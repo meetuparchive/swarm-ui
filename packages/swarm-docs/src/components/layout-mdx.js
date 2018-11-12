@@ -4,12 +4,12 @@ import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
 import { MDXProvider } from '@mdx-js/tag'
 
 
-const PreComponent = ({ className, ...props }) =>
-  props.children.props.props &&
+const PreComponent = ({ className, ...props }) => {
+
+  return props.children.props.props &&
   props.children.props.props.className ===
     "language-.jsx" ? (
     <LiveProvider
-      mountStylesheet={false}
       code={props.children.props.children}
     >
       <LiveEditor tabIndex="-1" />
@@ -19,13 +19,14 @@ const PreComponent = ({ className, ...props }) =>
   ) : (
     <pre {...props} className="pre-static" />
   );
+};
 
 export default class MDXLayout extends React.Component {
   render() {
     return (
         <Layout>
             <MDXProvider components={{ pre: PreComponent }}>
-                {this.props.children}
+              {this.props.children}
             </MDXProvider>
         </Layout>
     )

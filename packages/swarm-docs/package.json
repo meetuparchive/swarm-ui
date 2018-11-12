@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "swarm-docs",
   "description": "Swarm Docs",
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
@@ -18,7 +18,8 @@
     "react": "^16.7.0-alpha.0",
     "react-dom": "^16.5.1",
     "react-helmet": "^5.2.0",
-    "react-live": "^1.12.0"
+    "react-live": "^1.12.0",
+    "serve": "^10.0.2"
   },
   "keywords": [
     "gatsby"
@@ -27,6 +28,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
+    "start": "serve public/",
     "format": "prettier --write \"src/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
