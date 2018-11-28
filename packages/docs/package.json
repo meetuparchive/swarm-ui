@@ -1,11 +1,12 @@
 {
   "name": "swarm-docs",
   "description": "Swarm Docs",
-  "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "version": "2.0.0",
+  "author": "Hunter Bacot <hsbacot@gmail.com>",
   "dependencies": {
     "@mdx-js/mdx": "^0.15.6",
     "@mdx-js/tag": "^0.15.6",
+    "constants": "^0.0.2",
     "gatsby": "^2.0.19",
     "gatsby-image": "^2.0.15",
     "gatsby-mdx": "^0.2.0",
@@ -15,11 +16,14 @@
     "gatsby-plugin-sharp": "^2.0.7",
     "gatsby-source-filesystem": "^2.0.4",
     "gatsby-transformer-sharp": "^2.1.4",
+    "meetup-web-components": "6.1.2630-beta",
     "react": "^16.7.0-alpha.0",
-    "react-dom": "^16.5.1",
+    "react-dom": "^16.7.0-alpha.0",
     "react-helmet": "^5.2.0",
     "react-live": "^1.12.0",
-    "serve": "^10.0.2"
+    "serve": "^10.0.2",
+    "styles": "^0.0.1",
+    "swarm-components": "^0.0.1"
   },
   "keywords": [
     "gatsby"
@@ -27,7 +31,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "develop": "gatsby develop -p 5555",
     "start": "serve public/",
     "format": "prettier --write \"src/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
