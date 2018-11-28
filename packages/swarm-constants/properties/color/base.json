@@ -1,0 +1,25 @@
+{
+  "color": {
+    "merlot": { "value": "#7A1D47" },
+    "meetup-red": { "value": "#FF1154" },
+    "peach": { "value": "#F65858" },
+    "marigold": { "value": "#FFAD43" },
+    "indigo": { "value": "#00455D" },
+    "viridian": { "value": "#0098AB" },
+    "beach": { "value": "#97CAD1" },
+    "old-gold": { "value": "#947F5F" },
+    "white": { "value": "#FFFFFF" },
+    "alert-red": { "value": "#C80000" },
+    "beach-highlight": { "value": "#F7FEFF" },
+    "tooltip-blue": { "value": "#3679E4" },
+    "gray": {
+      "1": { "value": "#F6F7F8" },
+      "2": { "value": "#E6E6E6" },
+      "3": { "value": "#D9D9D9" },
+      "4": { "value": "#C5C4C4" },
+      "5": { "value": "#A2A2A2" },
+      "6": { "value": "#585858" },
+      "7": { "value": "#212121" }
+    }
+  }
+}

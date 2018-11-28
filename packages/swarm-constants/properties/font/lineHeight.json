@@ -1,0 +1,30 @@
+{
+  "font": {
+    "lineHeight": {
+      "tiny": {
+        "value": "18px"
+      },
+      "small": {
+        "value": "20px"
+      },
+      "normal": {
+        "value": "24px"
+      },
+      "sectionTitle": {
+        "value": "28px"
+      },
+      "kicker": {
+        "value": "22px"
+      },
+      "display3": {
+        "value": "36px"
+      },
+      "display2": {
+        "value": "38px"
+      },
+      "display1": {
+        "value": "52px"
+      }
+    }
+  }
+}

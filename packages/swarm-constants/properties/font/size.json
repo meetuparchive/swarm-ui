@@ -1,0 +1,30 @@
+{
+  "font": {
+    "size": {
+      "tiny": {
+        "value": "12px"
+      },
+      "small": {
+        "value": "14px"
+      },
+      "normal": {
+        "value": "16px"
+      },
+      "sectionTitle": {
+        "value": "20px"
+      },
+      "kicker": {
+        "value": "14px"
+      },
+      "display3": {
+        "value": "28px"
+      },
+      "display2": {
+        "value": "32px"
+      },
+      "display1": {
+        "value": "42px"
+      }
+    }
+  }
+}

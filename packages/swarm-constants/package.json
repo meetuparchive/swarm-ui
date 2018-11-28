@@ -1,0 +1,33 @@
+{
+  "name": "swarm-constants",
+  "version": "0.0.1",
+  "description": "style constants for swarm ui",
+  "author": "hsbacot <hsbacot@gmail.com>",
+  "homepage": "https://github.com/meetup/swarm-ui#readme",
+  "license": "ISC",
+  "main": "lib/constants.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__",
+    "build": "build"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meetup/swarm-ui.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/meetup/swarm-ui/issues"
+  },
+  "devDependencies": {
+    "style-dictionary": "hsbacot/style-dictionary#buxfix/css-comments"
+  },
+  "dependencies": {
+    "swarm-components": "^0.0.1"
+  }
+}
