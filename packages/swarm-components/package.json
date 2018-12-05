@@ -19,7 +19,8 @@
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
-    "build": "babel src/ -d lib/"
+    "build": "babel src/ -d lib/",
+    "develop": "babel src/ --watch -d lib/"
   },
   "bugs": {
     "url": "https://github.com/meetup/swarm-ui/issues"
@@ -35,6 +36,7 @@
     "flow-bin": "^0.86.0"
   },
   "dependencies": {
-    "classnames": "^2.2.6"
+    "classnames": "^2.2.6",
+    "swarm-constants": "^0.0.1"
   }
 }
