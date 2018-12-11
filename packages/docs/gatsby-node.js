@@ -5,3 +5,22 @@
  */
 
 // You can delete this file if you're not using it
+
+exports.onCreateWebpackConfig = ({
+  stage,
+  getConfig,
+  rules,
+  loaders,
+  actions,
+}) => {
+  actions.setWebpackConfig({
+    module: {
+      rules: [
+        {
+          test: /.inc$/,
+          use: ['html-loader'],
+        },
+      ],
+    },
+  })
+}

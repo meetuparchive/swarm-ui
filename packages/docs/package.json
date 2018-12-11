@@ -16,6 +16,7 @@
     "gatsby-plugin-sharp": "^2.0.7",
     "gatsby-source-filesystem": "^2.0.4",
     "gatsby-transformer-sharp": "^2.1.4",
+    "html-loader": "^0.5.5",
     "meetup-web-components": "6.1.2630-beta",
     "react": "^16.7.0-alpha.0",
     "react-dom": "^16.7.0-alpha.0",
@@ -24,7 +25,8 @@
     "serve": "^10.0.2",
     "styles": "^0.0.1",
     "swarm-components": "^0.0.1",
-    "swarm-constants": "^0.0.1"
+    "swarm-constants": "^0.0.1",
+    "swarm-icons": "^3.8.354"
   },
   "keywords": [
     "gatsby"

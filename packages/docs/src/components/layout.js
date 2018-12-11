@@ -4,6 +4,8 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import Header from './header'
 import { setConfig } from 'react-hot-loader'
+// icon sprite
+// hacks to include generated sprite with html-loader. line 50
 import './layout.css'
 // old swarm styles
 import 'meetup-web-components/assets/css/main.css'
@@ -33,6 +35,7 @@ const Layout = ({ children }) => {
             ]}
           >
             <html lang="en" />
+            {require('swarm-icons/dist/sprite/sprite.inc')}
           </Helmet>
           <Header siteTitle={data.site.siteMetadata.title} />
           <div
@@ -44,6 +47,12 @@ const Layout = ({ children }) => {
             }}
           >
             {children}
+            <div
+              dangerouslySetInnerHTML={{
+                __html: require('swarm-icons/dist/sprite/sprite.inc'),
+              }}
+              style={{ height: 0, overflow: 'hidden' }}
+            />
           </div>
         </>
       )}
