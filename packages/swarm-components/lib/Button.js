@@ -1,6 +1,7 @@
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 import * as React from 'react';
+import Icon from './Icon';
 
 /**
  *
@@ -20,6 +21,15 @@ export const getSwarmSize = props => {
   let size = 'default';
   if (props.small) size = 'small';
   return size;
+}; // TODO: find a better, more dynamic solution
+
+const FILLS = {
+  default: 'var(--color-viridian)',
+  disabled: 'var(--color-gray-4)',
+  primary: 'var(--color-white)',
+  neutral: 'var(--color-gray-7)',
+  bordered: 'var(--color-gray-7)',
+  inverted: 'var(--color-white)'
 };
 
 const Button = props => {
@@ -30,6 +40,8 @@ const Button = props => {
     bordered,
     inverted,
     small,
+    icon,
+    children,
     ...rest
   } = props;
 
@@ -37,10 +49,15 @@ const Button = props => {
     delete props.onClick;
   }
 
+  const buttonType = getButtonType(props);
   return React.createElement("button", _extends({
-    "data-swarm-button": getButtonType(props),
+    "data-swarm-button": buttonType,
     "data-swarm-size": getSwarmSize(props)
-  }, rest));
+  }, rest), icon ? React.createElement("span", null, children, React.createElement(Icon, {
+    shape: icon,
+    size: "xs",
+    color: FILLS[buttonType]
+  })) : children);
 };
 
 export default Button;

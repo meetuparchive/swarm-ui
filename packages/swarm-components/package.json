@@ -37,6 +37,8 @@
   },
   "dependencies": {
     "classnames": "^2.2.6",
-    "swarm-constants": "^0.0.1"
+    "html-loader": "^0.5.5",
+    "swarm-constants": "^0.0.1",
+    "swarm-icons": "^3.8.354"
   }
 }
