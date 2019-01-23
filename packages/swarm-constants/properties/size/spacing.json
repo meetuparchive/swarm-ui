@@ -1,0 +1,26 @@
+{
+    "size": {
+        "space": {
+            "default": {
+                "value": "16px",
+                "comment": "default space size"
+            },
+            "double": {
+                "value": "32px",
+                "comment": "double space size"
+            },
+            "half": {
+                "value": "8px",
+                "comment": "half space size"
+            },
+            "quarter": {
+                "value": "4px",
+                "comment": "quarter space size"
+            },
+            "quadruple": {
+                "value": "64px",
+                "comment": "quadruple space size"
+            }
+        }
+    }
+}

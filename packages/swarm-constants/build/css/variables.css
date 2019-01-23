@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 28 Nov 2018 15:19:23 GMT
+ * Generated on Thu, 17 Jan 2019 20:54:42 GMT
  */
 
 :root {
@@ -51,4 +51,9 @@
  --size-font-medium: 1rem; /* the medium size of the font */
  --size-font-large: 2rem; /* the large size of the font */
  --size-font-base: 1rem; /* the base size of the font */
+ --size-space-default: 16rem; /* default space size */
+ --size-space-double: 32rem; /* double space size */
+ --size-space-half: 8rem; /* half space size */
+ --size-space-quarter: 4rem; /* quarter space size */
+ --size-space-quadruple: 64rem; /* quadruple space size */
 }
