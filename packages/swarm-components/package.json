@@ -25,6 +25,12 @@
   "bugs": {
     "url": "https://github.com/meetup/swarm-ui/issues"
   },
+  "bundlesize": [
+    {
+      "path": "lib/*.js",
+      "maxSize": "> 10%"
+    }
+  ],
   "peerDependencies": {
     "react": "^16.6.3"
   },
@@ -33,6 +39,7 @@
     "@babel/core": "^7.1.6",
     "@babel/preset-flow": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
+    "bundlesize": "^0.17.0",
     "flow-bin": "^0.86.0"
   },
   "dependencies": {

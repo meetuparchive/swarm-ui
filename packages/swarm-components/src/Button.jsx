@@ -1,17 +1,19 @@
 // @flow
 import * as React from 'react';
+import cx from 'classnames';
 import Icon from './Icon';
 
 type Props = {
-  primary?: boolean,
-  neutral?: boolean,
   bordered?: boolean,
-  disabled?: boolean,
-  inverted?: boolean,
   className?: string,
+  disabled?: boolean,
   icon?: string,
-  small?: boolean,
+  inverted?: boolean,
+  neutral?: boolean,
   onClick?: (*) => void,
+  primary?: boolean,
+  right?: boolean,
+  small?: boolean,
   children: React.Node
 };
 
@@ -36,6 +38,13 @@ export const getSwarmSize = (props: Props): string => {
   return size;
 };
 
+export const getIconPosition = (props: Props): string => {
+  let position = 'left';
+  if (props.right) position = 'right';
+  if (!props.children) position = 'only';
+  return position;
+};
+
 // TODO: find a better, more dynamic solution
 const FILLS = {
   default: 'var(--color-viridian)',
@@ -44,7 +53,7 @@ const FILLS = {
   neutral: 'var(--color-gray-7)',
   bordered: 'var(--color-gray-7)',
   inverted: 'var(--color-white)'
-}
+};
 
 const Button = (props: Props): React.Element<'button'> => {
   // destructuring to not pass invalid attributes to node
@@ -55,6 +64,7 @@ const Button = (props: Props): React.Element<'button'> => {
     inverted,
     small,
     icon,
+    right,
     children,
     ...rest
   } = props;
@@ -69,9 +79,26 @@ const Button = (props: Props): React.Element<'button'> => {
     <button
       data-swarm-button={buttonType}
       data-swarm-size={getSwarmSize(props)}
+      data-icon={getIconPosition(props)}
       {...rest}
     >
-      {icon ? <span>{children}<Icon shape={icon} size='xs' color={FILLS[buttonType]} /></span> : children}
+      {icon ? (
+        <span >
+          {right ? (
+            <>
+              {children}
+              <Icon shape={icon} size='xs' color={FILLS[buttonType]} />
+            </>
+          ) : (
+            <>
+              <Icon shape={icon} size='xs' color={FILLS[buttonType]} />
+              {children}
+            </>
+          )}
+        </span>
+      ) : (
+        children
+      )}
     </button>
   );
 };

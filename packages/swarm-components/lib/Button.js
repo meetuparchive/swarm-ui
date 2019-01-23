@@ -1,6 +1,7 @@
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 import * as React from 'react';
+import cx from 'classnames';
 import Icon from './Icon';
 
 /**
@@ -21,6 +22,12 @@ export const getSwarmSize = props => {
   let size = 'default';
   if (props.small) size = 'small';
   return size;
+};
+export const getIconPosition = props => {
+  let position = 'left';
+  if (props.right) position = 'right';
+  if (!props.children) position = 'only';
+  return position;
 }; // TODO: find a better, more dynamic solution
 
 const FILLS = {
@@ -41,6 +48,7 @@ const Button = props => {
     inverted,
     small,
     icon,
+    right,
     children,
     ...rest
   } = props;
@@ -52,12 +60,17 @@ const Button = props => {
   const buttonType = getButtonType(props);
   return React.createElement("button", _extends({
     "data-swarm-button": buttonType,
-    "data-swarm-size": getSwarmSize(props)
-  }, rest), icon ? React.createElement("span", null, children, React.createElement(Icon, {
+    "data-swarm-size": getSwarmSize(props),
+    "data-icon": getIconPosition(props)
+  }, rest), icon ? React.createElement("span", null, right ? React.createElement(React.Fragment, null, children, React.createElement(Icon, {
     shape: icon,
     size: "xs",
     color: FILLS[buttonType]
-  })) : children);
+  })) : React.createElement(React.Fragment, null, React.createElement(Icon, {
+    shape: icon,
+    size: "xs",
+    color: FILLS[buttonType]
+  }), children)) : children);
 };
 
 export default Button;
