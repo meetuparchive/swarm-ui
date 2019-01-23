@@ -9,7 +9,8 @@ import { setConfig } from 'react-hot-loader'
 import './layout.css'
 // old swarm styles
 import 'meetup-web-components/assets/css/main.css'
-import 'styles/dist/main.css'
+// import 'styles/dist/main.css'
+import 'styles/dist/global.css'
 
 setConfig({ pureSFC: true })
 
