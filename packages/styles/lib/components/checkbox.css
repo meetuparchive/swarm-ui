@@ -1,0 +1,10 @@
+@import './utils/a11y.css';
+
+[data-swarm-checkbox] {
+    display: flex;
+}
+
+[data-swarm-checkbox] input {
+    /* visibility: hidden; */
+    @extend %visually-hidden;
+}

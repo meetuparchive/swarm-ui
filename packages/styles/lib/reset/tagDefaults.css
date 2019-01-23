@@ -1,0 +1,149 @@
+html {
+	color: var(--color-gray-7);
+	font-size: 100%;
+	overflow-y: scroll;
+	text-rendering: optimizeLegibility; /* stylelint-disable-line property-blacklist */
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+html,
+body {
+	background-color: #fff;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	position: relative; /* for the sake of split views */
+}
+
+/*
+// Inline tags
+*/
+abbr,
+strong,
+acronym,
+span,
+small,
+time,
+strike,
+sub,
+sup,
+a {
+	display: inline;
+}
+
+abbr,
+acronym {
+	border-width: 0;
+}
+
+b,
+strong {
+	font-weight: var(--font-weight-bold);
+}
+
+sup,
+sub {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	top: -0.5em;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+/*
+// Block tags
+*/
+p,
+ul,
+ol,
+blockquote,
+form,
+fieldset,
+legend,
+table,
+dl,
+dd,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+form,
+legend {
+	margin-bottom: 0;
+}
+
+img {
+	border: 0;
+	display: block;
+	line-height: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.resample {
+	image-rendering: optimizeQuality;
+	/* assuming we're sizing an img down on the client */
+	-ms-interpolation-mode: bicubic;
+}
+
+%listReset {
+
+}
+
+ul,
+ol {
+	@extend %listReset;
+}
+
+li {
+	margin: 0;
+	padding: 0;
+}
+
+/*
+// HTML5 elements
+*/
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+	display: block;
+}
+
+audio,
+canvas,
+video {
+	display: inline-block;
+}
+
+address {
+	display: inline;
+	font-style: normal;
+}

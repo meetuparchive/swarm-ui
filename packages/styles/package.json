@@ -17,10 +17,11 @@
   "scripts": {
     "build": "yarn postcss",
     "develop": "yarn postcss -w",
-    "postcss": "postcss lib/main.css -o dist/main.css"
+    "postcss": "postcss lib/main.css -o dist/main.css && postcss lib/global.css -o dist/global.css"
   },
   "devDependencies": {
     "autoprefixer": "^9.3.1",
+    "bundlesize": "^0.17.0",
     "cssnano": "^4.1.7",
     "postcss-cli": "^6.0.1",
     "postcss-extend-rule": "^2.0.0",

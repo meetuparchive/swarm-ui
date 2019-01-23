@@ -123,3 +123,14 @@
 [data-swarm-button][data-swarm-size="small"] {
   padding: var(--space-half) var(--space-half);
 }
+
+/* with icon */
+[data-swarm-button][data-icon="left"] .svg-icon {
+  margin-right:  var(--space-half);
+}
+[data-swarm-button][data-icon="right"] .svg-icon {
+  margin-left:  var(--space-half);
+}
+[data-swarm-button][data-icon="only"] {
+  padding: var(--space-half) var(--space);
+}

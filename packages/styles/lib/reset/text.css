@@ -1,0 +1,163 @@
+/*doc
+---
+title: Body/primary
+name: bodyText
+category: Text Styles
+---
+
+```html_example
+<p>This is default body text, inheritied from type styles applied to &lt;body&gt;</p>
+```
+
+*/
+
+html {
+	font-size: var(--font-size-normal);
+}
+
+body {
+	color: var(--color-gray-7);
+	font-family: var(--font-family-normal);
+	-moz-font-feature-settings: "liga", "kern";
+	-moz-font-feature-settings: "liga=1, kern=1";
+	-ms-font-feature-settings: "liga", "kern";
+	-o-font-feature-settings: "liga", "kern";
+	-webkit-font-feature-settings: "liga", "kern";
+	font-feature-settings: "liga", "kern";
+	font-size: var(--font-size-normal);
+	font-weight: var(--font-weight-normal); 
+	line-height: var(--font-line-height-normal);
+	text-rendering: optimizeLegibility; /* stylelint-disable-line property-blacklist */
+}
+
+
+code,
+pre,
+.text--mono {
+    font-family: var(--font-family-mono);
+}
+
+.text--middotRight::after,
+.text--middotLeft::before {
+	content: "\00b7";
+	display: inline-block;
+	font-weight: var(--font-weight-bold);
+	margin: auto 0.5em;
+}
+
+
+%wrapNice {
+    overflow-wrap: break-word;
+	-ms-word-break: normal; /* IE wraps funny with `break-word` and `break-all` */
+	word-break: break-word;
+	word-wrap: break-word;
+}
+
+/*doc
+---
+title: Running text
+name: runningText
+category: Text Styles
+---
+By default, paragraphs and headings are not styled
+with any bottom spacing. Links are not blue by default,
+as the most common case on Meetup will be block-level
+anchors with large touch targets.
+
+However, there will be instaces where you want the blue
+links and properly spaced paragraphs of running text (ie.
+event descriptions).
+
+```html_example
+<p>The robot is partially dressed in waterproof surgical garb.</p>
+<p>"Bruce Springsteen" is a terrible name for a <a href="#">cat</a>.</p>
+
+<hr style="margin: 8px;" /> <!-- lol, hr -->
+
+<div class="runningText">
+	<p>The robot is partially dressed in waterproof surgical garb.</p>
+	<p>"Bruce Springsteen" is a terrible name for a <a href="#">cat</a>.</p>
+</div>
+```
+*/
+
+.runningText {
+	line-height: var(--font-line-height-normal);
+}
+
+.runningText p {
+    @extend %wrapNice;
+    margin-bottom: var(--size-space-default);
+    max-width: 40em;
+
+}
+.runningText p:last-child {
+    margin-bottom: 0;
+}
+
+/*doc
+---
+title: Bulleted lists
+name: bulletedList
+category: Text Styles
+---
+
+`<ul>` and `<ol>` element list styles are
+reset by default.
+
+```html_example
+<ul>
+	<li>Eggs</li>
+	<li>More Eggs</li>
+</ul>
+```
+
+List style bullets are applied when list
+elements are inside a `.runningText` container.
+
+```html_example
+<div class="bounds">
+	<h3 class="text--big">Shopping list</h3>
+	<div class="runningText">
+		<ul>
+			<li>Eggs</li>
+			<li>More Eggs</li>
+		</ul>
+	</div>
+</div>
+```
+
+You may also use the `.bullets` class to apply
+numbers/bullets to a list.
+
+```html_example
+<div class="bounds">
+	<h3 class="text--big">Shopping list</h3>
+	<ul class="bullets">
+		<li>Eggs</li>
+		<li>More Eggs</li>
+	</ul>
+</div>
+```
+
+*/
+
+%_listStyleBase {
+	list-style-position: outside;
+	padding-left: 1.33em; /* indent by default */
+}
+
+/* stylelint-disable selector-no-qualifying-type */
+ul,
+ul.bullets,
+ul.runningText {
+    @extend %_listStyleBase;
+    list-style-type: disc;
+}
+
+ol,
+ol.bullets,
+ol.runningText {
+    @extend %_listStyleBase;
+    list-style-type: decimal;
+}
