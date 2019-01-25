@@ -1,0 +1,73 @@
+/* stylelint-disable selector-no-qualifying-type, selector-no-vendor-prefix */
+%label,
+label {
+	font-size: var(--font-size-normal);
+	font-weight: var(--font-weight-normal);
+}
+
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+%_formBase,
+button,
+input,
+select,
+textarea {
+	display: block;
+	font-family: inherit;
+	font-size: 100%;
+	line-height: var(--font-line-height-normal);
+}
+
+textarea {
+	-ms-overflow-style: none;
+}
+
+button {
+	background: transparent;
+	border-width: 0;
+	margin: 0;
+	padding: 0;
+}
+
+input {
+	color: var(--color-gray-7);
+}
+
+input,
+select {
+	/* height: (var(--font-size-normal) * var(--font-line-height-normal)) + var(--size-space-default)* 2; */
+	height: 72px;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+	color: var(--color-gray-4);
+	font-style: normal;
+}
+
+ 
+input[type="time"]::-webkit-clear-button,
+input[type="time"]::-webkit-outer-spin-button,
+input[type="time"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+input[type="time"]::-ms-clear {
+	display: none;
+}
+
+input[type="number"] {
+	-moz-appearance: textfield;
+}
+
+/* Safari height fix */
+input[type="checkbox"] {
+	height: auto;
+}
+/* stylelint-enable  */

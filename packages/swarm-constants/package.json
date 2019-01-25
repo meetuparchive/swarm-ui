@@ -1,6 +1,6 @@
 {
-  "name": "swarm-constants",
-  "version": "0.0.1",
+  "name": "@meetup/swarm-constants",
+  "version": "0.0.2",
   "description": "style constants for swarm ui",
   "author": "hsbacot <hsbacot@gmail.com>",
   "homepage": "https://github.com/meetup/swarm-ui#readme",
@@ -19,7 +19,8 @@
     "url": "git+https://github.com/meetup/swarm-ui.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "build": "npx style-dictionary build"
   },
   "bugs": {
     "url": "https://github.com/meetup/swarm-ui/issues"
@@ -29,6 +30,6 @@
     "style-dictionary": "hsbacot/style-dictionary#buxfix/css-comments"
   },
   "dependencies": {
-    "swarm-components": "^0.0.1"
+    "meetup-web-components": "6.1.2645-beta"
   }
 }

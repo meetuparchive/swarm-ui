@@ -1,5 +1,5 @@
 {
-  "name": "swarm-components",
+  "name": "@meetup/swarm-components",
   "version": "0.0.1",
   "description": "Web Components for Swarm",
   "author": "hsbacot <hsbacot@gmail.com>",
@@ -43,9 +43,10 @@
     "flow-bin": "^0.86.0"
   },
   "dependencies": {
+    "@meetup/swarm-constants": "^0.0.2",
     "classnames": "^2.2.6",
     "html-loader": "^0.5.5",
-    "swarm-constants": "^0.0.1",
+    "meetup-web-components": "6.1.2645-beta",
     "swarm-icons": "^3.8.354"
   }
 }

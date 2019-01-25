@@ -1,0 +1,82 @@
+%heading {
+    font-weight: var(--font-weight-bold);
+}
+
+%textColor {
+    color: var(--color-gray-7);
+}
+
+.text--display,
+.text--display1 {
+    @extend %heading;
+    @extand %textColor;
+
+    font-size: var(--font-size-display-1);
+    line-height: var(--font-line-height-display-1);
+}
+
+.text--pageTitle,
+.text--display2 {
+    @extend %heading;
+    @extand %textColor;
+
+    font-size: var(--font-size-display-2);
+    line-height: var(--font-line-height-display-2);
+}
+
+.text--big,
+.text--display3 {
+    @extand %textColor;
+
+    font-size: var(--font-size-display-3);
+    line-height: var(--font-line-height-display-3);
+    font-weight: var(--font-weight-semi-bold);
+}
+
+.text--sectionTitle {
+    @extand %textColor;
+
+    font-size: var(--font-size-section-title);
+    line-height: var(--font-line-height-section-title);
+    font-weight: var(--font-weight-semi-bold);
+}
+
+.text--kickerText {
+    @extand %textColor;
+    
+    font-size: var(--font-size-kicker);
+    line-height: var(--font-line-height-kicker);
+}
+.text--small {
+    @extand %textColor;
+    font-size: var(--font-size-small);
+    line-height: var(--font-line-height-small)
+}
+
+.text--tiny {
+    @extand %textColor;
+    font-size: var(--font-size-tiny);
+    line-height: var(--font-line-height-tiny)
+}
+
+.text--caption {
+    @extand %textColor;
+
+}
+
+.text--body {
+    @extand %textColor;
+    font-size: var(--font-size-normal);
+    line-height: var(--font-line-height-normal);
+}
+
+.text--body2 {
+    @extand %textColor;
+    font-size: var(--font-size-normal);
+    line-height: var(--font-line-height-section-title);
+}
+
+.text--normal {
+    @extand %textColor;
+    font-weight: var(--font-weight-normal) !important;
+}
