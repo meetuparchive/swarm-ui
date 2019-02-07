@@ -1,16 +1,3 @@
-/*doc
----
-title: Body/primary
-name: bodyText
-category: Text Styles
----
-
-```html_example
-<p>This is default body text, inheritied from type styles applied to &lt;body&gt;</p>
-```
-
-*/
-
 html {
 	font-size: var(--font-size-normal);
 }
@@ -52,34 +39,6 @@ pre,
 	word-break: break-word;
 	word-wrap: break-word;
 }
-
-/*doc
----
-title: Running text
-name: runningText
-category: Text Styles
----
-By default, paragraphs and headings are not styled
-with any bottom spacing. Links are not blue by default,
-as the most common case on Meetup will be block-level
-anchors with large touch targets.
-
-However, there will be instaces where you want the blue
-links and properly spaced paragraphs of running text (ie.
-event descriptions).
-
-```html_example
-<p>The robot is partially dressed in waterproof surgical garb.</p>
-<p>"Bruce Springsteen" is a terrible name for a <a href="#">cat</a>.</p>
-
-<hr style="margin: 8px;" /> <!-- lol, hr -->
-
-<div class="runningText">
-	<p>The robot is partially dressed in waterproof surgical garb.</p>
-	<p>"Bruce Springsteen" is a terrible name for a <a href="#">cat</a>.</p>
-</div>
-```
-*/
 
 .runningText {
 	line-height: var(--font-line-height-normal);

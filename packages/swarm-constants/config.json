@@ -2,7 +2,7 @@
   "source": ["properties/**/*.json"],
   "platforms": {
     "scss": {
-      "transformGroup": "scss",
+      "transforms": ["name/cti/snake", "size/px"],
       "buildPath": "build/scss/",
       "files": [{
         "destination": "_variables.scss",
@@ -10,67 +10,11 @@
       }]
     },
     "css": {
-      "transformGroup": "css",
+      "transforms": ["name/cti/kebab", "color/css", "size/px"],
       "buildPath": "build/css/",
       "files": [{
         "destination": "variables.css",
         "format": "css/variables"
-      }]
-    },
-    "android": {
-      "transformGroup": "android",
-      "buildPath": "build/android/",
-      "files": [{
-        "destination": "font_dimens.xml",
-        "format": "android/fontDimens"
-      },{
-        "destination": "colors.xml",
-        "format": "android/colors"
-      }]
-    },
-    "ios": {
-      "transformGroup": "ios",
-      "buildPath": "build/ios/",
-      "files": [{
-        "destination": "StyleDictionaryColor.h",
-        "format": "ios/colors.h",
-        "className": "StyleDictionaryColor",
-        "type": "StyleDictionaryColorName",
-        "filter": {
-          "attributes": {
-            "category": "color"
-          }
-        }
-      },{
-        "destination": "StyleDictionaryColor.m",
-        "format": "ios/colors.m",
-        "className": "StyleDictionaryColor",
-        "type": "StyleDictionaryColorName",
-        "filter": {
-          "attributes": {
-            "category": "color"
-          }
-        }
-      },{
-        "destination": "StyleDictionarySize.h",
-        "format": "ios/static.h",
-        "className": "StyleDictionarySize",
-        "type": "float",
-        "filter": {
-          "attributes": {
-            "category": "size"
-          }
-        }
-      },{
-        "destination": "StyleDictionarySize.m",
-        "format": "ios/static.m",
-        "className": "StyleDictionarySize",
-        "type": "float",
-        "filter": {
-          "attributes": {
-            "category": "size"
-          }
-        }
       }]
     }
   }

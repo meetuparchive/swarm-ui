@@ -3,25 +3,35 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 import * as React from 'react';
 import Icon from './Icon';
 
+// Can not inline css vars as color to Icon. Gray 5 icon fill on disbaled
 const Checkbox = props => {
   const {
     checked,
     label,
     id = 'a',
+    disabled,
+    children,
     ...rest
   } = props;
   return React.createElement("label", _extends({
-    for: id
-  }, rest, {
-    "data-swarm-checkbox": true
-  }), React.createElement("span", null, React.createElement(Icon, {
+    "data-swarm-checkbox": disabled ? 'disabled' : 'default',
+    for: id,
+    disabled: disabled
+  }, rest), React.createElement("span", {
+    "data-swarm-checkbox-field": checked ? 'checked' : 'unchecked',
+    tabIndex: "0",
+    role: "checkbox",
+    "aria-checked": checked
+  }, checked && React.createElement(Icon, {
     shape: "check",
-    size: "xs"
+    size: "xs",
+    color: disabled ? '#A2A2A2' : '#ffffff'
   })), React.createElement("input", {
     type: "checkbox",
     id: id,
-    checked: checked
-  }), React.createElement("span", null, label));
+    checked: checked,
+    disabled: disabled
+  }), React.createElement("span", null, label || children));
 };
 
 export default Checkbox;

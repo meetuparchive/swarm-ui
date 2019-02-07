@@ -134,3 +134,8 @@
 [data-swarm-button][data-icon="only"] {
   padding: var(--space-half) var(--space);
 }
+[data-swarm-button] span {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}

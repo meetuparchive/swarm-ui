@@ -2,9 +2,43 @@
 
 [data-swarm-checkbox] {
     display: flex;
+    align-items: center;
+    height: 30px;
 }
 
 [data-swarm-checkbox] input {
     /* visibility: hidden; */
     @extend %visually-hidden;
+}
+
+[data-swarm-checkbox-field] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--color-gray-3);
+    margin-right: var(--size-space-half);
+    border-radius: 4px;
+    height: 19px;
+    width: 19px;
+}
+
+/* hover */
+label[data-swarm-checkbox]:hover  span[data-swarm-checkbox-field] {
+    border-color: var(--color-gray-5);
+}
+
+/* focused */
+[data-swarm-checkbox-field]:focus {
+    border: 1px solid yellow;
+}
+
+/* checked */
+[data-swarm-checkbox-field="checked"] {
+    border: 1px solod var(--color-viridian);
+    background-color: var(--color-viridian);
+}
+
+/* disabled */
+[data-swarm-checkbox="disabled"] [data-swarm-checkbox-field] {
+    background-color: var(--color-gray-3);
 }

@@ -1,0 +1,56 @@
+@import './../utils/a11y.css';
+
+[data-swarm-toggle] input {
+    @extend %visually-hidden;
+}
+
+[data-swarm-toggle] {
+    display: inline-flex;
+    color: var(--color-viridian);
+    /* color specific to toggle */
+    border: 1px solid #E5E5E5;
+    align-items: center;
+    border-radius: 20px;
+    transition: background 0.15s;
+    cursor: pointer;
+    box-sizing: border-box;
+    height: 24px;
+    width: 49px;
+    transition: background 0.15s;
+    /* specific to toggle */
+    background-color: #FAFAFA;
+}
+
+[data-swarm-toggle] [data-swarm-toggle-switch-disc] {
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    box-sizing: content-box;
+    border: 1px solid var(--color-gray-4);
+    background-color: var(--color-white);
+    transition: transform 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+[data-swarm-toggle]:focus {
+    border: 1px solid yellow;
+    outline: none;
+}
+
+[data-swarm-toggle="checked"] {
+    border-color: var(--color-viridian);
+    background-color: var(--color-viridian);
+    color: var(--color-white);
+}
+
+[data-swarm-toggle="checked"] [data-swarm-toggle-switch-disc] {
+    color: var(--color-white);
+    transform: translateX(24px);
+}
+
+/* space vars not working for padding */
+div[data-swarm-toggle] span {
+    /* padding: 8px 16px; */
+}

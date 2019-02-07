@@ -3,19 +3,21 @@ import Icon from './Icon';
 
 export type Props = {
   checked: boolean,
+  disabled?: boolean,
   id?: string,
   name: string,
 };
 
-const Checkbox = (props: Props): React.ReactElement<'input'> => {
-  const { checked, label, id = 'a', ...rest } = props;
+// Can not inline css vars as color to Icon. Gray 5 icon fill on disbaled
+const Checkbox = (props: Props): React.ReactElement<'label'> => {
+  const { checked, label, id = 'a', disabled, children, ...rest } = props;
   return (
-    <label for={id} {...rest} data-swarm-checkbox>
-      <span>
-        <Icon shape='check' size='xs' />
+    <label data-swarm-checkbox={disabled ? 'disabled' : 'default'} for={id} disabled={disabled} {...rest} >
+      <span data-swarm-checkbox-field={checked ? 'checked': 'unchecked'} tabIndex='0' role="checkbox" aria-checked={checked}>
+        {checked && <Icon shape='check' size='xs' color={disabled ? '#A2A2A2' : '#ffffff'} />}
       </span>
-      <input type='checkbox' id={id} checked={checked} />
-      <span>{label}</span>
+      <input type='checkbox' id={id} checked={checked} disabled={disabled} />
+      <span>{label || children}</span>
     </label>
   );
 };

@@ -40,7 +40,7 @@ input {
 input,
 select {
 	/* height: (var(--font-size-normal) * var(--font-line-height-normal)) + var(--size-space-default)* 2; */
-	height: 72px;
+	/* height: 72px; */
 }
 
 input::-webkit-input-placeholder,

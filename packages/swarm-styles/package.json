@@ -1,6 +1,6 @@
 {
   "name": "@meetup/swarm-styles",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "Swarm UI styles",
   "author": "hsbacot <hsbacot@gmail.com>",
   "homepage": "",
@@ -16,19 +16,19 @@
   ],
   "scripts": {
     "build": "yarn postcss",
-    "develop": "yarn postcss -w",
+    "develop": "chokidar \"lib/**/*.css\" -c \"postcss lib/main.css -o dist/main.css && postcss lib/global.css -o dist/global.css\"",
     "postcss": "postcss lib/main.css -o dist/main.css && postcss lib/global.css -o dist/global.css"
   },
   "devDependencies": {
     "autoprefixer": "^9.3.1",
     "bundlesize": "^0.17.0",
+    "chokidar-cli": "^1.2.1",
     "cssnano": "^4.1.7",
     "postcss-cli": "^6.0.1",
     "postcss-extend-rule": "^2.0.0",
     "postcss-import": "^12.0.1"
   },
   "dependencies": {
-    "@meetup/swarm-constants": "^0.0.2",
-    "meetup-web-components": "6.1.2645-beta"
+    "@meetup/swarm-constants": "^0.0.2"
   }
 }
