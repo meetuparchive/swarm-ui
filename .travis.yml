@@ -7,6 +7,7 @@ cache:
 branches:
   only:
     - master
+if: tag IS blank
 
 before_install:
   - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > $HOME/.npmrc
