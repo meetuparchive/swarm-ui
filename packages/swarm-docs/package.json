@@ -3,6 +3,9 @@
   "description": "Swarm Docs",
   "version": "0.1.0",
   "author": "Hunter Bacot <hsbacot@gmail.com>",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@mdx-js/mdx": "^0.15.6",
     "@mdx-js/tag": "^0.15.6",
