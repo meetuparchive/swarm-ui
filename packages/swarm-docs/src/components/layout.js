@@ -13,6 +13,7 @@ import './layout.css'
 import '../assets/graphik.css'
 import '@meetup/swarm-styles/dist/main.css'
 import '@meetup/swarm-styles/dist/global.css'
+import '../assets/docs.css'
 
 setConfig({ pureSFC: true })
 

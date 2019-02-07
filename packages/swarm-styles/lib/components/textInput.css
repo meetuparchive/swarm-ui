@@ -1,0 +1,22 @@
+[data-swarm-text-input] {
+    border: 1px solid #DCDCDC;
+    background-color: #FAFAFA;
+    border-radius: 4px;
+    padding: var(--size-space-default);
+    color: var(--color-gray-7);
+}
+
+[data-swarm-text-input]:focus {
+    outline: none;
+    border-color: var(--color-viridian);
+}
+
+[data-swarm-text-input="disabled"] {
+    background-color: #FAFAFA;
+    border-color: #FAFAFA;
+    color: var(--color-gray-5);
+}
+
+[data-swarm-text-input="error"] {
+    border-color: var(--color-alert-red);
+}

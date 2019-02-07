@@ -1,0 +1,61 @@
+@import './../utils/a11y.css';
+
+[data-swarm-radio] {
+    display: flex;
+    align-items: center;
+    height: 30px;
+}
+
+[data-swarm-radio] input {
+    /* visibility: hidden; */
+    @extend %visually-hidden;
+}
+
+span[data-swarm-radio-field] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    margin-right: var(--size-space-half);
+    border-radius: 50%;
+    height: 19px;
+    width: 19px;
+}
+
+/* hover */
+label[data-swarm-radio]:hover  span[data-swarm-radio-field] {
+    border-color: var(--color-gray-5);
+}
+
+/* focused */
+[data-swarm-radio-field]:focus {
+    /* border: 1px solid yellow; */
+}
+
+/* unchecked */
+[data-swarm-radio-field="unchecked"] {
+    border: 1px solid var(--color-gray-3);
+}
+
+/* checked */
+[data-swarm-radio-field="checked"] {
+    border: 1px solid var(--color-viridiar);
+    background-color: var(--color-viridian);
+}
+
+/* disabled */
+[data-swarm-radio="disabled"] [data-swarm-radio-field] {
+    background-color: var(--color-gray-4);
+    border-color: var(--color-gray-4);
+}
+[data-swarm-radio="disabled"] [data-swarm-radio-field] [data-swarm-radio-dot] {
+    background-color: var(--color-gray-2);
+}
+
+/* selected dot */
+[data-swarm-radio-dot] {
+    height: 7px;
+    width: 7px;
+    border-radius: 50%;
+    background: var(--color-white);
+}

@@ -23,8 +23,8 @@
     "gatsby-transformer-sharp": "^2.1.4",
     "html-loader": "^0.5.5",
     "meetup-web-components": "6.1.2645-beta",
-    "react": "^16.7.0-alpha.0",
-    "react-dom": "^16.7.0-alpha.0",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
     "react-helmet": "^5.2.0",
     "react-live": "^1.12.0",
     "serve": "^10.0.2",
@@ -36,6 +36,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
+    "now-build": "npm run build",
     "develop": "gatsby develop -p 5555",
     "start": "serve public/",
     "format": "prettier --write \"src/**/*.js\"",

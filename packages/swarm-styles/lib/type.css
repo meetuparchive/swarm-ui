@@ -9,7 +9,7 @@
 .text--display,
 .text--display1 {
     @extend %heading;
-    @extand %textColor;
+    @extend %textColor;
 
     font-size: var(--font-size-display-1);
     line-height: var(--font-line-height-display-1);
@@ -18,7 +18,7 @@
 .text--pageTitle,
 .text--display2 {
     @extend %heading;
-    @extand %textColor;
+    @extend %textColor;
 
     font-size: var(--font-size-display-2);
     line-height: var(--font-line-height-display-2);
@@ -26,7 +26,7 @@
 
 .text--big,
 .text--display3 {
-    @extand %textColor;
+    @extend %textColor;
 
     font-size: var(--font-size-display-3);
     line-height: var(--font-line-height-display-3);
@@ -34,7 +34,7 @@
 }
 
 .text--sectionTitle {
-    @extand %textColor;
+    @extend %textColor;
 
     font-size: var(--font-size-section-title);
     line-height: var(--font-line-height-section-title);
@@ -42,41 +42,46 @@
 }
 
 .text--kickerText {
-    @extand %textColor;
+    @extend %textColor;
     
     font-size: var(--font-size-kicker);
     line-height: var(--font-line-height-kicker);
 }
 .text--small {
-    @extand %textColor;
+    @extend %textColor;
     font-size: var(--font-size-small);
     line-height: var(--font-line-height-small)
 }
 
 .text--tiny {
-    @extand %textColor;
+    @extend %textColor;
     font-size: var(--font-size-tiny);
     line-height: var(--font-line-height-tiny)
 }
 
 .text--caption {
-    @extand %textColor;
+    @extend %textColor;
 
 }
 
 .text--body {
-    @extand %textColor;
+    @extend %textColor;
     font-size: var(--font-size-normal);
     line-height: var(--font-line-height-normal);
 }
 
 .text--body2 {
-    @extand %textColor;
+    @extend %textColor;
     font-size: var(--font-size-normal);
     line-height: var(--font-line-height-section-title);
 }
 
 .text--normal {
-    @extand %textColor;
+    @extend %textColor;
     font-weight: var(--font-weight-normal) !important;
+}
+
+.text--link {
+    text-decoration: none;
+    color: var(--color-viridian);
 }

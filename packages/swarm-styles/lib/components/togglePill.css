@@ -1,0 +1,32 @@
+@import './../utils/a11y.css';
+
+[data-swarm-toggle-pill] input {
+    @extend %visually-hidden;
+}
+
+[data-swarm-toggle-pill] {
+    display: inline-flex;
+    color: var(--color-viridian);
+    border: 1px solid var(--color-viridian);
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    transition: background 0.15s;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+[data-swarm-toggle-pill]:focus {
+    border: 1px solid yellow;
+    outline: none;
+}
+
+[data-swarm-toggle-pill="checked"] {
+    background-color: var(--color-viridian);
+    color: var(--color-white)
+}
+
+/* space vars not working for padding */
+div[data-swarm-toggle-pill] span {
+    padding: 8px 16px;
+}
