@@ -1,7 +1,7 @@
 {
   "name": "@meetup/swarm-docs",
   "description": "Swarm Docs",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": "Hunter Bacot <hsbacot@gmail.com>",
   "publishConfig": {
     "access": "public"
