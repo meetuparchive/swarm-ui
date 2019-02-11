@@ -12,8 +12,8 @@
 }
 
 [data-swarm-text-input="disabled"] {
-    background-color: #FAFAFA;
-    border-color: #FAFAFA;
+    background-color: var(--color-gray-3);
+    border-color: var(--color-gray-3);
     color: var(--color-gray-5);
 }
 

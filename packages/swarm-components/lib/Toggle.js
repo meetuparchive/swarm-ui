@@ -12,6 +12,7 @@ const Toggle = props => {
     checked,
     disabled,
     id,
+    name,
     ...rest
   } = props;
   const checkedStatus = checked ? 'checked' : 'unchecked';

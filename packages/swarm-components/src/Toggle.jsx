@@ -15,7 +15,7 @@ const FILLS = {
 };
 
 const Toggle = (props: Props): React.ReactElement<'span'> => {
-  const { checked, disabled, id, ...rest } = props;
+  const { checked, disabled, id, name, ...rest } = props;
   const checkedStatus = checked ? 'checked' : 'unchecked';
   const fillIcon = checked ? 'check' : 'cross';
 

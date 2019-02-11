@@ -5,8 +5,8 @@ import Example from '../components/toggleExample'
 
 ```.jsx
 <>
-<TogglePill label="swarm" checked={1 == 1} />
-<TogglePill checked={1 == 1}>Swarm Toggle</TogglePill>
+<TogglePill label="swarm" checked={1 == 1} name="test-1" />
+<TogglePill checked={1 == 1} name="test-1">Swarm Toggle</TogglePill>
 </>
 ```
 
@@ -16,7 +16,7 @@ import Example from '../components/toggleExample'
 
 ```.jsx
 <>
-<Toggle checked={1 == 1} />
-<Toggle checked={1 == 0} />
+<Toggle checked={1 == 1} name="test-1"/>
+<Toggle checked={1 == 0} name="test-1"/>
 </>
 ```

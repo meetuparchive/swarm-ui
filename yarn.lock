@@ -1275,6 +1275,25 @@
     hoist-non-react-statics "^2.5.5"
     prop-types "^15.6.1"
 
+"@meetup/swarm-components@^0.0.1":
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/@meetup/swarm-components/-/swarm-components-0.0.1.tgz#16edea0c7849e000e67d496b21d5724770cb4eef"
+  integrity sha512-Yk09tPcEd5WSBnZpjaI3OaulMW7gbKUC+tflH3ygndAmO1Mt7eT8qyVSYpZTHtUuM9xXoZVzd45SZ42DCva1Cg==
+  dependencies:
+    "@meetup/swarm-constants" "^0.0.2"
+    classnames "^2.2.6"
+    html-loader "^0.5.5"
+    meetup-web-components "6.1.2645-beta"
+    swarm-icons "^3.8.354"
+
+"@meetup/swarm-constants@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@meetup/swarm-constants/-/swarm-constants-0.0.2.tgz#0cb09f4e9ce9b808eba5bdf399c7c82d38da5e17"
+  integrity sha512-UFvwrFPOR8NwoH141E2e4IQ64wgfRuj7p43X6cpNzCAKcN0pol4LE2B3G61BC1ij/+72w1OwN4ytVaVWTZxa8w==
+  dependencies:
+    "@meetup/swarm-components" "^0.0.1"
+    meetup-web-components "6.1.2645-beta"
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"

@@ -17,20 +17,23 @@ export const TextInput = props => {
   const {
     name,
     isSearch,
+    label,
     pattern,
     disabled,
     error,
     id,
     ...other
   } = props;
-  return React.createElement("input", _extends({
+  return React.createElement(React.Fragment, null, React.createElement("label", {
+    for: id
+  }, label), React.createElement("input", _extends({
     "data-swarm-text-input": getInputStatus(props),
     type: isSearch ? 'search' : 'text',
     name: name,
     pattern: pattern,
     disabled: disabled,
     id: id
-  }, other));
+  }, other)));
 };
 TextInput.defaultProps = {
   requiredText: '*'
