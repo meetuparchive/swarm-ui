@@ -1,0 +1,5 @@
+node_modules/
+lib/
+coverage/
+packages/**/node_modules
+packages/swarm-docs/public

@@ -8,6 +8,25 @@
     "deploy": "lerna publish --conventional-commits --yes"
   },
   "devDependencies": {
-    "lerna": "^3.4.3"
+    "eslint": "^5.13.0",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-loader": "^2.1.2",
+    "eslint-plugin-flowtype": "^3.4.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "lerna": "^3.4.3",
+    "lint-staged": "^8.1.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "{test,js}/**/*.js": [
+      "prettier --write --single-quote --use-tabs --trailing-comma es5",
+      "eslint",
+      "git add"
+    ]
   }
 }
