@@ -3,5 +3,5 @@
 const swarmComponents = require('..');
 
 describe('swarm-components', () => {
-    it('needs tests');
+	it('needs tests');
 });

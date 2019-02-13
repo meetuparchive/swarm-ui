@@ -1,0 +1,14 @@
+{
+	"printWidth": 86,
+	"singleQuote": true,
+	"trailingComma": "es5",
+	"useTabs": true,
+	"overrides": [
+		{
+			"files": "packages/swarm-styles/lib/**/**/*.css",
+			"options": {
+				"singleQuote": false
+			}
+		}
+	]
+}
