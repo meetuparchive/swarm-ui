@@ -4,7 +4,13 @@ import SelectExample from '../components/selectExample';
 # Select
 
 ```.jsx
-<Select label="Swarm Select" id="swarm-select" name="swarm-select">
+<Select
+    value="A"
+    label="Swarm Select"
+    id="swarm-select"
+    name="swarm-select"
+    onChange={(e) => alert(e.target.value)}
+>
     <option value="A">
         A
     </option>
