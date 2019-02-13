@@ -5,3 +5,4 @@ export { default as Radio } from './Radio';
 export { default as TextInput } from './TextInput';
 export { default as Toggle } from './Toggle';
 export { default as TogglePill } from './TogglePill';
+export { default as Select } from './Select';
