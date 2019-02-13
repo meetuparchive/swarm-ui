@@ -23,10 +23,12 @@ const Select = props => {
     name: name,
     id: id || name,
     required: Boolean(required)
-  }, other)), React.createElement(Icon, {
+  }, other)), React.createElement("span", {
+    "data-swarm-select-arrow": "chevron-down"
+  }, React.createElement(Icon, {
     shape: "chevron-down",
     size: "xs"
-  }));
+  })));
 };
 
 export default Select;

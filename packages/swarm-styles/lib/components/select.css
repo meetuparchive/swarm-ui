@@ -1,0 +1,31 @@
+[data-swarm-select] {
+    display:flex;
+    /* display:block; */
+}
+
+[data-swarm-select] select {
+    -webkit-appearance: none;
+	-moz-appearance: none;
+    appearance: none;
+    padding-top: var(--size-space-default);
+    padding-right: var(--size-space-double);
+    padding-bottom: var(--size-space-default);
+    padding-left: var(--size-space-default);
+    width: 100%;
+}
+
+[data-swarm-select-arrow] {
+    justify-content: flex-end;
+    /*
+    display: inline-block;
+    padding-right: var(--size-space-half);
+    position:absolute;
+    right: var(--size-space-half);
+    bottom: var(--size-space-half);
+    */
+}
+
+[data-swarm-select-arrow] svg {
+    height: 16px;
+    width: 16px;
+}

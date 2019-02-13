@@ -48,7 +48,9 @@ const Select = (props: Props) => {
                 {...other}
             />
 
-            <Icon shape="chevron-down" size="xs" />
+			<span data-swarm-select-arrow="chevron-down">
+            	<Icon shape="chevron-down" size="xs" />
+			</span>
 		</div>
 	);
 };
