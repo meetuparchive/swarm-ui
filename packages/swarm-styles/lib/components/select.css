@@ -1,12 +1,10 @@
-[data-swarm-select] {
-    display:flex;
-    /* display:block; */
+[data-swarm-select-wrapper] {
+    position:relative;
 }
 
 [data-swarm-select] select {
-    -webkit-appearance: none;
-	-moz-appearance: none;
     appearance: none;
+    user-select: none;
     padding-top: var(--size-space-default);
     padding-right: var(--size-space-double);
     padding-bottom: var(--size-space-default);
@@ -15,17 +13,20 @@
 }
 
 [data-swarm-select-arrow] {
-    justify-content: flex-end;
-    /*
     display: inline-block;
-    padding-right: var(--size-space-half);
+    pointer-events: none;
     position:absolute;
-    right: var(--size-space-half);
-    bottom: var(--size-space-half);
-    */
+    right: var(--size-space-default);
+    bottom: var(--size-space-default);
 }
 
 [data-swarm-select-arrow] svg {
-    height: 16px;
-    width: 16px;
+    height: var(--size-space-default);
+    width: var(--size-space-default);
+    align-self: center;
+    vertical-align: middle;
+    overflow: hidden;
+    font-size: 0;
+    position: relative;
+    display: inline-flex;
 }

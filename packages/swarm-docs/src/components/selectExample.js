@@ -1,11 +1,11 @@
-import React from 'react'
-import { Select } from '@meetup/swarm-components'
+import React from 'react';
+import { Select } from '@meetup/swarm-components';
 
 const SelectExample = () => {
   const [value, setValue] = React.useState('geoffrey');
 
   return (
-    <>
+    <div style={{width: 300}}>
       <Select
         value={value}
         label="Select a name for your horse"
@@ -23,7 +23,7 @@ const SelectExample = () => {
             Mister Chompy
           </option>
       </Select>
-    </>
+    </div>
   )
 }
 

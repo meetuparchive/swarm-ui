@@ -19,7 +19,9 @@ const Select = props => {
   }, label && React.createElement("label", {
     htmlFor: name,
     "data-requiredtext": "*"
-  }, label), helperText && React.createElement("div", null, helperText), React.createElement("select", _extends({
+  }, label), helperText && React.createElement("div", null, helperText), React.createElement("div", {
+    "data-swarm-select-wrapper": "1"
+  }, React.createElement("select", _extends({
     name: name,
     id: id || name,
     required: Boolean(required)
@@ -28,7 +30,7 @@ const Select = props => {
   }, React.createElement(Icon, {
     shape: "chevron-down",
     size: "xs"
-  })));
+  }))));
 };
 
 export default Select;

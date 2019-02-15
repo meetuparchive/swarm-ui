@@ -41,16 +41,18 @@ const Select = (props: Props) => {
                 </div>
             )}
 
-            <select
-                name={name}
-                id={id || name}
-                required={Boolean(required)}
-                {...other}
-            />
+			<div data-swarm-select-wrapper="1">
+				<select
+					name={name}
+					id={id || name}
+					required={Boolean(required)}
+					{...other}
+				/>
 
-			<span data-swarm-select-arrow="chevron-down">
-            	<Icon shape="chevron-down" size="xs" />
-			</span>
+				<span data-swarm-select-arrow="chevron-down">
+					<Icon shape="chevron-down" size="xs" />
+				</span>
+			</div>
 		</div>
 	);
 };
