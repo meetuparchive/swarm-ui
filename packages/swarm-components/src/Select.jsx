@@ -24,8 +24,12 @@ const Select = (props: Props) => {
 		...other
 	} = props;
 
+	const selectState = disabled
+		? 'disabled'
+		: (error ? 'error' : 'default');
+
 	return (
-		<div data-swarm-select={disabled ? 'disabled' : 'default'}>
+		<div data-swarm-select={selectState}>
 			{label && (
 				<label
 					htmlFor={name}

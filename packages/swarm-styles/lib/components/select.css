@@ -29,6 +29,11 @@
     border: none;
 }
 
+[data-swarm-select="error"] select {
+    border-color: var(--color-alert-red);
+    box-shadow:none;
+}
+
 [data-swarm-select-arrow] {
     display: inline-block;
     pointer-events: none;

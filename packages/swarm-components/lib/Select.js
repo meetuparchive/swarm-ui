@@ -14,8 +14,9 @@ const Select = props => {
     required,
     ...other
   } = props;
+  const selectState = disabled ? 'disabled' : error ? 'error' : 'default';
   return React.createElement("div", {
-    "data-swarm-select": disabled ? 'disabled' : 'default'
+    "data-swarm-select": selectState
   }, label && React.createElement("label", {
     htmlFor: name,
     "data-requiredtext": "*"
