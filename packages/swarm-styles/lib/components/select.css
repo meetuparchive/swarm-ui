@@ -10,6 +10,17 @@
     padding-bottom: var(--size-space-default);
     padding-left: var(--size-space-default);
     width: 100%;
+    border: 1px solid var(--color-gray-3);
+}
+
+[data-swarm-select] select:hover {
+    border-color: var(--color-gray-5);
+}
+
+[data-swarm-select] select:focus {
+    border-color: var(--color-viridian);
+    box-shadow: none;
+    outline: none;
 }
 
 [data-swarm-select-arrow] {
