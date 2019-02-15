@@ -11,21 +11,22 @@ const Select = props => {
     id,
     label,
     name,
-    required,
+    requiredText,
     ...other
   } = props;
   const selectState = disabled ? 'disabled' : error ? 'error' : 'default';
   return React.createElement("div", {
     "data-swarm-select": selectState
   }, label && React.createElement("label", {
-    htmlFor: name,
-    "data-requiredtext": "*"
-  }, label), helperText && React.createElement("div", null, helperText), React.createElement("div", {
+    htmlFor: name
+  }, label, requiredText ? React.createElement("span", null, " ", requiredText) : ''), helperText && React.createElement("p", {
+    "data-swarm-select-helper-text": "1"
+  }, helperText), React.createElement("div", {
     "data-swarm-select-wrapper": "1"
   }, React.createElement("select", _extends({
     name: name,
     id: id || name,
-    required: required,
+    required: Boolean(requiredText),
     disabled: disabled
   }, other)), React.createElement("span", {
     "data-swarm-select-arrow": "chevron-down"
