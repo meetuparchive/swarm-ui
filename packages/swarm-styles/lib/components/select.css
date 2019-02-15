@@ -11,7 +11,7 @@
     padding-left: var(--size-space-default);
     width: 100%;
     border: 1px solid var(--color-gray-3);
-    box-shadow: 0px 1px 3px 0px var(--color-gray-5);
+    /* box-shadow: 0px 1px 3px 0px var(--color-gray-5); */
 }
 
 [data-swarm-select] select:hover {
@@ -25,13 +25,11 @@
 
 [data-swarm-select="disabled"] select {
     background-color: var(--color-gray-2);
-    box-shadow: none;
     border: none;
 }
 
 [data-swarm-select="error"] select {
     border-color: var(--color-alert-red);
-    box-shadow:none;
 }
 
 [data-swarm-select-arrow] {
