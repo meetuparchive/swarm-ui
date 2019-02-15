@@ -45,7 +45,8 @@ const Select = (props: Props) => {
 				<select
 					name={name}
 					id={id || name}
-					required={Boolean(required)}
+					required={required}
+					disabled={disabled}
 					{...other}
 				/>
 

@@ -24,7 +24,8 @@ const Select = props => {
   }, React.createElement("select", _extends({
     name: name,
     id: id || name,
-    required: Boolean(required)
+    required: required,
+    disabled: disabled
   }, other)), React.createElement("span", {
     "data-swarm-select-arrow": "chevron-down"
   }, React.createElement(Icon, {

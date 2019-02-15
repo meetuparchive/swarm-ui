@@ -23,6 +23,12 @@
     outline: none;
 }
 
+[data-swarm-select="disabled"] select {
+    background-color: var(--color-gray-2);
+    box-shadow: none;
+    border: none;
+}
+
 [data-swarm-select-arrow] {
     display: inline-block;
     pointer-events: none;
