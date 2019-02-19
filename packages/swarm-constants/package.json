@@ -29,7 +29,5 @@
     "bundlesize": "^0.17.0",
     "style-dictionary": "hsbacot/style-dictionary#buxfix/css-comments"
   },
-  "dependencies": {
-    "meetup-web-components": "6.1.2645-beta"
-  }
+  "dependencies": {}
 }
