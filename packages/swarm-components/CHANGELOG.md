@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.2.0...@meetup/swarm-components@0.3.0) (2019-02-19)
+
+
+### Features
+
+* removing meetup-web-components dependency ([ac8e398](https://github.com/meetup/swarm-ui/commit/ac8e398))
+
+
+
+
+
 # [0.2.0](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.1.2...@meetup/swarm-components@0.2.0) (2019-02-13)
 
 

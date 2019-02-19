@@ -1,6 +1,6 @@
 {
   "name": "@meetup/swarm-constants",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "style constants for swarm ui",
   "author": "hsbacot <hsbacot@gmail.com>",
   "homepage": "https://github.com/meetup/swarm-ui#readme",
@@ -28,6 +28,5 @@
   "devDependencies": {
     "bundlesize": "^0.17.0",
     "style-dictionary": "hsbacot/style-dictionary#buxfix/css-comments"
-  },
-  "dependencies": {}
+  }
 }

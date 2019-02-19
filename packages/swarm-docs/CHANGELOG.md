@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.2.4...@meetup/swarm-docs@0.3.0) (2019-02-19)
+
+
+### Bug Fixes
+
+* tesing travis build on pr ([8982fb7](https://github.com/gatsbyjs/gatsby-starter-default/commit/8982fb7))
+
+
+### Features
+
+* removing meetup-web-components dependency ([ac8e398](https://github.com/gatsbyjs/gatsby-starter-default/commit/ac8e398))
+
+
+
+
+
 ## [0.2.4](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.2.3...@meetup/swarm-docs@0.2.4) (2019-02-13)
 
 
