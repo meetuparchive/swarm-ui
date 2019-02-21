@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.3.0...@meetup/swarm-docs@0.3.1) (2019-02-21)
+
+
+### Bug Fixes
+
+* updating constants dependency ([743966f](https://github.com/gatsbyjs/gatsby-starter-default/commit/743966f))
+
+
+
+
+
 # [0.3.0](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.2.4...@meetup/swarm-docs@0.3.0) (2019-02-19)
 
 
