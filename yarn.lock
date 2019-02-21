@@ -1448,25 +1448,6 @@
     hoist-non-react-statics "^2.5.5"
     prop-types "^15.6.1"
 
-"@meetup/swarm-components@^0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@meetup/swarm-components/-/swarm-components-0.0.1.tgz#16edea0c7849e000e67d496b21d5724770cb4eef"
-  integrity sha512-Yk09tPcEd5WSBnZpjaI3OaulMW7gbKUC+tflH3ygndAmO1Mt7eT8qyVSYpZTHtUuM9xXoZVzd45SZ42DCva1Cg==
-  dependencies:
-    "@meetup/swarm-constants" "^0.0.2"
-    classnames "^2.2.6"
-    html-loader "^0.5.5"
-    meetup-web-components "6.1.2645-beta"
-    swarm-icons "^3.8.354"
-
-"@meetup/swarm-constants@^0.0.2":
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/@meetup/swarm-constants/-/swarm-constants-0.0.2.tgz#0cb09f4e9ce9b808eba5bdf399c7c82d38da5e17"
-  integrity sha512-UFvwrFPOR8NwoH141E2e4IQ64wgfRuj7p43X6cpNzCAKcN0pol4LE2B3G61BC1ij/+72w1OwN4ytVaVWTZxa8w==
-  dependencies:
-    "@meetup/swarm-components" "^0.0.1"
-    meetup-web-components "6.1.2645-beta"
-
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
@@ -2236,11 +2217,6 @@ autoprefixer@^9.3.1, autoprefixer@^9.4.3:
     num2fraction "^1.2.2"
     postcss "^7.0.14"
     postcss-value-parser "^3.3.1"
-
-autosize@3.0.21:
-  version "3.0.21"
-  resolved "https://registry.yarnpkg.com/autosize/-/autosize-3.0.21.tgz#f182f40d17757d978a139a4c9ca40c4c0e448603"
-  integrity sha1-8YL0DRd1fZeKE5pMnKQMTA5EhgM=
 
 aws-sign2@~0.7.0:
   version "0.7.0"
@@ -3185,11 +3161,6 @@ change-case@^3.0.2:
     title-case "^2.1.0"
     upper-case "^1.1.1"
     upper-case-first "^1.1.0"
-
-change-emitter@^0.1.2:
-  version "0.1.6"
-  resolved "https://registry.yarnpkg.com/change-emitter/-/change-emitter-0.1.6.tgz#e8b2fe3d7f1ab7d69a32199aff91ea6931409515"
-  integrity sha1-6LL+PX8at9aaMhma/5HqaTFAlRU=
 
 character-entities-html4@^1.0.0:
   version "1.1.2"
@@ -4794,11 +4765,6 @@ download@^7.1.0:
     p-event "^2.1.0"
     pify "^3.0.0"
 
-downshift@1.31.12:
-  version "1.31.12"
-  resolved "https://registry.yarnpkg.com/downshift/-/downshift-1.31.12.tgz#78be425583234f18774fc37643eba17a776a91db"
-  integrity sha512-v9OCGFX6Zp/PUW6dlX7qTn5ee4ykdqCGwYQfwdKbehxdJB1heRdsms0Anmu/Eu0yH/0lF1JEYtXgODMjVfaPUA==
-
 duplexer3@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/duplexer3/-/duplexer3-0.1.4.tgz#ee01dd1cac0ed3cbc7fdbea37dc0a8f1ce002ce2"
@@ -5866,11 +5832,6 @@ flat@^4.0.0:
   dependencies:
     is-buffer "~2.0.3"
 
-flatpickr@^4.3.2:
-  version "4.5.2"
-  resolved "https://registry.yarnpkg.com/flatpickr/-/flatpickr-4.5.2.tgz#47c8ad472a096e5fb7e74b809b0703535383f20d"
-  integrity sha512-jDy4QYGpmiy7+Qk8QvKJ4spjDdxcx9cxMydmq1x427HkKWBw0qizLYeYM2F6tMcvvqGjU5VpJS55j4LnsaBblA==
-
 flatted@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-2.0.0.tgz#55122b6536ea496b4b44893ee2608141d10d9916"
@@ -5893,20 +5854,6 @@ fn-name@~2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/fn-name/-/fn-name-2.0.1.tgz#5214d7537a4d06a4a301c0cc262feb84188002e7"
   integrity sha1-UhTXU3pNBqSjAcDMJi/rhBiAAuc=
-
-focus-trap-react@3.1.2:
-  version "3.1.2"
-  resolved "https://registry.yarnpkg.com/focus-trap-react/-/focus-trap-react-3.1.2.tgz#4dd021ccd028bbd3321147d132cdf7585d6d1394"
-  integrity sha512-MoQmONoy9gRPyrC5DGezkcOMGgx7MtIOAQDHe098UtL2sA2vmucJwEmQisb+8LRXNYFHxuw5zJ1oLFeKu4Mteg==
-  dependencies:
-    focus-trap "^2.0.1"
-
-focus-trap@^2.0.1:
-  version "2.4.6"
-  resolved "https://registry.yarnpkg.com/focus-trap/-/focus-trap-2.4.6.tgz#332b475b317cec6a4a129f5307ce7ebc0da90b40"
-  integrity sha512-vWZTPtBU6pBoyWZDRZJHkXsyP2ZCZBHE3DRVXnSVdQKH/mcDtu9S5Kz8CUDyIqpfZfLEyI9rjKJLnc4Y40BRBg==
-  dependencies:
-    tabbable "^1.0.3"
 
 follow-redirects@1.0.0:
   version "1.0.0"
@@ -7025,7 +6972,7 @@ hoek@4.x.x:
   resolved "https://registry.yarnpkg.com/hoek/-/hoek-4.2.1.tgz#9634502aa12c445dd5a7c5734b572bb8738aacbb"
   integrity sha512-QLg82fGkfnJ/4iy1xZ81/9SIJiq1NGFUMGs6ParyjBZr6jW2Ufj/snDqTHixNlHdPNwN2RLVD0Pi3igeK9+JfA==
 
-hoist-non-react-statics@^2.3.1, hoist-non-react-statics@^2.5.0, hoist-non-react-statics@^2.5.5:
+hoist-non-react-statics@^2.5.0, hoist-non-react-statics@^2.5.5:
   version "2.5.5"
   resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-2.5.5.tgz#c5903cf409c0dfd908f388e619d86b9c1174cb47"
   integrity sha512-rqcy4pJo55FTTLWt+bU8ukscqHeE/e9KWvsOW2b/a3afxQZhwkQdT1rPPCJ0rYXdj4vNcasY8zHTH+jF/qStxw==
@@ -9011,19 +8958,6 @@ media-typer@0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/media-typer/-/media-typer-0.3.0.tgz#8710d7af0aa626f8fffa1ce00168545263255748"
   integrity sha1-hxDXrwqmJvj/+hzgAWhUUmMlV0g=
-
-meetup-web-components@6.1.2645-beta:
-  version "6.1.2645-beta"
-  resolved "https://registry.yarnpkg.com/meetup-web-components/-/meetup-web-components-6.1.2645-beta.tgz#5c2c1d42008274c8ed421706f6cc84bbe5a1f7f2"
-  integrity sha512-Ny5XiB4U+iOztbXKb99aaySnvoPIs3zwhNd+qk+zAoxRCz0w6WvFrPBUKvAP6AWms8yd+BazxfOXg5dDr21i/w==
-  dependencies:
-    autosize "3.0.21"
-    downshift "1.31.12"
-    focus-trap-react "3.1.2"
-    raf-schd "2.1.0"
-    react-flatpickr "3.6.4"
-    react-portal "4.1.2"
-    recompose "0.26.0"
 
 mem@^1.1.0:
   version "1.1.0"
@@ -11223,7 +11157,7 @@ promzard@^0.3.0:
   dependencies:
     read "1"
 
-prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.5.8, prop-types@^15.6.1, prop-types@^15.6.2:
+prop-types@^15.5.4, prop-types@^15.5.8, prop-types@^15.6.1, prop-types@^15.6.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -11376,11 +11310,6 @@ quick-lru@^1.0.0:
   resolved "https://registry.yarnpkg.com/quick-lru/-/quick-lru-1.1.0.tgz#4360b17c61136ad38078397ff11416e186dcfbb8"
   integrity sha1-Q2CxfGETatOAeDl/8RQW4Ybc+7g=
 
-raf-schd@2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/raf-schd/-/raf-schd-2.1.0.tgz#64d645723380ec25cc1714e909b953ef1cf254bf"
-  integrity sha512-6OXM6ObuPnyqjiHVz/XaFTm/yEYC1PXYMt/UFCwMvLQK1Wqlc2f7eU4+8JbgjfZLiQNQU9miFEGPnFUEMEx2hA==
-
 randomatic@^3.0.0:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/randomatic/-/randomatic-3.1.1.tgz#b776efc59375984e36c537b2f51a1f0aff0da1ed"
@@ -11483,14 +11412,6 @@ react-error-overlay@^3.0.0:
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-3.0.0.tgz#c2bc8f4d91f1375b3dad6d75265d51cd5eeaf655"
   integrity sha512-XzgvowFrwDo6TWcpJ/WTiarb9UI6lhA4PMzS7n1joK3sHfBBBOQHUc0U4u57D6DWO9vHv6lVSWx2Q/Ymfyv4hw==
 
-react-flatpickr@3.6.4:
-  version "3.6.4"
-  resolved "https://registry.yarnpkg.com/react-flatpickr/-/react-flatpickr-3.6.4.tgz#41a8406d00d787b629839ae1f5a01ed3bb6e84ac"
-  integrity sha512-s7nCzPvfddkDVQLlwDj8y5iCYVybUGwOQnGt2oyMe7OamteUeF8wt0TCSpeq5WFOCywne/7+7zvrPco/dTq/9Q==
-  dependencies:
-    flatpickr "^4.3.2"
-    prop-types "^15.5.10"
-
 react-helmet@^5.2.0:
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/react-helmet/-/react-helmet-5.2.0.tgz#a81811df21313a6d55c5f058c4aeba5d6f3d97a7"
@@ -11538,13 +11459,6 @@ react-live@^1.12.0:
     prismjs "1.6"
     prop-types "^15.5.8"
     unescape "^0.2.0"
-
-react-portal@4.1.2:
-  version "4.1.2"
-  resolved "https://registry.yarnpkg.com/react-portal/-/react-portal-4.1.2.tgz#7f28f3c8c2ed5c541907c0ed0f24e8996acf627f"
-  integrity sha512-SJXarj4bMfV2lf3SGEDoBQHyht3qGW+bMj7fWDPVLHt4FmIJI98+7JaYtV4OOi6SZMEcVk9iKBc/IO3MEAnLKw==
-  dependencies:
-    prop-types "^15.5.8"
 
 react-side-effect@^1.1.0:
   version "1.1.5"
@@ -11741,16 +11655,6 @@ recast@~0.11.12:
     esprima "~3.1.0"
     private "~0.1.5"
     source-map "~0.5.0"
-
-recompose@0.26.0:
-  version "0.26.0"
-  resolved "https://registry.yarnpkg.com/recompose/-/recompose-0.26.0.tgz#9babff039cb72ba5bd17366d55d7232fbdfb2d30"
-  integrity sha512-KwOu6ztO0mN5vy3+zDcc45lgnaUoaQse/a5yLVqtzTK13czSWnFGmXbQVmnoMgDkI5POd1EwIKSbjU1V7xdZog==
-  dependencies:
-    change-emitter "^0.1.2"
-    fbjs "^0.8.1"
-    hoist-non-react-statics "^2.3.1"
-    symbol-observable "^1.0.4"
 
 recursive-readdir@2.2.1:
   version "2.2.1"
@@ -13272,7 +13176,7 @@ swarm-icons@^3.8.354:
   resolved "https://registry.yarnpkg.com/swarm-icons/-/swarm-icons-3.8.354.tgz#c248865e8ddedaeed8ef62eac3c1c98ff82fa2e2"
   integrity sha512-kM7sQcRKSYQvO6/e9ggASA98a6qXVZIepbSzER74r+LeSWQqlfDSdcNu8TzaDL2D7TEC2wqoxp4JGu50ZQAR/w==
 
-symbol-observable@^1.0.4, symbol-observable@^1.1.0, symbol-observable@^1.2.0:
+symbol-observable@^1.1.0, symbol-observable@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.2.0.tgz#c22688aed4eab3cdc2dfeacbb561660560a00804"
   integrity sha512-e900nM8RRtGhlV36KGEU9k65K3mPb1WV70OdjfxlG2EAuM1noi/E/BaW/uMhL7bPEssK8QV57vN3esixjUvcXQ==
@@ -13286,11 +13190,6 @@ synchronous-promise@^2.0.5:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/synchronous-promise/-/synchronous-promise-2.0.6.tgz#de76e0ea2b3558c1e673942e47e714a930fa64aa"
   integrity sha512-TyOuWLwkmtPL49LHCX1caIwHjRzcVd62+GF6h8W/jHOeZUFHpnd2XJDVuUlaTaLPH1nuu2M69mfHr5XbQJnf/g==
-
-tabbable@^1.0.3:
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/tabbable/-/tabbable-1.1.3.tgz#0e4ee376f3631e42d7977a074dbd2b3827843081"
-  integrity sha512-nOWwx35/JuDI4ONuF0ZTo6lYvI0fY0tZCH1ErzY2EXfu4az50ZyiUX8X073FLiZtmWUVlkRnuXsehjJgCw9tYg==
 
 table@^5.2.3:
   version "5.2.3"
