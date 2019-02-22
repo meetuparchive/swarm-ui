@@ -1,21 +1,17 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
-import { StaticQuery, graphql } from 'gatsby'
-import Header from './header'
-import { setConfig } from 'react-hot-loader'
+import React from 'react';
+import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
+import { StaticQuery, graphql } from 'gatsby';
+import Header from './header';
+import { setConfig } from 'react-hot-loader';
 // icon sprite
-// hacks to include generated sprite with html-loader. line 50
-import './layout.css'
-// old swarm styles
 // import 'meetup-web-components/assets/css/main.css'
-// import 'styles/dist/main.css'
-import '../assets/graphik.css'
-import '@meetup/swarm-styles/dist/main.css'
-import '@meetup/swarm-styles/dist/global.css'
-import '../assets/docs.css'
+import '../assets/graphik.css';
+import '@meetup/swarm-styles/dist/main.css';
+import '@meetup/swarm-styles/dist/global.css';
+import '../assets/docs.css';
 
-setConfig({ pureSFC: true })
+setConfig({ pureSFC: true });
 
 const Layout = ({ children }) => {
   return (
@@ -61,11 +57,11 @@ const Layout = ({ children }) => {
         </>
       )}
     />
-  )
-}
+  );
+};
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Layout
+export default Layout;
