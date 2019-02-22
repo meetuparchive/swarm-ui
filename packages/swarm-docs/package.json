@@ -28,6 +28,7 @@
     "react-dom": "^16.8.0",
     "react-helmet": "^5.2.0",
     "react-live": "^1.12.0",
+    "retoggle": "^0.2.1",
     "serve": "^10.0.2",
     "swarm-icons": "^3.8.354"
   },

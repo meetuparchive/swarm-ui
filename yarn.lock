@@ -12036,6 +12036,11 @@ retext@^5.0.0:
     retext-stringify "^2.0.0"
     unified "^6.0.0"
 
+retoggle@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/retoggle/-/retoggle-0.2.1.tgz#418e453fee8d9e8dd30d9ed754e50ea08c2f1171"
+  integrity sha512-z5kSgZIx02QsfTGLTzfc/+X8WcSldqBZCR+8MqzCuzhPJNp317hwTqiLn3V2+JmoECaYyetZYjFej6Kt0W8drg==
+
 retry@^0.10.0:
   version "0.10.1"
   resolved "https://registry.yarnpkg.com/retry/-/retry-0.10.1.tgz#e76388d217992c252750241d3d3956fed98d8ff4"
