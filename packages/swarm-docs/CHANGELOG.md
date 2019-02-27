@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.3.1...@meetup/swarm-docs@0.4.0) (2019-02-27)
+
+
+### Bug Fixes
+
+* adding swarm styles to markdown nodes ([e5ad726](https://github.com/gatsbyjs/gatsby-starter-default/commit/e5ad726))
+* button example included ([2358b9c](https://github.com/gatsbyjs/gatsby-starter-default/commit/2358b9c))
+* removed gatsby layout resets ([b57f3f0](https://github.com/gatsbyjs/gatsby-starter-default/commit/b57f3f0))
+
+
+### Features
+
+* adding retoggle library and demo on buttons ([ed5bcc4](https://github.com/gatsbyjs/gatsby-starter-default/commit/ed5bcc4))
+
+
+
+
+
 ## [0.3.1](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.3.0...@meetup/swarm-docs@0.3.1) (2019-02-21)
 
 
