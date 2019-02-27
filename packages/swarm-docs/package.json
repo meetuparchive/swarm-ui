@@ -25,10 +25,10 @@
     "gatsby-transformer-sharp": "^2.1.4",
     "html-loader": "^0.5.5",
     "react": "^16.8.0",
+    "react-docgen-loader": "^2.9.1",
     "react-dom": "^16.8.0",
     "react-helmet": "^5.2.0",
     "react-live": "^1.12.0",
-    "retoggle": "^0.2.1",
     "serve": "^10.0.2",
     "swarm-icons": "^3.8.354"
   },
@@ -45,6 +45,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "babel-plugin-react-docgen": "^2.0.2",
     "bundlesize": "^0.17.0",
     "prettier": "^1.14.2"
   },

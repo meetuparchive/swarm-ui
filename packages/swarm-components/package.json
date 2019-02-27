@@ -39,6 +39,7 @@
     "@babel/core": "^7.1.6",
     "@babel/preset-flow": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
+    "babel-plugin-react-docgen": "^2.0.2",
     "bundlesize": "^0.17.0",
     "flow-bin": "^0.86.0"
   },

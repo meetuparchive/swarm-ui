@@ -4,15 +4,45 @@ import cx from 'classnames';
 import Icon from './Icon';
 
 type Props = {
+	/**
+	* The bordered button
+	*/
 	bordered?: boolean,
+	/**
+	* Classes for adidtional styles to be applied
+	*/
 	className?: string,
+	/**
+	* Indicates whether the button is disabled or not
+	*/
 	disabled?: boolean,
+	/**
+	* Supports icon classes found at https://meetup.github.io/swarm-icons/
+	*/
 	icon?: string,
+	/**
+	* Inverted styles for dark backgrounds
+	*/
 	inverted?: boolean,
+	/**
+	* The neutral style
+	*/
 	neutral?: boolean,
+	/**
+	* The function invoked when interacting with Button
+	*/
 	onClick?: (*) => void,
+	/**
+	* The primary style
+	*/
 	primary?: boolean,
+	/**
+	* Aligns the icon to the right
+	*/
 	right?: boolean,
+	/**
+	* Use the small button size
+	*/
 	small?: boolean,
 	children: React.Node,
 };

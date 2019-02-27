@@ -43,7 +43,7 @@
 
 [data-swarm-button="primary"]:focus,
 [data-swarm-button="primary"]:active {
-  border: 1px solid var(--color-alert-red)
+  border: 1px solid var(--color-peach)
 }
 
 [data-swarm-button="bordered"]:focus,
@@ -85,8 +85,8 @@
 }
 
 [data-swarm-button="primary"] {
-  background-color: var(--color-meetup-red);
-  border: 1px solid var(--color-meetup-red);
+  background-color: var(--color-peach);
+  border: 1px solid var(--color-peach);
   color: var(--color-white);
 }
 
