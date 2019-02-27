@@ -79,3 +79,42 @@ Icon.defaultProps = {
   size: 's'
 };
 export default Icon;
+Icon.__docgenInfo = {
+  "description": "Icon component used to insert an svg icon into a component or page\n\n**Accessibility** If an Icon is used on its own without supporting\ntext to explain what it is/does, be a good citizen and pass in an\n`aria-label` attribute describing what the icon represents\n\n@module Icon",
+  "methods": [],
+  "displayName": "Icon",
+  "props": {
+    "size": {
+      "defaultValue": {
+        "value": "'s'",
+        "computed": false
+      },
+      "required": false,
+      "flowType": {
+        "name": "string"
+      },
+      "description": "Which of our media sizes to render the icon at"
+    },
+    "shape": {
+      "required": true,
+      "flowType": {
+        "name": "string"
+      },
+      "description": "The name of the icon shape to render"
+    },
+    "circle": {
+      "required": false,
+      "flowType": {
+        "name": "boolean"
+      },
+      "description": "Whether the icon is outlined with a circle"
+    },
+    "color": {
+      "required": false,
+      "flowType": {
+        "name": "string"
+      },
+      "description": "What color the icon should be filled with"
+    }
+  }
+};

@@ -24,3 +24,38 @@ const TogglePill = props => {
 };
 
 export default TogglePill;
+TogglePill.__docgenInfo = {
+  "description": "",
+  "methods": [],
+  "displayName": "TogglePill",
+  "props": {
+    "checked": {
+      "required": true,
+      "flowType": {
+        "name": "boolean"
+      },
+      "description": ""
+    },
+    "disabled": {
+      "required": false,
+      "flowType": {
+        "name": "boolean"
+      },
+      "description": ""
+    },
+    "label": {
+      "required": false,
+      "flowType": {
+        "name": "string"
+      },
+      "description": ""
+    },
+    "name": {
+      "required": true,
+      "flowType": {
+        "name": "string"
+      },
+      "description": ""
+    }
+  }
+};
