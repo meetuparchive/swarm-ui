@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 import Header from './header';
+import Nav from './nav';
 import { setConfig } from 'react-hot-loader';
 // icon sprite
 // import 'meetup-web-components/assets/css/main.css'
@@ -23,7 +24,15 @@ const Layout = ({ children }) => {
               title
             }
           }
+        # Get all files for Nav
+        allFile(filter: { extension: { eq: "mdx" } }) {
+          edges {
+            node {
+              name
+            }
+          }
         }
+      }
       `}
       render={data => (
         <>
@@ -38,6 +47,7 @@ const Layout = ({ children }) => {
             {require('swarm-icons/dist/sprite/sprite.inc')}
           </Helmet>
           <Header siteTitle={data.site.siteMetadata.title} />
+          <Nav fileNames={ data.allFile.edges.map( ( value ) => value.node.name ) } />
           <div
             style={{
               margin: '0 auto',
