@@ -46,24 +46,26 @@ const Layout = ({ children }) => {
             <html lang="en" />
             {require('swarm-icons/dist/sprite/sprite.inc')}
           </Helmet>
-          <Header siteTitle={data.site.siteMetadata.title} />
-          <Nav fileNames={ data.allFile.edges.map( ( value ) => value.node.name ) } />
-          <div
-            style={{
-              margin: '0 auto',
-              maxWidth: 960,
-              padding: '0px 1.0875rem 1.45rem',
-              paddingTop: 0,
-            }}
-          >
-            {children}
+          <Nav fileNames={ data.allFile.edges.map((value) => value.node.name)} />
+          <div className="main">
+            <Header siteTitle={data.site.siteMetadata.title} />
             <div
-              dangerouslySetInnerHTML={{
-                __html: require('swarm-icons/dist/sprite/sprite.inc'),
+              style={{
+                margin: '0 auto',
+                maxWidth: 960,
+                padding: '0px 1.0875rem 1.45rem',
+                paddingTop: 0,
               }}
-              style={{ height: 0, overflow: 'hidden' }}
-            />
-          </div>
+            >
+              {children}
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: require('swarm-icons/dist/sprite/sprite.inc'),
+                }}
+                style={{ height: 0, overflow: 'hidden' }}
+              />
+            </div>
+        </div>
         </>
       )}
     />

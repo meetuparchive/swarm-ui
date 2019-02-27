@@ -1,3 +1,15 @@
 .react-live-preview {
   margin: 10px 0;
 }
+
+.left-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 90px;
+  padding: 10px;
+}
+
+.main {
+  margin-left: 100px; 
+}
