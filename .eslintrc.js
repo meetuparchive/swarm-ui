@@ -1,5 +1,5 @@
 const config = {
-  extends: ['eslint:recommended', 'plugin:flowtype/recommended', 'prettier'],
+  extends: ['eslint:recommended', 'plugin:flowtype/recommended', 'plugin:react/recommended', 'prettier'],
   parser: 'babel-eslint',
   parserOptions: {
     ecmaVersion: 6,
