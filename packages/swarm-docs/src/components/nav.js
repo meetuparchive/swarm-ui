@@ -8,7 +8,7 @@ type Props = {
 
 const Nav = (props: Props): React.Element<'div'> => {
     const navItems = props.fileNames.map((name) => (
-        <div key={name}><Link to={`/${name}`} >{name}</Link></div>
+        <div key={name}><Link to={`/${name}`} className="text--link">{name}</Link></div>
     ));
     return <div className="left-nav"><div>{navItems}</div></div>;
 };
