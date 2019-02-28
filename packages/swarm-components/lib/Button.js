@@ -91,7 +91,7 @@ Button.__docgenInfo = {
       "flowType": {
         "name": "string"
       },
-      "description": "Classes for adidtional styles to be applied"
+      "description": "Classes for additional styles to be applied"
     },
     "disabled": {
       "required": false,
