@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 
 const PropsTable = props => {
   const { propMetaData = { props: {} },...rest } = props
-  console.log(props);
   return (
     <table {...rest}>
       <thead>
@@ -17,7 +16,7 @@ const PropsTable = props => {
       </thead>
       <tbody>
         {Object.keys(propMetaData.props).map(key => {
-          const prop = propMetaData[key]
+          const prop = propMetaData.props[key]
           return (
             <tr key={key}>
               <td style={{ color: 'rgb(17, 147, 154)' }}>{key}</td>
