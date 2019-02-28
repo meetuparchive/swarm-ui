@@ -9,7 +9,7 @@ type Props = {
 	*/
 	bordered?: boolean,
 	/**
-	* Classes for adidtional styles to be applied
+	* Classes for additional styles to be applied
 	*/
 	className?: string,
 	/**
