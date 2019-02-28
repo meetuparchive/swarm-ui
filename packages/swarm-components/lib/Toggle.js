@@ -38,3 +38,58 @@ const Toggle = props => {
 };
 
 export default Toggle;
+Toggle.__docgenInfo = {
+  "description": "",
+  "methods": [],
+  "displayName": "Toggle",
+  "props": {
+    "checked": {
+      "required": true,
+      "flowType": {
+        "name": "boolean"
+      },
+      "description": ""
+    },
+    "disabled": {
+      "required": false,
+      "flowType": {
+        "name": "boolean"
+      },
+      "description": ""
+    },
+    "name": {
+      "required": true,
+      "flowType": {
+        "name": "string"
+      },
+      "description": ""
+    },
+    "id": {
+      "required": true,
+      "flowType": {
+        "name": "string"
+      },
+      "description": ""
+    },
+    "onChange": {
+      "required": false,
+      "flowType": {
+        "name": "signature",
+        "type": "function",
+        "raw": "e => null",
+        "signature": {
+          "arguments": [{
+            "name": "",
+            "type": {
+              "name": "e"
+            }
+          }],
+          "return": {
+            "name": "null"
+          }
+        }
+      },
+      "description": ""
+    }
+  }
+};

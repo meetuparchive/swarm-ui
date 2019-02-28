@@ -74,3 +74,101 @@ const Button = props => {
 };
 
 export default Button;
+Button.__docgenInfo = {
+  "description": "",
+  "methods": [],
+  "displayName": "Button",
+  "props": {
+    "bordered": {
+      "required": false,
+      "flowType": {
+        "name": "boolean"
+      },
+      "description": "The bordered button"
+    },
+    "className": {
+      "required": false,
+      "flowType": {
+        "name": "string"
+      },
+      "description": "Classes for additional styles to be applied"
+    },
+    "disabled": {
+      "required": false,
+      "flowType": {
+        "name": "boolean"
+      },
+      "description": "Indicates whether the button is disabled or not"
+    },
+    "icon": {
+      "required": false,
+      "flowType": {
+        "name": "string"
+      },
+      "description": "Supports icon classes found at https://meetup.github.io/swarm-icons/"
+    },
+    "inverted": {
+      "required": false,
+      "flowType": {
+        "name": "boolean"
+      },
+      "description": "Inverted styles for dark backgrounds"
+    },
+    "neutral": {
+      "required": false,
+      "flowType": {
+        "name": "boolean"
+      },
+      "description": "The neutral style"
+    },
+    "onClick": {
+      "required": false,
+      "flowType": {
+        "name": "signature",
+        "type": "function",
+        "raw": "(*) => void",
+        "signature": {
+          "arguments": [{
+            "name": "",
+            "type": {
+              "name": "unknown"
+            }
+          }],
+          "return": {
+            "name": "void"
+          }
+        }
+      },
+      "description": "The function invoked when interacting with Button"
+    },
+    "primary": {
+      "required": false,
+      "flowType": {
+        "name": "boolean"
+      },
+      "description": "The primary style"
+    },
+    "right": {
+      "required": false,
+      "flowType": {
+        "name": "boolean"
+      },
+      "description": "Aligns the icon to the right"
+    },
+    "small": {
+      "required": false,
+      "flowType": {
+        "name": "boolean"
+      },
+      "description": "Use the small button size"
+    },
+    "children": {
+      "required": true,
+      "flowType": {
+        "name": "ReactNode",
+        "raw": "React.Node"
+      },
+      "description": ""
+    }
+  }
+};

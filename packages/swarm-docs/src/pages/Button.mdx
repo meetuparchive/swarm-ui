@@ -1,45 +1,31 @@
 import { Button } from '@meetup/swarm-components'
 import { Icon } from '@meetup/swarm-components'
 import Example from '../components/buttonExample';
+import PropsTable from '../components/propstable';
 
 # Button
-This is a button for swarm 2
-```.jsx
-<Button>Click</Button>
-```
-```.jsx
-<Button primary>Click</Button>
-```
-```.jsx
-<Button neutral>Click</Button>
-```
-```.jsx
-<Button bordered>Click</Button>
-```
-```.jsx
-<Button disabled>Click</Button>
-```
+Buttons are the primary way to interact with content.
 
-<Button bordered>Click</Button>
-
-## Inverted
-<div style={{backgroundColor: 'black'}}>
-    <Button inverted>Inverted</Button>
-</div>
-<div style={{backgroundColor: 'green'}}>
-    <Button inverted>Inverted</Button>
-</div>
-
-## Button V2
-<Button primary icon='arrow-right' right>Hello</Button>
-<Button primary icon='arrow-right'>Hello</Button>
-
-## Icon
-<Icon shape="arrow-right" />
-
-## Button V1
-<button class="button button-primary">old</button>
-
-## Interactive
-
+## Example
 <Example />
+
+## Snippets
+```.jsx
+<>
+<Button>Click</Button>
+<Button primary>Click</Button>
+<Button neutral>Click</Button>
+<Button bordered>Click</Button>
+<Button disabled>Click</Button>
+</>
+```
+
+## Props
+<PropsTable propMetaData={Button.__docgenInfo} />
+
+
+## a11y
+
+Keyboard interactions: The button action should be triggered by the enter and space keys.
+
+

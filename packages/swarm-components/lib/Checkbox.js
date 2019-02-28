@@ -35,3 +35,38 @@ const Checkbox = props => {
 };
 
 export default Checkbox;
+Checkbox.__docgenInfo = {
+  "description": "",
+  "methods": [],
+  "displayName": "Checkbox",
+  "props": {
+    "checked": {
+      "required": true,
+      "flowType": {
+        "name": "boolean"
+      },
+      "description": ""
+    },
+    "disabled": {
+      "required": false,
+      "flowType": {
+        "name": "boolean"
+      },
+      "description": ""
+    },
+    "id": {
+      "required": false,
+      "flowType": {
+        "name": "string"
+      },
+      "description": ""
+    },
+    "name": {
+      "required": true,
+      "flowType": {
+        "name": "string"
+      },
+      "description": ""
+    }
+  }
+};
