@@ -88,7 +88,7 @@ Checkbox.__docgenInfo = {
       "description": "Whether this checkbox is read-only (does not have an onChange function)."
     },
     "children": {
-      "required": true,
+      "required": false,
       "flowType": {
         "name": "ReactNode",
         "raw": "React.Node"
@@ -96,7 +96,7 @@ Checkbox.__docgenInfo = {
       "description": "Child nodes that would be placed if there is no label."
     },
     "label": {
-      "required": true,
+      "required": false,
       "flowType": {
         "name": "string"
       },

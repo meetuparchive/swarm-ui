@@ -26,11 +26,11 @@ export type Props = {
 	/**
 		* Child nodes that would be placed if there is no label.
 	*/
-	children: React.Node,
+	children?: React.Node,
 	/**
 		* A label for your checkbox input. It will not be shown if `children` are passed to the component.
 	*/
-	label: string,
+	label?: string,
 }
 
 // Can not inline css vars as color to Icon. Gray 5 icon fill on disbaled
