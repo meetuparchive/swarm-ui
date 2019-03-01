@@ -1,25 +1,18 @@
-import React from 'react'
-import { TogglePill, Toggle } from '@meetup/swarm-components'
+import React from 'react';
+import { Toggle } from '@meetup/swarm-components';
 
 const Example = () => {
-  const [checked, setChecked] = React.useState(false)
-  const [twoChecked, setTwoChecked] = React.useState(false)
+  const [twoChecked, setTwoChecked] = React.useState(false);
   return (
     <>
-      <TogglePill
-        label="swarm"
-        checked={checked}
-        id="example"
-        onClick={() => setChecked(!checked)}
-      />
-      <br />
+      <label htmlFor="switch-example">Toggle Switch</label>
       <Toggle
         checked={twoChecked}
-        id="example"
-        onChange={() => setTwoChecked(!twoChecked)}
+        id="switch-example"
+        onClick={() => setTwoChecked(!twoChecked)}
       />
     </>
-  )
-}
+  );
+};
 
-export default Example
+export default Example;
