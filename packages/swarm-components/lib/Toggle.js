@@ -11,24 +11,19 @@ const Toggle = props => {
   const {
     checked,
     disabled,
-    id,
-    name,
     ...rest
   } = props;
   const checkedStatus = checked ? 'checked' : 'unchecked';
   const fillIcon = checked ? 'check' : 'cross';
-  return React.createElement("label", _extends({
+  return React.createElement("button", _extends({
     "data-swarm-toggle": checkedStatus,
     role: "checkbox",
+    type: "button",
     "aria-checked": checked,
-    id: id
-  }, rest), React.createElement("input", {
-    type: "checkbox",
+    "aria-readonly": disabled,
     checked: checked,
-    disabled: disabled,
-    name: name,
-    id: id
-  }), React.createElement("span", {
+    disabled: disabled
+  }, rest), React.createElement("span", {
     "data-swarm-toggle-switch-disc": true
   }, React.createElement(Icon, {
     shape: fillIcon,
@@ -48,48 +43,29 @@ Toggle.__docgenInfo = {
       "flowType": {
         "name": "boolean"
       },
-      "description": ""
+      "description": "Indicated whether the toggle is selected"
     },
     "disabled": {
       "required": false,
       "flowType": {
         "name": "boolean"
       },
-      "description": ""
-    },
-    "name": {
-      "required": true,
-      "flowType": {
-        "name": "string"
-      },
-      "description": ""
-    },
-    "id": {
-      "required": true,
-      "flowType": {
-        "name": "string"
-      },
-      "description": ""
+      "description": "Indicated whether the toggle is disabled"
     },
     "onChange": {
       "required": false,
       "flowType": {
         "name": "signature",
         "type": "function",
-        "raw": "e => null",
+        "raw": "() => null",
         "signature": {
-          "arguments": [{
-            "name": "",
-            "type": {
-              "name": "e"
-            }
-          }],
+          "arguments": [],
           "return": {
             "name": "null"
           }
         }
       },
-      "description": ""
+      "description": "Action to be performed when the toggle is interacted with"
     }
   }
 };
