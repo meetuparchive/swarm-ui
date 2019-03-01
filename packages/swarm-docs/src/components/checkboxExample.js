@@ -7,7 +7,7 @@ const Example = () => {
   return (
     <>
       <Checkbox
-        label="swarm"
+        label="here is a label"
         checked={checked}
         id="example"
         onChange={() => setChecked(!checked)}

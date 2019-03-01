@@ -1,19 +1,25 @@
 import { Checkbox } from '@meetup/swarm-components'
 import Example from '../components/checkboxExample'
+import PropsTable from '../components/propstable';
 
 # Checkbox
+A checkbox allows a user to select a value from a small set of options, often binary.
+
+## Example
+<Example />
 
 # Snippets
 ```.jsx
 <>
-<Checkbox label="swarm" checked={1 == 1} />
-<Checkbox label="swarm" checked={1 == 1} />
+<Checkbox label="do this thing" checked={true === true} />
+<Checkbox label="also this thing" checked={true === false} />
 </>
 ```
 
-#Props
+# Props
+<PropsTable propMetaData={Checkbox.__docgenInfo} />
 
+## a11y
 
-<Checkbox label="swarm" checked={1 == 1} />
+Keyboard interactions: Space should activate the checkbox.
 
-<Example />
