@@ -12,7 +12,6 @@ const Checkbox = props => {
     disabled,
     children,
     onChange,
-    readOnly,
     ...rest
   } = props;
   return React.createElement("label", _extends({
@@ -34,7 +33,7 @@ const Checkbox = props => {
     checked: checked,
     disabled: disabled,
     onChange: onChange,
-    readOnly: readOnly
+    readOnly: !onChange || disabled
   }), React.createElement("span", null, label || children));
 };
 
@@ -79,13 +78,6 @@ Checkbox.__docgenInfo = {
         }
       },
       "description": "A callback function that is called when the checkbox is toggled."
-    },
-    "readOnly": {
-      "required": false,
-      "flowType": {
-        "name": "boolean"
-      },
-      "description": "Whether this checkbox is read-only (does not have an onChange function)."
     },
     "children": {
       "required": false,

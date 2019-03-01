@@ -20,10 +20,6 @@ export type Props = {
 	*/
 	onChange?: () => mixed,
 	/**
-		* Whether this checkbox is read-only (does not have an onChange function).
-	*/
-	readOnly?: boolean,
-	/**
 		* Child nodes that would be placed if there is no label.
 	*/
 	children?: React.Node,
@@ -36,7 +32,7 @@ export type Props = {
 // Can not inline css vars as color to Icon. Gray 5 icon fill on disbaled
 const Checkbox = (props: Props): React.Element<'label'> => {
 	const {
-		checked, label, id, disabled, children, onChange, readOnly, ...rest } = props;
+		checked, label, id, disabled, children, onChange, ...rest } = props;
 	return (
 		<label
 			data-swarm-checkbox={disabled ? 'disabled' : 'default'}
@@ -54,7 +50,7 @@ const Checkbox = (props: Props): React.Element<'label'> => {
 					<Icon shape="check" size="xs" color={disabled ? '#A2A2A2' : '#ffffff'} />
 				)}
 			</span>
-			<input type="checkbox" id={id} checked={checked} disabled={disabled} onChange={onChange} readOnly={readOnly} />
+			<input type="checkbox" id={id} checked={checked} disabled={disabled} onChange={onChange} readOnly={!onChange || disabled} />
 			<span>{label || children}</span>
 		</label>
 	);
