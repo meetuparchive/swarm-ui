@@ -10,7 +10,7 @@ export type Props = {
 
 // Can not inline css vars as color to Icon. Gray 5 icon fill on disbaled
 const Checkbox = (props: Props): React.ReactElement<'label'> => {
-	const { checked, label, id = 'a', disabled, children, ...rest } = props;
+	const { checked, label, id = 'a', disabled, onChange, children, ...rest } = props;
 	return (
 		<label
 			data-swarm-checkbox={disabled ? 'disabled' : 'default'}
@@ -20,15 +20,14 @@ const Checkbox = (props: Props): React.ReactElement<'label'> => {
 		>
 			<span
 				data-swarm-checkbox-field={checked ? 'checked' : 'unchecked'}
-				tabIndex="0"
-				role="checkbox"
+				role='checkbox'
 				aria-checked={checked}
 			>
 				{checked && (
 					<Icon shape="check" size="xs" color={disabled ? '#A2A2A2' : '#ffffff'} />
 				)}
 			</span>
-			<input type="checkbox" id={id} checked={checked} disabled={disabled} />
+			<input type="checkbox" id={id} checked={checked} disabled={disabled} onChange={onChange} />
 			<span>{label || children}</span>
 		</label>
 	);
