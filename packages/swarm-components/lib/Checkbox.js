@@ -8,14 +8,16 @@ const Checkbox = props => {
   const {
     checked,
     label,
-    id = 'a',
+    id,
     disabled,
     children,
+    onChange,
+    readOnly,
     ...rest
   } = props;
   return React.createElement("label", _extends({
     "data-swarm-checkbox": disabled ? 'disabled' : 'default',
-    for: id,
+    htmlFor: id,
     disabled: disabled
   }, rest), React.createElement("span", {
     "data-swarm-checkbox-field": checked ? 'checked' : 'unchecked',
@@ -30,7 +32,9 @@ const Checkbox = props => {
     type: "checkbox",
     id: id,
     checked: checked,
-    disabled: disabled
+    disabled: disabled,
+    onChange: onChange,
+    readOnly: readOnly
   }), React.createElement("span", null, label || children));
 };
 
@@ -45,28 +49,58 @@ Checkbox.__docgenInfo = {
       "flowType": {
         "name": "boolean"
       },
-      "description": ""
+      "description": "Whether the box should be checked."
     },
     "disabled": {
       "required": false,
       "flowType": {
         "name": "boolean"
       },
-      "description": ""
+      "description": "Whether the box should be interactive."
     },
     "id": {
       "required": false,
       "flowType": {
         "name": "string"
       },
-      "description": ""
+      "description": "An identifier for the checkbox."
     },
-    "name": {
+    "onChange": {
+      "required": false,
+      "flowType": {
+        "name": "signature",
+        "type": "function",
+        "raw": "() => mixed",
+        "signature": {
+          "arguments": [],
+          "return": {
+            "name": "mixed"
+          }
+        }
+      },
+      "description": "A callback function that is called when the checkbox is toggled."
+    },
+    "readOnly": {
+      "required": false,
+      "flowType": {
+        "name": "boolean"
+      },
+      "description": "Whether this checkbox is read-only (does not have an onChange function)."
+    },
+    "children": {
+      "required": true,
+      "flowType": {
+        "name": "ReactNode",
+        "raw": "React.Node"
+      },
+      "description": "Child nodes that would be placed if there is no label."
+    },
+    "label": {
       "required": true,
       "flowType": {
         "name": "string"
       },
-      "description": ""
+      "description": "A label for your checkbox input. It will not be shown if `children` are passed to the component."
     }
   }
 };

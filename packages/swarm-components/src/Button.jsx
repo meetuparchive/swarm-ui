@@ -1,6 +1,5 @@
 // @flow
 import * as React from 'react';
-import cx from 'classnames';
 import Icon from './Icon';
 
 type Props = {
