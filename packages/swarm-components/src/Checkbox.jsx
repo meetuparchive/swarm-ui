@@ -1,20 +1,42 @@
+// @flow
 import * as React from 'react';
 import Icon from './Icon';
 
 export type Props = {
+	/**
+		* Whether the box should be checked.
+	*/
 	checked: boolean,
+	/**
+		* Whether the box should be interactive.
+	*/
 	disabled?: boolean,
+	/**
+		* An identifier for the checkbox.
+	*/
 	id?: string,
-	name: string,
-};
+	/**
+		* A callback function that is called when the checkbox is toggled.
+	*/
+	onChange?: () => mixed,
+	/**
+		* Child nodes that would be placed if there is no label.
+	*/
+	children?: React.Node,
+	/**
+		* A label for your checkbox input. It will not be shown if `children` are passed to the component.
+	*/
+	label?: string,
+}
 
 // Can not inline css vars as color to Icon. Gray 5 icon fill on disbaled
-const Checkbox = (props: Props): React.ReactElement<'label'> => {
-	const { checked, label, id = 'a', disabled, children, ...rest } = props;
+const Checkbox = (props: Props): React.Element<'label'> => {
+	const {
+		checked, label, id, disabled, children, onChange, ...rest } = props;
 	return (
 		<label
 			data-swarm-checkbox={disabled ? 'disabled' : 'default'}
-			for={id}
+			htmlFor={id}
 			disabled={disabled}
 			{...rest}
 		>
@@ -28,7 +50,7 @@ const Checkbox = (props: Props): React.ReactElement<'label'> => {
 					<Icon shape="check" size="xs" color={disabled ? '#A2A2A2' : '#ffffff'} />
 				)}
 			</span>
-			<input type="checkbox" id={id} checked={checked} disabled={disabled} />
+			<input type="checkbox" id={id} checked={checked} disabled={disabled} onChange={onChange} readOnly={!onChange || disabled} />
 			<span>{label || children}</span>
 		</label>
 	);

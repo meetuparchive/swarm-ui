@@ -1,21 +1,18 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
-import { StaticQuery, graphql } from 'gatsby'
-import Header from './header'
-import { setConfig } from 'react-hot-loader'
+import React from 'react';
+import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
+import { StaticQuery, graphql } from 'gatsby';
+import Header from './header';
+import Nav from './nav';
+import { setConfig } from 'react-hot-loader';
 // icon sprite
-// hacks to include generated sprite with html-loader. line 50
-import './layout.css'
-// old swarm styles
 // import 'meetup-web-components/assets/css/main.css'
-// import 'styles/dist/main.css'
-import '../assets/graphik.css'
-import '@meetup/swarm-styles/dist/main.css'
-import '@meetup/swarm-styles/dist/global.css'
-import '../assets/docs.css'
+import '../assets/graphik.css';
+import '@meetup/swarm-styles/dist/main.css';
+import '@meetup/swarm-styles/dist/global.css';
+import '../assets/docs.css';
 
-setConfig({ pureSFC: true })
+setConfig({ pureSFC: true });
 
 const Layout = ({ children }) => {
   return (
@@ -27,7 +24,15 @@ const Layout = ({ children }) => {
               title
             }
           }
+        # Get all files for Nav
+        allFile(filter: { extension: { eq: "mdx" } }) {
+          edges {
+            node {
+              name
+            }
+          }
         }
+      }
       `}
       render={data => (
         <>
@@ -41,31 +46,34 @@ const Layout = ({ children }) => {
             <html lang="en" />
             {require('swarm-icons/dist/sprite/sprite.inc')}
           </Helmet>
-          <Header siteTitle={data.site.siteMetadata.title} />
-          <div
-            style={{
-              margin: '0 auto',
-              maxWidth: 960,
-              padding: '0px 1.0875rem 1.45rem',
-              paddingTop: 0,
-            }}
-          >
-            {children}
+          <Nav fileNames={ data.allFile.edges.map((value) => value.node.name)} />
+          <div className="main">
+            <Header siteTitle={data.site.siteMetadata.title} />
             <div
-              dangerouslySetInnerHTML={{
-                __html: require('swarm-icons/dist/sprite/sprite.inc'),
+              style={{
+                margin: '0 auto',
+                maxWidth: 960,
+                padding: '0px 1.0875rem 1.45rem',
+                paddingTop: 0,
               }}
-              style={{ height: 0, overflow: 'hidden' }}
-            />
-          </div>
+            >
+              {children}
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: require('swarm-icons/dist/sprite/sprite.inc'),
+                }}
+                style={{ height: 0, overflow: 'hidden' }}
+              />
+            </div>
+        </div>
         </>
       )}
     />
-  )
-}
+  );
+};
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Layout
+export default Layout;

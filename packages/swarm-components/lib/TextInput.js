@@ -39,3 +39,73 @@ TextInput.defaultProps = {
   requiredText: '*'
 };
 export default TextInput;
+TextInput.__docgenInfo = {
+  "description": "@module TextInput",
+  "methods": [],
+  "displayName": "TextInput",
+  "props": {
+    "requiredText": {
+      "defaultValue": {
+        "value": "'*'",
+        "computed": false
+      },
+      "required": false
+    },
+    "disabled": {
+      "required": false,
+      "flowType": {
+        "name": "boolean"
+      },
+      "description": ""
+    },
+    "error": {
+      "required": false,
+      "flowType": {
+        "name": "boolean"
+      },
+      "description": ""
+    },
+    "id": {
+      "required": false,
+      "flowType": {
+        "name": "string"
+      },
+      "description": ""
+    },
+    "isSearch": {
+      "required": false,
+      "flowType": {
+        "name": "boolean"
+      },
+      "description": ""
+    },
+    "label": {
+      "required": false,
+      "flowType": {
+        "name": "string"
+      },
+      "description": ""
+    },
+    "name": {
+      "required": true,
+      "flowType": {
+        "name": "string"
+      },
+      "description": ""
+    },
+    "pattern": {
+      "required": false,
+      "flowType": {
+        "name": "string"
+      },
+      "description": ""
+    },
+    "value": {
+      "required": true,
+      "flowType": {
+        "name": "string"
+      },
+      "description": ""
+    }
+  }
+};

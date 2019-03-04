@@ -3,6 +3,51 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.3.1...@meetup/swarm-docs@0.4.0) (2019-02-27)
+
+
+### Bug Fixes
+
+* adding swarm styles to markdown nodes ([e5ad726](https://github.com/gatsbyjs/gatsby-starter-default/commit/e5ad726))
+* button example included ([2358b9c](https://github.com/gatsbyjs/gatsby-starter-default/commit/2358b9c))
+* removed gatsby layout resets ([b57f3f0](https://github.com/gatsbyjs/gatsby-starter-default/commit/b57f3f0))
+
+
+### Features
+
+* adding retoggle library and demo on buttons ([ed5bcc4](https://github.com/gatsbyjs/gatsby-starter-default/commit/ed5bcc4))
+
+
+
+
+
+## [0.3.1](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.3.0...@meetup/swarm-docs@0.3.1) (2019-02-21)
+
+
+### Bug Fixes
+
+* updating constants dependency ([743966f](https://github.com/gatsbyjs/gatsby-starter-default/commit/743966f))
+
+
+
+
+
+# [0.3.0](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.2.4...@meetup/swarm-docs@0.3.0) (2019-02-19)
+
+
+### Bug Fixes
+
+* tesing travis build on pr ([8982fb7](https://github.com/gatsbyjs/gatsby-starter-default/commit/8982fb7))
+
+
+### Features
+
+* removing meetup-web-components dependency ([ac8e398](https://github.com/gatsbyjs/gatsby-starter-default/commit/ac8e398))
+
+
+
+
+
 ## [0.2.4](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.2.3...@meetup/swarm-docs@0.2.4) (2019-02-13)
 
 

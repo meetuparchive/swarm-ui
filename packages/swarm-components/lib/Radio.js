@@ -35,3 +35,52 @@ const Radio = props => {
 };
 
 export default Radio;
+Radio.__docgenInfo = {
+  "description": "",
+  "methods": [],
+  "displayName": "Radio",
+  "props": {
+    "checked": {
+      "required": true,
+      "flowType": {
+        "name": "boolean"
+      },
+      "description": ""
+    },
+    "disabled": {
+      "required": false,
+      "flowType": {
+        "name": "boolean"
+      },
+      "description": ""
+    },
+    "id": {
+      "required": false,
+      "flowType": {
+        "name": "string"
+      },
+      "description": ""
+    },
+    "value": {
+      "required": true,
+      "flowType": {
+        "name": "string"
+      },
+      "description": ""
+    },
+    "label": {
+      "required": false,
+      "flowType": {
+        "name": "string"
+      },
+      "description": ""
+    },
+    "name": {
+      "required": true,
+      "flowType": {
+        "name": "string"
+      },
+      "description": ""
+    }
+  }
+};

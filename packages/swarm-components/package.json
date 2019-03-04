@@ -1,6 +1,6 @@
 {
   "name": "@meetup/swarm-components",
-  "version": "0.2.0",
+  "version": "0.3.1",
   "description": "Web Components for Swarm",
   "author": "hsbacot <hsbacot@gmail.com>",
   "homepage": "https://github.com/meetup/swarm-ui#readme",
@@ -39,14 +39,14 @@
     "@babel/core": "^7.1.6",
     "@babel/preset-flow": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
+    "babel-plugin-react-docgen": "^2.0.2",
     "bundlesize": "^0.17.0",
     "flow-bin": "^0.86.0"
   },
   "dependencies": {
-    "@meetup/swarm-constants": "^0.1.1",
+    "@meetup/swarm-constants": "^0.2.2",
     "classnames": "^2.2.6",
     "html-loader": "^0.5.5",
-    "meetup-web-components": "6.1.2645-beta",
     "swarm-icons": "^3.8.354"
   }
 }

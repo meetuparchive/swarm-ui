@@ -8,14 +8,15 @@ const Checkbox = props => {
   const {
     checked,
     label,
-    id = 'a',
+    id,
     disabled,
     children,
+    onChange,
     ...rest
   } = props;
   return React.createElement("label", _extends({
     "data-swarm-checkbox": disabled ? 'disabled' : 'default',
-    for: id,
+    htmlFor: id,
     disabled: disabled
   }, rest), React.createElement("span", {
     "data-swarm-checkbox-field": checked ? 'checked' : 'unchecked',
@@ -30,8 +31,68 @@ const Checkbox = props => {
     type: "checkbox",
     id: id,
     checked: checked,
-    disabled: disabled
+    disabled: disabled,
+    onChange: onChange,
+    readOnly: !onChange || disabled
   }), React.createElement("span", null, label || children));
 };
 
 export default Checkbox;
+Checkbox.__docgenInfo = {
+  "description": "",
+  "methods": [],
+  "displayName": "Checkbox",
+  "props": {
+    "checked": {
+      "required": true,
+      "flowType": {
+        "name": "boolean"
+      },
+      "description": "Whether the box should be checked."
+    },
+    "disabled": {
+      "required": false,
+      "flowType": {
+        "name": "boolean"
+      },
+      "description": "Whether the box should be interactive."
+    },
+    "id": {
+      "required": false,
+      "flowType": {
+        "name": "string"
+      },
+      "description": "An identifier for the checkbox."
+    },
+    "onChange": {
+      "required": false,
+      "flowType": {
+        "name": "signature",
+        "type": "function",
+        "raw": "() => mixed",
+        "signature": {
+          "arguments": [],
+          "return": {
+            "name": "mixed"
+          }
+        }
+      },
+      "description": "A callback function that is called when the checkbox is toggled."
+    },
+    "children": {
+      "required": false,
+      "flowType": {
+        "name": "ReactNode",
+        "raw": "React.Node"
+      },
+      "description": "Child nodes that would be placed if there is no label."
+    },
+    "label": {
+      "required": false,
+      "flowType": {
+        "name": "string"
+      },
+      "description": "A label for your checkbox input. It will not be shown if `children` are passed to the component."
+    }
+  }
+};

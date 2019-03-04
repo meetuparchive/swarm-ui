@@ -37,3 +37,59 @@ const Select = props => {
 };
 
 export default Select;
+Select.__docgenInfo = {
+  "description": "",
+  "methods": [],
+  "displayName": "Select",
+  "props": {
+    "disabled": {
+      "required": false,
+      "flowType": {
+        "name": "boolean"
+      },
+      "description": ""
+    },
+    "error": {
+      "required": false,
+      "flowType": {
+        "name": "string"
+      },
+      "description": ""
+    },
+    "helperText": {
+      "required": false,
+      "flowType": {
+        "name": "string"
+      },
+      "description": ""
+    },
+    "id": {
+      "required": false,
+      "flowType": {
+        "name": "string"
+      },
+      "description": ""
+    },
+    "label": {
+      "required": false,
+      "flowType": {
+        "name": "string"
+      },
+      "description": ""
+    },
+    "name": {
+      "required": false,
+      "flowType": {
+        "name": "string"
+      },
+      "description": ""
+    },
+    "required": {
+      "required": false,
+      "flowType": {
+        "name": "boolean"
+      },
+      "description": ""
+    }
+  }
+};
