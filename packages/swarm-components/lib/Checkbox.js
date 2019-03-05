@@ -20,7 +20,6 @@ const Checkbox = props => {
     disabled: disabled
   }, rest), React.createElement("span", {
     "data-swarm-checkbox-field": checked ? 'checked' : 'unchecked',
-    tabIndex: "0",
     role: "checkbox",
     "aria-checked": checked
   }, checked && React.createElement(Icon, {
