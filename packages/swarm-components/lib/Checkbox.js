@@ -10,7 +10,6 @@ const Checkbox = props => {
     label,
     id,
     disabled,
-    onChange,
     children,
     onChange,
     ...rest
