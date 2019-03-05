@@ -9,7 +9,7 @@ type Props = React.ElementConfig<HTMLSelectElement> & {
     id?: string,
 	label?: string,
 	name?: string,
-	required?: boolean,
+	requiredText?: string,
 };
 
 const Select = (props: Props) => {
@@ -20,35 +20,44 @@ const Select = (props: Props) => {
         id,
 		label,
         name,
-		required,
+		requiredText,
 		...other
 	} = props;
 
+	const selectState = disabled
+		? 'disabled'
+		: (error ? 'error' : 'default');
+
 	return (
-		<div data-swarm-select={disabled ? 'disabled' : 'default'}>
+		<div data-swarm-select={selectState}>
 			{label && (
 				<label
 					htmlFor={name}
-					data-requiredtext="*"
 				>
 					{label}
+					{requiredText ? <span> {requiredText}</span> : ''}
 				</label>
             )}
 
 			{helperText && (
-                <div>
+                <p data-swarm-select-helper-text="1">
                     {helperText}
-                </div>
+                </p>
             )}
 
-            <select
-                name={name}
-                id={id || name}
-                required={Boolean(required)}
-                {...other}
-            />
+			<div data-swarm-select-wrapper="1">
+				<select
+					name={name}
+					id={id || name}
+					required={Boolean(requiredText)}
+					disabled={disabled}
+					{...other}
+				/>
 
-            <Icon shape="chevron-down" size="xs" />
+				<span data-swarm-select-arrow="chevron-down">
+					<Icon shape="chevron-down" size="xs" />
+				</span>
+			</div>
 		</div>
 	);
 };

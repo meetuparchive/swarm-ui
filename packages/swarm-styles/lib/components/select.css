@@ -1,0 +1,61 @@
+[data-swarm-select-wrapper] {
+    position:relative;
+}
+
+[data-swarm-select] label span {
+    color: var(--color-gray-5);
+}
+
+[data-swarm-select-helper-text] {
+    font-size: var(--font-size-small);
+}
+
+[data-swarm-select] select {
+    appearance: none;
+    user-select: none;
+    padding-top: var(--size-space-default);
+    padding-right: var(--size-space-double);
+    padding-bottom: var(--size-space-default);
+    padding-left: var(--size-space-default);
+    width: 100%;
+    border: 1px solid var(--color-gray-3);
+    /* ToDo: do we need a box shadow? do we want it on focus or on error states as well? */
+    /* box-shadow: 0px 1px 3px 0px var(--color-gray-5); */
+}
+
+[data-swarm-select] select:hover {
+    border-color: var(--color-gray-5);
+}
+
+[data-swarm-select] select:focus {
+    border-color: var(--color-viridian);
+    outline: none;
+}
+
+[data-swarm-select="disabled"] select {
+    background-color: var(--color-gray-2);
+    border: none;
+}
+
+[data-swarm-select="error"] select {
+    border-color: var(--color-alert-red);
+}
+
+[data-swarm-select-arrow] {
+    display: inline-block;
+    pointer-events: none;
+    position:absolute;
+    right: var(--size-space-default);
+    bottom: var(--size-space-default);
+}
+
+[data-swarm-select-arrow] svg {
+    height: var(--size-space-default);
+    width: var(--size-space-default);
+    align-self: center;
+    vertical-align: middle;
+    overflow: hidden;
+    font-size: 0;
+    position: relative;
+    display: inline-flex;
+}
