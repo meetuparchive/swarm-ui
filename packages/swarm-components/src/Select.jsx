@@ -3,12 +3,33 @@ import * as React from 'react';
 import Icon from './Icon';
 
 type Props = React.ElementConfig<HTMLSelectElement> & {
-    disabled?: boolean,
+	/**
+	 * Whether the select menu is disabled.
+	 */
+	disabled?: boolean,
+	/**
+	 * Whether the select menu has errored.
+	 */
 	error?: string,
+	/**
+	 * Line of text further describing the select menu.
+	 */
 	helperText?: string,
-    id?: string,
+	/**
+	 * Unique identifier for select tag.
+	 */
+	id?: string,
+	/**
+	 * Associated <label> tag for the <select> tag.
+	 */
 	label?: string,
-	name?: string,
+	/**
+	 * Name of select menu form field.
+	 */
+	name: string,
+	/**
+	 * Copy to be used for a required select field.
+	 */
 	requiredText?: string,
 };
 
