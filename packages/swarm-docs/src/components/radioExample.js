@@ -8,6 +8,8 @@ const Example = () => {
 
   return (
     <>
+      <p><b>These are examples of single (not-grouped) Radio buttons:</b></p>
+      <br/>
       <Radio
         label="Radio button with `label` prop"
         checked={checked}
@@ -54,6 +56,7 @@ const Example = () => {
       />
       <br/>
       <br/>
+      <p><b>This is an example of how to manage state for a group of radio buttons:</b></p>
     </>
   );
 };
