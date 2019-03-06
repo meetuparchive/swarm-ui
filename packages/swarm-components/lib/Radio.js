@@ -1,24 +1,23 @@
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 import * as React from 'react';
-import Icon from './Icon';
 
 // Can not inline css vars as color to Icon. Gray 5 icon fill on disbaled
 const Radio = props => {
   const {
     checked,
     label,
-    id = 'a',
+    id,
     disabled,
     value,
     children,
-    ...rest
+    ...other
   } = props;
   return React.createElement("label", _extends({
     "data-swarm-radio": disabled ? 'disabled' : 'default',
-    for: id,
+    htmlFor: id,
     disabled: disabled
-  }, rest), React.createElement("span", {
+  }, other), React.createElement("span", {
     "data-swarm-radio-field": checked ? 'checked' : 'unchecked',
     tabIndex: "0",
     role: "checkbox",
@@ -45,42 +44,46 @@ Radio.__docgenInfo = {
       "flowType": {
         "name": "boolean"
       },
-      "description": ""
+      "description": "Whether the radio button is checked."
     },
     "disabled": {
       "required": false,
       "flowType": {
         "name": "boolean"
       },
-      "description": ""
+      "description": "Whether the input should be interactive."
     },
     "id": {
-      "required": false,
+      "required": true,
       "flowType": {
         "name": "string"
       },
-      "description": ""
+      "description": "An identifier for the input."
     },
     "value": {
       "required": true,
       "flowType": {
         "name": "string"
       },
-      "description": ""
+      "description": "Value of the input."
     },
     "label": {
       "required": false,
       "flowType": {
         "name": "string"
       },
-      "description": ""
+      "description": "Label for the input."
     },
-    "name": {
+    "children": {
       "required": true,
       "flowType": {
-        "name": "string"
+        "name": "ReactReactElement",
+        "raw": "React.ReactElement<*>",
+        "elements": [{
+          "name": "unknown"
+        }]
       },
-      "description": ""
+      "description": "Use children as an alternative to the `label` prop for more complex input labels."
     }
   }
 };
