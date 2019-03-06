@@ -84,10 +84,10 @@ Select.__docgenInfo = {
       },
       "description": ""
     },
-    "required": {
+    "requiredText": {
       "required": false,
       "flowType": {
-        "name": "boolean"
+        "name": "string"
       },
       "description": ""
     }

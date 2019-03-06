@@ -2,32 +2,25 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 import * as React from 'react';
 
-const getInputStatus = props => {
-  let status = 'default';
-  if (props.error) status = 'error';
-  if (props.disabled) status = 'disabled';
-  return status;
-};
 /**
  * @module TextInput
  */
-
-
 export const TextInput = props => {
   const {
     name,
+    error,
     isSearch,
     label,
     pattern,
     disabled,
-    error,
     id,
     ...other
   } = props;
+  const inputState = disabled ? 'disabled' : error ? 'error' : 'default';
   return React.createElement(React.Fragment, null, React.createElement("label", {
-    for: id
+    htmlFor: id
   }, label), React.createElement("input", _extends({
-    "data-swarm-text-input": getInputStatus(props),
+    "data-swarm-text-input": inputState,
     type: isSearch ? 'search' : 'text',
     name: name,
     pattern: pattern,
@@ -35,77 +28,67 @@ export const TextInput = props => {
     id: id
   }, other)));
 };
-TextInput.defaultProps = {
-  requiredText: '*'
-};
 export default TextInput;
 TextInput.__docgenInfo = {
   "description": "@module TextInput",
   "methods": [],
   "displayName": "TextInput",
   "props": {
-    "requiredText": {
-      "defaultValue": {
-        "value": "'*'",
-        "computed": false
-      },
-      "required": false
-    },
     "disabled": {
       "required": false,
       "flowType": {
         "name": "boolean"
       },
-      "description": ""
+      "description": "Whether the input should be interactive."
     },
     "error": {
       "required": false,
       "flowType": {
         "name": "boolean"
       },
-      "description": ""
+      "description": "Whether the field has an error."
     },
     "id": {
       "required": false,
       "flowType": {
         "name": "string"
       },
-      "description": ""
+      "description": "An identifier for the input."
     },
     "isSearch": {
       "required": false,
       "flowType": {
         "name": "boolean"
       },
-      "description": ""
+      "description": "Whether the input is a search field."
     },
     "label": {
       "required": false,
       "flowType": {
         "name": "string"
       },
-      "description": ""
+      "description": "Label for the input."
     },
     "name": {
       "required": true,
       "flowType": {
         "name": "string"
       },
-      "description": ""
+      "description": "Name for the input."
     },
     "pattern": {
       "required": false,
       "flowType": {
         "name": "string"
       },
-      "description": ""
+      "description": "A regular expression that the input's value is checked against on form submission."
     },
     "value": {
       "required": true,
       "flowType": {
         "name": "string"
       },
-      "description": ""
+      "description": "Value of input."
     }
   }
 };
