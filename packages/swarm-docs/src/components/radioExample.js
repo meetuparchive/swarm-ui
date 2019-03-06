@@ -11,15 +11,17 @@ const Example = () => {
       <Radio
         label="Radio button with `label` prop"
         checked={checked}
-        id="example1"
         onChange={() => setChecked(!checked)}
+        name="example1"
+        value="1"
       />
       <br/>
       <br/>
       <Radio
         checked={twoChecked}
-        id="example2"
         onChange={() => setTwoChecked(!twoChecked)}
+        name="example2"
+        value="2"
       >
         Radio button using children as label
       </Radio>
@@ -27,8 +29,9 @@ const Example = () => {
       <br/>
       <Radio
         checked={threeChecked}
-        id="example3"
         onChange={() => setThreeChecked(!threeChecked)}
+        name="example3"
+        value="3"
       >
         <span>Radio Button with <b>nested</b> children as label</span>
       </Radio>
@@ -36,14 +39,16 @@ const Example = () => {
       <br/>
       <Radio
         label="Disabled radio button"
-        id="example4"
+        name="example4"
+        value="4"
         disabled
       />
       <br/>
       <br/>
       <Radio
         label="Disabled, checked radio button"
-        id="example5"
+        name="example5"
+        value="5"
         disabled
         checked
       />

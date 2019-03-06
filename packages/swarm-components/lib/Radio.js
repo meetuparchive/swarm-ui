@@ -11,11 +11,12 @@ const Radio = props => {
     disabled,
     value,
     children,
+    name,
     ...other
   } = props;
   return React.createElement("label", _extends({
     "data-swarm-radio": disabled ? 'disabled' : 'default',
-    htmlFor: id,
+    htmlFor: id || name,
     disabled: disabled
   }, other), React.createElement("span", {
     "data-swarm-radio-field": checked ? 'checked' : 'unchecked',
@@ -26,7 +27,8 @@ const Radio = props => {
     "data-swarm-radio-dot": true
   })), React.createElement("input", {
     type: "radio",
-    id: id,
+    id: id || name,
+    name: name,
     checked: checked,
     disabled: disabled,
     value: value
@@ -54,11 +56,18 @@ Radio.__docgenInfo = {
       "description": "Whether the input should be interactive."
     },
     "id": {
+      "required": false,
+      "flowType": {
+        "name": "string"
+      },
+      "description": "A unique identifier for the input."
+    },
+    "name": {
       "required": true,
       "flowType": {
         "name": "string"
       },
-      "description": "An identifier for the input."
+      "description": "Used to associate a group of radio buttons.\nOnly one radio button in a group can be selected."
     },
     "value": {
       "required": true,

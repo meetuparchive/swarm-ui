@@ -11,9 +11,14 @@ export type Props = {
    */
   disabled?: boolean,
   /**
-   * An identifier for the input.
+   * A unique identifier for the input.
    */
-  id: string,
+  id?: string,
+  /**
+   * Used to associate a group of radio buttons.
+   * Only one radio button in a group can be selected.
+   */
+  name: string,
   /**
    * Value of the input.
    */
@@ -37,15 +42,16 @@ const Radio = (props: Props): React.ReactElement<'label'> => {
     disabled,
     value,
     children,
+    name,
     ...other
   } = props;
 
   return (
-    <label data-swarm-radio={disabled ? 'disabled' : 'default'} htmlFor={id} disabled={disabled} {...other} >
+    <label data-swarm-radio={disabled ? 'disabled' : 'default'} htmlFor={id || name} disabled={disabled} {...other} >
       <span data-swarm-radio-field={checked ? 'checked': 'unchecked'} tabIndex='0' role="checkbox" aria-checked={checked}>
         {checked && <span data-swarm-radio-dot/>}
       </span>
-      <input type='radio' id={id} checked={checked} disabled={disabled} value={value} />
+      <input type='radio' id={id || name} name={name} checked={checked} disabled={disabled} value={value} />
       <span>{label || children}</span>
     </label>
   );
