@@ -5,7 +5,7 @@ export type Props = {
   /**
    * Whether the radio button is checked.
    */
-  checked: boolean,
+  checked?: boolean,
   /**
    * Whether the input should be interactive.
    */

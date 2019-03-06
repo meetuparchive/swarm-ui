@@ -40,7 +40,7 @@ Radio.__docgenInfo = {
   "displayName": "Radio",
   "props": {
     "checked": {
-      "required": true,
+      "required": false,
       "flowType": {
         "name": "boolean"
       },
