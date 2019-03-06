@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.4.0...@meetup/swarm-docs@0.5.0) (2019-03-05)
+
+
+### Bug Fixes
+
+* adding react-docgen to support docgen info on components. Commenting Button props ([aa3d15a](https://github.com/gatsbyjs/gatsby-starter-default/commit/aa3d15a))
+* adding react-docgen to support docgen info on components. Commenting Button props ([8e21459](https://github.com/gatsbyjs/gatsby-starter-default/commit/8e21459))
+* icon position in select dropdown ([170ad86](https://github.com/gatsbyjs/gatsby-starter-default/commit/170ad86))
+
+
+### Features
+
+* add checkbox docs and fix flow types and console errors ([d2e469b](https://github.com/gatsbyjs/gatsby-starter-default/commit/d2e469b))
+
+
+
+
+
 # [0.4.0](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.3.1...@meetup/swarm-docs@0.4.0) (2019-02-27)
 
 
