@@ -14,25 +14,25 @@ const Radio = props => {
     name,
     ...other
   } = props;
-  return React.createElement("label", _extends({
+  return React.createElement("label", {
     "data-swarm-radio": disabled ? 'disabled' : 'default',
     htmlFor: id || name,
     disabled: disabled
-  }, other), React.createElement("span", {
+  }, React.createElement("span", {
     "data-swarm-radio-field": checked ? 'checked' : 'unchecked',
     tabIndex: "0",
     role: "checkbox",
     "aria-checked": checked
   }, checked && React.createElement("span", {
     "data-swarm-radio-dot": true
-  })), React.createElement("input", {
+  })), React.createElement("input", _extends({
     type: "radio",
-    id: id || name,
+    id: id,
     name: name,
     checked: checked,
     disabled: disabled,
     value: value
-  }), React.createElement("span", null, label || children));
+  }, other)), React.createElement("span", null, label || children));
 };
 
 export default Radio;
@@ -81,7 +81,7 @@ Radio.__docgenInfo = {
       "flowType": {
         "name": "string"
       },
-      "description": "Label for the input."
+      "description": "String label for the input. Will override any children values."
     },
     "children": {
       "required": true,
@@ -92,7 +92,7 @@ Radio.__docgenInfo = {
           "name": "unknown"
         }]
       },
-      "description": "Use children as an alternative to the `label` prop for more complex input labels."
+      "description": "Use children as an alternative to the `label` prop for more complex input labels.\nThe `label` prop will override children."
     }
   }
 };
