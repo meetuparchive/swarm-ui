@@ -47,49 +47,49 @@ Select.__docgenInfo = {
       "flowType": {
         "name": "boolean"
       },
-      "description": ""
+      "description": "Whether the select menu is disabled."
     },
     "error": {
       "required": false,
       "flowType": {
         "name": "string"
       },
-      "description": ""
+      "description": "Whether the select menu has errored."
     },
     "helperText": {
       "required": false,
       "flowType": {
         "name": "string"
       },
-      "description": ""
+      "description": "Line of text further describing the select menu."
     },
     "id": {
       "required": false,
       "flowType": {
         "name": "string"
       },
-      "description": ""
+      "description": "Unique identifier for select tag."
     },
     "label": {
       "required": false,
       "flowType": {
         "name": "string"
       },
-      "description": ""
+      "description": "Associated <label> tag for the <select> tag."
     },
     "name": {
-      "required": false,
+      "required": true,
       "flowType": {
         "name": "string"
       },
-      "description": ""
+      "description": "Name of select menu form field."
     },
     "requiredText": {
       "required": false,
       "flowType": {
         "name": "string"
       },
-      "description": ""
+      "description": "Copy to be used for a required select field."
     }
   }
 };
