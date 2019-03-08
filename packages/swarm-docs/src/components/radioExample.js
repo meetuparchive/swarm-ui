@@ -1,6 +1,57 @@
 import React from 'react';
 import { Radio } from '@meetup/swarm-components';
 
+
+export const GroupRadioButtonsExample = () => {
+  const [shape, setShape] = React.useState('circle');
+  const [circleButton, setCircleButton] = React.useState(true);
+  const [squareButton, setSquareButton] = React.useState(false);
+  const [triangleButton, setTriangleButton] = React.useState(false);
+
+
+  function onButtonChange(e) {
+    const value = e.target.value;
+
+    setShape(value);
+
+    setCircleButton(value === 'circle');
+    setSquareButton(value === 'square');
+    setTriangleButton(value === 'triangle');
+
+  }
+
+  React.useEffect(() => console.log(shape));
+
+  return(
+    <>
+      <Radio
+        name='shape'
+        label="Circle"
+        id='circle'
+        value='circle'
+        onChange={(e) => onButtonChange(e)}
+        checked={circleButton}
+      />
+      <Radio
+        name="shape"
+        label="Square"
+        id='square'
+        value='square'
+        onChange={(e) => onButtonChange(e)}
+        checked={squareButton}
+      />
+      <Radio
+        name="shape"
+        label="Triangle"
+        id='triangle'
+        value='triangle'
+        onChange={(e) => onButtonChange(e)}
+        checked={triangleButton}
+      />
+    </>
+  );
+};
+
 const Example = () => {
   const [checked, setChecked] = React.useState(false);
   const [twoChecked, setTwoChecked] = React.useState(false);
@@ -8,8 +59,6 @@ const Example = () => {
 
   return (
     <>
-      <p><b>These are examples of single (not-grouped) Radio buttons:</b></p>
-      <br/>
       <Radio
         label="Radio button with `label` prop"
         checked={checked}
@@ -51,12 +100,12 @@ const Example = () => {
         label="Disabled, checked radio button"
         name="example5"
         value="5"
+        onChange={() => {}}
         disabled
         checked
       />
       <br/>
       <br/>
-      <p><b>This is an example of how to manage state for a group of radio buttons:</b></p>
     </>
   );
 };
