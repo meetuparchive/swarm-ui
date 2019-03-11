@@ -48,7 +48,7 @@ const Radio = (props: Props): React.ReactElement<'label'> => {
   } = props;
 
   return (
-    <label data-swarm-radio={disabled ? 'disabled' : 'default'} htmlFor={id} disabled={disabled}>
+    <label data-swarm-radio={disabled ? 'disabled' : 'default'} disabled={disabled}>
       <span data-swarm-radio-field={checked ? 'checked': 'unchecked'} tabIndex='0' role="checkbox" aria-checked={checked}>
         {checked && <span data-swarm-radio-dot/>}
       </span>
