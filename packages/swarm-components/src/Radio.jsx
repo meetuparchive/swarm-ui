@@ -31,7 +31,7 @@ export type Props = {
    * Use children as an alternative to the `label` prop for more complex input labels.
    * The `label` prop will override children.
    */
-  children: React.ReactElement<*>,
+  children?: React.ReactElement<*>,
 };
 
 // Can not inline css vars as color to Icon. Gray 5 icon fill on disbaled
