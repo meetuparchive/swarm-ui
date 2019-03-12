@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.1](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.4.0...@meetup/swarm-components@0.4.1) (2019-03-12)
+
+
+### Bug Fixes
+
+* add more radio examples ([99b48e0](https://github.com/meetup/swarm-ui/commit/99b48e0))
+* distinction between name and id props ([0993963](https://github.com/meetup/swarm-ui/commit/0993963))
+* don't need htmlFor attribute for label ([2297136](https://github.com/meetup/swarm-ui/commit/2297136))
+* don't need htmlFor attribute for label ([a971f4a](https://github.com/meetup/swarm-ui/commit/a971f4a))
+* id should be unique; document label and children more clearly ([915c9c3](https://github.com/meetup/swarm-ui/commit/915c9c3))
+* required props ([181da9e](https://github.com/meetup/swarm-ui/commit/181da9e))
+* update Radio doc page with required sections ([f7838db](https://github.com/meetup/swarm-ui/commit/f7838db))
+
+
+
+
+
 # [0.4.0](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.3.1...@meetup/swarm-components@0.4.0) (2019-03-05)
 
 

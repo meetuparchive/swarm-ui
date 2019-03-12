@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.3](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-constants@0.2.2...@meetup/swarm-constants@0.2.3) (2019-03-12)
+
+
+### Bug Fixes
+
+* adding build to dist ([db38e45](https://github.com/meetup/swarm-ui/commit/db38e45))
+
+
+
+
+
 ## [0.2.2](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-constants@0.2.0...@meetup/swarm-constants@0.2.2) (2019-02-21)
 
 

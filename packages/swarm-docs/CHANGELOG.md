@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.1](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.5.0...@meetup/swarm-docs@0.5.1) (2019-03-12)
+
+
+### Bug Fixes
+
+* add a11y docs to select ([8e7f6ac](https://github.com/gatsbyjs/gatsby-starter-default/commit/8e7f6ac))
+* add a11y to radio docs ([a344219](https://github.com/gatsbyjs/gatsby-starter-default/commit/a344219))
+* add more radio examples ([99b48e0](https://github.com/gatsbyjs/gatsby-starter-default/commit/99b48e0))
+* distinction between name and id props ([0993963](https://github.com/gatsbyjs/gatsby-starter-default/commit/0993963))
+* live snippet needs onChange attribute to avoid console error ([4279498](https://github.com/gatsbyjs/gatsby-starter-default/commit/4279498))
+* placeholder for example of grouped radio buttons ([fd194d3](https://github.com/gatsbyjs/gatsby-starter-default/commit/fd194d3))
+* radio group example ([9d25f63](https://github.com/gatsbyjs/gatsby-starter-default/commit/9d25f63))
+* update Radio doc page with required sections ([f7838db](https://github.com/gatsbyjs/gatsby-starter-default/commit/f7838db))
+
+
+
+
+
 # [0.5.0](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.4.0...@meetup/swarm-docs@0.5.0) (2019-03-05)
 
 
