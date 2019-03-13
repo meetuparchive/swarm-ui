@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.2](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.4.1...@meetup/swarm-components@0.4.2) (2019-03-13)
+
+
+### Bug Fixes
+
+* checking for onClick existence before deleteing on disabled buttons ([92b410c](https://github.com/meetup/swarm-ui/commit/92b410c))
+
+
+
+
+
 ## [0.4.1](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.4.0...@meetup/swarm-components@0.4.1) (2019-03-12)
 
 
