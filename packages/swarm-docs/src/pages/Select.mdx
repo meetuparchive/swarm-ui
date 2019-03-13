@@ -1,31 +1,79 @@
 import { Select } from  '@meetup/swarm-components';
 import SelectExample from '../components/selectExample';
+import PropsTable from '../components/propstable';
 
-# Select
+## Select
+---
+A wrapper for an html `<select>` element with an optional `<label>` tag and helper text.
+
+<br/>
+<br/>
+
+### Snippet
+---
+
+Use this interactive snippet to try the component:
+<br/>
 
 ```.jsx
-<Select
-    value="A"
-    label="Swarm Select"
-    id="swarm-select"
-    name="swarm-select"
-    onChange={(e) => alert(e.target.value)}
->
-    <option value="A">
-        A
-    </option>
-    <option value="B">
-        B
-    </option>
-    <option value="C">
-        C
-    </option>
-    <option value="D">
-        D
-    </option>
-</Select>
+<div style={{width: 200}}>
+    <Select
+        value="A"
+        label="Swarm Select"
+        id="swarm-select"
+        name="swarm-select"
+        onChange={(e) => alert(e.target.value)}
+    >
+        <option value="A">
+            A
+        </option>
+        <option value="B">
+            B
+        </option>
+        <option value="C">
+            C
+        </option>
+        <option value="D">
+            D
+        </option>
+    </Select>
+</div>
 ```
+<br/>
+<br/>
 
-## Example
+### Props
+---
+<br/>
+<PropsTable propMetaData={Select.__docgenInfo} />
+
+
+<br/>
+<br/>
+
+### a11y
+---
+<br/>
+
+The following keyboard interactions are used to control the select component.
+You can also filter by typing letters, but this behavior varies by browser.
+Some will filter as you type, like autocomplete. Others will only sort by first letter.
+E.g., in a list of US States, hitting A then R may take you to Arizona, or it may
+take you to Alabama and then Rhode Island.
+<br/>
+
+**Keyboard interactions:**
+* **↑/↓**       ... navigate between menu options
+* **Spacebar**  ... expand
+
+<br/>
+See: <a href="https://webaim.org/techniques/keyboard/">https://webaim.org/techniques/keyboard/</a>
+
+<br/>
+<br/>
+
+### Examples
+---
+<br/>
 
 <SelectExample />

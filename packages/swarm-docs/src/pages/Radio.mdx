@@ -1,12 +1,62 @@
-import { Radio } from '@meetup/swarm-components'
-import Example from '../components/radioExample'
+import { Radio } from '@meetup/swarm-components';
+import Example, { GroupRadioButtonsExample } from '../components/radioExample';
+import PropsTable from '../components/propstable';
 
-# Radio
+## Radio
+---
+A wrapper for an html `<input type="radio">`.
+
+<br/>
+<br/>
+
+### Snippet
+---
+
+Use this interactive snippet to try the component:
+<br/>
 
 ```.jsx
-<Radio label="swarm" checked={1 == 1} />
+<Radio name="swarm" label="swarm" value="1" checked={true} onChange={(e) => alert(e.target.value)} />
 ```
 
-<Radio label="swarm" checked={1 == 0} />
+<br/>
+<br/>
+
+### Props
+---
+<br/>
+<PropsTable propMetaData={Radio.__docgenInfo} />
+
+<br/>
+<br/>
+
+### a11y
+---
+<br/>
+
+Radio buttons should be used when only one option from a group can be selected.
+
+<br/>
+
+**Keyboard interactions:**
+* **↑/↓** or **←/→**    ... to select an option.
+* **Tab**               ... to move to the next element.
+
+<br/>
+<br/>
+
+### Examples
+---
+<br/>
+
+**These are examples of single (not-grouped) Radio buttons:**
+<br/>
 
 <Example />
+
+<br/>
+
+**This is an example of grouped radio buttons and how to manage state:**
+<br/>
+
+<GroupRadioButtonsExample />

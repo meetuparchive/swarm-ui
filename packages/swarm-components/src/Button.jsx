@@ -1,6 +1,5 @@
 // @flow
 import * as React from 'react';
-import cx from 'classnames';
 import Icon from './Icon';
 
 type Props = {
@@ -98,10 +97,6 @@ const Button = (props: Props): React.Element<'button'> => {
 		children,
 		...rest
 	} = props;
-
-	if (props.disabled) {
-		delete props.onClick;
-	}
 
 	const buttonType = getButtonType(props);
 
