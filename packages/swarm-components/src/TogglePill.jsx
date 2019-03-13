@@ -5,7 +5,7 @@ export type Props = {
   /**
    * Indicates whether the toggle is selected
    */
-  checked: boolean,
+  checked?: boolean,
   /**
    * Indicates whether the toggle is disabled
    */
@@ -17,7 +17,7 @@ export type Props = {
   /**
    * Text label of the content, applied if label is not set
    */
-  children?: any
+  children?: React.Node
 };
 
 const TogglePill = (props: Props): React.Element<'button'> => {

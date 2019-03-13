@@ -26,7 +26,7 @@ TogglePill.__docgenInfo = {
   "displayName": "TogglePill",
   "props": {
     "checked": {
-      "required": true,
+      "required": false,
       "flowType": {
         "name": "boolean"
       },
@@ -49,7 +49,8 @@ TogglePill.__docgenInfo = {
     "children": {
       "required": false,
       "flowType": {
-        "name": "any"
+        "name": "ReactNode",
+        "raw": "React.Node"
       },
       "description": "Text label of the content, applied if label is not set"
     }
