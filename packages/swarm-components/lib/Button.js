@@ -52,7 +52,7 @@ const Button = props => {
     ...rest
   } = props;
 
-  if (props.disabled) {
+  if (props.disabled && props.onClick) {
     delete props.onClick;
   }
 
