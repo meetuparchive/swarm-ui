@@ -98,10 +98,6 @@ const Button = (props: Props): React.Element<'button'> => {
 		...rest
 	} = props;
 
-	if (props.disabled && props.onClick) {
-		delete props.onClick;
-	}
-
 	const buttonType = getButtonType(props);
 
 	return (
