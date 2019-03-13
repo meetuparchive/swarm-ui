@@ -2,33 +2,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 import * as React from 'react';
 import Icon from './Icon';
-
-/**
- *
- * @param {*} props
- *
- */
-export const getButtonType = props => {
-  let buttonType = 'default';
-  if (props.disabled) buttonType = 'disabled';
-  if (props.primary) buttonType = 'primary';
-  if (props.neutral) buttonType = 'neutral';
-  if (props.bordered) buttonType = 'bordered';
-  if (props.inverted) buttonType = 'inverted';
-  return buttonType;
-};
-export const getSwarmSize = props => {
-  let size = 'default';
-  if (props.small) size = 'small';
-  return size;
-};
-export const getIconPosition = props => {
-  let position = 'left';
-  if (props.right) position = 'right';
-  if (!props.children) position = 'only';
-  return position;
-}; // TODO: find a better, more dynamic solution
-
+// TODO: find a better, more dynamic solution
 const FILLS = {
   default: 'var(--color-viridian)',
   disabled: 'var(--color-gray-4)',
@@ -37,31 +11,57 @@ const FILLS = {
   bordered: 'var(--color-gray-7)',
   inverted: 'var(--color-white)'
 };
+/**
+ *
+ * @param {*} props
+ *
+ */
+
+export const getButtonType = props => {
+  let buttonType = 'default';
+
+  if (props.disabled) {
+    buttonType = 'disabled';
+  } else if (props.primary) {
+    buttonType = 'primary';
+  } else if (props.neutral) {
+    buttonType = 'neutral';
+  } else if (props.bordered) {
+    buttonType = 'bordered';
+  } else if (props.inverted) {
+    buttonType = 'inverted';
+  }
+
+  return buttonType;
+};
+export const getSwarmSize = props => {
+  return props.small ? 'small' : 'default';
+};
+export const getIconPosition = props => {
+  return props.children ? props.right ? 'right' : 'left' : 'only';
+};
 
 const Button = props => {
   // destructuring to not pass invalid attributes to node
   const {
-    primary,
-    neutral,
-    bordered,
-    inverted,
-    small,
     icon,
     right,
     children,
-    ...rest
+    isLink,
+    ...other
   } = props;
 
   if (props.disabled) {
     delete props.onClick;
   }
 
+  const Component = isLink ? 'a' : 'button';
   const buttonType = getButtonType(props);
-  return React.createElement("button", _extends({
+  return React.createElement(Component, _extends({
     "data-swarm-button": buttonType,
     "data-swarm-size": getSwarmSize(props),
     "data-icon": getIconPosition(props)
-  }, rest), icon ? React.createElement("span", null, right ? React.createElement(React.Fragment, null, children, React.createElement(Icon, {
+  }, other), icon ? React.createElement("span", null, right ? React.createElement(React.Fragment, null, children, React.createElement(Icon, {
     shape: icon,
     size: "xs",
     color: FILLS[buttonType]
@@ -125,16 +125,16 @@ Button.__docgenInfo = {
       "flowType": {
         "name": "signature",
         "type": "function",
-        "raw": "(*) => void",
+        "raw": "() => {}",
         "signature": {
-          "arguments": [{
-            "name": "",
-            "type": {
-              "name": "unknown"
-            }
-          }],
+          "arguments": [],
           "return": {
-            "name": "void"
+            "name": "signature",
+            "type": "object",
+            "raw": "{}",
+            "signature": {
+              "properties": []
+            }
           }
         }
       },
@@ -167,7 +167,14 @@ Button.__docgenInfo = {
         "name": "ReactNode",
         "raw": "React.Node"
       },
-      "description": ""
+      "description": "Content of button"
+    },
+    "isLink": {
+      "required": false,
+      "flowType": {
+        "name": "boolean"
+      },
+      "description": "Render an anchor styled as a button instead\nof a button element"
     }
   }
 };

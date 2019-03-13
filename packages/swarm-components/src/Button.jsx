@@ -4,74 +4,65 @@ import Icon from './Icon';
 
 type Props = {
 	/**
-	* The bordered button
-	*/
+	 * The bordered button
+	 */
 	bordered?: boolean,
+
 	/**
-	* Classes for additional styles to be applied
-	*/
+	 * Classes for additional styles to be applied
+	 */
 	className?: string,
+
 	/**
-	* Indicates whether the button is disabled or not
-	*/
+	 * Indicates whether the button is disabled or not
+	 */
 	disabled?: boolean,
+
 	/**
-	* Supports icon classes found at https://meetup.github.io/swarm-icons/
-	*/
+	 * Supports icon classes found at https://meetup.github.io/swarm-icons/
+	 */
 	icon?: string,
+
 	/**
-	* Inverted styles for dark backgrounds
-	*/
+	 * Inverted styles for dark backgrounds
+	 */
 	inverted?: boolean,
+
 	/**
-	* The neutral style
-	*/
+	 * The neutral style
+	 */
 	neutral?: boolean,
+
 	/**
-	* The function invoked when interacting with Button
-	*/
-	onClick?: (*) => void,
+	 * The function invoked when interacting with Button
+	 */
+	onClick?: () => {},
+
 	/**
-	* The primary style
-	*/
+	 * The primary style
+	 */
 	primary?: boolean,
+
 	/**
-	* Aligns the icon to the right
-	*/
+	 * Aligns the icon to the right
+	 */
 	right?: boolean,
+
 	/**
-	* Use the small button size
-	*/
+	 * Use the small button size
+	 */
 	small?: boolean,
+
+	/**
+	 * Content of button
+	 */
 	children: React.Node,
-};
 
-/**
- *
- * @param {*} props
- *
- */
-export const getButtonType = (props: Props): string => {
-	let buttonType = 'default';
-	if (props.disabled) buttonType = 'disabled';
-	if (props.primary) buttonType = 'primary';
-	if (props.neutral) buttonType = 'neutral';
-	if (props.bordered) buttonType = 'bordered';
-	if (props.inverted) buttonType = 'inverted';
-	return buttonType;
-};
-
-export const getSwarmSize = (props: Props): string => {
-	let size = 'default';
-	if (props.small) size = 'small';
-	return size;
-};
-
-export const getIconPosition = (props: Props): string => {
-	let position = 'left';
-	if (props.right) position = 'right';
-	if (!props.children) position = 'only';
-	return position;
+	/**
+	 * Render an anchor styled as a button instead
+	 * of a button element
+	 */
+	isLink?: boolean,
 };
 
 // TODO: find a better, more dynamic solution
@@ -84,32 +75,61 @@ const FILLS = {
 	inverted: 'var(--color-white)',
 };
 
-const Button = (props: Props): React.Element<'button'> => {
+
+/**
+ *
+ * @param {*} props
+ *
+ */
+export const getButtonType = (props: Props): string => {
+	let buttonType = 'default';
+
+	if (props.disabled) {
+		buttonType = 'disabled';
+	} else if (props.primary) {
+		buttonType = 'primary';
+	} else if (props.neutral) {
+		buttonType = 'neutral';
+	} else if (props.bordered) {
+		buttonType = 'bordered';
+	} else if (props.inverted) {
+		buttonType = 'inverted';
+	}
+
+	return buttonType;
+};
+
+export const getSwarmSize = (props: Props): string => {
+	return props.small ? 'small' : 'default';
+};
+
+export const getIconPosition = (props: Props): string => {
+	return (props.children) ? (props.right ? 'right' : 'left') : 'only';
+};
+
+const Button = (props: Props): React.Element<'button' | 'a'> => {
 	// destructuring to not pass invalid attributes to node
 	const {
-		primary,
-		neutral,
-		bordered,
-		inverted,
-		small,
 		icon,
 		right,
 		children,
-		...rest
+		isLink,
+		...other
 	} = props;
 
 	if (props.disabled) {
 		delete props.onClick;
 	}
 
+	const Component = isLink ? 'a' : 'button';
 	const buttonType = getButtonType(props);
 
 	return (
-		<button
+		<Component
 			data-swarm-button={buttonType}
 			data-swarm-size={getSwarmSize(props)}
 			data-icon={getIconPosition(props)}
-			{...rest}
+			{...other}
 		>
 			{icon ? (
 				<span>
@@ -128,7 +148,7 @@ const Button = (props: Props): React.Element<'button'> => {
 			) : (
 				children
 			)}
-		</button>
+		</Component>
 	);
 };
 
