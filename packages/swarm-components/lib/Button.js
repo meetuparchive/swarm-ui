@@ -51,11 +51,6 @@ const Button = props => {
     children,
     ...rest
   } = props;
-
-  if (props.disabled && props.onClick) {
-    delete props.onClick;
-  }
-
   const buttonType = getButtonType(props);
   return React.createElement("button", _extends({
     "data-swarm-button": buttonType,
