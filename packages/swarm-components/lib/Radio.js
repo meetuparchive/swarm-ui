@@ -16,7 +16,6 @@ const Radio = props => {
   } = props;
   return React.createElement("label", {
     "data-swarm-radio": disabled ? 'disabled' : 'default',
-    htmlFor: id || name,
     disabled: disabled
   }, React.createElement("span", {
     "data-swarm-radio-field": checked ? 'checked' : 'unchecked',
@@ -84,7 +83,7 @@ Radio.__docgenInfo = {
       "description": "String label for the input. Will override any children values."
     },
     "children": {
-      "required": true,
+      "required": false,
       "flowType": {
         "name": "ReactReactElement",
         "raw": "React.ReactElement<*>",
