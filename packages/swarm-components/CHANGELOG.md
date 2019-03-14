@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.4](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.4.3...@meetup/swarm-components@0.4.4) (2019-03-14)
+
+
+### Bug Fixes
+
+* running build to compile components to syns the lib to the src dir ([cfcf1ec](https://github.com/meetup/swarm-ui/commit/cfcf1ec))
+
+
+
+
+
 ## [0.4.3](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.4.2...@meetup/swarm-components@0.4.3) (2019-03-14)
 
 **Note:** Version bump only for package @meetup/swarm-components
