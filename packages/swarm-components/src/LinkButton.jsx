@@ -65,7 +65,7 @@ export type LinkButtonProps = {
 	children: React.Node,
 };
 
-const LinkButton = (props: Props): React.Element<'a'> => {
+const LinkButton = (props: LinkButtonProps): React.Element<'a'> => {
 	// destructuring to not pass invalid attributes to node
 	const {
 		icon,

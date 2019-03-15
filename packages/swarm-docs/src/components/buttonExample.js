@@ -31,11 +31,6 @@ const Example = () => {
       </div>
       <br/>
       <br/>
-      <Button href="https://www.meetup.com" primary isLink>
-        Link Button
-      </Button>
-      <br/>
-      <br/>
     </div>
   );
 };
