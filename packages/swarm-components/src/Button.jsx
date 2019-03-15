@@ -57,12 +57,6 @@ type Props = {
 	 * Content of button
 	 */
 	children: React.Node,
-
-	/**
-	 * Render an anchor styled as a button instead
-	 * of a button element
-	 */
-	isLink?: boolean,
 };
 
 // TODO: find a better, more dynamic solution
@@ -106,21 +100,19 @@ export const getIconPosition = (props: Props): string => {
 	return (props.children) ? (props.right ? 'right' : 'left') : 'only';
 };
 
-const Button = (props: Props): React.Element<'button' | 'a'> => {
+const Button = (props: Props): React.Element<'button'> => {
 	// destructuring to not pass invalid attributes to node
 	const {
 		icon,
 		right,
 		children,
-		isLink,
 		...other
 	} = props;
 
-	const Component = isLink ? 'a' : 'button';
 	const buttonType = getButtonType(props);
 
 	return (
-		<Component
+		<button
 			data-swarm-button={buttonType}
 			data-swarm-size={getSwarmSize(props)}
 			data-icon={getIconPosition(props)}
@@ -143,7 +135,7 @@ const Button = (props: Props): React.Element<'button' | 'a'> => {
 			) : (
 				children
 			)}
-		</Component>
+		</button>
 	);
 };
 
