@@ -50,11 +50,6 @@ const Button = props => {
     isLink,
     ...other
   } = props;
-
-  if (props.disabled) {
-    delete props.onClick;
-  }
-
   const Component = isLink ? 'a' : 'button';
   const buttonType = getButtonType(props);
   return React.createElement(Component, _extends({

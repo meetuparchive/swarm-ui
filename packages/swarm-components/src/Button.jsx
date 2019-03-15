@@ -75,7 +75,6 @@ const FILLS = {
 	inverted: 'var(--color-white)',
 };
 
-
 /**
  *
  * @param {*} props
@@ -116,10 +115,6 @@ const Button = (props: Props): React.Element<'button' | 'a'> => {
 		isLink,
 		...other
 	} = props;
-
-	if (props.disabled) {
-		delete props.onClick;
-	}
 
 	const Component = isLink ? 'a' : 'button';
 	const buttonType = getButtonType(props);
