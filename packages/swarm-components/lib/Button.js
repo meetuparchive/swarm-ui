@@ -2,44 +2,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 import * as React from 'react';
 import Icon from './Icon';
-// TODO: find a better, more dynamic solution
-const FILLS = {
-  default: 'var(--color-viridian)',
-  disabled: 'var(--color-gray-4)',
-  primary: 'var(--color-white)',
-  neutral: 'var(--color-gray-7)',
-  bordered: 'var(--color-gray-7)',
-  inverted: 'var(--color-white)'
-};
-/**
- *
- * @param {*} props
- *
- */
-
-export const getButtonType = props => {
-  let buttonType = 'default';
-
-  if (props.disabled) {
-    buttonType = 'disabled';
-  } else if (props.primary) {
-    buttonType = 'primary';
-  } else if (props.neutral) {
-    buttonType = 'neutral';
-  } else if (props.bordered) {
-    buttonType = 'bordered';
-  } else if (props.inverted) {
-    buttonType = 'inverted';
-  }
-
-  return buttonType;
-};
-export const getSwarmSize = props => {
-  return props.small ? 'small' : 'default';
-};
-export const getIconPosition = props => {
-  return props.children ? props.right ? 'right' : 'left' : 'only';
-};
+import { FILLS, getButtonType, getSwarmSize, getIconPosition } from './utils/buttonUtils';
 
 const Button = props => {
   // destructuring to not pass invalid attributes to node
@@ -47,12 +10,10 @@ const Button = props => {
     icon,
     right,
     children,
-    isLink,
     ...other
   } = props;
-  const Component = isLink ? 'a' : 'button';
   const buttonType = getButtonType(props);
-  return React.createElement(Component, _extends({
+  return React.createElement("button", _extends({
     "data-swarm-button": buttonType,
     "data-swarm-size": getSwarmSize(props),
     "data-icon": getIconPosition(props)
@@ -163,13 +124,6 @@ Button.__docgenInfo = {
         "raw": "React.Node"
       },
       "description": "Content of button"
-    },
-    "isLink": {
-      "required": false,
-      "flowType": {
-        "name": "boolean"
-      },
-      "description": "Render an anchor styled as a button instead\nof a button element"
     }
   }
 };
