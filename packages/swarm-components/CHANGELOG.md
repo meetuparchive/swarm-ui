@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.7](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.4.6...@meetup/swarm-components@0.4.7) (2019-03-18)
+
+
+### Bug Fixes
+
+* destructure name and value for checkbox ([8c58d5e](https://github.com/meetup/swarm-ui/commit/8c58d5e))
+
+
+
+
+
 ## [0.4.6](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.4.5...@meetup/swarm-components@0.4.6) (2019-03-18)
 
 
