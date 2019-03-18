@@ -15,7 +15,7 @@
   text-decoration: none !important;
 }
 
-[data-swarm-button] {
+%data-swarm-button {
   display: inline-flex;
   flex-direction: row;
   justify-content: center;
@@ -29,11 +29,15 @@
   outline: 0;
   padding: var(--space-half) var(--space-triple);
   vertical-align: middle;
+}
 
+[data-swarm-button] {
+  @extend %data-swarm-button;
   @extend %button-personality;
 }
 
 /* focus & active */
+%swarm-button-default-focus,
 [data-swarm-button="default"]:focus,
 [data-swarm-button="default"]:active {
   background-color: var(--color-viridian);
@@ -41,11 +45,13 @@
   border: 1px solid var(--color-indigo);
 }
 
+%swarm-button-primary-focus,
 [data-swarm-button="primary"]:focus,
 [data-swarm-button="primary"]:active {
   border: 1px solid var(--color-peach)
 }
 
+%swarm-button-bordered-focus,
 [data-swarm-button="bordered"]:focus,
 [data-swarm-button="bordered"]:active {
   background-color: var(--color-white);
@@ -53,6 +59,7 @@
   border: 1px solid var(--color-gray-5);
 }
 
+%swarm-button-neutral-focus,
 [data-swarm-button="neutral"]:focus,
 [data-swarm-button="neutral"]:active {
   background-color: var(--color-gray-2);
@@ -61,16 +68,20 @@
 }
 
 /* hovers */
+
+%swarm-button-default-hover,
 [data-swarm-button="default"]:hover {
   background-color: var(--color-viridian);
   color: var(--color-white);
 }
 
+%swarm-button-bordered-hover,
 [data-swarm-button="bordered"]:hover,
 [data-swarm-button="neutral"]:hover {
   border: solid 1px var(--color-gray-4);
 }
 
+%swarm-button-primary-hover,
 [data-swarm-button="primary"]:hover {
   /* --color-peach at 90% */
   background-color: rgba(246, 88, 88, .9);
@@ -78,41 +89,48 @@
 }
 
 /* colors */
+%swarm-button-default,
 [data-swarm-button="default"] {
   background-color: var(--color-white);
   border: 1px solid var(--color-viridian);
   color: var(--color-viridian);
 }
 
+%swarm-button-primary,
 [data-swarm-button="primary"] {
   background-color: var(--color-peach);
   border: 1px solid var(--color-peach);
   color: var(--color-white);
 }
 
+%swarm-button-neutral,
 [data-swarm-button="neutral"] {
   background-color: var(--color-gray-1);
   border: 1px solid var(--color-gray-3);
   color: var(--color-gray-7);
 }
 
+%swarm-button-bordered,
 [data-swarm-button="bordered"] {
   background-color: var(--color-white);
   border: 1px solid var(--color-gray-3);
   color: var(--color-gray-7);
 }
 
+%swarm-button-inverted,
 [data-swarm-button="inverted"] {
   border: 1px solid var(--color-white);
   color: var(--color-white);
 }
 
+%swarm-button-inverted-hover,
 [data-swarm-button="inverted"]:hover,
 [data-swarm-button="inverted"]:focus,
 [data-swarm-button="inverted"]:active {
   opacity: 0.9;
 }
 
+%swarm-button-disabled,
 [data-swarm-button="disabled"] {
   background-color: var(--color-gray-2);
   border: 1px solid var(--color-gray-2);
@@ -120,20 +138,28 @@
 }
 
 /* small */
+%swarm-button-small,
 [data-swarm-button][data-swarm-size="small"] {
   padding: var(--space-half) var(--space-half);
 }
 
 /* with icon */
+%swarm-button-icon-left,
 [data-swarm-button][data-icon="left"] .svg-icon {
   margin-right:  var(--space-half);
 }
+
+%swarm-button-icon-right,
 [data-swarm-button][data-icon="right"] .svg-icon {
   margin-left:  var(--space-half);
 }
+
+%swarm-button-icon-only,
 [data-swarm-button][data-icon="only"] {
   padding: var(--space-half) var(--space);
 }
+
+%swarm-button-icon-span,
 [data-swarm-button] span {
   display: inline-flex;
   justify-content: center;

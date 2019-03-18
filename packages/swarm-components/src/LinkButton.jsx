@@ -78,7 +78,7 @@ const LinkButton = (props: LinkButtonProps): React.Element<'a'> => {
 
 	return (
 		<a
-			data-swarm-button={buttonType}
+			data-swarm-link={buttonType}
 			data-swarm-size={getSwarmSize(props)}
 			data-icon={getIconPosition(props)}
 			{...other}
