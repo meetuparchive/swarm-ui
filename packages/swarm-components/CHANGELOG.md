@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.6](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.4.5...@meetup/swarm-components@0.4.6) (2019-03-18)
+
+
+### Bug Fixes
+
+* toggle proptypes updated to be more specific ([52ef155](https://github.com/meetup/swarm-ui/commit/52ef155))
+* updated to use buttons for easier a11y, added flow & comments for react-docgen support ([3c21ae8](https://github.com/meetup/swarm-ui/commit/3c21ae8))
+
+
+
+
+
 ## [0.4.5](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.4.4...@meetup/swarm-components@0.4.5) (2019-03-18)
 
 
