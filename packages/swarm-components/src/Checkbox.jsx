@@ -27,6 +27,14 @@ export type Props = {
 		* A label for your checkbox input. It will not be shown if `children` are passed to the component.
 	*/
 	label?: string,
+	/**
+	 * Name for checkbox form field.
+	 */
+	name?: string,
+	/**
+	 * Value for checkbox form field.
+	 */
+	value?: string | boolean,
 }
 
 // Can not inline css vars as color to Icon. Gray 5 icon fill on disbaled
@@ -49,7 +57,7 @@ const Checkbox = (props: Props): React.Element<'label'> => {
 					<Icon shape="check" size="xs" color={disabled ? '#A2A2A2' : '#ffffff'} />
 				)}
 			</span>
-			<input type="checkbox" id={id} checked={checked} disabled={disabled} onChange={onChange} readOnly={!onChange || disabled} />
+			<input type="checkbox" id={id} checked={checked} disabled={disabled} onChange={onChange} readOnly={!onChange || disabled} name={name} value={value}/>
 			<span>{label || children}</span>
 		</label>
 	);
