@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.1](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.6.0...@meetup/swarm-docs@0.6.1) (2019-03-18)
+
+**Note:** Version bump only for package @meetup/swarm-docs
+
+
+
+
+
+# [0.6.0](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.5.5...@meetup/swarm-docs@0.6.0) (2019-03-18)
+
+
+### Features
+
+* doc page for Toggle and TogglePill ([e68c96e](https://github.com/gatsbyjs/gatsby-starter-default/commit/e68c96e))
+
+
+
+
+
+## [0.5.5](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.5.4...@meetup/swarm-docs@0.5.5) (2019-03-18)
+
+**Note:** Version bump only for package @meetup/swarm-docs
+
+
+
+
+
 ## [0.5.4](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.5.3...@meetup/swarm-docs@0.5.4) (2019-03-14)
 
 **Note:** Version bump only for package @meetup/swarm-docs

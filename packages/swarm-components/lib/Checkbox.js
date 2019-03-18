@@ -12,6 +12,8 @@ const Checkbox = props => {
     disabled,
     children,
     onChange,
+    name,
+    value,
     ...rest
   } = props;
   return React.createElement("label", _extends({
@@ -32,7 +34,9 @@ const Checkbox = props => {
     checked: checked,
     disabled: disabled,
     onChange: onChange,
-    readOnly: !onChange || disabled
+    readOnly: !onChange || disabled,
+    name: name,
+    value: value
   }), React.createElement("span", null, label || children));
 };
 
@@ -92,6 +96,26 @@ Checkbox.__docgenInfo = {
         "name": "string"
       },
       "description": "A label for your checkbox input. It will not be shown if `children` are passed to the component."
+    },
+    "name": {
+      "required": false,
+      "flowType": {
+        "name": "string"
+      },
+      "description": "Name for checkbox form field."
+    },
+    "value": {
+      "required": false,
+      "flowType": {
+        "name": "union",
+        "raw": "string | boolean",
+        "elements": [{
+          "name": "string"
+        }, {
+          "name": "boolean"
+        }]
+      },
+      "description": "Value for checkbox form field."
     }
   }
 };
