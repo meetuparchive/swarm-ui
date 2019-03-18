@@ -12,6 +12,8 @@ const Checkbox = props => {
     disabled,
     children,
     onChange,
+    name,
+    value,
     ...rest
   } = props;
   return React.createElement("label", _extends({
