@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.5](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.4.4...@meetup/swarm-components@0.4.5) (2019-03-18)
+
+
+### Bug Fixes
+
+* name and value props for checkbox ([19b76c2](https://github.com/meetup/swarm-ui/commit/19b76c2))
+
+
+
+
+
 ## [0.4.4](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.4.3...@meetup/swarm-components@0.4.4) (2019-03-14)
 
 
