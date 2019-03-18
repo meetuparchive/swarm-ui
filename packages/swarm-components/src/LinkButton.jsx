@@ -40,7 +40,7 @@ export type LinkButtonProps = {
 	neutral?: boolean,
 
 	/**
-	 * The function invoked when interacting with Button
+	 * The function invoked when interacting with LinkButton
 	 */
 	onClick?: () => {},
 
