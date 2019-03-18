@@ -1,24 +1,38 @@
+// @flow
 import * as React from 'react';
 
 export type Props = {
-  checked: boolean,
+  /**
+   * Indicates whether the toggle is selected
+   */
+  checked?: boolean,
+  /**
+   * Indicates whether the toggle is disabled
+   */
   disabled?: boolean,
+  /**
+   * Text label of the content
+   */
   label?: string,
-  name: string
+  /**
+   * Text label of the content, applied if label is not set
+   */
+  children?: React.Node
 };
 
-const TogglePill = (props: Props): React.ReactElement<'span'> => {
-  const { checked, disabled, name, label, children, ...rest } = props;
+const TogglePill = (props: Props): React.Element<'button'> => {
+  const { checked, disabled, label, children, ...rest } = props;
   return (
-    <div
+    <button
       data-swarm-toggle-pill={checked ? 'checked' : 'unchecked'}
       role='checkbox'
       aria-checked={checked}
+      disabled={disabled}
+      checked={checked}
       {...rest}
     >
-      <input type='checkbox' checked={checked} disabled={disabled} name={name} />
       <span>{label || children}</span>
-    </div>
+    </button>
   );
 };
 

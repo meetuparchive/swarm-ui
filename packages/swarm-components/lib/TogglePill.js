@@ -6,21 +6,17 @@ const TogglePill = props => {
   const {
     checked,
     disabled,
-    name,
     label,
     children,
     ...rest
   } = props;
-  return React.createElement("div", _extends({
+  return React.createElement("button", _extends({
     "data-swarm-toggle-pill": checked ? 'checked' : 'unchecked',
     role: "checkbox",
-    "aria-checked": checked
-  }, rest), React.createElement("input", {
-    type: "checkbox",
-    checked: checked,
+    "aria-checked": checked,
     disabled: disabled,
-    name: name
-  }), React.createElement("span", null, label || children));
+    checked: checked
+  }, rest), React.createElement("span", null, label || children));
 };
 
 export default TogglePill;
@@ -30,32 +26,33 @@ TogglePill.__docgenInfo = {
   "displayName": "TogglePill",
   "props": {
     "checked": {
-      "required": true,
+      "required": false,
       "flowType": {
         "name": "boolean"
       },
-      "description": ""
+      "description": "Indicates whether the toggle is selected"
     },
     "disabled": {
       "required": false,
       "flowType": {
         "name": "boolean"
       },
-      "description": ""
+      "description": "Indicates whether the toggle is disabled"
     },
     "label": {
       "required": false,
       "flowType": {
         "name": "string"
       },
-      "description": ""
+      "description": "Text label of the content"
     },
-    "name": {
-      "required": true,
+    "children": {
+      "required": false,
       "flowType": {
-        "name": "string"
+        "name": "ReactNode",
+        "raw": "React.Node"
       },
-      "description": ""
+      "description": "Text label of the content, applied if label is not set"
     }
   }
 };
