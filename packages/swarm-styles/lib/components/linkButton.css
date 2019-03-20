@@ -1,9 +1,9 @@
   [data-swarm-link] {
-    @extend %swarm-button;
+    @extend %data-swarm-button;
   }
 
   [data-swarm-link]{
-    @extend %swarm-button;
+    @extend %data-swarm-button;
   }
 
   /* focus & active */
