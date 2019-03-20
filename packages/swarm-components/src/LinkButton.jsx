@@ -40,11 +40,6 @@ export type LinkButtonProps = {
 	neutral?: boolean,
 
 	/**
-	 * The function invoked when interacting with LinkButton
-	 */
-	onClick?: () => {},
-
-	/**
 	 * The primary style
 	 */
 	primary?: boolean,
