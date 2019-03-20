@@ -2,6 +2,9 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 import * as React from 'react';
 import Icon from './Icon';
+import FieldLabel from './FieldLabel';
+import FeildHelper from './FieldHelper';
+import FieldHelper from './FieldHelper';
 
 const Select = props => {
   const {
@@ -17,11 +20,9 @@ const Select = props => {
   const selectState = disabled ? 'disabled' : error ? 'error' : 'default';
   return React.createElement("div", {
     "data-swarm-select": selectState
-  }, label && React.createElement("label", {
+  }, label && React.createElement(FieldLabel, {
     htmlFor: name
-  }, label, requiredText ? React.createElement("span", null, " ", requiredText) : ''), helperText && React.createElement("p", {
-    "data-swarm-select-helper-text": "1"
-  }, helperText), React.createElement("div", {
+  }, label, requiredText ? React.createElement("span", null, " ", requiredText) : ''), helperText && React.createElement(FieldHelper, null, helperText), React.createElement("div", {
     "data-swarm-select-wrapper": "1"
   }, React.createElement("select", _extends({
     name: name,

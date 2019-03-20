@@ -6,10 +6,6 @@
     color: var(--color-gray-5);
 }
 
-[data-swarm-select-helper-text] {
-    font-size: var(--font-size-small);
-}
-
 [data-swarm-select] select {
     appearance: none;
     user-select: none;
