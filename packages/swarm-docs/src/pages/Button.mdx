@@ -7,9 +7,8 @@ import PropsTable from '../components/propstable';
 Buttons are the primary way to interact with content.
 
 ## Example
-<Example />
+<Example /><br/>
 
-## Snippets
 ```.jsx
 <>
 <Button>Click</Button>
@@ -23,9 +22,56 @@ Buttons are the primary way to interact with content.
 ## Props
 <PropsTable propMetaData={Button.__docgenInfo} />
 
+## Anatomy
+All button styles and sizes share the same anatomy.
+<img src="/static/docs-images/button-anatomy.png" width="810" height="252" />
+
+## Styles
+
+** Default **
+
+<img src="/static/docs-images/button-secondary-states.png" width="810" height="132" />
+<br/>
+
+** Primary **
+
+<img src="/static/docs-images/button-primary-states.png" width="810" height="132" />
+<br/>
+
+** Neutral **
+
+<img src="/static/docs-images/button-neutral-states.png" width="810" height="132" />
+<br/>
+
+** Bordered **
+
+<img src="/static/docs-images/button-bordered-states.png" width="810" height="132" />
+<br/>
+
+** Disabled **
+
+<div class="temp-image"></div>
+
+
+
+
+## Sizing
+
+** Size & Height **
+
+Any button can be configured to one of three distinct sizes. Size dictates label style and top/bottom padding. Button padding uses spacing variables which are dynamic based on viewport.
+<br/>
+<img src="/static/docs-images/button-sizing-size.png" width="600" height="373" />
+<br/><br/>
+
+** Width **
+
+Any button can be configured to one of three width settings. Width dictates left/right padding behavior. Button padding uses spacing variables which are dynamic based on viewport.
+<br/>
+<img src="/static/docs-images/button-sizing-width.png" width="600" height="371" />
+<br/><br/>
 
 ## a11y
-
 Keyboard interactions: The button action should be triggered by the enter and space keys.
 
 
