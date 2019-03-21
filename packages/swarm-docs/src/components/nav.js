@@ -6,7 +6,7 @@ type Props = {
     fileNames: Array<string>
 };
 
-const Nav = (props: Props) => {
+const Nav = (props: Props): React.Element<'div'> => {
     const navItems = props.fileNames.map((name) => (
         <li key={name}><Link to={`/${name}`} className="text--link">{name}</Link></li>
     ));
