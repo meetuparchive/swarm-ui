@@ -1,13 +1,35 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = exports.getIconShape = exports.MEDIA_SIZES = exports.ICON_CIRCLED_CLASS = exports.SVG_THIN_STYLE = exports.ICON_CLASS = void 0;
+
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
+var _react = _interopRequireDefault(require("react"));
+
+var _classnames = _interopRequireDefault(require("classnames"));
+
+var _shapeConstants = require("swarm-icons/dist/js/shapeConstants");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
-import PropTypes from 'prop-types';
-import React from 'react';
-import cx from 'classnames';
-import { VALID_SHAPES } from 'swarm-icons/dist/js/shapeConstants';
-export const ICON_CLASS = 'svg';
-export const SVG_THIN_STYLE = '--small';
-export const ICON_CIRCLED_CLASS = 'svg--circled';
-export const MEDIA_SIZES = {
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+var ICON_CLASS = 'svg';
+exports.ICON_CLASS = ICON_CLASS;
+var SVG_THIN_STYLE = '--small';
+exports.SVG_THIN_STYLE = SVG_THIN_STYLE;
+var ICON_CIRCLED_CLASS = 'svg--circled';
+exports.ICON_CIRCLED_CLASS = ICON_CIRCLED_CLASS;
+var MEDIA_SIZES = {
   xxs: '12',
   xs: '16',
   s: '24',
@@ -16,7 +38,11 @@ export const MEDIA_SIZES = {
   xl: '72',
   xxl: '120'
 };
-const SMALL_ICON_VARIANT_WHITELIST = VALID_SHAPES.filter(s => !s.startsWith('external') && !s.startsWith('meetup') // no third party icons // logos use same path for `xs`
+exports.MEDIA_SIZES = MEDIA_SIZES;
+
+var SMALL_ICON_VARIANT_WHITELIST = _shapeConstants.VALID_SHAPES.filter(function (s) {
+  return !s.startsWith('external') && !s.startsWith('meetup');
+} // no third party icons // logos use same path for `xs`
 );
 /**
  * @param {String} shape - icon shape
@@ -24,14 +50,17 @@ const SMALL_ICON_VARIANT_WHITELIST = VALID_SHAPES.filter(s => !s.startsWith('ext
  * @returns {String} icon name (with or without suffix)
  */
 
-export const getIconShape = (shape, size) => {
+
+var getIconShape = function getIconShape(shape, size) {
   if (!SMALL_ICON_VARIANT_WHITELIST.includes(shape)) {
     return shape;
   }
 
-  const suffix = size === 'xxs' || size === 'xs' || size === 's' ? SVG_THIN_STYLE : '';
-  return `${shape}${suffix}`;
+  var suffix = size === 'xxs' || size === 'xs' || size === 's' ? SVG_THIN_STYLE : '';
+  return "".concat(shape).concat(suffix);
 };
+
+exports.getIconShape = getIconShape;
 
 /**
  * Icon component used to insert an svg icon into a component or page
@@ -42,43 +71,41 @@ export const getIconShape = (shape, size) => {
  *
  * @module Icon
  */
-const Icon = props => {
-  const {
-    className,
-    shape,
-    size,
-    color,
-    style,
-    circled,
-    ...other
-  } = props;
-  const classNames = cx(ICON_CLASS, `svg--${shape}`, {
-    [ICON_CIRCLED_CLASS]: circled
-  }, className);
-  const sizeVal = MEDIA_SIZES[size];
-  const allStyles = style || {};
+var Icon = function Icon(props) {
+  var className = props.className,
+      shape = props.shape,
+      size = props.size,
+      color = props.color,
+      style = props.style,
+      circled = props.circled,
+      other = _objectWithoutProperties(props, ["className", "shape", "size", "color", "style", "circled"]);
+
+  var classNames = (0, _classnames.default)(ICON_CLASS, "svg--".concat(shape), _defineProperty({}, ICON_CIRCLED_CLASS, circled), className);
+  var sizeVal = MEDIA_SIZES[size];
+  var allStyles = style || {};
 
   if (color) {
     allStyles.fill = color;
   }
 
-  return React.createElement("svg", _extends({
+  return _react.default.createElement("svg", _extends({
     preserveAspectRatio: "xMinYMin meet",
     width: sizeVal,
     height: sizeVal,
-    viewBox: `0 0 ${sizeVal} ${sizeVal}`,
+    viewBox: "0 0 ".concat(sizeVal, " ").concat(sizeVal),
     className: "svg-icon valign--middle",
     role: "img",
     style: allStyles
-  }, other), React.createElement("use", {
-    xlinkHref: `#icon-${getIconShape(shape, size)}`
+  }, other), _react.default.createElement("use", {
+    xlinkHref: "#icon-".concat(getIconShape(shape, size))
   }));
 };
 
 Icon.defaultProps = {
   size: 's'
 };
-export default Icon;
+var _default = Icon;
+exports.default = _default;
 Icon.__docgenInfo = {
   "description": "Icon component used to insert an svg icon into a component or page\n\n**Accessibility** If an Icon is used on its own without supporting\ntext to explain what it is/does, be a good citizen and pass in an\n`aria-label` attribute describing what the icon represents\n\n@module Icon",
   "methods": [],

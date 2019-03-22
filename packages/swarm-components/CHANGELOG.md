@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.8](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.4.7...@meetup/swarm-components@0.4.8) (2019-03-21)
+
+
+### Bug Fixes
+
+* added babel env preset to compile to es5 compatibility ([65d978e](https://github.com/meetup/swarm-ui/commit/65d978e))
+
+
+
+
+
 ## [0.4.7](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.4.6...@meetup/swarm-components@0.4.7) (2019-03-18)
 
 
