@@ -4,9 +4,6 @@
   "workspaces": [
     "packages/*"
   ],
-  "scripts": {
-    "deploy": "lerna publish --conventional-commits --yes"
-  },
   "devDependencies": {
     "eslint": "^5.13.0",
     "eslint-config-prettier": "^4.0.0",
