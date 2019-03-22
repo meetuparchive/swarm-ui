@@ -21,32 +21,23 @@ const PropsTable = props => {
 
           return (
             <tr key={key}>
-              <td><span className="text-code">{key}</span></td>
+              <td className="text-code"><pre>{key}</pre></td>
               <td>{prop.flowType.name}</td>
               {prop.required ? (
-                <td><span className="text-required">required</span></td>
+                <td className="text-required">required</td>
               ) : (
-                <td><span>optional</span></td>
+                <td>optional</td>
               )}
               {prop.defaultValue ? (
-                <td>
-                  <span className="text-highlight">{prop.defaultValue.value}</span>
-                </td>
+                <td className="text-highlight">{prop.defaultValue.value}</td>
               ) : (
-                <td><span>none</span></td>
+                <td>none</td>
               )}
-              {prop.description ? <td><span>{prop.description}</span></td> : <td />}
+              {prop.description ? <td>{prop.description}</td> : <td />}
             </tr>
           );
         })}
       </tbody>
-      <tfoot><tr>
-          <th></th>
-          <th></th>
-          <th></th>
-          <th></th>
-          <th></th>
-        </tr></tfoot>
     </table>
   );
 };
