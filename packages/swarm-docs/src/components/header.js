@@ -10,7 +10,7 @@ const Header = ({ siteTitle }) => {
           textDecoration: 'none',
         }}
       >
-        <p>{siteTitle}</p>
+        <p>Swarm Design System Documentation</p>
       </Link>
     </h1>
   )

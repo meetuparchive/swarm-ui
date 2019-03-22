@@ -1,6 +1,6 @@
 {
   "name": "@meetup/swarm-docs",
-  "description": "Swarm Design System",
+  "description": "Meetup Swarm Design System Documentation",
   "version": "0.6.1",
   "author": "Hunter Bacot <hsbacot@gmail.com>",
   "publishConfig": {
