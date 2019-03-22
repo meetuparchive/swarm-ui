@@ -3,11 +3,13 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.getIconPosition = exports.getSwarmSize = exports.getButtonType = void 0;
+exports.default = void 0;
 
 var React = _interopRequireWildcard(require("react"));
 
 var _Icon = _interopRequireDefault(require("./Icon"));
+
+var _buttonUtils = require("./utils/buttonUtils");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -19,74 +21,26 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-/**
- *
- * @param {*} props
- *
- */
-var getButtonType = function getButtonType(props) {
-  var buttonType = 'default';
-  if (props.disabled) buttonType = 'disabled';
-  if (props.primary) buttonType = 'primary';
-  if (props.neutral) buttonType = 'neutral';
-  if (props.bordered) buttonType = 'bordered';
-  if (props.inverted) buttonType = 'inverted';
-  return buttonType;
-};
-
-exports.getButtonType = getButtonType;
-
-var getSwarmSize = function getSwarmSize(props) {
-  var size = 'default';
-  if (props.small) size = 'small';
-  return size;
-};
-
-exports.getSwarmSize = getSwarmSize;
-
-var getIconPosition = function getIconPosition(props) {
-  var position = 'left';
-  if (props.right) position = 'right';
-  if (!props.children) position = 'only';
-  return position;
-}; // TODO: find a better, more dynamic solution
-
-
-exports.getIconPosition = getIconPosition;
-var FILLS = {
-  default: 'var(--color-viridian)',
-  disabled: 'var(--color-gray-4)',
-  primary: 'var(--color-white)',
-  neutral: 'var(--color-gray-7)',
-  bordered: 'var(--color-gray-7)',
-  inverted: 'var(--color-white)'
-};
-
 var Button = function Button(props) {
   // destructuring to not pass invalid attributes to node
-  var primary = props.primary,
-      neutral = props.neutral,
-      bordered = props.bordered,
-      inverted = props.inverted,
-      small = props.small,
-      icon = props.icon,
+  var icon = props.icon,
       right = props.right,
       children = props.children,
-      rest = _objectWithoutProperties(props, ["primary", "neutral", "bordered", "inverted", "small", "icon", "right", "children"]);
+      other = _objectWithoutProperties(props, ["icon", "right", "children"]);
 
-  var buttonType = getButtonType(props);
+  var buttonType = (0, _buttonUtils.getButtonType)(props);
   return React.createElement("button", _extends({
     "data-swarm-button": buttonType,
-    "data-swarm-size": getSwarmSize(props),
-    "data-icon": getIconPosition(props)
-  }, rest), icon ? React.createElement("span", null, right ? React.createElement(React.Fragment, null, children, React.createElement(_Icon.default, {
+    "data-swarm-size": (0, _buttonUtils.getSwarmSize)(props),
+    "data-icon": (0, _buttonUtils.getIconPosition)(props)
+  }, other), icon ? React.createElement("span", null, right ? React.createElement(React.Fragment, null, children, React.createElement(_Icon.default, {
     shape: icon,
     size: "xs",
-    color: FILLS[buttonType]
+    color: _buttonUtils.FILLS[buttonType]
   })) : React.createElement(React.Fragment, null, React.createElement(_Icon.default, {
     shape: icon,
     size: "xs",
-    color: FILLS[buttonType]
+    color: _buttonUtils.FILLS[buttonType]
   }), children)) : children);
 };
 
@@ -144,16 +98,16 @@ Button.__docgenInfo = {
       "flowType": {
         "name": "signature",
         "type": "function",
-        "raw": "(*) => void",
+        "raw": "() => {}",
         "signature": {
-          "arguments": [{
-            "name": "",
-            "type": {
-              "name": "unknown"
-            }
-          }],
+          "arguments": [],
           "return": {
-            "name": "void"
+            "name": "signature",
+            "type": "object",
+            "raw": "{}",
+            "signature": {
+              "properties": []
+            }
           }
         }
       },
@@ -186,7 +140,7 @@ Button.__docgenInfo = {
         "name": "ReactNode",
         "raw": "React.Node"
       },
-      "description": ""
+      "description": "Content of button"
     }
   }
 };

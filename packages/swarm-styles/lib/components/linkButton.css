@@ -1,0 +1,92 @@
+[data-swarm-link] {
+  @extend %data-swarm-button;
+  @extend %button-personality;
+}
+
+/* focus & active */
+[data-swarm-link="default"]:focus,
+[data-swarm-link="default"]:active {
+  @extend %swarm-button-default-focus;
+}
+
+[data-swarm-link="primary"]:focus,
+[data-swarm-link="primary"]:active {
+  @extend %swarm-button-primary-focus;
+}
+
+[data-swarm-link="bordered"]:focus,
+[data-swarm-link="bordered"]:active {
+  @extend %swarm-button-bordered-focus;
+}
+
+[data-swarm-link="neutral"]:focus,
+[data-swarm-link="neutral"]:active {
+  @extend %swarm-button-neutral-focus;
+}
+
+/* hovers */
+[data-swarm-link="default"]:hover {
+  @extend %swarm-button-default-hover;
+}
+
+[data-swarm-link="bordered"]:hover,
+[data-swarm-link="neutral"]:hover {
+  @extend %swarm-button-bordered-hover;
+}
+
+[data-swarm-link="primary"]:hover {
+  @extend %swarm-button-primary-hover;
+}
+
+/* colors */
+[data-swarm-link="default"] {
+  @extend %swarm-button-default;
+}
+
+[data-swarm-link="primary"] {
+  @extend %swarm-button-primary;
+}
+
+[data-swarm-link="neutral"] {
+  @extend %swarm-button-neutral;
+}
+
+[data-swarm-link="bordered"] {
+  @extend %swarm-button-bordered;
+}
+
+[data-swarm-link="inverted"] {
+  @extend %swarm-button-inverted;
+}
+
+[data-swarm-link="inverted"]:hover,
+[data-swarm-link="inverted"]:focus,
+[data-swarm-link="inverted"]:active {
+  @extend %swarm-button-inverted-hover;
+}
+
+[data-swarm-link="disabled"] {
+  @extend %swarm-button-disabled;
+}
+
+/* small */
+[data-swarm-link][data-swarm-size="small"] {
+  @extend %swarm-button-small;
+}
+
+/* with icon */
+[data-swarm-link][data-icon="left"] .svg-icon {
+  @extend %swarm-button-icon-left;
+}
+
+[data-swarm-link][data-icon="right"] .svg-icon {
+  @extend %swarm-button-icon-right;
+}
+
+[data-swarm-link][data-icon="only"] {
+  @extend %swarm-button-icon-only;
+}
+
+[data-swarm-link] span {
+  @extend %swarm-button-icon-span;
+}

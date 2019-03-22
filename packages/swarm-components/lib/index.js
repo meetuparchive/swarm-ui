@@ -9,6 +9,12 @@ Object.defineProperty(exports, "Button", {
     return _Button.default;
   }
 });
+Object.defineProperty(exports, "LinkButton", {
+  enumerable: true,
+  get: function get() {
+    return _LinkButton.default;
+  }
+});
 Object.defineProperty(exports, "Checkbox", {
   enumerable: true,
   get: function get() {
@@ -53,6 +59,8 @@ Object.defineProperty(exports, "Select", {
 });
 
 var _Button = _interopRequireDefault(require("./Button"));
+
+var _LinkButton = _interopRequireDefault(require("./LinkButton"));
 
 var _Checkbox = _interopRequireDefault(require("./Checkbox"));
 
