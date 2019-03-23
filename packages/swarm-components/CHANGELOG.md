@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.4.8...@meetup/swarm-components@0.5.0) (2019-03-23)
+
+
+### Bug Fixes
+
+* remove link support in Button component ([d1f5569](https://github.com/meetup/swarm-ui/commit/d1f5569))
+* remove onClick prop from LinkButton ([3ff3d8a](https://github.com/meetup/swarm-ui/commit/3ff3d8a))
+* support isLink prop; update docs ([b6413e5](https://github.com/meetup/swarm-ui/commit/b6413e5))
+
+
+### Features
+
+* new LinkButton component ([7dae808](https://github.com/meetup/swarm-ui/commit/7dae808))
+
+
+
+
+
 ## [0.4.8](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.4.7...@meetup/swarm-components@0.4.8) (2019-03-21)
 
 
