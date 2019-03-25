@@ -116,6 +116,20 @@ h1.docs-title a {
   color: var(--color-marigold);
 }
 
+/* Content Layout */
+.grid-2-col {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.grid-2-col .column {
+  width: 48%;
+  flex-direction: column;
+  margin: 0 0 20px 0;
+}
+
 
 /* Prism Code editor */
 pre.prism-code {
