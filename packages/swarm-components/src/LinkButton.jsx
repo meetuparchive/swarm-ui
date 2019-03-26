@@ -8,7 +8,7 @@ import {
 	getIconPosition,
 } from './utils/buttonUtils';
 
-export type ButtonProps = {
+export type LinkButtonProps = {
 	/**
 	 * The bordered button
 	 */
@@ -40,11 +40,6 @@ export type ButtonProps = {
 	neutral?: boolean,
 
 	/**
-	 * The function invoked when interacting with Button
-	 */
-	onClick?: () => {},
-
-	/**
 	 * The primary style
 	 */
 	primary?: boolean,
@@ -65,7 +60,7 @@ export type ButtonProps = {
 	children: React.Node,
 };
 
-const Button = (props: ButtonProps): React.Element<'button'> => {
+const LinkButton = (props: LinkButtonProps): React.Element<'a'> => {
 	// destructuring to not pass invalid attributes to node
 	const {
 		icon,
@@ -77,8 +72,8 @@ const Button = (props: ButtonProps): React.Element<'button'> => {
 	const buttonType = getButtonType(props);
 
 	return (
-		<button
-			data-swarm-button={buttonType}
+		<a
+			data-swarm-link={buttonType}
 			data-swarm-size={getSwarmSize(props)}
 			data-icon={getIconPosition(props)}
 			{...other}
@@ -100,8 +95,8 @@ const Button = (props: ButtonProps): React.Element<'button'> => {
 			) : (
 				children
 			)}
-		</button>
+		</a>
 	);
 };
 
-export default Button;
+export default LinkButton;

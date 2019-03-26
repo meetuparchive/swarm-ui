@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.3](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.6.2...@meetup/swarm-docs@0.6.3) (2019-03-23)
+
+
+### Bug Fixes
+
+* support isLink prop; update docs ([b6413e5](https://github.com/gatsbyjs/gatsby-starter-default/commit/b6413e5))
+
+
+
+
+
+## [0.6.2](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.6.1...@meetup/swarm-docs@0.6.2) (2019-03-21)
+
+**Note:** Version bump only for package @meetup/swarm-docs
+
+
+
+
+
 ## [0.6.1](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.6.0...@meetup/swarm-docs@0.6.1) (2019-03-18)
 
 **Note:** Version bump only for package @meetup/swarm-docs

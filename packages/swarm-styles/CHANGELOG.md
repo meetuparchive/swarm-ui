@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.8](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.1.7...@meetup/swarm-styles@0.1.8) (2019-03-23)
+
+
+### Bug Fixes
+
+* cant mix functional css selectors with other rules ([c918706](https://github.com/meetup/swarm-ui/commit/c918706))
+
+
+
+
+
 ## [0.1.7](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.1.6...@meetup/swarm-styles@0.1.7) (2019-03-18)
 
 
