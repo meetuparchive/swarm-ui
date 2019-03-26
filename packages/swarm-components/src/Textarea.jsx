@@ -1,12 +1,20 @@
 // @flow
 import * as React from 'react';
 
-
-const getTextareaStatus = (props: Props) => {
-    return 'default'
+type Props = {
+    disabeld?: boolean,
+    error?: boolean,
+    value?: string
 }
 
-const getCharacterCount = (value = 0) => value.length
+const getTextareaStatus = (props: Props) => {
+    let status = 'default';
+    if (props.error) status = 'error';
+    if (props.disabeld) status = 'disabled';
+    return status;
+}
+
+const getCharacterCount = (value: string = '') => value.length;
 
 export const Textarea = (props: Props) => {
 
