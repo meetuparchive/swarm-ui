@@ -7,6 +7,7 @@ const Example = () => {
   const [value4, setValue4] = React.useState('');
   const [value5, setValue5] = React.useState('');
   const [value6, setValue6] = React.useState('abc');
+  const [value7, setValue7] = React.useState('value');
 
   return (
     <>
@@ -16,8 +17,6 @@ const Example = () => {
         value={value1}
         onChange={(e) => setValue1(e.target.value)} />
       <br/>
-      <br/>
-      <br/>
       <label htmlFor="input2">Label</label>
       <TextInput
         id="input2"
@@ -25,15 +24,11 @@ const Example = () => {
         value={value2}
         onChange={(e) => setValue2(e.target.value)} />
       <br/>
-      <br/>
-      <br/>
       <label htmlFor="input3">Disabled input</label>
       <TextInput
         id="input3"
         name="input3"
         disabled />
-      <br/>
-      <br/>
       <br/>
       <label htmlFor="input4">Error Input</label>
       <TextInput
@@ -43,8 +38,6 @@ const Example = () => {
         onChange={(e) => setValue4(e.target.value)}
         error />
       <br/>
-      <br/>
-      <br/>
       <label htmlFor="input5">Search Input</label>
       <TextInput
         id="input5"
@@ -53,8 +46,6 @@ const Example = () => {
         onChange={(e) => setValue5(e.target.value)}
         isSearch />
       <br/>
-      <br/>
-      <br/>
       <label htmlFor="input6">Input with 3 letter value pattern</label>
       <TextInput
         id="input6"
@@ -62,6 +53,14 @@ const Example = () => {
         value={value6}
         pattern="[A-Za-z]{3}"
         onChange={(e) => setValue6(e.target.value)} />
+      <br/>
+      <label htmlFor="input7">Search Input</label>
+      <TextInput
+        id="input7"
+        name="input7"
+        value={value7}
+        onChange={(e) => setValue7(e.target.value)}
+        iconShape="location-pin" />
     </>
   );
 };

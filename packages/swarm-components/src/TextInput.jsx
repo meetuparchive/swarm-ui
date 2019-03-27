@@ -1,5 +1,16 @@
 // @flow
 import * as React from 'react';
+import Icon from './Icon';
+
+const ICON_SIZES = Object.freeze({
+  XXS: 'xxs',
+  XS: 'xs',
+  S: 's',
+  M: 'm',
+  L: 'l',
+  XL: 'xl',
+  XXL: 'xxl',
+});
 
 type Props = {
   /**
@@ -29,7 +40,16 @@ type Props = {
   /**
    * Value of input.
    */
-  value: string
+  value: string,
+  /**
+   * Name of icon to render in the input
+   */
+  iconShape: ?string,
+  /**
+   * Optional size for icon if `iconShape` is provided.
+   * Default size is `xs`
+   */
+  iconSize: $Values<typeof ICON_SIZES>,
 };
 
 /**
@@ -43,21 +63,31 @@ export const TextInput = (props: Props): React$Element<*> => {
     pattern,
     disabled,
     id,
+    iconShape,
+    iconSize = 'xs',
     ...other
   } = props;
 
+  const wrapperState = iconShape ? 'icon' : 'default';
   const inputState = disabled ? 'disabled' : error ? 'error' : 'default';
 
   return (
-    <input
-      data-swarm-text-input={inputState}
-      type={isSearch ? 'search' : 'text'}
-      name={name}
-      pattern={pattern}
-      disabled={disabled}
-      id={id}
-      {...other}
-    />
+    <div data-swarm-text-input-wrapper={wrapperState}>
+      <input
+        data-swarm-text-input={inputState}
+        type={isSearch ? 'search' : 'text'}
+        name={name}
+        pattern={pattern}
+        disabled={disabled}
+        id={id}
+        {...other}
+      />
+      {iconShape && (
+        <span data-swarm-input-icon={iconShape}>
+          <Icon shape={iconShape} size={iconSize} aria-hidden={true} />
+        </span>
+      )}
+    </div>
   );
 };
 
