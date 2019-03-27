@@ -13,7 +13,7 @@ type Props = {
   /**
    * An identifier for the input.
    */
-  id?: string,
+  id: string,
   /**
    * Whether the input is a search field.
    */
