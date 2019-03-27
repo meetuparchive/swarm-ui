@@ -19,10 +19,6 @@ type Props = {
    */
   isSearch?: boolean,
   /**
-   * Label for the input.
-   */
-  label?: string,
-  /**
    * Name for the input.
    */
   name: string,
@@ -44,7 +40,6 @@ export const TextInput = (props: Props): React$Element<*> => {
     name,
     error,
     isSearch,
-    label,
     pattern,
     disabled,
     id,
@@ -54,18 +49,15 @@ export const TextInput = (props: Props): React$Element<*> => {
   const inputState = disabled ? 'disabled' : error ? 'error' : 'default';
 
   return (
-    <>
-      <label htmlFor={id}>{label}</label>
-      <input
-        data-swarm-text-input={inputState}
-        type={isSearch ? 'search' : 'text'}
-        name={name}
-        pattern={pattern}
-        disabled={disabled}
-        id={id}
-        {...other}
-      />
-    </>
+    <input
+      data-swarm-text-input={inputState}
+      type={isSearch ? 'search' : 'text'}
+      name={name}
+      pattern={pattern}
+      disabled={disabled}
+      id={id}
+      {...other}
+    />
   );
 };
 
