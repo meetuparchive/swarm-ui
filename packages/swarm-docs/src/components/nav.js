@@ -13,7 +13,7 @@ const Nav = (props: Props): React.Element<'div'> => {
     return (
         <div className="left-nav">
             <Link to="/">
-                <img className="swarm-logo" src="/static/docs-images/swarm-logo.png" width="64" height="62" />
+                <img className="swarm-logo" src="/docs-images/swarm-logo.png" width="64" height="62" />
             </Link>
             <ul>{navItems}</ul>
         </div>
