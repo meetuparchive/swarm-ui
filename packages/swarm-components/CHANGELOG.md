@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.1](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.5.0...@meetup/swarm-components@0.5.1) (2019-03-27)
+
+
+### Bug Fixes
+
+* add iconShape support; update css and docs ([c6dc5e0](https://github.com/meetup/swarm-ui/commit/c6dc5e0))
+* iconShape and iconSize should be optional not required ([6138b07](https://github.com/meetup/swarm-ui/commit/6138b07))
+* remove label prop from TextInput ([8580805](https://github.com/meetup/swarm-ui/commit/8580805))
+* update textInput swarm docs to provide both a label tag and an id prop ([f4851fe](https://github.com/meetup/swarm-ui/commit/f4851fe))
+
+
+
+
+
 # [0.5.0](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.4.8...@meetup/swarm-components@0.5.0) (2019-03-23)
 
 
