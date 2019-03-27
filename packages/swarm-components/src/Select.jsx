@@ -15,17 +15,9 @@ type Props = React.ElementConfig<HTMLSelectElement> & {
 	 */
 	error?: string,
 	/**
-	 * Line of text further describing the select menu.
-	 */
-	helperText?: string,
-	/**
 	 * Unique identifier for select tag.
 	 */
 	id?: string,
-	/**
-	 * Associated <label> tag for the <select> tag.
-	 */
-	label?: string,
 	/**
 	 * Name of select menu form field.
 	 */
@@ -40,9 +32,7 @@ const Select = (props: Props) => {
 	const {
         disabled,
 		error,
-        helperText,
         id,
-		label,
         name,
 		requiredText,
 		...other
