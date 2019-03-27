@@ -1,9 +1,20 @@
+[data-swarm-text-input-wrapper] {
+    position:relative;
+}
+
 [data-swarm-text-input] {
     border: 1px solid #DCDCDC;
     background-color: #FAFAFA;
     border-radius: 4px;
-    padding: var(--size-space-default);
     color: var(--color-gray-7);
+}
+
+[data-swarm-text-input-wrapper="default"] [data-swarm-text-input] {
+    padding: var(--size-space-default);
+}
+
+[data-swarm-text-input-wrapper="icon"] [data-swarm-text-input] {
+    padding: var(--size-space-default) var(--size-space-double);
 }
 
 [data-swarm-text-input]:focus {
@@ -19,4 +30,15 @@
 
 [data-swarm-text-input="error"] {
     border-color: var(--color-alert-red);
+}
+
+/** Icon sytles */
+[data-swarm-input-icon] {
+    align-content: center;
+    bottom: 0;
+    display: flex important!;
+    left: 0;
+    padding: var(--size-space-default) var(--size-space-half);
+    position:absolute;
+    top:0;
 }
