@@ -122,15 +122,14 @@ TextInput.__docgenInfo = {
       "description": "Value of input."
     },
     "iconShape": {
-      "required": true,
+      "required": false,
       "flowType": {
-        "name": "string",
-        "nullable": true
+        "name": "string"
       },
       "description": "Name of icon to render in the input"
     },
     "iconSize": {
-      "required": true,
+      "required": false,
       "flowType": {
         "name": "$Values",
         "elements": [{

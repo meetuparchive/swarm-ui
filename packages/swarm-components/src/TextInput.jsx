@@ -44,12 +44,12 @@ type Props = {
   /**
    * Name of icon to render in the input
    */
-  iconShape: ?string,
+  iconShape?: string,
   /**
    * Optional size for icon if `iconShape` is provided.
    * Default size is `xs`
    */
-  iconSize: $Values<typeof ICON_SIZES>,
+  iconSize?: $Values<typeof ICON_SIZES>,
 };
 
 /**
