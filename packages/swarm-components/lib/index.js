@@ -39,6 +39,12 @@ Object.defineProperty(exports, "TextInput", {
     return _TextInput.default;
   }
 });
+Object.defineProperty(exports, "Textarea", {
+  enumerable: true,
+  get: function get() {
+    return _Textarea.default;
+  }
+});
 Object.defineProperty(exports, "Toggle", {
   enumerable: true,
   get: function get() {
@@ -69,6 +75,8 @@ var _Icon = _interopRequireDefault(require("./Icon"));
 var _Radio = _interopRequireDefault(require("./Radio"));
 
 var _TextInput = _interopRequireDefault(require("./TextInput"));
+
+var _Textarea = _interopRequireDefault(require("./Textarea"));
 
 var _Toggle = _interopRequireDefault(require("./Toggle"));
 
