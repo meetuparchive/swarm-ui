@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 import cx from 'classnames';
 import { VALID_SHAPES } from 'swarm-icons/dist/js/shapeConstants';

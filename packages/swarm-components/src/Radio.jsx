@@ -31,11 +31,11 @@ export type Props = {
    * Use children as an alternative to the `label` prop for more complex input labels.
    * The `label` prop will override children.
    */
-  children?: React.ReactElement<*>,
+  children?: React.Node,
 };
 
 // Can not inline css vars as color to Icon. Gray 5 icon fill on disbaled
-const Radio = (props: Props): React.ReactElement<'label'> => {
+const Radio = (props: Props): React.Element<'label'> => {
   const {
     checked,
     label,
