@@ -5,6 +5,7 @@
  */
 
 // You can delete this file if you're not using it
+const Shell = require('child_process');
 
 exports.onCreateWebpackConfig = ({
   stage,
@@ -22,5 +23,9 @@ exports.onCreateWebpackConfig = ({
         },
       ],
     },
-  })
-}
+  });
+};
+
+exports.onPostBuild = () => {
+  Shell.execSync('cp -r src/images/* public/');
+};

@@ -5,7 +5,7 @@ const PropsTable = props => {
   const { propMetaData = { props: {} },...rest } = props;
 
   return (
-    <table {...rest}>
+    <table {...rest} className="props-table">
       <thead>
         <tr>
           <th>Name</th>
@@ -21,19 +21,17 @@ const PropsTable = props => {
 
           return (
             <tr key={key}>
-              <td style={{ color: 'rgb(17, 147, 154)' }}>{key}</td>
+              <td className="text-code"><pre>{key}</pre></td>
               <td>{prop.flowType.name}</td>
               {prop.required ? (
-                <td style={{ color: 'rgb(255, 76, 34)' }}>required</td>
+                <td className="text-required">required</td>
               ) : (
-                <td style={{ color: '#c6c6c6' }}>optional</td>
+                <td>optional</td>
               )}
               {prop.defaultValue ? (
-                <td style={{ color: 'rgb(236, 171, 32)' }}>
-                  {prop.defaultValue.value}
-                </td>
+                <td className="text-highlight">{prop.defaultValue.value}</td>
               ) : (
-                <td style={{ color: '#c6c6c6' }}>none</td>
+                <td>none</td>
               )}
               {prop.description ? <td>{prop.description}</td> : <td />}
             </tr>

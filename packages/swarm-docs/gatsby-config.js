@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Swarm Docs',
+    title: 'Swarm Design System Documentation',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
