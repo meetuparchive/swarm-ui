@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.4](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.5.2...@meetup/swarm-components@0.5.4) (2019-03-28)
+
+
+### Bug Fixes
+
+* fix flow errors in Radio.jsx ([3314581](https://github.com/meetup/swarm-ui/commit/3314581))
+
+
+
+
+
 ## [0.5.3](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.5.2...@meetup/swarm-components@0.5.3) (2019-03-28)
 
 
