@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.6.7...@meetup/swarm-docs@0.7.0) (2019-03-28)
+
+
+### Bug Fixes
+
+* added siteTitle variable back in, renamed site title in gatsy config and package ([7cf91a2](https://github.com/gatsbyjs/gatsby-starter-default/commit/7cf91a2))
+* adding images ([b76f221](https://github.com/gatsbyjs/gatsby-starter-default/commit/b76f221))
+* changed site title to be more seo friendly ([9732c51](https://github.com/gatsbyjs/gatsby-starter-default/commit/9732c51))
+* copy images dir after build ([c087f03](https://github.com/gatsbyjs/gatsby-starter-default/commit/c087f03))
+* removed commented ruleset, cleaned up spacing ([7c2076e](https://github.com/gatsbyjs/gatsby-starter-default/commit/7c2076e))
+* removed unnecessary line breaks ([cf420b3](https://github.com/gatsbyjs/gatsby-starter-default/commit/cf420b3))
+* simplified and cleaned up styling of propstable ([a41fe5f](https://github.com/gatsbyjs/gatsby-starter-default/commit/a41fe5f))
+* static image references we incorrect ([de627ea](https://github.com/gatsbyjs/gatsby-starter-default/commit/de627ea))
+
+
+### Features
+
+* updating look and feel of navigation, propstable, page layout and markdown for button component ([ee96234](https://github.com/gatsbyjs/gatsby-starter-default/commit/ee96234))
+
+
+
+
+
 ## [0.6.7](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.6.5...@meetup/swarm-docs@0.6.7) (2019-03-28)
 
 **Note:** Version bump only for package @meetup/swarm-docs
