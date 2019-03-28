@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.5](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.6.4...@meetup/swarm-docs@0.6.5) (2019-03-27)
+
+**Note:** Version bump only for package @meetup/swarm-docs
+
+
+
+
+
+## [0.6.4](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.6.3...@meetup/swarm-docs@0.6.4) (2019-03-27)
+
+
+### Bug Fixes
+
+* add iconShape support; update css and docs ([c6dc5e0](https://github.com/gatsbyjs/gatsby-starter-default/commit/c6dc5e0))
+* update textInput swarm docs to provide both a label tag and an id prop ([f4851fe](https://github.com/gatsbyjs/gatsby-starter-default/commit/f4851fe))
+
+
+
+
+
 ## [0.6.3](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.6.2...@meetup/swarm-docs@0.6.3) (2019-03-23)
 
 

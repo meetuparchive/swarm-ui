@@ -7,55 +7,60 @@ const Example = () => {
   const [value4, setValue4] = React.useState('');
   const [value5, setValue5] = React.useState('');
   const [value6, setValue6] = React.useState('abc');
+  const [value7, setValue7] = React.useState('value');
 
   return (
     <>
       <TextInput
+        id="input1"
         name="input1"
         value={value1}
         onChange={(e) => setValue1(e.target.value)} />
       <br/>
-      <br/>
-      <br/>
+      <label htmlFor="input2">Label</label>
       <TextInput
+        id="input2"
         name="input2"
         value={value2}
-        label="Input Label with value"
         onChange={(e) => setValue2(e.target.value)} />
       <br/>
-      <br/>
-      <br/>
+      <label htmlFor="input3">Disabled input</label>
       <TextInput
+        id="input3"
         name="input3"
-        label="Disabled input"
         disabled />
       <br/>
-      <br/>
-      <br/>
+      <label htmlFor="input4">Error Input</label>
       <TextInput
+        id="input4"
         name="input4"
-        label="Input with Error"
         value={value4}
         onChange={(e) => setValue4(e.target.value)}
         error />
       <br/>
-      <br/>
-      <br/>
+      <label htmlFor="input5">Search Input</label>
       <TextInput
+        id="input5"
         name="input5"
-        label="Search input"
         value={value5}
         onChange={(e) => setValue5(e.target.value)}
         isSearch />
       <br/>
-      <br/>
-      <br/>
+      <label htmlFor="input6">Input with 3 letter value pattern</label>
       <TextInput
+        id="input6"
         name="input6"
         value={value6}
-        label="3 letter value pattern"
         pattern="[A-Za-z]{3}"
         onChange={(e) => setValue6(e.target.value)} />
+      <br/>
+      <label htmlFor="input7">Search Input</label>
+      <TextInput
+        id="input7"
+        name="input7"
+        value={value7}
+        onChange={(e) => setValue7(e.target.value)}
+        iconShape="location-pin" />
     </>
   );
 };
