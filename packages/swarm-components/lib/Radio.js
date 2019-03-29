@@ -98,11 +98,8 @@ Radio.__docgenInfo = {
     "children": {
       "required": false,
       "flowType": {
-        "name": "ReactReactElement",
-        "raw": "React.ReactElement<*>",
-        "elements": [{
-          "name": "unknown"
-        }]
+        "name": "ReactNode",
+        "raw": "React.Node"
       },
       "description": "Use children as an alternative to the `label` prop for more complex input labels.\nThe `label` prop will override children."
     }
