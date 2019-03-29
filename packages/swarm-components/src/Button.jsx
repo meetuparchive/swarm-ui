@@ -67,12 +67,7 @@ export type ButtonProps = {
 
 const Button = (props: ButtonProps): React.Element<'button'> => {
 	// destructuring to not pass invalid attributes to node
-	const {
-		icon,
-		right,
-		children,
-		...other
-	} = props;
+	const { icon, right, children, ...other } = props;
 
 	const buttonType = getButtonType(props);
 
