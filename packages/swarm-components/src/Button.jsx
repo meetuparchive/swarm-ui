@@ -5,7 +5,7 @@ import {
 	FILLS,
 	getButtonType,
 	getSwarmSize,
-	getIconPosition
+	getIconPosition,
 } from './utils/buttonUtils';
 
 export type ButtonProps = {
@@ -62,10 +62,10 @@ export type ButtonProps = {
 	/**
 	 * Content of button
 	 */
-	children: React.Node
+	children: React.Node,
 };
 
-const Button = (props: ButtonProps): React.Element<"button"> => {
+const Button = (props: ButtonProps): React.Element<'button'> => {
 	// destructuring to not pass invalid attributes to node
 	const { icon, right, children, ...other } = props;
 
