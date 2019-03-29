@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.5](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.5.4...@meetup/swarm-components@0.5.5) (2019-03-29)
+
+
+### Bug Fixes
+
+* clean up the textarea component ([701d2b2](https://github.com/meetup/swarm-ui/commit/701d2b2))
+* update the lib directory ([fa2c904](https://github.com/meetup/swarm-ui/commit/fa2c904))
+
+
+
+
+
 ## [0.5.4](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.5.2...@meetup/swarm-components@0.5.4) (2019-03-28)
 
 
