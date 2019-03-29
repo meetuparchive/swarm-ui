@@ -7,5 +7,4 @@
 ```
 const swarmComponents = require('swarm-components');
 
-// TODO: DEMONSTRATE API
 ```
