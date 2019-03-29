@@ -29,10 +29,14 @@
       "pre-commit": "lint-staged"
     }
   },
+  "prettier": {
+    "useTabs": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
   "lint-staged": {
-    "{test,js}/**/*.{js,jsx}": [
-      "prettier --write --single-quote --use-tabs --trailing-comma es5",
-      "eslint",
+    ".jsx": [
+      "prettier --write",
       "git add"
     ]
   }
