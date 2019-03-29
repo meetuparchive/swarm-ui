@@ -25,8 +25,10 @@ var FILLS = {
 };
 
 var Toggle = function Toggle(props) {
-  var checked = props.checked,
-      disabled = props.disabled,
+  var _props$checked = props.checked,
+      checked = _props$checked === void 0 ? false : _props$checked,
+      _props$disabled = props.disabled,
+      disabled = _props$disabled === void 0 ? false : _props$disabled,
       rest = _objectWithoutProperties(props, ["checked", "disabled"]);
 
   var checkedStatus = checked ? 'checked' : 'unchecked';
