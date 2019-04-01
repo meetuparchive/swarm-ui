@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.15](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.1.14...@meetup/swarm-styles@0.1.15) (2019-04-01)
+
+
+### Bug Fixes
+
+* removed disc and padding from li resets ([bc48fbb](https://github.com/meetup/swarm-ui/commit/bc48fbb))
+
+
+
+
+
 ## [0.1.14](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.1.13...@meetup/swarm-styles@0.1.14) (2019-03-29)
 
 **Note:** Version bump only for package @meetup/swarm-styles
