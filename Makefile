@@ -12,6 +12,6 @@ ifeq ($(TRAVIS_PULL_REQUEST), false)
 	git checkout master
 	lerna publish --conventional-commits --yes -m "$$COMMIT_MESSAGE"
 else
-	lerna publish --conventional-commits --yes --canary --preid beta -m "$$COMMIT_MESSAGE"
+	lerna publish --conventional-commits --yes --canary --preid beta -m "$(COMMIT_MESSAGE)"
 endif
 endif
