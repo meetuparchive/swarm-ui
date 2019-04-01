@@ -71,6 +71,7 @@ const Button = (props: ButtonProps): React.Element<'button'> => {
 		icon,
 		right,
 		children,
+		small, // eslint-disable-line no-unused-vars
 		...other
 	} = props;
 
