@@ -26,7 +26,8 @@ var Button = function Button(props) {
   var icon = props.icon,
       right = props.right,
       children = props.children,
-      other = _objectWithoutProperties(props, ["icon", "right", "children"]);
+      small = props.small,
+      other = _objectWithoutProperties(props, ["icon", "right", "children", "small"]);
 
   var buttonType = (0, _buttonUtils.getButtonType)(props);
   return React.createElement("button", _extends({
