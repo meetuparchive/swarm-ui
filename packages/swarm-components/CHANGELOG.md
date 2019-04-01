@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.9](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.5.8...@meetup/swarm-components@0.5.9) (2019-04-01)
+
+
+### Bug Fixes
+
+* passing  prop to DOM element with boolean value yields React Error ([20113ff](https://github.com/meetup/swarm-ui/commit/20113ff))
+
+
+
+
+
 ## [0.5.8](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.5.7...@meetup/swarm-components@0.5.8) (2019-03-29)
 
 **Note:** Version bump only for package @meetup/swarm-components
