@@ -1,0 +1,45 @@
+[data-swarm-number-input] {
+    display: inline-flex;
+    border: 1px solid #DCDCDC;
+    background-color: #FAFAFA;
+    border-radius: 4px;
+    padding: var(--size-space-default);
+    color: var(--color-gray-7);
+}
+[data-swarm-number-input]:focus {
+    outline: none;
+    border-color: var(--color-viridian);
+}
+
+[data-swarm-number-input="disabled"] {
+    background-color: var(--color-gray-3);
+    border-color: var(--color-gray-3);
+    color: var(--color-gray-5);
+}
+
+[data-swarm-number-input="error"] {
+    border-color: var(--color-alert-red);
+}
+
+[data-swarm-number-input] input {
+    background-color: #FAFAFA;
+    border: none;
+    padding: 0;
+    color: var(--color-gray-7);
+}
+
+[data-swarm-number-input] input[type=number]::-webkit-inner-spin-button, 
+[data-swarm-number-input] input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+/* focused */
+[data-swarm-number-input]:focus-within {
+    box-shadow: 0 0 1px 2px rgb(94, 158, 214);
+}
+[data-swarm-number-input-field]:focus {
+    outline: none;
+}
