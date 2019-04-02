@@ -107,14 +107,12 @@ numbers/bullets to a list.
 }
 
 /* stylelint-disable selector-no-qualifying-type */
-ul,
 ul.bullets,
 ul.runningText {
     @extend %_listStyleBase;
     list-style-type: disc;
 }
 
-ol,
 ol.bullets,
 ol.runningText {
     @extend %_listStyleBase;

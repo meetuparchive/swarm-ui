@@ -21,7 +21,7 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-var Button = function Button(props) {
+var LinkButton = function LinkButton(props) {
   // destructuring to not pass invalid attributes to node
   var icon = props.icon,
       right = props.right,
@@ -34,8 +34,8 @@ var Button = function Button(props) {
       other = _objectWithoutProperties(props, ["icon", "right", "children", "bordered", "neutral", "primary", "inverted", "small"]);
 
   var buttonType = (0, _buttonUtils.getButtonType)(props);
-  return React.createElement("button", _extends({
-    "data-swarm-button": buttonType,
+  return React.createElement("a", _extends({
+    "data-swarm-link": buttonType,
     "data-swarm-size": (0, _buttonUtils.getSwarmSize)(props),
     "data-icon": (0, _buttonUtils.getIconPosition)(props)
   }, other), icon ? React.createElement("span", null, right ? React.createElement(React.Fragment, null, children, React.createElement(_Icon.default, {
@@ -49,12 +49,12 @@ var Button = function Button(props) {
   }), children)) : children);
 };
 
-var _default = Button;
+var _default = LinkButton;
 exports.default = _default;
-Button.__docgenInfo = {
+LinkButton.__docgenInfo = {
   "description": "",
   "methods": [],
-  "displayName": "Button",
+  "displayName": "LinkButton",
   "props": {
     "bordered": {
       "required": false,
@@ -97,26 +97,6 @@ Button.__docgenInfo = {
         "name": "boolean"
       },
       "description": "The neutral style"
-    },
-    "onClick": {
-      "required": false,
-      "flowType": {
-        "name": "signature",
-        "type": "function",
-        "raw": "() => {}",
-        "signature": {
-          "arguments": [],
-          "return": {
-            "name": "signature",
-            "type": "object",
-            "raw": "{}",
-            "signature": {
-              "properties": []
-            }
-          }
-        }
-      },
-      "description": "The function invoked when interacting with Button"
     },
     "primary": {
       "required": false,

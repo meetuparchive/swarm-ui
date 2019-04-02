@@ -12,17 +12,9 @@ type Props = React.ElementConfig<HTMLSelectElement> & {
 	 */
 	error?: string,
 	/**
-	 * Line of text further describing the select menu.
-	 */
-	helperText?: string,
-	/**
 	 * Unique identifier for select tag.
 	 */
 	id?: string,
-	/**
-	 * Associated <label> tag for the <select> tag.
-	 */
-	label?: string,
 	/**
 	 * Name of select menu form field.
 	 */
@@ -37,9 +29,7 @@ const Select = (props: Props) => {
 	const {
         disabled,
 		error,
-        helperText,
         id,
-		label,
         name,
 		requiredText,
 		...other
@@ -51,21 +41,6 @@ const Select = (props: Props) => {
 
 	return (
 		<div data-swarm-select={selectState}>
-			{label && (
-				<label
-					htmlFor={name}
-				>
-					{label}
-					{requiredText ? <span> {requiredText}</span> : ''}
-				</label>
-            )}
-
-			{helperText && (
-                <p data-swarm-select-helper-text="1">
-                    {helperText}
-                </p>
-            )}
-
 			<div data-swarm-select-wrapper="1">
 				<select
 					name={name}

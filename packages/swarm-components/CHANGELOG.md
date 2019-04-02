@@ -3,6 +3,111 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.18](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.5.17...@meetup/swarm-components@0.5.18) (2019-04-02)
+
+
+### Bug Fixes
+
+* adding lib field files ([1b472d9](https://github.com/meetup/swarm-ui/commit/1b472d9))
+* adding select docs with FieldLabel and FieldHelper ([e467290](https://github.com/meetup/swarm-ui/commit/e467290))
+* merging master, resolving css conflicts ([bb8b9a1](https://github.com/meetup/swarm-ui/commit/bb8b9a1))
+
+
+
+
+
+## [0.5.17](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.5.16...@meetup/swarm-components@0.5.17) (2019-04-02)
+
+
+### Bug Fixes
+
+* added husky dep, and commitlint with conventional commit tooling ([43bd07f](https://github.com/meetup/swarm-ui/commit/43bd07f))
+* merging master, resolved conflicts ([69b0265](https://github.com/meetup/swarm-ui/commit/69b0265))
+* removing files not yet added ([9370a04](https://github.com/meetup/swarm-ui/commit/9370a04))
+* testing lint-staged ([d90adf1](https://github.com/meetup/swarm-ui/commit/d90adf1))
+* testing lint-staged prettier ([7c07d73](https://github.com/meetup/swarm-ui/commit/7c07d73))
+* testing lint-staged prettier ([73b3843](https://github.com/meetup/swarm-ui/commit/73b3843))
+
+
+
+
+
+## [0.5.16](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.5.15...@meetup/swarm-components@0.5.16) (2019-04-02)
+
+
+### Bug Fixes
+
+* Icon lint and flow errors ([efca3c7](https://github.com/meetup/swarm-ui/commit/efca3c7))
+
+
+
+
+
+## [0.5.15](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.5.14...@meetup/swarm-components@0.5.15) (2019-04-02)
+
+
+### Bug Fixes
+
+* destructure props to LinkButton to avoid passing down the DOM ([e07039c](https://github.com/meetup/swarm-ui/commit/e07039c))
+
+
+
+
+
+## [0.5.14](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.5.13...@meetup/swarm-components@0.5.14) (2019-04-01)
+
+
+### Bug Fixes
+
+* destructure button props to avoid passing down the DOM ([01b9e00](https://github.com/meetup/swarm-ui/commit/01b9e00))
+
+
+
+
+
+## [0.5.13](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.5.12...@meetup/swarm-components@0.5.13) (2019-04-01)
+
+**Note:** Version bump only for package @meetup/swarm-components
+
+
+
+
+
+## [0.5.12](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.5.11...@meetup/swarm-components@0.5.12) (2019-04-01)
+
+**Note:** Version bump only for package @meetup/swarm-components
+
+
+
+
+
+## [0.5.11](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.5.10...@meetup/swarm-components@0.5.11) (2019-04-01)
+
+**Note:** Version bump only for package @meetup/swarm-components
+
+
+
+
+
+## [0.5.10](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.5.9...@meetup/swarm-components@0.5.10) (2019-04-01)
+
+**Note:** Version bump only for package @meetup/swarm-components
+
+
+
+
+
+## [0.5.9](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.5.8...@meetup/swarm-components@0.5.9) (2019-04-01)
+
+
+### Bug Fixes
+
+* passing  prop to DOM element with boolean value yields React Error ([20113ff](https://github.com/meetup/swarm-ui/commit/20113ff))
+
+
+
+
+
 ## [0.5.8](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.5.7...@meetup/swarm-components@0.5.8) (2019-03-29)
 
 **Note:** Version bump only for package @meetup/swarm-components

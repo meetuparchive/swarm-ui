@@ -19,73 +19,76 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-var Select = function Select(props) {
-  var disabled = props.disabled,
-      error = props.error,
-      id = props.id,
-      name = props.name,
-      requiredText = props.requiredText,
-      other = _objectWithoutProperties(props, ["disabled", "error", "id", "name", "requiredText"]);
-
-  var selectState = disabled ? 'disabled' : error ? 'error' : 'default';
-  return React.createElement("div", {
-    "data-swarm-select": selectState
-  }, React.createElement("div", {
-    "data-swarm-select-wrapper": "1"
-  }, React.createElement("select", _extends({
-    name: name,
-    id: id || name,
-    required: Boolean(requiredText),
-    disabled: disabled
-  }, other)), React.createElement("span", {
-    "data-swarm-select-arrow": "chevron-down"
-  }, React.createElement(_Icon.default, {
-    shape: "chevron-down",
-    size: "xs"
-  }))));
+var getStatus = function getStatus(props) {
+  return props.disabled ? 'disabled' : props.error ? 'error' : 'default';
 };
 
-var _default = Select;
+var getCharacterCount = function getCharacterCount() {
+  var value = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+  return value.length;
+};
+
+var NumericalInput = function NumericalInput(props) {
+  var _props$className = props.className,
+      className = _props$className === void 0 ? '' : _props$className,
+      other = _objectWithoutProperties(props, ["className"]);
+
+  return React.createElement("div", {
+    "data-swarm-number-input": getStatus(props),
+    className: className
+  }, React.createElement("input", _extends({
+    "data-swarm-number-input-field": true,
+    type: "number",
+    pattern: "[0-9]*"
+  }, other)), React.createElement("button", {
+    "data-swarm-number-input-increment": true,
+    onClick: props.onIncrament
+  }, React.createElement(_Icon.default, {
+    shape: "plus",
+    size: "xs"
+  })), React.createElement("button", {
+    "data-swarm-number-input-decrement": true,
+    onClick: props.onDecrement
+  }, React.createElement(_Icon.default, {
+    shape: "minus",
+    size: "xs"
+  })));
+};
+
+var _default = NumericalInput;
 exports.default = _default;
-Select.__docgenInfo = {
+NumericalInput.__docgenInfo = {
   "description": "",
   "methods": [],
-  "displayName": "Select",
+  "displayName": "NumericalInput",
   "props": {
+    "className": {
+      "required": false,
+      "flowType": {
+        "name": "string"
+      },
+      "description": "Classname of wrapper, specified because it is not applied with other"
+    },
     "disabled": {
       "required": false,
       "flowType": {
         "name": "boolean"
       },
-      "description": "Whether the select menu is disabled."
+      "description": "Whether the numerical input should be interactive."
     },
     "error": {
       "required": false,
       "flowType": {
-        "name": "string"
+        "name": "boolean"
       },
-      "description": "Whether the select menu has errored."
+      "description": "Whether the textarea renders an error state."
     },
-    "id": {
+    "value": {
       "required": false,
       "flowType": {
         "name": "string"
       },
-      "description": "Unique identifier for select tag."
-    },
-    "name": {
-      "required": true,
-      "flowType": {
-        "name": "string"
-      },
-      "description": "Name of select menu form field."
-    },
-    "requiredText": {
-      "required": false,
-      "flowType": {
-        "name": "string"
-      },
-      "description": "Copy to be used for a required select field."
+      "description": "Value for textarea."
     }
   }
 };

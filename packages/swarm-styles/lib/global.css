@@ -1,4 +1,4 @@
 @import '@meetup/swarm-constants/build/css/variables.css';
+@import './reset/all.css';
 @import './type.css';
 @import './spacing.css';
-@import './reset/all.css';
