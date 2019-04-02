@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.18](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.5.17...@meetup/swarm-components@0.5.18) (2019-04-02)
+
+
+### Bug Fixes
+
+* adding lib field files ([1b472d9](https://github.com/meetup/swarm-ui/commit/1b472d9))
+* adding select docs with FieldLabel and FieldHelper ([e467290](https://github.com/meetup/swarm-ui/commit/e467290))
+* merging master, resolving css conflicts ([bb8b9a1](https://github.com/meetup/swarm-ui/commit/bb8b9a1))
+
+
+
+
+
 ## [0.5.17](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.5.16...@meetup/swarm-components@0.5.17) (2019-04-02)
 
 

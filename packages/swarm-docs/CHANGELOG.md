@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.16](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.7.15...@meetup/swarm-docs@0.7.16) (2019-04-02)
+
+
+### Bug Fixes
+
+* adding select docs with FieldLabel and FieldHelper ([e467290](https://github.com/gatsbyjs/gatsby-starter-default/commit/e467290))
+
+
+
+
+
 ## [0.7.15](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.7.14...@meetup/swarm-docs@0.7.15) (2019-04-02)
 
 **Note:** Version bump only for package @meetup/swarm-docs
