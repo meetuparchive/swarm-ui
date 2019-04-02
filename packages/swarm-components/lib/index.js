@@ -3,6 +3,12 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+Object.defineProperty(exports, "NumericalInput", {
+  enumerable: true,
+  get: function get() {
+    return _NumericalInput.default;
+  }
+});
 Object.defineProperty(exports, "Button", {
   enumerable: true,
   get: function get() {
@@ -63,6 +69,8 @@ Object.defineProperty(exports, "Select", {
     return _Select.default;
   }
 });
+
+var _NumericalInput = _interopRequireDefault(require("./NumericalInput"));
 
 var _Button = _interopRequireDefault(require("./Button"));
 

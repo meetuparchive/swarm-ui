@@ -1695,6 +1695,16 @@
     hoist-non-react-statics "^2.5.5"
     prop-types "^15.6.1"
 
+"@meetup/swarm-components@^0.5.3":
+  version "0.5.3"
+  resolved "https://registry.yarnpkg.com/@meetup/swarm-components/-/swarm-components-0.5.3.tgz#930577761d85cf4bb26c44e8dfb5aaa7b2a18f30"
+  integrity sha512-hU/UfbWuwlxL7BulRiyM1YfGCMPRLnHi2RUrToiTmrxRBrN5dhxVJkuOLQPhb770AoK9/nIycXFIJjt/yPMW0Q==
+  dependencies:
+    "@meetup/swarm-constants" "^0.2.3"
+    classnames "^2.2.6"
+    html-loader "^0.5.5"
+    swarm-icons "^3.8.354"
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
