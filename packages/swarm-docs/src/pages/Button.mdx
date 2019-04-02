@@ -7,14 +7,8 @@ import PropsTable from '../components/propstable';
 ---
 Buttons are the primary way to interact with content.
 
-<br/>
-<br/>
-
-### Snippet
----
-
-Use this interactive snippet to try the component:
-<br/>
+## Example
+<Example /><br/>
 
 ```.jsx
 <>
@@ -29,17 +23,70 @@ Use this interactive snippet to try the component:
 <br/>
 <PropsTable propMetaData={Button.__docgenInfo} />
 
+## Anatomy
+All button styles and sizes share the same anatomy.
+<img src="/docs-images/button-anatomy.png" width="810" height="252" />
 <br/>
+<div class="grid-2-col">
+    <div class="column">
+        <p class="text--body"><strong>Label</strong></p>
+        <p class="text--body">Button labels should be short and actionable. Label attributes are driven by button style and size.</p>
+    </div>
+    <div class="column">
+        <p class="text--body"><strong>Border</strong></p>
+        <p class="text--body">All buttons have solid 1px borders, though some styles require the same color for background and border, hiding the presence of the border.</p>
+    </div>
+    <div class="column">
+        <p class="text--body"><strong>Background</strong></p>
+        <p class="text--body">Button style determines its background color and opacity.</p>
+    </div>
+    <div class="column">
+        <p class="text--body"><strong>Radius</strong></p>
+        <p class="text--body">All buttons in all sizes and viewports have an 8px border radius.</p>
+    </div>
+</div>
+
+## Styles
+
+** Default **
+
+<img src="/docs-images/button-secondary-states.png" width="810" height="132" />
 <br/>
 
-### a11y
----
+** Primary **
+
+<img src="/docs-images/button-primary-states.png" width="810" height="132" />
+<br/>
+
+** Neutral **
+
+<img src="/docs-images/button-neutral-states.png" width="810" height="132" />
+<br/>
+
+** Bordered **
+
+<img src="/docs-images/button-bordered-states.png" width="810" height="132" />
+<br/>
+
+** Disabled **
+
+<img src="/docs-images/button-disabled-states.png" width="250" height="132" />
+
+## Sizing
+
+** Size & Height **
+
+Any button can be configured to one of three distinct sizes. Size dictates label style and top/bottom padding. Button padding uses spacing variables which are dynamic based on viewport.
+<br/>
+<img src="/docs-images/button-sizing-size.png" width="600" height="373" />
+<br/><br/>
+
+** Width **
+
+Any button can be configured to one of three width settings. Width dictates left/right padding behavior. Button padding uses spacing variables which are dynamic based on viewport.
+<br/>
+<img src="/docs-images/button-sizing-width.png" width="600" height="371" />
+<br/><br/>
+
+## a11y
 Keyboard interactions: The button action should be triggered by the enter and space keys.
-
-<br/>
-<br/>
-
-## Examples
----
-
-<Example />

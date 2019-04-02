@@ -1,7 +1,4 @@
 .DS_Store
-/node_modules
-/packages/swarm-components/lib
-/packages/*/node_modules
+node_modules
 *.log
 *.chache
-/packages/swarm-components/lib

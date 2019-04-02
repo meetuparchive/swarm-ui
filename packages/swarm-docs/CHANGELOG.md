@@ -3,6 +3,185 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.15](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.7.14...@meetup/swarm-docs@0.7.15) (2019-04-02)
+
+**Note:** Version bump only for package @meetup/swarm-docs
+
+
+
+
+
+## [0.7.14](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.7.13...@meetup/swarm-docs@0.7.14) (2019-04-02)
+
+**Note:** Version bump only for package @meetup/swarm-docs
+
+
+
+
+
+## [0.7.13](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.7.12...@meetup/swarm-docs@0.7.13) (2019-04-02)
+
+**Note:** Version bump only for package @meetup/swarm-docs
+
+
+
+
+
+## [0.7.12](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.7.11...@meetup/swarm-docs@0.7.12) (2019-04-01)
+
+**Note:** Version bump only for package @meetup/swarm-docs
+
+
+
+
+
+## [0.7.11](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.7.10...@meetup/swarm-docs@0.7.11) (2019-04-01)
+
+**Note:** Version bump only for package @meetup/swarm-docs
+
+
+
+
+
+## [0.7.10](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.7.9...@meetup/swarm-docs@0.7.10) (2019-04-01)
+
+**Note:** Version bump only for package @meetup/swarm-docs
+
+
+
+
+
+## [0.7.9](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.7.8...@meetup/swarm-docs@0.7.9) (2019-04-01)
+
+**Note:** Version bump only for package @meetup/swarm-docs
+
+
+
+
+
+## [0.7.8](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.7.7...@meetup/swarm-docs@0.7.8) (2019-04-01)
+
+**Note:** Version bump only for package @meetup/swarm-docs
+
+
+
+
+
+## [0.7.7](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.7.6...@meetup/swarm-docs@0.7.7) (2019-04-01)
+
+**Note:** Version bump only for package @meetup/swarm-docs
+
+
+
+
+
+## [0.7.6](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.7.5...@meetup/swarm-docs@0.7.6) (2019-04-01)
+
+**Note:** Version bump only for package @meetup/swarm-docs
+
+
+
+
+
+## [0.7.5](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.7.4...@meetup/swarm-docs@0.7.5) (2019-03-29)
+
+**Note:** Version bump only for package @meetup/swarm-docs
+
+
+
+
+
+## [0.7.4](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.7.3...@meetup/swarm-docs@0.7.4) (2019-03-29)
+
+**Note:** Version bump only for package @meetup/swarm-docs
+
+
+
+
+
+## [0.7.3](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.7.2...@meetup/swarm-docs@0.7.3) (2019-03-29)
+
+**Note:** Version bump only for package @meetup/swarm-docs
+
+
+
+
+
+## [0.7.2](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.7.1...@meetup/swarm-docs@0.7.2) (2019-03-29)
+
+**Note:** Version bump only for package @meetup/swarm-docs
+
+
+
+
+
+## [0.7.1](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.7.0...@meetup/swarm-docs@0.7.1) (2019-03-29)
+
+**Note:** Version bump only for package @meetup/swarm-docs
+
+
+
+
+
+# [0.7.0](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.6.7...@meetup/swarm-docs@0.7.0) (2019-03-28)
+
+
+### Bug Fixes
+
+* added siteTitle variable back in, renamed site title in gatsy config and package ([7cf91a2](https://github.com/gatsbyjs/gatsby-starter-default/commit/7cf91a2))
+* adding images ([b76f221](https://github.com/gatsbyjs/gatsby-starter-default/commit/b76f221))
+* changed site title to be more seo friendly ([9732c51](https://github.com/gatsbyjs/gatsby-starter-default/commit/9732c51))
+* copy images dir after build ([c087f03](https://github.com/gatsbyjs/gatsby-starter-default/commit/c087f03))
+* removed commented ruleset, cleaned up spacing ([7c2076e](https://github.com/gatsbyjs/gatsby-starter-default/commit/7c2076e))
+* removed unnecessary line breaks ([cf420b3](https://github.com/gatsbyjs/gatsby-starter-default/commit/cf420b3))
+* simplified and cleaned up styling of propstable ([a41fe5f](https://github.com/gatsbyjs/gatsby-starter-default/commit/a41fe5f))
+* static image references we incorrect ([de627ea](https://github.com/gatsbyjs/gatsby-starter-default/commit/de627ea))
+
+
+### Features
+
+* updating look and feel of navigation, propstable, page layout and markdown for button component ([ee96234](https://github.com/gatsbyjs/gatsby-starter-default/commit/ee96234))
+
+
+
+
+
+## [0.6.7](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.6.5...@meetup/swarm-docs@0.6.7) (2019-03-28)
+
+**Note:** Version bump only for package @meetup/swarm-docs
+
+
+
+
+
+## [0.6.6](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.6.5...@meetup/swarm-docs@0.6.6) (2019-03-28)
+
+**Note:** Version bump only for package @meetup/swarm-docs
+
+
+
+
+
+## [0.6.5](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.6.4...@meetup/swarm-docs@0.6.5) (2019-03-27)
+
+**Note:** Version bump only for package @meetup/swarm-docs
+
+
+
+
+
+## [0.6.4](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.6.3...@meetup/swarm-docs@0.6.4) (2019-03-27)
+
+
+### Bug Fixes
+
+* add iconShape support; update css and docs ([c6dc5e0](https://github.com/gatsbyjs/gatsby-starter-default/commit/c6dc5e0))
+* update textInput swarm docs to provide both a label tag and an id prop ([f4851fe](https://github.com/gatsbyjs/gatsby-starter-default/commit/f4851fe))
+
+
+
+
+
 ## [0.6.3](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.6.2...@meetup/swarm-docs@0.6.3) (2019-03-23)
 
 

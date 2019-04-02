@@ -5,8 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = exports.getIconShape = exports.MEDIA_SIZES = exports.ICON_CIRCLED_CLASS = exports.SVG_THIN_STYLE = exports.ICON_CLASS = void 0;
 
-var _propTypes = _interopRequireDefault(require("prop-types"));
-
 var _react = _interopRequireDefault(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
@@ -77,10 +75,10 @@ var Icon = function Icon(props) {
       size = props.size,
       color = props.color,
       style = props.style,
-      circled = props.circled,
-      other = _objectWithoutProperties(props, ["className", "shape", "size", "color", "style", "circled"]);
+      circle = props.circle,
+      other = _objectWithoutProperties(props, ["className", "shape", "size", "color", "style", "circle"]);
 
-  var classNames = (0, _classnames.default)(ICON_CLASS, "svg--".concat(shape), _defineProperty({}, ICON_CIRCLED_CLASS, circled), className);
+  var classNames = (0, _classnames.default)(ICON_CLASS, "svg--".concat(shape), _defineProperty({}, ICON_CIRCLED_CLASS, circle), className, 'svg-icon', 'valign--middle');
   var sizeVal = MEDIA_SIZES[size];
   var allStyles = style || {};
 
@@ -93,7 +91,7 @@ var Icon = function Icon(props) {
     width: sizeVal,
     height: sizeVal,
     viewBox: "0 0 ".concat(sizeVal, " ").concat(sizeVal),
-    className: "svg-icon valign--middle",
+    className: classNames,
     role: "img",
     style: allStyles
   }, other), _react.default.createElement("use", {
@@ -142,6 +140,25 @@ Icon.__docgenInfo = {
         "name": "string"
       },
       "description": "What color the icon should be filled with"
+    },
+    "className": {
+      "required": false,
+      "flowType": {
+        "name": "string"
+      },
+      "description": "Class applied to svg tag"
+    },
+    "style": {
+      "required": false,
+      "flowType": {
+        "name": "signature",
+        "type": "object",
+        "raw": "{}",
+        "signature": {
+          "properties": []
+        }
+      },
+      "description": "Object of css styles"
     }
   }
 };

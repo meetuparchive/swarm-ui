@@ -4,23 +4,15 @@ node_js:
 cache:
   yarn: true
 
-branches:
-  only:
-    - master
-if: tag IS blank
+if: (branch = master OR type = pull_request) AND tag IS blank
 
 before_install:
   - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > $HOME/.npmrc
   - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.13.0
   - export PATH=$HOME/.yarn/bin:$PATH
-  - yarn --version
+
+before_script:
+  - git diff --exit-code yarn.lock
 
 script:
-  - echo "no test scripts"
-
-deploy:
-  provider: script
-  script: "git checkout master && yarn deploy"
-  skip_cleanup: true
-  on:
-    condition: $TRAVIS_EVENT_TYPE = push
+  - make publish

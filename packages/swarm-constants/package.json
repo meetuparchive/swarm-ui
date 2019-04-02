@@ -1,6 +1,6 @@
 {
   "name": "@meetup/swarm-constants",
-  "version": "0.2.3",
+  "version": "0.2.6",
   "description": "style constants for swarm ui",
   "author": "hsbacot <hsbacot@gmail.com>",
   "homepage": "https://github.com/meetup/swarm-ui#readme",

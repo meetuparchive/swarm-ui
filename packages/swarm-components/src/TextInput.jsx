@@ -1,5 +1,16 @@
 // @flow
 import * as React from 'react';
+import Icon from './Icon';
+
+const ICON_SIZES = Object.freeze({
+  XXS: 'xxs',
+  XS: 'xs',
+  S: 's',
+  M: 'm',
+  L: 'l',
+  XL: 'xl',
+  XXL: 'xxl',
+});
 
 type Props = {
   /**
@@ -13,15 +24,11 @@ type Props = {
   /**
    * An identifier for the input.
    */
-  id?: string,
+  id: string,
   /**
    * Whether the input is a search field.
    */
   isSearch?: boolean,
-  /**
-   * Label for the input.
-   */
-  label?: string,
   /**
    * Name for the input.
    */
@@ -33,7 +40,16 @@ type Props = {
   /**
    * Value of input.
    */
-  value: string
+  value: string,
+  /**
+   * Name of icon to render in the input
+   */
+  iconShape?: string,
+  /**
+   * Optional size for icon if `iconShape` is provided.
+   * Default size is `xs`
+   */
+  iconSize?: $Values<typeof ICON_SIZES>,
 };
 
 /**
@@ -44,18 +60,19 @@ export const TextInput = (props: Props): React$Element<*> => {
     name,
     error,
     isSearch,
-    label,
     pattern,
     disabled,
     id,
+    iconShape,
+    iconSize = 'xs',
     ...other
   } = props;
 
+  const wrapperState = iconShape ? 'icon' : 'default';
   const inputState = disabled ? 'disabled' : error ? 'error' : 'default';
 
   return (
-    <>
-      <label htmlFor={id}>{label}</label>
+    <div data-swarm-text-input-wrapper={wrapperState}>
       <input
         data-swarm-text-input={inputState}
         type={isSearch ? 'search' : 'text'}
@@ -65,7 +82,12 @@ export const TextInput = (props: Props): React$Element<*> => {
         id={id}
         {...other}
       />
-    </>
+      {iconShape && (
+        <span data-swarm-input-icon={iconShape}>
+          <Icon shape={iconShape} size={iconSize} aria-hidden={true} />
+        </span>
+      )}
+    </div>
   );
 };
 

@@ -5,6 +5,7 @@
 @import './components/radio.css';
 @import './components/field.css';
 @import './components/textInput.css';
+@import './components/textarea.css';
 @import './components/togglePill.css';
 @import './components/toggle.css';
 @import './components/select.css';

@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 import cx from 'classnames';
 import { VALID_SHAPES } from 'swarm-icons/dist/js/shapeConstants';
@@ -44,6 +43,10 @@ type Props = {
 	circle?: boolean,
 	/** What color the icon should be filled with */
 	color?: string,
+	/** Class applied to svg tag */
+	className?: string,
+	/** Object of css styles */
+	style?: {}
 };
 
 /**
@@ -56,13 +59,15 @@ type Props = {
  * @module Icon
  */
 const Icon = (props: Props) => {
-	const { className, shape, size, color, style, circled, ...other } = props;
+	const { className, shape, size, color, style, circle, ...other } = props;
 
 	const classNames = cx(
 		ICON_CLASS,
 		`svg--${shape}`,
-		{ [ICON_CIRCLED_CLASS]: circled },
-		className
+		{ [ICON_CIRCLED_CLASS]: circle },
+		className,
+		'svg-icon',
+		'valign--middle'
 	);
 
 	const sizeVal = MEDIA_SIZES[size];
@@ -78,7 +83,7 @@ const Icon = (props: Props) => {
 			width={sizeVal}
 			height={sizeVal}
 			viewBox={`0 0 ${sizeVal} ${sizeVal}`}
-			className="svg-icon valign--middle"
+			className={classNames}
 			role="img"
 			style={allStyles}
 			{...other}

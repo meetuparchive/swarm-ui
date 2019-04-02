@@ -66,6 +66,11 @@ const LinkButton = (props: LinkButtonProps): React.Element<'a'> => {
 		icon,
 		right,
 		children,
+		bordered, // eslint-disable-line no-unused-vars
+		neutral, // eslint-disable-line no-unused-vars
+		primary, // eslint-disable-line no-unused-vars
+		inverted, // eslint-disable-line no-unused-vars
+		small, // eslint-disable-line no-unused-vars
 		...other
 	} = props;
 

@@ -38,6 +38,11 @@ const config = {
     'space-in-parens': [2, 'never'],
     'spaced-comment': [2, 'always'],
     strict: 0
+  },
+  settings: {
+    react: {
+      version: 'detect'
+    }
   }
 };
 

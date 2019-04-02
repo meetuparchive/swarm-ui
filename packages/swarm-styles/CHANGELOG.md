@@ -3,6 +3,71 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.15](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.1.14...@meetup/swarm-styles@0.1.15) (2019-04-01)
+
+
+### Bug Fixes
+
+* removed disc and padding from li resets ([bc48fbb](https://github.com/meetup/swarm-ui/commit/bc48fbb))
+
+
+
+
+
+## [0.1.14](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.1.13...@meetup/swarm-styles@0.1.14) (2019-03-29)
+
+**Note:** Version bump only for package @meetup/swarm-styles
+
+
+
+
+
+## [0.1.13](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.1.12...@meetup/swarm-styles@0.1.13) (2019-03-29)
+
+**Note:** Version bump only for package @meetup/swarm-styles
+
+
+
+
+
+## [0.1.12](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.1.11...@meetup/swarm-styles@0.1.12) (2019-03-29)
+
+**Note:** Version bump only for package @meetup/swarm-styles
+
+
+
+
+
+## [0.1.11](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.1.10...@meetup/swarm-styles@0.1.11) (2019-03-29)
+
+
+### Bug Fixes
+
+* important declaration ([804c84b](https://github.com/meetup/swarm-ui/commit/804c84b))
+
+
+
+
+
+## [0.1.10](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.1.9...@meetup/swarm-styles@0.1.10) (2019-03-27)
+
+**Note:** Version bump only for package @meetup/swarm-styles
+
+
+
+
+
+## [0.1.9](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.1.8...@meetup/swarm-styles@0.1.9) (2019-03-27)
+
+
+### Bug Fixes
+
+* add iconShape support; update css and docs ([c6dc5e0](https://github.com/meetup/swarm-ui/commit/c6dc5e0))
+
+
+
+
+
 ## [0.1.8](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.1.7...@meetup/swarm-styles@0.1.8) (2019-03-23)
 
 

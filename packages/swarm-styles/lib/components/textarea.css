@@ -1,0 +1,21 @@
+[data-swarm-textarea] {
+    border: 1px solid #DCDCDC;
+    background-color: #FAFAFA;
+    border-radius: 4px;
+    padding: var(--size-space-default);
+    color: var(--color-gray-7);
+}
+[data-swarm-textarea]:focus {
+    outline: none;
+    border-color: var(--color-viridian);
+}
+
+[data-swarm-textarea="disabled"] {
+    background-color: var(--color-gray-3);
+    border-color: var(--color-gray-3);
+    color: var(--color-gray-5);
+}
+
+[data-swarm-textarea="error"] {
+    border-color: var(--color-alert-red);
+}
