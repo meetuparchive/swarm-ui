@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.15](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.5.14...@meetup/swarm-components@0.5.15) (2019-04-02)
+
+
+### Bug Fixes
+
+* destructure props to LinkButton to avoid passing down the DOM ([e07039c](https://github.com/meetup/swarm-ui/commit/e07039c))
+
+
+
+
+
 ## [0.5.14](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.5.13...@meetup/swarm-components@0.5.14) (2019-04-01)
 
 
