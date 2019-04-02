@@ -1,9 +1,6 @@
 // @flow
 import * as React from 'react';
 import Icon from './Icon';
-import FieldLabel from './FieldLabel';
-import FeildHelper from './FieldHelper';
-import FieldHelper from './FieldHelper';
 
 type Props = React.ElementConfig<HTMLSelectElement> & {
 	/**
@@ -44,21 +41,6 @@ const Select = (props: Props) => {
 
 	return (
 		<div data-swarm-select={selectState}>
-			{label && (
-				<FieldLabel
-					htmlFor={name}
-				>
-					{label}
-					{requiredText ? <span> {requiredText}</span> : ''}
-				</FieldLabel>
-            )}
-
-			{helperText && (
-				<FieldHelper>
-                    {helperText}
-                </FieldHelper>
-            )}
-
 			<div data-swarm-select-wrapper="1">
 				<select
 					name={name}

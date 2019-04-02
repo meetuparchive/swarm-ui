@@ -9,10 +9,6 @@ var React = _interopRequireWildcard(require("react"));
 
 var _Icon = _interopRequireDefault(require("./Icon"));
 
-var _FieldLabel = _interopRequireDefault(require("./FieldLabel"));
-
-var _FieldHelper = _interopRequireDefault(require("./FieldHelper"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
@@ -26,19 +22,15 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 var Select = function Select(props) {
   var disabled = props.disabled,
       error = props.error,
-      helperText = props.helperText,
       id = props.id,
-      label = props.label,
       name = props.name,
       requiredText = props.requiredText,
-      other = _objectWithoutProperties(props, ["disabled", "error", "helperText", "id", "label", "name", "requiredText"]);
+      other = _objectWithoutProperties(props, ["disabled", "error", "id", "name", "requiredText"]);
 
   var selectState = disabled ? 'disabled' : error ? 'error' : 'default';
   return React.createElement("div", {
     "data-swarm-select": selectState
-  }, label && React.createElement(_FieldLabel.default, {
-    htmlFor: name
-  }, label, requiredText ? React.createElement("span", null, " ", requiredText) : ''), helperText && React.createElement(_FieldHelper.default, null, helperText), React.createElement("div", {
+  }, React.createElement("div", {
     "data-swarm-select-wrapper": "1"
   }, React.createElement("select", _extends({
     name: name,
@@ -74,26 +66,12 @@ Select.__docgenInfo = {
       },
       "description": "Whether the select menu has errored."
     },
-    "helperText": {
-      "required": false,
-      "flowType": {
-        "name": "string"
-      },
-      "description": "Line of text further describing the select menu."
-    },
     "id": {
       "required": false,
       "flowType": {
         "name": "string"
       },
       "description": "Unique identifier for select tag."
-    },
-    "label": {
-      "required": false,
-      "flowType": {
-        "name": "string"
-      },
-      "description": "Associated <label> tag for the <select> tag."
     },
     "name": {
       "required": true,
