@@ -67,7 +67,17 @@ export type ButtonProps = {
 
 const Button = (props: ButtonProps): React.Element<'button'> => {
 	// destructuring to not pass invalid attributes to node
-	const { icon, right, children, ...other } = props;
+	const {
+		icon,
+		right,
+		children,
+		bordered, // eslint-disable-line no-unused-vars
+		neutral, // eslint-disable-line no-unused-vars
+		primary, // eslint-disable-line no-unused-vars
+		inverted, // eslint-disable-line no-unused-vars
+		small, // eslint-disable-line no-unused-vars
+		...other
+	} = props;
 
 	const buttonType = getButtonType(props);
 

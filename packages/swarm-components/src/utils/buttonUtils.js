@@ -2,7 +2,8 @@
 import type {ButtonProps} from '../Button';
 import type {LinkButtonProps} from '../LinkButton';
 
-// TODO: find a better, more dynamic solution
+// TODO:
+// find a better, more dynamic solution
 export const FILLS = {
 	default: 'var(--color-viridian)',
 	disabled: 'var(--color-gray-4)',
