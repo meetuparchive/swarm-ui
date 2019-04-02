@@ -1,4 +1,4 @@
-import { Select } from  '@meetup/swarm-components';
+import { Select, FieldLabel } from  '@meetup/swarm-components';
 import SelectExample from '../components/selectExample';
 import PropsTable from '../components/propstable';
 
@@ -17,9 +17,9 @@ Use this interactive snippet to try the component:
 
 ```.jsx
 <div style={{width: 200}}>
+    <FieldLabel htmlFor="swarm-select" >Swarm Select</FieldLabel>
     <Select
         value="A"
-        label="Swarm Select"
         id="swarm-select"
         name="swarm-select"
         onChange={(e) => alert(e.target.value)}

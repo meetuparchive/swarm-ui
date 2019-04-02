@@ -22,21 +22,15 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 var Select = function Select(props) {
   var disabled = props.disabled,
       error = props.error,
-      helperText = props.helperText,
       id = props.id,
-      label = props.label,
       name = props.name,
       requiredText = props.requiredText,
-      other = _objectWithoutProperties(props, ["disabled", "error", "helperText", "id", "label", "name", "requiredText"]);
+      other = _objectWithoutProperties(props, ["disabled", "error", "id", "name", "requiredText"]);
 
   var selectState = disabled ? 'disabled' : error ? 'error' : 'default';
   return React.createElement("div", {
     "data-swarm-select": selectState
-  }, label && React.createElement("label", {
-    htmlFor: name
-  }, label, requiredText ? React.createElement("span", null, " ", requiredText) : ''), helperText && React.createElement("p", {
-    "data-swarm-select-helper-text": "1"
-  }, helperText), React.createElement("div", {
+  }, React.createElement("div", {
     "data-swarm-select-wrapper": "1"
   }, React.createElement("select", _extends({
     name: name,
@@ -72,26 +66,12 @@ Select.__docgenInfo = {
       },
       "description": "Whether the select menu has errored."
     },
-    "helperText": {
-      "required": false,
-      "flowType": {
-        "name": "string"
-      },
-      "description": "Line of text further describing the select menu."
-    },
     "id": {
       "required": false,
       "flowType": {
         "name": "string"
       },
       "description": "Unique identifier for select tag."
-    },
-    "label": {
-      "required": false,
-      "flowType": {
-        "name": "string"
-      },
-      "description": "Associated <label> tag for the <select> tag."
     },
     "name": {
       "required": true,
