@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.16](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.5.15...@meetup/swarm-components@0.5.16) (2019-04-02)
+
+
+### Bug Fixes
+
+* Icon lint and flow errors ([efca3c7](https://github.com/meetup/swarm-ui/commit/efca3c7))
+
+
+
+
+
 ## [0.5.15](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.5.14...@meetup/swarm-components@0.5.15) (2019-04-02)
 
 
