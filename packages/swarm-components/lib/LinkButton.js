@@ -26,7 +26,12 @@ var LinkButton = function LinkButton(props) {
   var icon = props.icon,
       right = props.right,
       children = props.children,
-      other = _objectWithoutProperties(props, ["icon", "right", "children"]);
+      bordered = props.bordered,
+      neutral = props.neutral,
+      primary = props.primary,
+      inverted = props.inverted,
+      small = props.small,
+      other = _objectWithoutProperties(props, ["icon", "right", "children", "bordered", "neutral", "primary", "inverted", "small"]);
 
   var buttonType = (0, _buttonUtils.getButtonType)(props);
   return React.createElement("a", _extends({
