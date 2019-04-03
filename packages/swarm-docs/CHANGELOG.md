@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.17](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.7.16...@meetup/swarm-docs@0.7.17) (2019-04-03)
+
+
+### Bug Fixes
+
+* adding docs and styles for numerical input ([f9902c2](https://github.com/gatsbyjs/gatsby-starter-default/commit/f9902c2))
+* merging master into numerical input ([0746b08](https://github.com/gatsbyjs/gatsby-starter-default/commit/0746b08))
+
+
+
+
+
 ## [0.7.16](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.7.15...@meetup/swarm-docs@0.7.16) (2019-04-02)
 
 

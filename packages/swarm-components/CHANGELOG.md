@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.5.18...@meetup/swarm-components@0.6.0) (2019-04-03)
+
+
+### Bug Fixes
+
+* adding docs and styles for numerical input ([f9902c2](https://github.com/meetup/swarm-ui/commit/f9902c2))
+* merging master into numerical input ([0746b08](https://github.com/meetup/swarm-ui/commit/0746b08))
+
+
+### Features
+
+* numerical input ([a70a7c1](https://github.com/meetup/swarm-ui/commit/a70a7c1))
+
+
+
+
+
 ## [0.5.18](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.5.17...@meetup/swarm-components@0.5.18) (2019-04-02)
 
 
