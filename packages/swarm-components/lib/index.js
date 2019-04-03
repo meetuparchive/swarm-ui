@@ -39,6 +39,12 @@ Object.defineProperty(exports, "Icon", {
     return _Icon.default;
   }
 });
+Object.defineProperty(exports, "NumericalInput", {
+  enumerable: true,
+  get: function get() {
+    return _NumericalInput.default;
+  }
+});
 Object.defineProperty(exports, "Radio", {
   enumerable: true,
   get: function get() {
@@ -87,6 +93,8 @@ var _FieldHelper = _interopRequireDefault(require("./FieldHelper"));
 var _FieldLabel = _interopRequireDefault(require("./FieldLabel"));
 
 var _Icon = _interopRequireDefault(require("./Icon"));
+
+var _NumericalInput = _interopRequireDefault(require("./NumericalInput"));
 
 var _Radio = _interopRequireDefault(require("./Radio"));
 
