@@ -4,18 +4,45 @@ import Icon from './Icon';
 
 type Value = number | null;
 type Props = {
-	disabled?: boolean,
-	error?: React$Node,
-	id: string,
+    /**
+     * indicates whether the input is disabled
+     */
+    disabled?: boolean,
+    /**
+     * indicates whether there is an error on the input
+     */
+    error?: React$Node,
+    /**
+     * id of the input
+     */
+    id: string,
+    /**
+     * the maximum integer allowed
+     */
 	max?: number,
-	min?: number,
+    /**
+     * the minimum integer allowed
+     */
+    min?: number,
+    /**
+     * name of the input, used with labels
+     */
     name: string,
     /**
      * Required change handler with Value, not event
      */
-	onChange: Value => void,
-	onBlur: (SyntheticInputEvent<HTMLInputElement>) => void,
-	step: number,
+    onChange: Value => void,
+    /**
+     * funcitonality invoked when the form field is blurred
+     */
+    onBlur: (SyntheticInputEvent<HTMLInputElement>) => void,
+    /**
+     * The amount the input will increment or decrement when using keyboard interactions
+     */
+    step: number,
+    /**
+     * The value of the field
+     */
 	value: Value,
 };
 
