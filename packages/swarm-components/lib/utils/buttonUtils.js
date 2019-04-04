@@ -7,7 +7,7 @@ exports.getIconPosition = exports.getSwarmSize = exports.getButtonType = exports
 // TODO:
 // find a better, more dynamic solution
 var FILLS = {
-  default: 'var(--color-viridian)',
+  "default": 'var(--color-viridian)',
   disabled: 'var(--color-gray-4)',
   primary: 'var(--color-white)',
   neutral: 'var(--color-gray-7)',
