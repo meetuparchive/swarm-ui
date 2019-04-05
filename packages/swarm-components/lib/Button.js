@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
+exports["default"] = void 0;
 
 var React = _interopRequireWildcard(require("react"));
 
@@ -11,9 +11,9 @@ var _Icon = _interopRequireDefault(require("./Icon"));
 
 var _buttonUtils = require("./utils/buttonUtils");
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj["default"] = obj; return newObj; } }
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
@@ -38,11 +38,11 @@ var Button = function Button(props) {
     "data-swarm-button": buttonType,
     "data-swarm-size": (0, _buttonUtils.getSwarmSize)(props),
     "data-icon": (0, _buttonUtils.getIconPosition)(props)
-  }, other), icon ? React.createElement("span", null, right ? React.createElement(React.Fragment, null, children, React.createElement(_Icon.default, {
+  }, other), icon ? React.createElement("span", null, right ? React.createElement(React.Fragment, null, children, React.createElement(_Icon["default"], {
     shape: icon,
     size: "xs",
     color: _buttonUtils.FILLS[buttonType]
-  })) : React.createElement(React.Fragment, null, React.createElement(_Icon.default, {
+  })) : React.createElement(React.Fragment, null, React.createElement(_Icon["default"], {
     shape: icon,
     size: "xs",
     color: _buttonUtils.FILLS[buttonType]
@@ -50,7 +50,7 @@ var Button = function Button(props) {
 };
 
 var _default = Button;
-exports.default = _default;
+exports["default"] = _default;
 Button.__docgenInfo = {
   "description": "",
   "methods": [],

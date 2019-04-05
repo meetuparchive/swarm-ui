@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.getIconShape = exports.MEDIA_SIZES = exports.ICON_CIRCLED_CLASS = exports.SVG_THIN_STYLE = exports.ICON_CLASS = void 0;
+exports["default"] = exports.getIconShape = exports.MEDIA_SIZES = exports.ICON_CIRCLED_CLASS = exports.SVG_THIN_STYLE = exports.ICON_CLASS = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -11,7 +11,7 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _shapeConstants = require("swarm-icons/dist/js/shapeConstants");
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
@@ -78,7 +78,7 @@ var Icon = function Icon(props) {
       circle = props.circle,
       other = _objectWithoutProperties(props, ["className", "shape", "size", "color", "style", "circle"]);
 
-  var classNames = (0, _classnames.default)(ICON_CLASS, "svg--".concat(shape), _defineProperty({}, ICON_CIRCLED_CLASS, circle), className, 'svg-icon', 'valign--middle');
+  var classNames = (0, _classnames["default"])(ICON_CLASS, "svg--".concat(shape), _defineProperty({}, ICON_CIRCLED_CLASS, circle), className, 'svg-icon', 'valign--middle');
   var sizeVal = MEDIA_SIZES[size];
   var allStyles = style || {};
 
@@ -86,7 +86,7 @@ var Icon = function Icon(props) {
     allStyles.fill = color;
   }
 
-  return _react.default.createElement("svg", _extends({
+  return _react["default"].createElement("svg", _extends({
     preserveAspectRatio: "xMinYMin meet",
     width: sizeVal,
     height: sizeVal,
@@ -94,7 +94,7 @@ var Icon = function Icon(props) {
     className: classNames,
     role: "img",
     style: allStyles
-  }, other), _react.default.createElement("use", {
+  }, other), _react["default"].createElement("use", {
     xlinkHref: "#icon-".concat(getIconShape(shape, size))
   }));
 };
@@ -103,7 +103,7 @@ Icon.defaultProps = {
   size: 's'
 };
 var _default = Icon;
-exports.default = _default;
+exports["default"] = _default;
 Icon.__docgenInfo = {
   "description": "Icon component used to insert an svg icon into a component or page\n\n**Accessibility** If an Icon is used on its own without supporting\ntext to explain what it is/does, be a good citizen and pass in an\n`aria-label` attribute describing what the icon represents\n\n@module Icon",
   "methods": [],
