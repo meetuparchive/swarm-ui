@@ -4,7 +4,8 @@ chore: Version %s built by Travis CI
 $(TRAVIS_BUILD_WEB_URL)
 [skip ci]
 endef
-export COMMIT_MESSAGE
+
+export COMMIT_MESSAGE # make this value available as env var
 
 publish:
 	git remote set-url origin https://muptravis:$(GITHUB_TOKEN)@github.com/$(TRAVIS_REPO_SLUG).git
