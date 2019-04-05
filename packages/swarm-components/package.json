@@ -1,6 +1,6 @@
 {
   "name": "@meetup/swarm-components",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "Web Components for Swarm",
   "author": "hsbacot <hsbacot@gmail.com>",
   "homepage": "https://github.com/meetup/swarm-ui#readme",
@@ -37,6 +37,7 @@
   "devDependencies": {
     "@babel/cli": "7.4.3",
     "@babel/core": "7.4.3",
+    "@babel/plugin-proposal-class-properties": "7.4.0",
     "@babel/preset-env": "7.4.3",
     "@babel/preset-flow": "7.0.0",
     "@babel/preset-react": "7.0.0",

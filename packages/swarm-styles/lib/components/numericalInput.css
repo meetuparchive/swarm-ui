@@ -11,6 +11,10 @@
     border-color: var(--color-viridian);
 }
 
+[data-swarm-number-input] button:focus {
+    outline: none;
+}
+
 [data-swarm-number-input="disabled"] {
     background-color: var(--color-gray-3);
     border-color: var(--color-gray-3);

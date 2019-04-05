@@ -235,7 +235,7 @@
     "@babel/helper-remap-async-to-generator" "^7.1.0"
     "@babel/plugin-syntax-async-generators" "^7.2.0"
 
-"@babel/plugin-proposal-class-properties@^7.0.0":
+"@babel/plugin-proposal-class-properties@7.4.0", "@babel/plugin-proposal-class-properties@^7.0.0":
   version "7.4.0"
   resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-class-properties/-/plugin-proposal-class-properties-7.4.0.tgz#d70db61a2f1fd79de927eea91f6411c964e084b8"
   dependencies:
@@ -1426,21 +1426,6 @@
 "@mdx-js/tag@0.20.3":
   version "0.20.3"
   resolved "https://registry.yarnpkg.com/@mdx-js/tag/-/tag-0.20.3.tgz#9e2306040b6469248c45a5f5baf44d0014db0493"
-
-"@meetup/swarm-components@0.6.1":
-  version "0.6.1"
-  resolved "https://registry.yarnpkg.com/@meetup/swarm-components/-/swarm-components-0.6.1.tgz#9cc3dab9d6d0d21c89fdc783509a48dcdad3a936"
-  dependencies:
-    "@meetup/swarm-constants" "^0.2.6"
-    classnames "^2.2.6"
-    html-loader "^0.5.5"
-    swarm-icons "^3.8.354"
-
-"@meetup/swarm-styles@0.2.1":
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/@meetup/swarm-styles/-/swarm-styles-0.2.1.tgz#2d005ef9d4cb79bc413d32e3cc92f8a3a8139d99"
-  dependencies:
-    "@meetup/swarm-constants" "^0.2.6"
 
 "@mikaelkristiansson/domready@^1.0.9":
   version "1.0.9"
@@ -3131,7 +3116,7 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
-classnames@2.2.6, classnames@^2.2.6:
+classnames@2.2.6:
   version "2.2.6"
   resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
 
@@ -6465,7 +6450,7 @@ html-entities@^1.2.0:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/html-entities/-/html-entities-1.2.1.tgz#0df29351f0721163515dfb9e5543e5f6eed5162f"
 
-html-loader@0.5.5, html-loader@^0.5.5:
+html-loader@0.5.5:
   version "0.5.5"
   resolved "https://registry.yarnpkg.com/html-loader/-/html-loader-0.5.5.tgz#6356dbeb0c49756d8ebd5ca327f16ff06ab5faea"
   dependencies:
@@ -11849,7 +11834,7 @@ swap-case@^1.1.0:
     lower-case "^1.1.1"
     upper-case "^1.1.1"
 
-swarm-icons@3.8.354, swarm-icons@^3.8.354:
+swarm-icons@3.8.354:
   version "3.8.354"
   resolved "https://registry.yarnpkg.com/swarm-icons/-/swarm-icons-3.8.354.tgz#c248865e8ddedaeed8ef62eac3c1c98ff82fa2e2"
 
