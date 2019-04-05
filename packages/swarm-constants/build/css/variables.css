@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Tue, 12 Mar 2019 21:42:34 GMT
+ * Generated on Fri, 05 Apr 2019 02:45:42 GMT
  */
 
 :root {
@@ -28,14 +28,14 @@
  --color-font-tertiary: #212121;
  --font-family-normal: 'Graphik Meetup', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
  --font-family-mono: Monaco, 'Andale Mono', 'Courier New', monospace;
- --font-line-height-tiny: 18px;
- --font-line-height-small: 20px;
- --font-line-height-normal: 24px;
- --font-line-height-section-title: 28px;
- --font-line-height-kicker: 22px;
- --font-line-height-display-3: 36px;
- --font-line-height-display-2: 38px;
- --font-line-height-display-1: 52px;
+ --font-line-height-tiny: 1.5;
+ --font-line-height-small: 1.43;
+ --font-line-height-normal: 1.5;
+ --font-line-height-section-title: 1.4;
+ --font-line-height-kicker: 1.57;
+ --font-line-height-display-3: 1.29;
+ --font-line-height-display-2: 1.19;
+ --font-line-height-display-1: 1.24;
  --font-size-tiny: 12px;
  --font-size-small: 14px;
  --font-size-normal: 16px;
