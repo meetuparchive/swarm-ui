@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.18](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.7.17...@meetup/swarm-docs@0.7.18) (2019-04-05)
+
+
+### Bug Fixes
+
+* correcting NumericalInput, calling value directly in onChange ([41391d0](https://github.com/gatsbyjs/gatsby-starter-default/commit/41391d0))
+* numerical input example ([f1eeea4](https://github.com/gatsbyjs/gatsby-starter-default/commit/f1eeea4))
+
+
+
+
+
 ## [0.7.17](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.7.16...@meetup/swarm-docs@0.7.17) (2019-04-03)
 
 
