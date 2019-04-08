@@ -20,15 +20,14 @@
     "postcss": "postcss lib/main.css -o dist/main.css && postcss lib/global.css -o dist/global.css"
   },
   "devDependencies": {
-    "autoprefixer": "^9.3.1",
-    "bundlesize": "^0.17.0",
-    "chokidar-cli": "^1.2.1",
-    "cssnano": "^4.1.7",
-    "postcss-cli": "^6.0.1",
-    "postcss-extend-rule": "^2.0.0",
-    "postcss-import": "^12.0.1"
+    "autoprefixer": "9.5.0",
+    "chokidar-cli": "1.2.2",
+    "cssnano": "4.1.10",
+    "postcss-cli": "6.1.2",
+    "postcss-extend-rule": "2.0.0",
+    "postcss-import": "12.0.1"
   },
   "dependencies": {
-    "@meetup/swarm-constants": "^0.2.6"
+    "@meetup/swarm-constants": "0.2.6"
   }
 }

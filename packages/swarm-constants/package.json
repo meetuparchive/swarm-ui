@@ -26,7 +26,6 @@
     "url": "https://github.com/meetup/swarm-ui/issues"
   },
   "devDependencies": {
-    "bundlesize": "^0.17.0",
     "style-dictionary": "hsbacot/style-dictionary#buxfix/css-comments"
   }
 }
