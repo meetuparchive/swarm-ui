@@ -3,6 +3,37 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.1](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.8.0...@meetup/swarm-docs@0.8.1) (2019-04-08)
+
+**Note:** Version bump only for package @meetup/swarm-docs
+
+
+
+
+
+# [0.8.0](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.7.18...@meetup/swarm-docs@0.8.0) (2019-04-08)
+
+
+### Features
+
+* Added 700 weight font. Replaced base64-encoded fonts with standalone files. Added example use of 700 font. ([27dc113](https://github.com/gatsbyjs/gatsby-starter-default/commit/27dc113))
+
+
+
+
+
+## [0.7.18](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.7.17...@meetup/swarm-docs@0.7.18) (2019-04-05)
+
+
+### Bug Fixes
+
+* correcting NumericalInput, calling value directly in onChange ([41391d0](https://github.com/gatsbyjs/gatsby-starter-default/commit/41391d0))
+* numerical input example ([f1eeea4](https://github.com/gatsbyjs/gatsby-starter-default/commit/f1eeea4))
+
+
+
+
+
 ## [0.7.17](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.7.16...@meetup/swarm-docs@0.7.17) (2019-04-03)
 
 

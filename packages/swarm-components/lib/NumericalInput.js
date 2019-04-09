@@ -235,7 +235,7 @@ NumericalInput.__docgenInfo = {
       "type": {
         "name": "signature",
         "type": "object",
-        "raw": "{\n\tdisabled?: boolean,\n\terror?: React$Node,\n\tid: string,\n\tmax?: number,\n\tmin?: number,\n    name: string,\n    /**\n     * Required change handler with Value, not event\n     */\n\tonChange: Value => void,\n\tonBlur: (SyntheticInputEvent<HTMLInputElement>) => void,\n\tstep: number,\n\tvalue: Value,\n}",
+        "raw": "{\n    /**\n     * indicates whether the input is disabled\n     */\n    disabled?: boolean,\n    /**\n     * indicates whether there is an error on the input\n     */\n    error?: React$Node,\n    /**\n     * id of the input\n     */\n    id: string,\n    /**\n     * the maximum integer allowed\n     */\n\tmax?: number,\n    /**\n     * the minimum integer allowed\n     */\n    min?: number,\n    /**\n     * name of the input, used with labels\n     */\n    name: string,\n    /**\n     * Required change handler with Value, not event\n     */\n    onChange: Value => void,\n    /**\n     * funcitonality invoked when the form field is blurred\n     */\n    onBlur: (SyntheticInputEvent<HTMLInputElement>) => void,\n    /**\n     * The amount the input will increment or decrement when using keyboard interactions\n     */\n    step: number,\n    /**\n     * The value of the field\n     */\n\tvalue: Value,\n}",
         "signature": {
           "properties": [{
             "key": "disabled",
@@ -512,7 +512,7 @@ NumericalInput.__docgenInfo = {
       "flowType": {
         "name": "number"
       },
-      "description": ""
+      "description": "The amount the input will increment or decrement when using keyboard interactions"
     },
     "min": {
       "defaultValue": {
@@ -523,42 +523,42 @@ NumericalInput.__docgenInfo = {
       "flowType": {
         "name": "number"
       },
-      "description": ""
+      "description": "the minimum integer allowed"
     },
     "disabled": {
       "required": false,
       "flowType": {
         "name": "boolean"
       },
-      "description": ""
+      "description": "indicates whether the input is disabled"
     },
     "error": {
       "required": false,
       "flowType": {
         "name": "React$Node"
       },
-      "description": ""
+      "description": "indicates whether there is an error on the input"
     },
     "id": {
       "required": true,
       "flowType": {
         "name": "string"
       },
-      "description": ""
+      "description": "id of the input"
     },
     "max": {
       "required": false,
       "flowType": {
         "name": "number"
       },
-      "description": ""
+      "description": "the maximum integer allowed"
     },
     "name": {
       "required": true,
       "flowType": {
         "name": "string"
       },
-      "description": ""
+      "description": "name of the input, used with labels"
     },
     "onChange": {
       "required": true,
@@ -608,7 +608,7 @@ NumericalInput.__docgenInfo = {
           }
         }
       },
-      "description": ""
+      "description": "funcitonality invoked when the form field is blurred"
     },
     "value": {
       "required": true,
@@ -621,7 +621,7 @@ NumericalInput.__docgenInfo = {
           "name": "null"
         }]
       },
-      "description": ""
+      "description": "The value of the field"
     }
   }
 };

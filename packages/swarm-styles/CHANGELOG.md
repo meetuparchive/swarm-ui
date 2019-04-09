@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.2](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.2.1...@meetup/swarm-styles@0.2.2) (2019-04-08)
+
+**Note:** Version bump only for package @meetup/swarm-styles
+
+
+
+
+
+## [0.2.1](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.2.0...@meetup/swarm-styles@0.2.1) (2019-04-05)
+
+
+### Bug Fixes
+
+* button focus styles, comments on props ([7f2370b](https://github.com/meetup/swarm-ui/commit/7f2370b))
+
+
+
+
+
 # [0.2.0](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.1.16...@meetup/swarm-styles@0.2.0) (2019-04-03)
 
 

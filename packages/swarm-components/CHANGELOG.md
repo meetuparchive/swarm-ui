@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.2](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.6.1...@meetup/swarm-components@0.6.2) (2019-04-08)
+
+**Note:** Version bump only for package @meetup/swarm-components
+
+
+
+
+
+## [0.6.1](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.6.0...@meetup/swarm-components@0.6.1) (2019-04-05)
+
+
+### Bug Fixes
+
+* button focus styles, comments on props ([7f2370b](https://github.com/meetup/swarm-ui/commit/7f2370b))
+* correcting NumericalInput, calling value directly in onChange ([41391d0](https://github.com/meetup/swarm-ui/commit/41391d0))
+
+
+
+
+
 # [0.6.0](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.5.18...@meetup/swarm-components@0.6.0) (2019-04-03)
 
 
