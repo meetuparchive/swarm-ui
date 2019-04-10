@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.3](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.2.2...@meetup/swarm-styles@0.2.3) (2019-04-09)
+
+
+### Bug Fixes
+
+* line heights converted to ratios ([e2dda44](https://github.com/meetup/swarm-ui/commit/e2dda44))
+* merging master, fixing style conflict ([27025ff](https://github.com/meetup/swarm-ui/commit/27025ff))
+
+
+
+
+
 ## [0.2.2](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.2.1...@meetup/swarm-styles@0.2.2) (2019-04-08)
 
 **Note:** Version bump only for package @meetup/swarm-styles
