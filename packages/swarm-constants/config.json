@@ -15,6 +15,9 @@
       "files": [{
         "destination": "variables.css",
         "format": "css/variables"
+      },{
+        "destination": "classnames.css",
+        "format": "custom/format/classnames"
       }]
     }
   }
