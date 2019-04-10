@@ -27,6 +27,6 @@
   },
   "devDependencies": {
     "lodash": "4.17.11",
-    "style-dictionary": "hsbacot/style-dictionary#buxfix/css-comments"
+    "style-dictionary": "2.7.0"
   }
 }

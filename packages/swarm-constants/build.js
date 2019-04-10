@@ -5,15 +5,19 @@ const _ = require('lodash');
 console.log('Build started...');
 console.log('\n==============================================');
 
-
-// DECLARE CUSTOM FORMATS VIA CUSTOM TEMPLATE FILES (AND ENGINES)
-// These formatting functions are using the Lodash "template" syntax
-
+// Custom format that uses the Lodash "template" syntax
 StyleDictionary.registerFormat({
   name: 'custom/format/classnames',
   formatter: _.template(fs.readFileSync(__dirname + '/templates/classnames.template'))
 });
 
+// Filter to determine if a property is a color
+StyleDictionary.registerFilter({
+  name: 'isColorProp',
+  matcher: function(prop) {
+    return prop.name.startsWith('color');
+  }
+});
 
 // FINALLY, BUILD ALL THE PLATFORMS
 StyleDictionary.buildAllPlatforms();

@@ -17,7 +17,8 @@
         "format": "css/variables"
       },{
         "destination": "classnames.css",
-        "format": "custom/format/classnames"
+        "format": "custom/format/classnames",
+        "filter": "isColorProp"
       }]
     }
   }
