@@ -4,6 +4,10 @@ import Icon from './Icon';
 
 type Value = number | null;
 type Props = {
+	/**
+	 * Classname of wrapper, specified because it is not applied with other
+	 */
+	className?: string,
     /**
      * indicates whether the input is disabled
      */
@@ -55,7 +59,11 @@ const getStatus = (props: Props): string => {
 	return props.disabled ? 'disabled' : props.error ? 'error' : 'default';
 };
 
-export class NumericalInput extends React.Component<Props> {
+export class NumericalInput extends React.Component<Props, State> {
+	fauxInputEl: HTMLInputElement | null;
+	decrementBtnEl: HTMLButtonElement | null;
+	incrementBtnEl: HTMLButtonElement | null;
+
 	static defaultProps = {
 		step: 1,
 		min: 0,
@@ -139,7 +147,7 @@ export class NumericalInput extends React.Component<Props> {
 	};
 
 	render() {
-		const { className = '', onChange, onBlur, onKeyDown, onFocus, value, ...other } = this.props;
+		const { className = '', onChange, onBlur, value, ...other } = this.props;
 
 		return (
 			<div data-swarm-number-input={getStatus(this.props)} className={className}>

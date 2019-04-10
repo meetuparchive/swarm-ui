@@ -5,6 +5,7 @@
     border-radius: 4px;
     padding: var(--size-space-default);
     color: var(--color-gray-7);
+    align-items: center;
 }
 [data-swarm-number-input]:focus {
     outline: none;
@@ -38,6 +39,11 @@
     -moz-appearance: none;
     appearance: none;
     margin: 0; 
+}
+
+[data-swarm-number-input-field] {
+    height: 16px;
+    margin: 0;
 }
 
 /* focused */
