@@ -2,28 +2,28 @@
   "font": {
     "lineHeight": {
       "tiny": {
-        "value": "18px"
+        "value": "1.5"
       },
       "small": {
-        "value": "20px"
+        "value": "1.43"
       },
       "normal": {
-        "value": "24px"
+        "value": "1.5"
       },
       "sectionTitle": {
-        "value": "28px"
+        "value": "1.4"
       },
       "kicker": {
-        "value": "22px"
+        "value": "1.57"
       },
       "display3": {
-        "value": "36px"
+        "value": "1.29"
       },
       "display2": {
-        "value": "38px"
+        "value": "1.19"
       },
       "display1": {
-        "value": "52px"
+        "value": "1.24"
       }
     }
   }
