@@ -25,7 +25,7 @@ describe('👀 components are visually the same', function() {
 	afterAll(async () => {
 		await browser.close();
 
-		// comment next line out if you want to to open it in your browser for debugging
+		// comment next line out if you want to open it in your browser for debugging
 		return server.stop();
 	});
 
