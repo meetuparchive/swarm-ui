@@ -40,37 +40,33 @@ describe('👀 components are visually the same', function() {
 			const SLUG = 'Button';
 
 			server.route(createRoute(SLUG, <Button>Press me</Button>));
-
 			await page.goto(`${server.info.uri}/${SLUG}`);
-			let screenshot = await page.screenshot();
 
-			expect(screenshot).toMatchImageSnapshot({
+			expect(await page.screenshot()).toMatchImageSnapshot({
 				customSnapshotIdentifier: SLUG,
 			});
 		});
 
 		it('Disabled', async () => {
 			const SLUG = 'Button-disabled';
+
 			server.route(
 				createRoute(SLUG, <Button disabled>Can&apos;t press me</Button>)
 			);
-
 			await page.goto(`${server.info.uri}/${SLUG}`);
-			let screenshot = await page.screenshot();
 
-			expect(screenshot).toMatchImageSnapshot({
+			expect(await page.screenshot()).toMatchImageSnapshot({
 				customSnapshotIdentifier: SLUG,
 			});
 		});
 
 		it('Primary', async () => {
 			const SLUG = 'Button-primary';
+
 			server.route(createRoute(SLUG, <Button primary>Must press me</Button>));
-
 			await page.goto(`${server.info.uri}/${SLUG}`);
-			let screenshot = await page.screenshot();
 
-			expect(screenshot).toMatchImageSnapshot({
+			expect(await page.screenshot()).toMatchImageSnapshot({
 				customSnapshotIdentifier: SLUG,
 			});
 		});
