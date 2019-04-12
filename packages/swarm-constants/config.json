@@ -15,6 +15,10 @@
       "files": [{
         "destination": "variables.css",
         "format": "css/variables"
+      },{
+        "destination": "colorModifiers.css",
+        "format": "custom/format/colorModifiers",
+        "filter": "isColorProp"
       }]
     }
   }

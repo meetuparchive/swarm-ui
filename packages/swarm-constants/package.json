@@ -5,7 +5,6 @@
   "author": "hsbacot <hsbacot@gmail.com>",
   "homepage": "https://github.com/meetup/swarm-ui#readme",
   "license": "ISC",
-  "main": "lib/constants.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__",
@@ -20,12 +19,14 @@
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
-    "build": "npx style-dictionary build"
+    "build": "node ./build.js",
+    "clean": "rm -rf build"
   },
   "bugs": {
     "url": "https://github.com/meetup/swarm-ui/issues"
   },
   "devDependencies": {
-    "style-dictionary": "hsbacot/style-dictionary#buxfix/css-comments"
+    "lodash": "4.17.11",
+    "style-dictionary": "2.7.0"
   }
 }
