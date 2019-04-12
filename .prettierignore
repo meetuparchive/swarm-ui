@@ -6,3 +6,5 @@ packages/swarm-docs/public
 packages/swarm-constants
 packages/swarm-docs
 packages/swarm-styles
+package.json
+packages/**/package.json
