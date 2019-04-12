@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.9](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-constants@0.2.8...@meetup/swarm-constants@0.2.9) (2019-04-12)
+
+
+### Bug Fixes
+
+* **swarm-constants:** fix template and new build output ([8d5d2ef](https://github.com/meetup/swarm-ui/commit/8d5d2ef))
+* **swarm-constants:** rename classnames to colorModifiers ([5fab86d](https://github.com/meetup/swarm-ui/commit/5fab86d))
+
+
+
+
+
 ## [0.2.8](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-constants@0.2.7...@meetup/swarm-constants@0.2.8) (2019-04-09)
 
 
