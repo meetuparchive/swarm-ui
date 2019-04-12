@@ -8,7 +8,13 @@ import ReactDOMServer from 'react-dom/server';
 
 class screenRenderer {
 	constructor(config) {
-		this.config = { verbose: false, port: 4000, padding: '1em', ...config };
+		this.config = {
+			viewport: { width: 800, height: 600 },
+			verbose: false,
+			port: 4000,
+			padding: '1em',
+			...config,
+		};
 
 		this.routeIndex = 0;
 	}
@@ -44,6 +50,8 @@ class screenRenderer {
 
 		await this.server.start();
 		this.log('Server running on %s', this.server.info.uri);
+
+		return this;
 	}
 
 	createRoute(slug, element) {
@@ -76,31 +84,23 @@ class screenRenderer {
 		return this.server.stop();
 	}
 
-	async screenshot(element) {
+	async screenshot(element, screenshotConfig) {
 		const page = await this.browser.newPage();
-		if (this.config.viewport) {
-			page.setViewport(this.config.viewport);
-		}
+		page.setViewport(
+			(screenshotConfig && screenshotConfig.viewport) || this.config.viewport
+		);
 
-		const SLUG = `route-${this.routeIndex++}`;
+		const slug = `route-${this.routeIndex++}`;
 
-		this.server.route(this.createRoute(SLUG, element));
+		this.server.route(this.createRoute(slug, element));
 
-		const TEST_URL = `${this.server.info.uri}/${SLUG}`;
+		const testUrl = `${this.server.info.uri}/${slug}`;
 
-		this.log(`Testing: ${TEST_URL}`);
-		await page.goto(TEST_URL);
+		this.log(`Testing: ${testUrl}`);
+		await page.goto(testUrl);
 
 		return page.screenshot();
 	}
 }
 
-const getScreenRenderer = async config => {
-	const renderer = new screenRenderer(config);
-
-	await renderer.init();
-
-	return renderer;
-};
-
-export default getScreenRenderer;
+export default async config => new screenRenderer(config).init();
