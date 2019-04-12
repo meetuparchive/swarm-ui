@@ -78,7 +78,9 @@ class screenRenderer {
 
 	async screenshot(element) {
 		const page = await this.browser.newPage();
-		page.setViewport(this.config.viewport);
+		if (this.config.viewport) {
+			page.setViewport(this.config.viewport);
+		}
 
 		const SLUG = `route-${this.routeIndex++}`;
 
