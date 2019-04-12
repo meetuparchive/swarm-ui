@@ -61,6 +61,12 @@ function (_React$Component) {
 
     _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(NumericalInput)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
+    _defineProperty(_assertThisInitialized(_this), "fauxInputEl", void 0);
+
+    _defineProperty(_assertThisInitialized(_this), "decrementBtnEl", void 0);
+
+    _defineProperty(_assertThisInitialized(_this), "incrementBtnEl", void 0);
+
     _defineProperty(_assertThisInitialized(_this), "state", {
       value: _this.props.value || _this.props.value === 0 ? _this.props.value : null,
       isFieldFocused: false
@@ -158,10 +164,8 @@ function (_React$Component) {
           className = _this$props2$classNam === void 0 ? '' : _this$props2$classNam,
           onChange = _this$props2.onChange,
           onBlur = _this$props2.onBlur,
-          onKeyDown = _this$props2.onKeyDown,
-          onFocus = _this$props2.onFocus,
           value = _this$props2.value,
-          other = _objectWithoutProperties(_this$props2, ["className", "onChange", "onBlur", "onKeyDown", "onFocus", "value"]);
+          other = _objectWithoutProperties(_this$props2, ["className", "onChange", "onBlur", "value"]);
 
       return React.createElement("div", {
         "data-swarm-number-input": getStatus(this.props),
@@ -235,9 +239,15 @@ NumericalInput.__docgenInfo = {
       "type": {
         "name": "signature",
         "type": "object",
-        "raw": "{\n    /**\n     * indicates whether the input is disabled\n     */\n    disabled?: boolean,\n    /**\n     * indicates whether there is an error on the input\n     */\n    error?: React$Node,\n    /**\n     * id of the input\n     */\n    id: string,\n    /**\n     * the maximum integer allowed\n     */\n\tmax?: number,\n    /**\n     * the minimum integer allowed\n     */\n    min?: number,\n    /**\n     * name of the input, used with labels\n     */\n    name: string,\n    /**\n     * Required change handler with Value, not event\n     */\n    onChange: Value => void,\n    /**\n     * funcitonality invoked when the form field is blurred\n     */\n    onBlur: (SyntheticInputEvent<HTMLInputElement>) => void,\n    /**\n     * The amount the input will increment or decrement when using keyboard interactions\n     */\n    step: number,\n    /**\n     * The value of the field\n     */\n\tvalue: Value,\n}",
+        "raw": "{\n\t/**\n\t * Classname of wrapper, specified because it is not applied with other\n\t */\n\tclassName?: string,\n    /**\n     * indicates whether the input is disabled\n     */\n    disabled?: boolean,\n    /**\n     * indicates whether there is an error on the input\n     */\n    error?: React$Node,\n    /**\n     * id of the input\n     */\n    id: string,\n    /**\n     * the maximum integer allowed\n     */\n\tmax?: number,\n    /**\n     * the minimum integer allowed\n     */\n    min?: number,\n    /**\n     * name of the input, used with labels\n     */\n    name: string,\n    /**\n     * Required change handler with Value, not event\n     */\n    onChange: Value => void,\n    /**\n     * funcitonality invoked when the form field is blurred\n     */\n    onBlur: (SyntheticInputEvent<HTMLInputElement>) => void,\n    /**\n     * The amount the input will increment or decrement when using keyboard interactions\n     */\n    step: number,\n    /**\n     * The value of the field\n     */\n\tvalue: Value,\n}",
         "signature": {
           "properties": [{
+            "key": "className",
+            "value": {
+              "name": "string",
+              "required": false
+            }
+          }, {
             "key": "disabled",
             "value": {
               "name": "boolean",
@@ -524,6 +534,13 @@ NumericalInput.__docgenInfo = {
         "name": "number"
       },
       "description": "the minimum integer allowed"
+    },
+    "className": {
+      "required": false,
+      "flowType": {
+        "name": "string"
+      },
+      "description": "Classname of wrapper, specified because it is not applied with other"
     },
     "disabled": {
       "required": false,
