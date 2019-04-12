@@ -1,5 +1,5 @@
 define COMMIT_MESSAGE
-chore: Version %s built by Travis CI
+chore(release): Published by Travis CI
 
 $(TRAVIS_BUILD_WEB_URL)
 [skip ci]
