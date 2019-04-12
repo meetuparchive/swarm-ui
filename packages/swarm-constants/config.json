@@ -16,8 +16,8 @@
         "destination": "variables.css",
         "format": "css/variables"
       },{
-        "destination": "classnames.css",
-        "format": "custom/format/classnames",
+        "destination": "colorModifiers.css",
+        "format": "custom/format/colorModifiers",
         "filter": "isColorProp"
       }]
     }

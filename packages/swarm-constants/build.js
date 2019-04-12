@@ -7,8 +7,8 @@ console.log('\n==============================================');
 
 // Custom format that uses the Lodash "template" syntax
 StyleDictionary.registerFormat({
-  name: 'custom/format/classnames',
-  formatter: _.template(fs.readFileSync(__dirname + '/templates/classnames.template'))
+  name: 'custom/format/colorModifiers',
+  formatter: _.template(fs.readFileSync(__dirname + '/templates/colorModifiers.template'))
 });
 
 // Filter to determine if a property is a color
