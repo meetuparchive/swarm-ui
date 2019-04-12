@@ -1,0 +1,6 @@
+<% _.each(allProperties, function(prop) {
+%>.<%= prop.name %> {
+    color: <%= prop.value %>;
+}
+
+<% }); %>

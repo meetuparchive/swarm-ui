@@ -12937,9 +12937,9 @@ strong-log-transformer@^2.0.0:
     minimist "^1.2.0"
     through "^2.3.4"
 
-style-dictionary@hsbacot/style-dictionary#buxfix/css-comments:
-  version "2.5.0"
-  resolved "https://codeload.github.com/hsbacot/style-dictionary/tar.gz/e4c9357922d215ef79954c031d28774a1e2568fa"
+style-dictionary@2.7.0:
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/style-dictionary/-/style-dictionary-2.7.0.tgz#9576257a6829a8c7481a661a70bb8c81d2307599"
   dependencies:
     chalk "^2.4.1"
     commander "^2.9.0"
