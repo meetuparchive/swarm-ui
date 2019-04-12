@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 12 Apr 2019 14:56:22 GMT
+ * Generated on Fri, 12 Apr 2019 15:03:45 GMT
  */
 
 :root {
@@ -45,8 +45,9 @@
  --font-size-display-2: 32px;
  --font-size-display-1: 42px;
  --font-weight-normal: 400;
- --font-weight-semi-bold: 500;
- --font-weight-bold: 600;
+ --font-weight-regular: 500;
+ --font-weight-semi-bold: 600;
+ --font-weight-bold: 700;
  --size-font-small: 0.75; /* the small size of the font */
  --size-font-medium: 1; /* the medium size of the font */
  --size-font-large: 2; /* the large size of the font */
