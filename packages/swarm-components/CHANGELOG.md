@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.6.6...@meetup/swarm-components@0.7.0) (2019-04-12)
+
+
+### Bug Fixes
+
+* added package.jsons to .prettierignore, reformatted package.json ([e7daa13](https://github.com/meetup/swarm-ui/commit/e7daa13))
+* fixed test script. made viewport config optional ([d9566b8](https://github.com/meetup/swarm-ui/commit/d9566b8))
+* re-added the packages ([2b67f8a](https://github.com/meetup/swarm-ui/commit/2b67f8a))
+* typo in the comment ([bc404ae](https://github.com/meetup/swarm-ui/commit/bc404ae))
+
+
+### Features
+
+* viewport config per screenshot ([b170b80](https://github.com/meetup/swarm-ui/commit/b170b80))
+
+
+
+
+
 ## [0.6.6](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.6.5...@meetup/swarm-components@0.6.6) (2019-04-12)
 
 **Note:** Version bump only for package @meetup/swarm-components
