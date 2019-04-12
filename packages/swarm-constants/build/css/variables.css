@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 12 Apr 2019 15:03:45 GMT
+ * Generated on Fri, 12 Apr 2019 20:33:37 GMT
  */
 
 :root {
@@ -57,4 +57,5 @@
  --size-space-half: 8px; /* half space size */
  --size-space-quarter: 4px; /* quarter space size */
  --size-space-quadruple: 64px; /* quadruple space size */
+ --size-space-large-default: 20px; /* default space size for large screens */
 }

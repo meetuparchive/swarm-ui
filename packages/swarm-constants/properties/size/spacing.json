@@ -20,6 +20,10 @@
             "quadruple": {
                 "value": "64px",
                 "comment": "quadruple space size"
+            },
+            "largeDefault": {
+                "value": "20px",
+                "comment": "default space size for large screens"
             }
         }
     }
