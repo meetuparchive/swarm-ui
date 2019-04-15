@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.1](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.7.0...@meetup/swarm-components@0.7.1) (2019-04-15)
+
+
+### Bug Fixes
+
+* **swarm-components:** don't build test files ([aa1a95f](https://github.com/meetup/swarm-ui/commit/aa1a95f))
+* **swarm-components:** omit test files from build ([2d910e9](https://github.com/meetup/swarm-ui/commit/2d910e9))
+* **swarm-componets:** do not build testUtils directory ([b31a2ba](https://github.com/meetup/swarm-ui/commit/b31a2ba))
+
+
+
+
+
 # [0.7.0](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.6.6...@meetup/swarm-components@0.7.0) (2019-04-12)
 
 
