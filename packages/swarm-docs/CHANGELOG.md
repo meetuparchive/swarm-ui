@@ -3,6 +3,34 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.7](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.8.6...@meetup/swarm-docs@0.8.7) (2019-04-15)
+
+
+### Bug Fixes
+
+* inverted color class ([d290167](https://github.com/gatsbyjs/gatsby-starter-default/commit/d290167))
+* resolved style conflicts ([eab944c](https://github.com/gatsbyjs/gatsby-starter-default/commit/eab944c))
+
+
+
+
+
+## [0.8.6](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.8.5...@meetup/swarm-docs@0.8.6) (2019-04-12)
+
+**Note:** Version bump only for package @meetup/swarm-docs
+
+
+
+
+
+## [0.8.5](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.8.4...@meetup/swarm-docs@0.8.5) (2019-04-12)
+
+**Note:** Version bump only for package @meetup/swarm-docs
+
+
+
+
+
 ## [0.8.4](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.8.3...@meetup/swarm-docs@0.8.4) (2019-04-12)
 
 **Note:** Version bump only for package @meetup/swarm-docs

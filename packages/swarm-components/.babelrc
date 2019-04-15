@@ -1,4 +1,14 @@
 {
-  "presets": ["@babel/preset-flow", "@babel/preset-react", "@babel/preset-env"],
-  "plugins": ["react-docgen", "@babel/plugin-proposal-class-properties"]
+	"presets": ["@babel/preset-flow", "@babel/preset-react", "@babel/preset-env"],
+	"plugins": [
+		"react-docgen",
+		"@babel/plugin-proposal-class-properties",
+		[
+			"@babel/plugin-transform-runtime",
+			{
+				"regenerator": true
+			}
+		],
+		"@babel/plugin-transform-async-to-generator"
+	]
 }

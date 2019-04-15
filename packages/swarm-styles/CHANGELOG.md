@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.7](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.2.6...@meetup/swarm-styles@0.2.7) (2019-04-15)
+
+
+### Bug Fixes
+
+* inverted color class ([d290167](https://github.com/meetup/swarm-ui/commit/d290167))
+* resolved style conflicts ([eab944c](https://github.com/meetup/swarm-ui/commit/eab944c))
+
+
+
+
+
+## [0.2.6](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.2.5...@meetup/swarm-styles@0.2.6) (2019-04-12)
+
+**Note:** Version bump only for package @meetup/swarm-styles
+
+
+
+
+
 ## [0.2.5](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.2.4...@meetup/swarm-styles@0.2.5) (2019-04-12)
 
 **Note:** Version bump only for package @meetup/swarm-styles

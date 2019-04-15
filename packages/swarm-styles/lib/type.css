@@ -9,7 +9,6 @@
 .text--display,
 .text--display1 {
     @extend %heading;
-    @extend %textColor;
 
     font-size: var(--font-size-display-1);
     line-height: var(--font-line-height-display-1);
@@ -18,7 +17,6 @@
 .text--pageTitle,
 .text--display2 {
     @extend %heading;
-    @extend %textColor;
 
     font-size: var(--font-size-display-2);
     line-height: var(--font-line-height-display-2);
@@ -26,62 +24,54 @@
 
 .text--big,
 .text--display3 {
-    @extend %textColor;
-
     font-size: var(--font-size-display-3);
     line-height: var(--font-line-height-display-3);
     font-weight: var(--font-weight-semi-bold);
 }
 
 .text--sectionTitle {
-    @extend %textColor;
-
     font-size: var(--font-size-section-title);
     line-height: var(--font-line-height-section-title);
     font-weight: var(--font-weight-semi-bold);
 }
 
 .text--kickerText {
-    @extend %textColor;
-    
     font-size: var(--font-size-kicker);
     line-height: var(--font-line-height-kicker);
 }
 .text--small {
-    @extend %textColor;
     font-size: var(--font-size-small);
     line-height: var(--font-line-height-small)
 }
 
 .text--tiny {
-    @extend %textColor;
     font-size: var(--font-size-tiny);
     line-height: var(--font-line-height-tiny)
 }
 
 .text--caption {
-    @extend %textColor;
-
 }
 
 .text--body {
-    @extend %textColor;
     font-size: var(--font-size-normal);
     line-height: var(--font-line-height-normal);
 }
 
 .text--body2 {
-    @extend %textColor;
     font-size: var(--font-size-normal);
     line-height: var(--font-line-height-section-title);
 }
 
 .text--normal {
-    @extend %textColor;
     font-weight: var(--font-weight-normal) !important;
 }
 
 .text--link {
     text-decoration: none;
     color: var(--color-viridian);
+}
+
+/* INVERTED */
+.inverted {
+    color: var(--color-white);
 }
