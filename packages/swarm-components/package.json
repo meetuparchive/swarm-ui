@@ -19,8 +19,8 @@
   },
   "scripts": {
     "test": "NODE_ENV=test jest --config jest.config.json",
-    "build": "babel src --out-dir lib --ignore test.js,test.jsx",
-    "develop": "babel src/ --watch -d lib/"
+    "build": "npx babel src --out-dir lib --ignore 'src/**/*.test.js','src/**/*.test.jsx'",
+    "develop": "npx babel src/ --watch -d lib/"
   },
   "bugs": {
     "url": "https://github.com/meetup/swarm-ui/issues"
