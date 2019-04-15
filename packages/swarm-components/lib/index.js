@@ -1,5 +1,7 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -107,5 +109,3 @@ var _Toggle = _interopRequireDefault(require("./Toggle"));
 var _TogglePill = _interopRequireDefault(require("./TogglePill"));
 
 var _Select = _interopRequireDefault(require("./Select"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
