@@ -1,25 +1,23 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = exports.getIconShape = exports.MEDIA_SIZES = exports.ICON_CIRCLED_CLASS = exports.SVG_THIN_STYLE = exports.ICON_CLASS = void 0;
+
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
+
+var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
+
+var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
 
 var _react = _interopRequireDefault(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
 var _shapeConstants = require("swarm-icons/dist/js/shapeConstants");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-
-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 var ICON_CLASS = 'svg';
 exports.ICON_CLASS = ICON_CLASS;
@@ -76,9 +74,8 @@ var Icon = function Icon(props) {
       color = props.color,
       style = props.style,
       circle = props.circle,
-      other = _objectWithoutProperties(props, ["className", "shape", "size", "color", "style", "circle"]);
-
-  var classNames = (0, _classnames["default"])(ICON_CLASS, "svg--".concat(shape), _defineProperty({}, ICON_CIRCLED_CLASS, circle), className, 'svg-icon', 'valign--middle');
+      other = (0, _objectWithoutProperties2["default"])(props, ["className", "shape", "size", "color", "style", "circle"]);
+  var classNames = (0, _classnames["default"])(ICON_CLASS, "svg--".concat(shape), (0, _defineProperty2["default"])({}, ICON_CIRCLED_CLASS, circle), className, 'svg-icon', 'valign--middle');
   var sizeVal = MEDIA_SIZES[size];
   var allStyles = style || {};
 
@@ -86,7 +83,7 @@ var Icon = function Icon(props) {
     allStyles.fill = color;
   }
 
-  return _react["default"].createElement("svg", _extends({
+  return _react["default"].createElement("svg", (0, _extends2["default"])({
     preserveAspectRatio: "xMinYMin meet",
     width: sizeVal,
     height: sizeVal,

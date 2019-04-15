@@ -1,43 +1,35 @@
 "use strict";
 
+var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = exports.NumericalInput = void 0;
 
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
+
+var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+
+var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
+
+var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
+
+var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
+
+var _getPrototypeOf3 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
+
+var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
+
+var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+
+var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
+
 var React = _interopRequireWildcard(require("react"));
 
 var _Icon = _interopRequireDefault(require("./Icon"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj["default"] = obj; return newObj; } }
-
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-
-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 var getStatus = function getStatus(props) {
   return props.disabled ? 'disabled' : props.error ? 'error' : 'default';
@@ -46,33 +38,28 @@ var getStatus = function getStatus(props) {
 var NumericalInput =
 /*#__PURE__*/
 function (_React$Component) {
-  _inherits(NumericalInput, _React$Component);
+  (0, _inherits2["default"])(NumericalInput, _React$Component);
 
   function NumericalInput() {
     var _getPrototypeOf2;
 
     var _this;
 
-    _classCallCheck(this, NumericalInput);
+    (0, _classCallCheck2["default"])(this, NumericalInput);
 
     for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
 
-    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(NumericalInput)).call.apply(_getPrototypeOf2, [this].concat(args)));
-
-    _defineProperty(_assertThisInitialized(_this), "fauxInputEl", void 0);
-
-    _defineProperty(_assertThisInitialized(_this), "decrementBtnEl", void 0);
-
-    _defineProperty(_assertThisInitialized(_this), "incrementBtnEl", void 0);
-
-    _defineProperty(_assertThisInitialized(_this), "state", {
+    _this = (0, _possibleConstructorReturn2["default"])(this, (_getPrototypeOf2 = (0, _getPrototypeOf3["default"])(NumericalInput)).call.apply(_getPrototypeOf2, [this].concat(args)));
+    (0, _defineProperty2["default"])((0, _assertThisInitialized2["default"])(_this), "fauxInputEl", void 0);
+    (0, _defineProperty2["default"])((0, _assertThisInitialized2["default"])(_this), "decrementBtnEl", void 0);
+    (0, _defineProperty2["default"])((0, _assertThisInitialized2["default"])(_this), "incrementBtnEl", void 0);
+    (0, _defineProperty2["default"])((0, _assertThisInitialized2["default"])(_this), "state", {
       value: _this.props.value || _this.props.value === 0 ? _this.props.value : null,
       isFieldFocused: false
     });
-
-    _defineProperty(_assertThisInitialized(_this), "_updateValueByStep", function (isIncreasing) {
+    (0, _defineProperty2["default"])((0, _assertThisInitialized2["default"])(_this), "_updateValueByStep", function (isIncreasing) {
       var _this$props = _this.props,
           min = _this$props.min,
           max = _this$props.max,
@@ -82,8 +69,7 @@ function (_React$Component) {
       var minConstrained = Math.max(newValue, _this.props.min || -Infinity);
       return Math.min(minConstrained, max || Infinity);
     });
-
-    _defineProperty(_assertThisInitialized(_this), "_updateValue", function (value) {
+    (0, _defineProperty2["default"])((0, _assertThisInitialized2["default"])(_this), "_updateValue", function (value) {
       _this.setState(function () {
         return {
           value: value
@@ -94,8 +80,7 @@ function (_React$Component) {
         _this.props.onChange(value);
       }
     });
-
-    _defineProperty(_assertThisInitialized(_this), "onBlur", function (e) {
+    (0, _defineProperty2["default"])((0, _assertThisInitialized2["default"])(_this), "onBlur", function (e) {
       var formControls = [_this.fauxInputEl, _this.decrementBtnEl, _this.incrementBtnEl];
 
       if (formControls.every(function (c) {
@@ -112,8 +97,7 @@ function (_React$Component) {
         }
       }
     });
-
-    _defineProperty(_assertThisInitialized(_this), "onChange", function (e) {
+    (0, _defineProperty2["default"])((0, _assertThisInitialized2["default"])(_this), "onChange", function (e) {
       var newValue = e.target.value ? parseInt(e.target.value, 10) : null;
 
       if (Number.isNaN(newValue)) {
@@ -122,39 +106,34 @@ function (_React$Component) {
 
       _this._updateValue(newValue);
     });
-
-    _defineProperty(_assertThisInitialized(_this), "onFocus", function (e) {
+    (0, _defineProperty2["default"])((0, _assertThisInitialized2["default"])(_this), "onFocus", function (e) {
       _this.setState(function () {
         return {
           isFieldFocused: true
         };
       });
     });
-
-    _defineProperty(_assertThisInitialized(_this), "onKeyDown", function (e) {
+    (0, _defineProperty2["default"])((0, _assertThisInitialized2["default"])(_this), "onKeyDown", function (e) {
       // Disable the 'e' or 'E' values because we don't
       // support scientific notation at the moment
       if (e.key.toLowerCase() === 'e') {
         e.preventDefault();
       }
     });
-
-    _defineProperty(_assertThisInitialized(_this), "incrementAction", function (e) {
+    (0, _defineProperty2["default"])((0, _assertThisInitialized2["default"])(_this), "incrementAction", function (e) {
       e.preventDefault();
 
       _this._updateValue(_this._updateValueByStep(true));
     });
-
-    _defineProperty(_assertThisInitialized(_this), "decrementAction", function (e) {
+    (0, _defineProperty2["default"])((0, _assertThisInitialized2["default"])(_this), "decrementAction", function (e) {
       e.preventDefault();
 
       _this._updateValue(_this._updateValueByStep(false));
     });
-
     return _this;
   }
 
-  _createClass(NumericalInput, [{
+  (0, _createClass2["default"])(NumericalInput, [{
     key: "render",
     value: function render() {
       var _this2 = this;
@@ -165,12 +144,11 @@ function (_React$Component) {
           onChange = _this$props2.onChange,
           onBlur = _this$props2.onBlur,
           value = _this$props2.value,
-          other = _objectWithoutProperties(_this$props2, ["className", "onChange", "onBlur", "value"]);
-
+          other = (0, _objectWithoutProperties2["default"])(_this$props2, ["className", "onChange", "onBlur", "value"]);
       return React.createElement("div", {
         "data-swarm-number-input": getStatus(this.props),
         className: className
-      }, React.createElement("input", _extends({
+      }, React.createElement("input", (0, _extends2["default"])({
         "data-swarm-number-input-field": true,
         type: "number",
         pattern: "[0-9]*",
@@ -215,17 +193,14 @@ function (_React$Component) {
       };
     }
   }]);
-
   return NumericalInput;
 }(React.Component);
 
 exports.NumericalInput = NumericalInput;
-
-_defineProperty(NumericalInput, "defaultProps", {
+(0, _defineProperty2["default"])(NumericalInput, "defaultProps", {
   step: 1,
   min: 0
 });
-
 var _default = NumericalInput;
 exports["default"] = _default;
 NumericalInput.__docgenInfo = {

@@ -3,7 +3,7 @@ import React from 'react';
 import { toMatchImageSnapshot } from 'jest-image-snapshot';
 expect.extend({ toMatchImageSnapshot });
 
-import getScreenRenderer from './screenRenderer';
+import getScreenRenderer from './testUtils/screenRenderer';
 
 import Button from './Button';
 
