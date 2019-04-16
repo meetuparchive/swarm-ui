@@ -28,8 +28,9 @@ var Button = function Button(props) {
       neutral = props.neutral,
       primary = props.primary,
       inverted = props.inverted,
+      reset = props.reset,
       small = props.small,
-      other = (0, _objectWithoutProperties2["default"])(props, ["icon", "right", "children", "bordered", "neutral", "primary", "inverted", "small"]);
+      other = (0, _objectWithoutProperties2["default"])(props, ["icon", "right", "children", "bordered", "neutral", "primary", "inverted", "reset", "small"]);
   var buttonType = (0, _buttonUtils.getButtonType)(props);
   return React.createElement("button", (0, _extends2["default"])({
     "data-swarm-button": buttonType,
@@ -80,6 +81,13 @@ Button.__docgenInfo = {
         "name": "string"
       },
       "description": "Supports icon classes found at https://meetup.github.io/swarm-icons/"
+    },
+    "reset": {
+      "required": false,
+      "flowType": {
+        "name": "boolean"
+      },
+      "description": "Strips all styles from the button"
     },
     "inverted": {
       "required": false,
