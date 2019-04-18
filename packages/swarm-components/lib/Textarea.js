@@ -13,6 +13,8 @@ var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends")
 
 var React = _interopRequireWildcard(require("react"));
 
+var _autosize = _interopRequireDefault(require("autosize"));
+
 var getTextareaStatus = function getTextareaStatus(props) {
   return props.disabled ? 'disabled' : props.error ? 'error' : 'default';
 };
@@ -23,9 +25,14 @@ var getCharacterCount = function getCharacterCount() {
 };
 
 var Textarea = function Textarea(props) {
-  console.log('textarea char count', getCharacterCount(props.value));
+  var textareaRef = React.useCallback(function (node) {
+    if (node !== null && props.autosize) {
+      (0, _autosize["default"])(node);
+    }
+  }, [props.value]);
   return React.createElement("textarea", (0, _extends2["default"])({
-    "data-swarm-textarea": getTextareaStatus(props)
+    "data-swarm-textarea": getTextareaStatus(props),
+    ref: textareaRef
   }, props));
 };
 
@@ -36,6 +43,13 @@ Textarea.__docgenInfo = {
   "methods": [],
   "displayName": "Textarea",
   "props": {
+    "autosize": {
+      "required": false,
+      "flowType": {
+        "name": "boolean"
+      },
+      "description": "Resizes the height based on content"
+    },
     "disabled": {
       "required": false,
       "flowType": {
