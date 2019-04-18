@@ -178,6 +178,10 @@
   @extend %swarm-button-disabled;
 }
 
+[data-swarm-button="reset"] {
+  padding: var(--size-space-quarter);
+}
+
 /* small */
 %swarm-button-small {
   padding: var(--space-half) var(--space-half);
