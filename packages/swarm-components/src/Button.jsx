@@ -30,6 +30,11 @@ export type ButtonProps = {
 	icon?: string,
 
 	/**
+	 * Strips all styles from the button
+	 */
+	reset?: boolean,
+
+	/**
 	 * Inverted styles for dark backgrounds
 	 */
 	inverted?: boolean,
@@ -75,6 +80,7 @@ const Button = (props: ButtonProps): React.Element<'button'> => {
 		neutral, // eslint-disable-line no-unused-vars
 		primary, // eslint-disable-line no-unused-vars
 		inverted, // eslint-disable-line no-unused-vars
+		reset, // eslint-disable-line no-unused-vars
 		small, // eslint-disable-line no-unused-vars
 		...other
 	} = props;

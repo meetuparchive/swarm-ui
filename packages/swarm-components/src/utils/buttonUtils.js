@@ -11,6 +11,7 @@ export const FILLS = {
 	neutral: 'var(--color-gray-7)',
 	bordered: 'var(--color-gray-7)',
 	inverted: 'var(--color-white)',
+	reset: 'var(--color-gray-7)',
 };
 
 type Props = ButtonProps | LinkButtonProps;
@@ -25,6 +26,8 @@ export const getButtonType = (props: Props): string => {
 
 	if (props.disabled) {
 		buttonType = 'disabled';
+	} else if (props.reset) {
+		buttonType = 'reset';
 	} else if (props.primary) {
 		buttonType = 'primary';
 	} else if (props.neutral) {

@@ -12,7 +12,8 @@ var FILLS = {
   primary: 'var(--color-white)',
   neutral: 'var(--color-gray-7)',
   bordered: 'var(--color-gray-7)',
-  inverted: 'var(--color-white)'
+  inverted: 'var(--color-white)',
+  reset: 'var(--color-gray-7)'
 };
 exports.FILLS = FILLS;
 
@@ -26,6 +27,8 @@ var getButtonType = function getButtonType(props) {
 
   if (props.disabled) {
     buttonType = 'disabled';
+  } else if (props.reset) {
+    buttonType = 'reset';
   } else if (props.primary) {
     buttonType = 'primary';
   } else if (props.neutral) {

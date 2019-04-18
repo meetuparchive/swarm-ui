@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.2](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.7.1...@meetup/swarm-components@0.7.2) (2019-04-16)
+
+
+### Bug Fixes
+
+* merge master and fix button reset ([e7b1b87](https://github.com/meetup/swarm-ui/commit/e7b1b87))
+
+
+
+
+
 ## [0.7.1](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.7.0...@meetup/swarm-components@0.7.1) (2019-04-15)
 
 
