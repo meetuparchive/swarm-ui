@@ -73,8 +73,9 @@ describe('👀 components are visually the same', function() {
 			).toMatchImageSnapshot();
 		});
 		it('Inverted', async () => {
+			// Adding a background so the inverted button shows up in the screenshot.
 			expect(
-				await renderer.screenshot(<Button inverted> Press me</Button>)
+				await renderer.screenshot(<Button inverted> Press me</Button>, {bodyStyle: 'background-color:powderblue;'})
 			).toMatchImageSnapshot();
 		});
 		it('Neutral', async () => {

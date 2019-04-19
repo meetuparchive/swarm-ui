@@ -56,7 +56,7 @@ class screenRenderer {
 		return this;
 	}
 
-	createRoute(slug, element) {
+	createRoute(slug, element, bodyStyle='') {
 		const links = this.config.stylesheets
 			.map(
 				stylesheet =>
@@ -74,7 +74,7 @@ class screenRenderer {
 								<head>
 									${links}
 								</head>
-								<body style="padding: ${this.config.padding}">
+								<body style="padding: ${this.config.padding}; ${bodyStyle}">
 								${ReactDOMServer.renderToStaticMarkup(element)}
 								</body>
 							</html>`,
@@ -94,7 +94,7 @@ class screenRenderer {
 
 		const slug = `route-${this.routeIndex++}`;
 
-		this.server.route(this.createRoute(slug, element));
+		this.server.route(this.createRoute(slug, element, screenshotConfig.bodyStyle));
 
 		const testUrl = `${this.server.info.uri}/${slug}`;
 
