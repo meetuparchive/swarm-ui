@@ -12,6 +12,7 @@ class screenRenderer {
 			viewport: { width: 800, height: 600 },
 			verbose: false,
 			port: 4000,
+			host: 'localhost',
 			padding: '1em',
 			...config,
 		};
@@ -26,13 +27,14 @@ class screenRenderer {
 	}
 
 	async init() {
-		const { port, staticPath } = this.config;
+		const { port, host, staticPath } = this.config;
 
 		this.browser = await puppeteer.launch();
 		this.log('Browser is running');
 
 		this.server = Hapi.server({
 			port,
+			host,
 		});
 
 		await this.server.register(inert);
