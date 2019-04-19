@@ -9,6 +9,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 
+var _objectSpread2 = _interopRequireDefault(require("@babel/runtime/helpers/objectSpread"));
+
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
 var React = _interopRequireWildcard(require("react"));
@@ -24,16 +26,30 @@ var getCharacterCount = function getCharacterCount() {
   return value.length;
 };
 
+var CharCount = function CharCount(props) {
+  return React.createElement("p", (0, _extends2["default"])({
+    "data-swarm-textarea-char-count": true,
+    className: "text--tiny"
+  }, props));
+};
+
 var Textarea = function Textarea(props) {
+  var maxLength = props.maxLength,
+      autosize = props.autosize;
   var textareaRef = React.useCallback(function (node) {
     if (node !== null && props.autosize) {
       (0, _autosize["default"])(node);
     }
   }, [props.value]);
-  return React.createElement("textarea", (0, _extends2["default"])({
-    "data-swarm-textarea": getTextareaStatus(props),
+  var remainingCharacters = parseInt(maxLength, 10) - getCharacterCount(props.value);
+  return React.createElement("div", {
+    "data-swarm-textarea-wrapper": true
+  }, React.createElement("textarea", (0, _extends2["default"])({
+    "data-swarm-textarea": getTextareaStatus((0, _objectSpread2["default"])({}, props, {
+      error: props.error || remainingCharacters < 0
+    })),
     ref: textareaRef
-  }, props));
+  }, props)), maxLength && React.createElement(CharCount, null, remainingCharacters));
 };
 
 var _default = Textarea;
@@ -70,6 +86,19 @@ Textarea.__docgenInfo = {
         "name": "string"
       },
       "description": "Value for textarea."
+    },
+    "maxLength": {
+      "required": false,
+      "flowType": {
+        "name": "union",
+        "raw": "string | number",
+        "elements": [{
+          "name": "string"
+        }, {
+          "name": "number"
+        }]
+      },
+      "description": "max length of input field"
     }
   }
 };

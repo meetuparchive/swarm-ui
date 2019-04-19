@@ -15,6 +15,13 @@ const TextareaExample = () => {
         onChange={e => setValue2(e.target.value)}
         autosize
       />
+      <p>with autosize & maxLength 200</p>
+      <Textarea
+        value={value2}
+        onChange={e => setValue2(e.target.value)}
+        autosize
+        maxLength="200"
+      />
     </>
   );
 };
