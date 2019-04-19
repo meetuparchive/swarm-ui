@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.9](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.2.8...@meetup/swarm-styles@0.2.9) (2019-04-19)
+
+
+### Bug Fixes
+
+* reset button has quarter space ([d256724](https://github.com/meetup/swarm-ui/commit/d256724))
+
+
+
+
+
 ## [0.2.8](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.2.7...@meetup/swarm-styles@0.2.8) (2019-04-15)
 
 **Note:** Version bump only for package @meetup/swarm-styles
