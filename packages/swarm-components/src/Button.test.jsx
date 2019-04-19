@@ -3,8 +3,6 @@ import React from 'react';
 import { toMatchImageSnapshot } from 'jest-image-snapshot';
 expect.extend({ toMatchImageSnapshot });
 
-import getPort from 'get-port';
-
 import getScreenRenderer from './testUtils/screenRenderer';
 
 import Button from './Button';
@@ -15,7 +13,6 @@ describe('Button', () => {
 	// This is ran when the suite starts up.
 	beforeAll(async () => {
 		renderer = await getScreenRenderer({
-			port: await getPort(),
 			viewport: { width: 200, height: 100 },
 			staticPath: '../../../swarm-styles/dist',
 			stylesheets: ['global.css', 'main.css'],
