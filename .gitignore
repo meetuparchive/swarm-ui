@@ -3,3 +3,8 @@ node_modules
 *.log
 *.chache
 *-diff.png
+
+packages/swarm-components/lib/
+packages/swarm-constants/build/
+packages/swarm-docs/public/
+packages/swarm-styles/dist/
