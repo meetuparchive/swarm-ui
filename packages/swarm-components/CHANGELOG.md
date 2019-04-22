@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.9.0](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.8.2...@meetup/swarm-components@0.9.0) (2019-04-22)
+
+
+### Bug Fixes
+
+* fix merge conflicts, regenerate test snapshots ([71596b3](https://github.com/meetup/swarm-ui/commit/71596b3))
+* set default padding and use bodystyle flexibility in screenshot ([790c0b1](https://github.com/meetup/swarm-ui/commit/790c0b1))
+* set default padding and use bodystyle flexibility in screenshot ([4bdc06a](https://github.com/meetup/swarm-ui/commit/4bdc06a))
+
+
+### Features
+
+* ability to set body style, improve inverted test to be visible ([fa19a35](https://github.com/meetup/swarm-ui/commit/fa19a35))
+* add host to screenreader, add more visual tests for button ([b408843](https://github.com/meetup/swarm-ui/commit/b408843))
+
+
+
+
+
 ## [0.8.2](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.8.1...@meetup/swarm-components@0.8.2) (2019-04-22)
 
 **Note:** Version bump only for package @meetup/swarm-components
