@@ -88,7 +88,7 @@ class screenRenderer {
 		return this.server.stop();
 	}
 
-	async screenshot(element, screenshotConfig) {
+	async screenshot(element, screenshotConfig={}) {
 		const page = await this.browser.newPage();
 		page.setViewport(
 			(screenshotConfig && screenshotConfig.viewport) || this.config.viewport

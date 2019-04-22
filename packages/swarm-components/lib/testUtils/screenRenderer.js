@@ -166,29 +166,34 @@ function () {
     value: function () {
       var _screenshot = (0, _asyncToGenerator2["default"])(
       /*#__PURE__*/
-      _regenerator["default"].mark(function _callee3(element, screenshotConfig) {
-        var page, slug, testUrl;
+      _regenerator["default"].mark(function _callee3(element) {
+        var screenshotConfig,
+            page,
+            slug,
+            testUrl,
+            _args3 = arguments;
         return _regenerator["default"].wrap(function _callee3$(_context3) {
           while (1) {
             switch (_context3.prev = _context3.next) {
               case 0:
-                _context3.next = 2;
+                screenshotConfig = _args3.length > 1 && _args3[1] !== undefined ? _args3[1] : {};
+                _context3.next = 3;
                 return this.browser.newPage();
 
-              case 2:
+              case 3:
                 page = _context3.sent;
                 page.setViewport(screenshotConfig && screenshotConfig.viewport || this.config.viewport);
                 slug = "route-".concat(this.routeIndex++);
                 this.server.route(this.createRoute(slug, element, screenshotConfig.bodyStyle));
                 testUrl = "".concat(this.server.info.uri, "/").concat(slug);
                 this.log("Testing: ".concat(testUrl));
-                _context3.next = 10;
+                _context3.next = 11;
                 return page["goto"](testUrl);
 
-              case 10:
+              case 11:
                 return _context3.abrupt("return", page.screenshot());
 
-              case 11:
+              case 12:
               case "end":
                 return _context3.stop();
             }
@@ -196,7 +201,7 @@ function () {
         }, _callee3, this);
       }));
 
-      function screenshot(_x, _x2) {
+      function screenshot(_x) {
         return _screenshot.apply(this, arguments);
       }
 
@@ -243,7 +248,7 @@ function () {
     }, _callee4);
   }));
 
-  return function (_x3) {
+  return function (_x2) {
     return _ref.apply(this, arguments);
   };
 }();
