@@ -7,9 +7,6 @@ endef
 
 export COMMIT_MESSAGE # make this value available as env var
 
-lib:
-	yarn build
-
 publish:
 	git remote set-url origin https://muptravis:$(GITHUB_TOKEN)@github.com/$(TRAVIS_REPO_SLUG).git
 ifeq ($(TRAVIS_BRANCH), master)

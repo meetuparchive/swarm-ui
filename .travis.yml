@@ -16,8 +16,8 @@ before_install:
   - export PATH=$HOME/.yarn/bin:$PATH
 
 before_script:
-  # Build the artificats to publish (`lerna run build`)
-  - make lib
+  # Build the artifacts to publish
+  - yarn build
   # Exit the build if there are any diffs in the yarn.lock file
   - git diff --exit-code yarn.lock
   # Verifies that versions of the package deps in package.json match those in yarn’s lock file
