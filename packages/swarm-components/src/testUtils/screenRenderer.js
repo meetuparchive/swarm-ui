@@ -75,7 +75,7 @@ class screenRenderer {
 								<head>
 									${links}
 								</head>
-								<body style="padding: '1em'; ${bodyStyle}">
+								<body style="padding:1em; ${bodyStyle}">
 								${ReactDOMServer.renderToStaticMarkup(element)}
 								</body>
 							</html>`,

@@ -26,64 +26,22 @@ describe('Button', () => {
 		return renderer.stop();
 	});
 
-	it('Default', async () => {
+	const testCases = [
+		['Default', <Button key="1" >Press me</Button>],
+		['Disabled', <Button disabled key="2">Can&apos;t press me</Button>],
+		['Primary', <Button primary key="3">Must press me</Button>],
+		['Bordered', <Button bordered key="4">Press me</Button>],
+		['Icon with text', <Button icon="bolt" key="5">Press me</Button>],
+		['Icon (right) with text', <Button right icon="chevron-right" key="6">Press me</Button>],
+		['Icon without text', <Button icon="bolt" key="7" />],
+		['Reset', <Button reset key="8"> Press me</Button>],
+		['Inverted', <Button inverted key="9"> Press me</Button>, {bodyStyle: 'background-color:powderblue;'}],
+		['Neutral',<Button neutral key="10"> Press me</Button>],
+		['Small',<Button small key="11"> Press me</Button>],
+	];
+	test.each(testCases)('Visual diff: %s', async (description, element) => {
 		expect(
-			await renderer.screenshot(<Button>Press me</Button>)
-		).toMatchImageSnapshot();
-	});
-
-	it('Disabled', async () => {
-		expect(
-			await renderer.screenshot(<Button disabled>Can&apos;t press me</Button>)
-		).toMatchImageSnapshot();
-	});
-
-	it('Primary', async () => {
-		expect(
-			await renderer.screenshot(<Button primary>Must press me</Button>)
-		).toMatchImageSnapshot();
-	});
-
-	it('Bordered', async () => {
-		expect(
-			await renderer.screenshot(<Button bordered>Press me</Button>)
-		).toMatchImageSnapshot();
-	});
-
-	it('Icon with text', async () => {
-		expect(
-			await renderer.screenshot(<Button icon="bolt">Press me</Button>)
-		).toMatchImageSnapshot();
-	});
-	it('Icon (right) with text', async () => {
-		expect(
-			await renderer.screenshot(<Button right icon="chevron-right">Press me</Button>)
-		).toMatchImageSnapshot();
-	});
-	it('Icon without text', async () => {
-		expect(
-			await renderer.screenshot(<Button icon="bolt" />)
-		).toMatchImageSnapshot();
-	});
-	it('Reset', async () => {
-		expect(
-			await renderer.screenshot(<Button reset> Press me</Button>)
-		).toMatchImageSnapshot();
-	});
-	it('Inverted', async () => {
-		// Adding a background so the inverted button shows up in the screenshot.
-		expect(
-			await renderer.screenshot(<Button inverted> Press me</Button>, {bodyStyle: 'background-color:powderblue;'})
-		).toMatchImageSnapshot();
-	});
-	it('Neutral', async () => {
-		expect(
-			await renderer.screenshot(<Button neutral> Press me</Button>)
-		).toMatchImageSnapshot();
-	});
-	it('Small', async () => {
-		expect(
-			await renderer.screenshot(<Button small> Press me</Button>)
+			await renderer.screenshot(element)
 		).toMatchImageSnapshot();
 	});
 });
