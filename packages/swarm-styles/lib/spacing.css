@@ -1,3 +1,18 @@
 :root {
-    --space: 16px;
+    --space-quarter: var(--size-space-quarter);
+    --space-half: var(--size-space-half);
+    --space: var(--size-space-default);
+    --space-double: var(--size-space-double);
+    --space-quadruple: var(--size-space-quadruple);
+}
+
+/* Medium breakpoint overrides */
+@media only screen and (min-width: 640px) {
+  :root {
+    --space-quarter: var(--size-space-large-quarter);
+    --space-half: var(--size-space-large-half);
+    --space: var(--size-space-large-default);
+    --space-double: var(--size-space-large-double);
+    --space-quadruple: var(--size-space-large-quadruple);
+   }
 }

@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-constants@0.2.11...@meetup/swarm-constants@0.3.0) (2019-04-22)
+
+
+### Bug Fixes
+
+* add largeDouble, largeHalf, largeQuarter, largeQuadruple spacing ([b627349](https://github.com/meetup/swarm-ui/commit/b627349))
+* **merge conflict:** merge branch 'master' ([07a992a](https://github.com/meetup/swarm-ui/commit/07a992a))
+
+
+### Features
+
+* **swarm-constants:** add large screen default spacing ([ca1f707](https://github.com/meetup/swarm-ui/commit/ca1f707))
+
+
+
+
+
 ## [0.2.11](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-constants@0.2.10...@meetup/swarm-constants@0.2.11) (2019-04-15)
 
 **Note:** Version bump only for package @meetup/swarm-constants
