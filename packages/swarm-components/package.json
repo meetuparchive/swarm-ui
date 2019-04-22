@@ -1,6 +1,6 @@
 {
   "name": "@meetup/swarm-components",
-  "version": "0.8.1",
+  "version": "0.8.2",
   "description": "Web Components for Swarm",
   "author": "hsbacot <hsbacot@gmail.com>",
   "homepage": "https://github.com/meetup/swarm-ui#readme",
@@ -53,7 +53,7 @@
     "puppeteer": "1.14.0"
   },
   "dependencies": {
-    "@meetup/swarm-constants": "^0.3.0",
+    "@meetup/swarm-constants": "^0.3.1",
     "classnames": "2.2.6",
     "html-loader": "0.5.5",
     "swarm-icons": "3.8.354"
