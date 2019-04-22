@@ -25,9 +25,26 @@ describe('Checkbox', () => {
 		// comment next line out if you want to open it in your browser for debugging
 		return renderer.stop();
 	});
-	it('Default', async () => {
+	it('Unchecked', async () => {
 		expect(
 			await renderer.screenshot(<Checkbox>Check me</Checkbox>)
+		).toMatchImageSnapshot();
+	});
+	it('Checked', async () => {
+		expect(
+			await renderer.screenshot(<Checkbox checked>Uncheck me</Checkbox>)
+		).toMatchImageSnapshot();
+	});
+	it('Disbled unchecked', async () => {
+		expect(
+			await renderer.screenshot(
+				<Checkbox disabled>Can&apos;t check me</Checkbox>
+			)
+		).toMatchImageSnapshot();
+	});
+	it('Disbled checked', async () => {
+		expect(
+			await renderer.screenshot(<Checkbox>Can&apos;t uncheck me</Checkbox>)
 		).toMatchImageSnapshot();
 	});
 });
