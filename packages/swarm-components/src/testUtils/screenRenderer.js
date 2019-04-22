@@ -13,7 +13,8 @@ class screenRenderer {
 		this.config = {
 			viewport: { width: 800, height: 600 },
 			verbose: false,
-			padding: '1em',
+			port: 4000,
+			host: 'localhost',
 			...config,
 		};
 
@@ -56,7 +57,7 @@ class screenRenderer {
 		return this;
 	}
 
-	createRoute(slug, element) {
+	createRoute(slug, element, bodyStyle='') {
 		const links = this.config.stylesheets
 			.map(
 				stylesheet =>
@@ -74,7 +75,7 @@ class screenRenderer {
 								<head>
 									${links}
 								</head>
-								<body style="padding: ${this.config.padding}">
+								<body style="padding:1em; ${bodyStyle}">
 								${ReactDOMServer.renderToStaticMarkup(element)}
 								</body>
 							</html>`,
@@ -86,7 +87,7 @@ class screenRenderer {
 		return this.server.stop();
 	}
 
-	async screenshot(element, screenshotConfig) {
+	async screenshot(element, screenshotConfig={}) {
 		const page = await this.browser.newPage();
 		page.setViewport(
 			(screenshotConfig && screenshotConfig.viewport) || this.config.viewport
@@ -94,7 +95,7 @@ class screenRenderer {
 
 		const slug = `route-${this.routeIndex++}`;
 
-		this.server.route(this.createRoute(slug, element));
+		this.server.route(this.createRoute(slug, element, screenshotConfig.bodyStyle));
 
 		const testUrl = `${this.server.info.uri}/${slug}`;
 
