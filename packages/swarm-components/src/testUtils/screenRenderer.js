@@ -6,6 +6,8 @@ import puppeteer from 'puppeteer';
 
 import ReactDOMServer from 'react-dom/server';
 
+import getPort from 'get-port';
+
 class screenRenderer {
 	constructor(config) {
 		this.config = {
@@ -27,14 +29,14 @@ class screenRenderer {
 	}
 
 	async init() {
-		const { port, host, staticPath } = this.config;
+		const { host, port, staticPath } = this.config;
 
 		this.browser = await puppeteer.launch();
 		this.log('Browser is running');
 
 		this.server = Hapi.server({
-			port,
 			host,
+			port,
 		});
 
 		await this.server.register(inert);
@@ -105,4 +107,15 @@ class screenRenderer {
 	}
 }
 
-export default async config => new screenRenderer(config).init();
+export default async config => {
+	if (!config.port) {
+		config.port = await getPort();
+	}
+
+	// enforse localhost when not specified
+	if (!config.host) {
+		config.host = 'localhost';
+	}
+
+	return new screenRenderer(config).init();
+};
