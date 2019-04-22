@@ -16,14 +16,16 @@ before_install:
   - export PATH=$HOME/.yarn/bin:$PATH
 
 before_script:
-  # Build the artifacts to publish
-  - yarn build
   # Exit the build if there are any diffs in the yarn.lock file
   - git diff --exit-code yarn.lock
   # Verifies that versions of the package deps in package.json match those in yarn’s lock file
   # - yarn check
 
-# TODO: script stage should be flow check, run test
-# and `make publish` should be moved to `after_success`
 script:
+  # Build the artifacts to publish
+  - yarn build
+
+# TODO: run flow check, run test before publish
+after_success:
+  # use lerna publish to version and deploy new packages
   - make publish
