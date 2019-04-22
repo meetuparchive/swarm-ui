@@ -14,9 +14,7 @@ describe('👀 components are visually the same', function() {
 	beforeAll(async () => {
 		renderer = await getScreenRenderer({
 			port: 4000,
-			viewport: { width: 200, height: 100 },
-			staticPath: '../../swarm-styles/dist',
-			stylesheets: ['global.css', 'main.css'],
+			viewport: { width: 300, height: 100 },
 			// verbose: true,
 		});
 	});
@@ -42,7 +40,7 @@ describe('👀 components are visually the same', function() {
 
 		it('Primary', async () => {
 			expect(
-				await renderer.screenshot(<Button primary>Must press me</Button>)
+				await renderer.screenshot(<Button primary icon="alert">Must press me</Button>)
 			).toMatchImageSnapshot();
 		});
 	});
