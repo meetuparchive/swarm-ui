@@ -5,9 +5,9 @@ expect.extend({ toMatchImageSnapshot });
 
 import getScreenRenderer from './testUtils/screenRenderer';
 
-import Button from './Button';
+import Checkbox from './Checkbox';
 
-describe('Button', () => {
+describe('Checkbox', () => {
 	let renderer;
 
 	// This is ran when the suite starts up.
@@ -25,22 +25,9 @@ describe('Button', () => {
 		// comment next line out if you want to open it in your browser for debugging
 		return renderer.stop();
 	});
-
 	it('Default', async () => {
 		expect(
-			await renderer.screenshot(<Button>Press me</Button>)
-		).toMatchImageSnapshot();
-	});
-
-	it('Disabled', async () => {
-		expect(
-			await renderer.screenshot(<Button disabled>Can&apos;t press me</Button>)
-		).toMatchImageSnapshot();
-	});
-
-	it('Primary', async () => {
-		expect(
-			await renderer.screenshot(<Button primary>Must press me</Button>)
+			await renderer.screenshot(<Checkbox>Check me</Checkbox>)
 		).toMatchImageSnapshot();
 	});
 });
