@@ -24,8 +24,9 @@ before_script:
 script:
   # Build the artifacts to publish
   - yarn build
+  # Run the visual diff regression tests
+  - yarn test:integration
 
-# TODO: run flow check, run test before publish
 after_success:
   # use lerna publish to version and deploy new packages
   - make publish

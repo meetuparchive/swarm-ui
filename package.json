@@ -5,7 +5,9 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "lerna run build"
+    "build": "lerna run build",
+    "test": "yarn && yarn build --scope @meetup/swarm-components && yarn test:integration",
+    "test:integration": "lerna run --scope @meetup/swarm-components test:integration"
   },
   "devDependencies": {
     "@commitlint/cli": "7.5.2",
