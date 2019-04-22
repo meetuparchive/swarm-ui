@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.11](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-constants@0.2.10...@meetup/swarm-constants@0.2.11) (2019-04-15)
+
+**Note:** Version bump only for package @meetup/swarm-constants
+
+
+
+
+
 ## [0.2.10](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-constants@0.2.9...@meetup/swarm-constants@0.2.10) (2019-04-12)
 
 **Note:** Version bump only for package @meetup/swarm-constants
