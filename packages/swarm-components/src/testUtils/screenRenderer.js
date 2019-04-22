@@ -15,7 +15,6 @@ class screenRenderer {
 			verbose: false,
 			port: 4000,
 			host: 'localhost',
-			padding: '1em',
 			...config,
 		};
 
@@ -76,7 +75,7 @@ class screenRenderer {
 								<head>
 									${links}
 								</head>
-								<body style="padding: ${this.config.padding}; ${bodyStyle}">
+								<body style="padding: '1em'; ${bodyStyle}">
 								${ReactDOMServer.renderToStaticMarkup(element)}
 								</body>
 							</html>`,
