@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.8.0](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.7.2...@meetup/swarm-components@0.8.0) (2019-04-22)
+
+
+### Bug Fixes
+
+* moved get-port to devDeps ([b941bbd](https://github.com/meetup/swarm-ui/commit/b941bbd))
+
+
+### Features
+
+* allow multiple, parallel tests, also fixes CSS paths ([7960674](https://github.com/meetup/swarm-ui/commit/7960674))
+* made get-port an implementation detail and port and host optional ([52f9edd](https://github.com/meetup/swarm-ui/commit/52f9edd))
+
+
+
+
+
 ## [0.7.2](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.7.1...@meetup/swarm-components@0.7.2) (2019-04-16)
 
 
