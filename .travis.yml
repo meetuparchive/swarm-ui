@@ -4,15 +4,26 @@ node_js:
 cache:
   yarn: true
 
+# Conditional builds:
+# Build for PRs and master merges
+# Don't build if release has already been tagged (GH integrations)
 if: (branch = master OR type = pull_request) AND tag IS blank
 
+# Install specific version of yarn
 before_install:
   - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > $HOME/.npmrc
   - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.13.0
   - export PATH=$HOME/.yarn/bin:$PATH
 
 before_script:
+  # Build the artificats to publish (`lerna run build`)
+  - make lib
+  # Exit the build if there are any diffs in the yarn.lock file
   - git diff --exit-code yarn.lock
+  # Verifies that versions of the package deps in package.json match those in yarn’s lock file
+  - yarn check
 
+# TODO: script stage should be flow check, run test
+# and `make publish` should be moved to `after_success`
 script:
   - make publish
