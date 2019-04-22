@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.1](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.8.0...@meetup/swarm-components@0.8.1) (2019-04-22)
+
+**Note:** Version bump only for package @meetup/swarm-components
+
+
+
+
+
 # [0.8.0](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.7.2...@meetup/swarm-components@0.8.0) (2019-04-22)
 
 
