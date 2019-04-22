@@ -4,6 +4,7 @@ node_modules
 *.chache
 *-diff.png
 
-packages/swarm-components/lib/
-packages/swarm-constants/build/
-packages/swarm-styles/dist/
+lib/
+!packages/swarm-styles/lib/
+build/
+dist/
