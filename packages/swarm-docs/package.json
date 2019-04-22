@@ -1,7 +1,7 @@
 {
   "name": "@meetup/swarm-docs",
   "description": "Meetup Swarm Design System Documentation",
-  "version": "0.8.11",
+  "version": "0.8.13",
   "author": "Hunter Bacot <hsbacot@gmail.com>",
   "publishConfig": {
     "access": "public"
@@ -28,9 +28,9 @@
   "dependencies": {
     "@mdx-js/mdx": "0.20.3",
     "@mdx-js/tag": "0.20.3",
-    "@meetup/swarm-components": "^0.8.0",
-    "@meetup/swarm-constants": "^0.2.11",
-    "@meetup/swarm-styles": "^0.2.9",
+    "@meetup/swarm-components": "^0.8.2",
+    "@meetup/swarm-constants": "^0.3.1",
+    "@meetup/swarm-styles": "^0.3.1",
     "constants": "0.0.2",
     "core-js": "2.6.5",
     "gatsby": "2.3.14",
