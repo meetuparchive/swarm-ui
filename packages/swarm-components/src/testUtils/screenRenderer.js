@@ -6,13 +6,15 @@ import puppeteer from 'puppeteer';
 
 import ReactDOMServer from 'react-dom/server';
 
+import getPort from 'get-port';
+
 class screenRenderer {
 	constructor(config) {
 		this.config = {
 			viewport: { width: 800, height: 600 },
 			verbose: false,
 			port: 4000,
-			padding: '1em',
+			host: 'localhost',
 			...config,
 		};
 
@@ -26,12 +28,13 @@ class screenRenderer {
 	}
 
 	async init() {
-		const { port, staticPath } = this.config;
+		const { host, port, staticPath } = this.config;
 
 		this.browser = await puppeteer.launch();
 		this.log('Browser is running');
 
 		this.server = Hapi.server({
+			host,
 			port,
 		});
 
@@ -54,7 +57,7 @@ class screenRenderer {
 		return this;
 	}
 
-	createRoute(slug, element) {
+	createRoute(slug, element, bodyStyle='') {
 		const links = this.config.stylesheets
 			.map(
 				stylesheet =>
@@ -72,7 +75,7 @@ class screenRenderer {
 								<head>
 									${links}
 								</head>
-								<body style="padding: ${this.config.padding}">
+								<body style="padding:1em; ${bodyStyle}">
 								${ReactDOMServer.renderToStaticMarkup(element)}
 								</body>
 							</html>`,
@@ -84,7 +87,7 @@ class screenRenderer {
 		return this.server.stop();
 	}
 
-	async screenshot(element, screenshotConfig) {
+	async screenshot(element, screenshotConfig={}) {
 		const page = await this.browser.newPage();
 		page.setViewport(
 			(screenshotConfig && screenshotConfig.viewport) || this.config.viewport
@@ -92,7 +95,7 @@ class screenRenderer {
 
 		const slug = `route-${this.routeIndex++}`;
 
-		this.server.route(this.createRoute(slug, element));
+		this.server.route(this.createRoute(slug, element, screenshotConfig.bodyStyle));
 
 		const testUrl = `${this.server.info.uri}/${slug}`;
 
@@ -103,4 +106,15 @@ class screenRenderer {
 	}
 }
 
-export default async config => new screenRenderer(config).init();
+export default async config => {
+	if (!config.port) {
+		config.port = await getPort();
+	}
+
+	// enforse localhost when not specified
+	if (!config.host) {
+		config.host = 'localhost';
+	}
+
+	return new screenRenderer(config).init();
+};
