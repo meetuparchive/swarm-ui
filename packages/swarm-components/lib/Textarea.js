@@ -42,12 +42,13 @@ var Textarea = function Textarea(props) {
     }
   }, [props.value]);
   var remainingCharacters = parseInt(maxLength, 10) - getCharacterCount(props.value);
+  var textareaStatus = getTextareaStatus((0, _objectSpread2["default"])({}, props, {
+    error: props.error || remainingCharacters < 0
+  }));
   return React.createElement("div", {
     "data-swarm-textarea-wrapper": true
   }, React.createElement("textarea", (0, _extends2["default"])({
-    "data-swarm-textarea": getTextareaStatus((0, _objectSpread2["default"])({}, props, {
-      error: props.error || remainingCharacters < 0
-    })),
+    "data-swarm-textarea": textareaStatus,
     ref: textareaRef
   }, props)), maxLength && React.createElement(CharCount, null, remainingCharacters));
 };

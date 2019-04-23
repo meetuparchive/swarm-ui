@@ -25,20 +25,18 @@ type Props = {
     maxLength?: string | number,
 }
 
+type CharProps = {
+    children?: React.Node
+}
+
 const getTextareaStatus = (props: Props): string => {
     return props.disabled ? 'disabled' : (props.error ? 'error' : 'default');
 };
 
 const getCharacterCount = (value: string = '') => value.length;
-type CharProps = {
-    children?: any
-}
 
-const CharCount = (props: CharProps) => {
-    return (
-        <p data-swarm-textarea-char-count className="text--tiny" {...props} />
-    );
-}
+const CharCount = (props: CharProps) => <p data-swarm-textarea-char-count className="text--tiny" {...props} />
+
 
 const Textarea = (props: Props): React.Element<'div'> => {
 
@@ -50,12 +48,13 @@ const Textarea = (props: Props): React.Element<'div'> => {
         }
     }, [props.value]);
 
-    const remainingCharacters = (parseInt(maxLength, 10) - getCharacterCount(props.value))
+    const remainingCharacters = (parseInt(maxLength, 10) - getCharacterCount(props.value));
+    const textareaStatus = getTextareaStatus({ ...props, error: props.error || remainingCharacters < 0 });
 
     return (
         <div data-swarm-textarea-wrapper>
             <textarea
-                data-swarm-textarea={getTextareaStatus({ ...props, error: props.error || remainingCharacters < 0 })}
+                data-swarm-textarea={textareaStatus}
                 ref={textareaRef}
                 {...props}
             />
