@@ -54,6 +54,7 @@
   },
   "dependencies": {
     "@meetup/swarm-constants": "^0.3.1",
+    "autosize": "^4.0.2",
     "classnames": "2.2.6",
     "swarm-icons": "3.8.354"
   }
