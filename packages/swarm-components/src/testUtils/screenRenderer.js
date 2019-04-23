@@ -7,6 +7,7 @@ import puppeteer from 'puppeteer';
 import ReactDOMServer from 'react-dom/server';
 
 import icons from '../testUtils/icons';
+import getPort from 'get-port';
 
 class screenRenderer {
 	constructor(config) {
@@ -29,12 +30,13 @@ class screenRenderer {
 	}
 
 	async init() {
-		const { port, host } = this.config;
+		const { host, port, staticPath } = this.config;
 
 		this.browser = await puppeteer.launch();
 		this.log('Browser is running');
 
 		this.server = Hapi.server({
+			host,
 			port,
 			host,
 		});
@@ -69,7 +71,7 @@ class screenRenderer {
 		return this;
 	}
 
-	createRoute(slug, element) {
+	createRoute(slug, element, bodyStyle = '') {
 		return {
 			method: 'GET',
 			path: `/${slug}`,
@@ -80,7 +82,7 @@ class screenRenderer {
 									<link rel="stylesheet" type="text/css" href="/assets/graphik.css" />
 									${icons}
 								</head>
-								<body style="padding: ${this.config.padding}">
+								<body style="padding:1em; ${bodyStyle}">
 								${ReactDOMServer.renderToStaticMarkup(element)}
 								</body>
 							</html>`,
@@ -92,7 +94,7 @@ class screenRenderer {
 		return this.server.stop();
 	}
 
-	async screenshot(element, screenshotConfig) {
+	async screenshot(element, screenshotConfig = {}) {
 		const page = await this.browser.newPage();
 		page.setViewport(
 			(screenshotConfig && screenshotConfig.viewport) || this.config.viewport
@@ -100,7 +102,9 @@ class screenRenderer {
 
 		const slug = `route-${this.routeIndex++}`;
 
-		this.server.route(this.createRoute(slug, element));
+		this.server.route(
+			this.createRoute(slug, element, screenshotConfig.bodyStyle)
+		);
 
 		const testUrl = `${this.server.info.uri}/${slug}`;
 
@@ -111,4 +115,15 @@ class screenRenderer {
 	}
 }
 
-export default async config => new screenRenderer(config).init();
+export default async config => {
+	if (!config.port) {
+		config.port = await getPort();
+	}
+
+	// enforse localhost when not specified
+	if (!config.host) {
+		config.host = 'localhost';
+	}
+
+	return new screenRenderer(config).init();
+};

@@ -7,7 +7,7 @@ import getScreenRenderer from './testUtils/screenRenderer';
 
 import Button from './Button';
 
-describe('👀 components are visually the same', function() {
+describe('Button', () => {
 	let renderer;
 
 	// This is ran when the suite starts up.
@@ -25,23 +25,22 @@ describe('👀 components are visually the same', function() {
 		return renderer.stop();
 	});
 
-	describe('Button', () => {
-		it('Default', async () => {
-			expect(
-				await renderer.screenshot(<Button>Press me</Button>)
-			).toMatchImageSnapshot();
-		});
-
-		it('Disabled', async () => {
-			expect(
-				await renderer.screenshot(<Button disabled>Can&apos;t press me</Button>)
-			).toMatchImageSnapshot();
-		});
-
-		it('Primary', async () => {
-			expect(
-				await renderer.screenshot(<Button primary icon="alert">Must press me</Button>)
-			).toMatchImageSnapshot();
-		});
+	const testCases = [
+		['Default', <Button key="1" >Press me</Button>],
+		['Disabled', <Button disabled key="2">Can&apos;t press me</Button>],
+		['Primary', <Button primary key="3">Must press me</Button>],
+		['Bordered', <Button bordered key="4">Press me</Button>],
+		['Icon with text', <Button icon="bolt" key="5">Press me</Button>],
+		['Icon (right) with text', <Button right icon="chevron-right" key="6">Press me</Button>],
+		['Icon without text', <Button icon="bolt" key="7" />],
+		['Reset', <Button reset key="8"> Press me</Button>],
+		['Inverted', <Button inverted key="9"> Press me</Button>, {bodyStyle: 'background-color:powderblue;'}],
+		['Neutral',<Button neutral key="10"> Press me</Button>],
+		['Small',<Button small key="11"> Press me</Button>],
+	];
+	test.each(testCases)('Visual diff: %s', async (description, element) => {
+		expect(
+			await renderer.screenshot(element)
+		).toMatchImageSnapshot();
 	});
 });
