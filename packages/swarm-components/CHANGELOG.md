@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.9.1](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.9.0...@meetup/swarm-components@0.9.1) (2019-04-23)
+
+
+### Bug Fixes
+
+* added autosize support to textarea ([8d70594](https://github.com/meetup/swarm-ui/commit/8d70594))
+* adding icons template string ([d427fa9](https://github.com/meetup/swarm-ui/commit/d427fa9))
+* character count and propstable added ([919f1b9](https://github.com/meetup/swarm-ui/commit/919f1b9))
+* merging in master ([e80b12f](https://github.com/meetup/swarm-ui/commit/e80b12f))
+* merging master ([519c2c5](https://github.com/meetup/swarm-ui/commit/519c2c5))
+* more specific children type, pr review changes ([9a7ce21](https://github.com/meetup/swarm-ui/commit/9a7ce21))
+* removing dup dependency ([d9df70b](https://github.com/meetup/swarm-ui/commit/d9df70b))
+* removing unused file from loading icons via transform ([468c2b6](https://github.com/meetup/swarm-ui/commit/468c2b6))
+* serving icons and fonts in test harness ([ed2b6dc](https://github.com/meetup/swarm-ui/commit/ed2b6dc))
+
+
+
+
+
 # [0.9.0](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.8.2...@meetup/swarm-components@0.9.0) (2019-04-22)
 
 
