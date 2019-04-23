@@ -13,9 +13,8 @@ describe('Button', () => {
 	// This is ran when the suite starts up.
 	beforeAll(async () => {
 		renderer = await getScreenRenderer({
-			viewport: { width: 200, height: 100 },
-			staticPath: '../../../swarm-styles/dist',
-			stylesheets: ['global.css', 'main.css'],
+			port: 4000,
+			viewport: { width: 300, height: 100 },
 			// verbose: true,
 		});
 	});
