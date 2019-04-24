@@ -16,7 +16,6 @@ class screenRenderer {
 			verbose: false,
 			port: 4000,
 			host: 'localhost',
-			padding: '1em',
 			...config,
 		};
 
@@ -30,7 +29,7 @@ class screenRenderer {
 	}
 
 	async init() {
-		const { host, port, staticPath } = this.config;
+		const { host, port } = this.config;
 
 		this.browser = await puppeteer.launch();
 		this.log('Browser is running');
@@ -38,7 +37,6 @@ class screenRenderer {
 		this.server = Hapi.server({
 			host,
 			port,
-			host,
 		});
 
 		await this.server.register(inert);
@@ -71,7 +69,9 @@ class screenRenderer {
 		return this;
 	}
 
-	createRoute(slug, element, bodyStyle = '') {
+	createRoute(slug, element) {
+		const markup = ReactDOMServer.renderToStaticMarkup(element);
+		console.log(markup);
 		return {
 			method: 'GET',
 			path: `/${slug}`,
@@ -82,8 +82,10 @@ class screenRenderer {
 									<link rel="stylesheet" type="text/css" href="/assets/graphik.css" />
 									${icons}
 								</head>
-								<body style="padding:1em; ${bodyStyle}">
-								${ReactDOMServer.renderToStaticMarkup(element)}
+								<body>
+									<div style="padding:1em; width:10000px; height:1000px;">
+										${ReactDOMServer.renderToStaticMarkup(element)}
+									</div>
 								</body>
 							</html>`,
 		};
@@ -103,7 +105,7 @@ class screenRenderer {
 		const slug = `route-${this.routeIndex++}`;
 
 		this.server.route(
-			this.createRoute(slug, element, screenshotConfig.bodyStyle)
+			this.createRoute(slug, element)
 		);
 
 		const testUrl = `${this.server.info.uri}/${slug}`;

@@ -37,9 +37,23 @@ describe('LinkButton', () => {
 		['Small', <LinkButton small key="11"> Press me</LinkButton>],
 	];
 
-	test.each(testCases)('Visual diff: %s', async (description, element) => {
+	const testCasesAsMarkup = (
+		<div>
+			{testCases.map((test, index) => (
+				<div key={index}>
+					<p>{test[0]}</p>
+					<div style={test[2] ? test[2] : {}}>
+						{test[1]}
+					</div>
+				</div>
+			))}
+		</div>
+	);
+
+	it('Default', async () => {
 		expect(
-			await renderer.screenshot(element)
+			await renderer.screenshot(testCasesAsMarkup)
 		).toMatchImageSnapshot();
 	});
+
 });
