@@ -14,8 +14,6 @@ describe('Checkbox', () => {
 	beforeAll(async () => {
 		renderer = await getScreenRenderer({
 			viewport: { width: 200, height: 100 },
-			staticPath: '../../../swarm-styles/dist',
-			stylesheets: ['global.css', 'main.css'],
 			// verbose: true,
 		});
 	});
@@ -44,7 +42,11 @@ describe('Checkbox', () => {
 	});
 	it('Disbled checked', async () => {
 		expect(
-			await renderer.screenshot(<Checkbox>Can&apos;t uncheck me</Checkbox>)
+			await renderer.screenshot(
+				<Checkbox disabled checked>
+					Can&apos;t uncheck me
+				</Checkbox>
+			)
 		).toMatchImageSnapshot();
 	});
 });
