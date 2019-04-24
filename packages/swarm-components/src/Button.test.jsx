@@ -13,7 +13,6 @@ describe('Button', () => {
 	// This is ran when the suite starts up.
 	beforeAll(async () => {
 		renderer = await getScreenRenderer({
-			port: 4000,
 			viewport: { width: 300, height: 100 },
 			// verbose: true,
 		});
