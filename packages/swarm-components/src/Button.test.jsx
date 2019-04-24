@@ -60,14 +60,12 @@ describe('Button', () => {
 		[
 			'Reset',
 			<Button reset key="8">
-				{' '}
 				Press me
 			</Button>,
 		],
 		[
 			'Inverted',
 			<Button inverted key="9">
-				{' '}
 				Press me
 			</Button>,
 			{ bodyStyle: 'background-color: powderblue;' },
@@ -75,14 +73,12 @@ describe('Button', () => {
 		[
 			'Neutral',
 			<Button neutral key="10">
-				{' '}
 				Press me
 			</Button>,
 		],
 		[
 			'Small',
 			<Button small key="11">
-				{' '}
 				Press me
 			</Button>,
 		],
