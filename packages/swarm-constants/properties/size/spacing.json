@@ -20,6 +20,26 @@
             "quadruple": {
                 "value": "64px",
                 "comment": "quadruple space size"
+            },
+            "largeDefault": {
+                "value": "20px",
+                "comment": "default space size for large screens"
+            },
+            "largeDouble": {
+                "value": "40px",
+                "comment": "default space size for large screens"
+            },
+            "largeHalf": {
+                "value": "10px",
+                "comment": "half space size"
+            },
+            "largeQuarter": {
+                "value": "5px",
+                "comment": "quarter space size"
+            },
+            "largeQuadruple": {
+                "value": "80px",
+                "comment": "quadruple space size"
             }
         }
     }

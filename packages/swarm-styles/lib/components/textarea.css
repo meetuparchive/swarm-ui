@@ -4,6 +4,8 @@
     border-radius: 4px;
     padding: var(--size-space-default);
     color: var(--color-gray-7);
+    width: 100%;
+    box-sizing: border-box;
 }
 [data-swarm-textarea]:focus {
     outline: none;
@@ -18,4 +20,14 @@
 
 [data-swarm-textarea="error"] {
     border-color: var(--color-alert-red);
+}
+
+[data-swarm-textarea-wrapper] {
+    position: relative;
+}
+
+[data-swarm-textarea-char-count] {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
 }

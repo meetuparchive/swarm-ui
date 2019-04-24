@@ -13,9 +13,8 @@ describe('Button', () => {
 	// This is ran when the suite starts up.
 	beforeAll(async () => {
 		renderer = await getScreenRenderer({
-			viewport: { width: 200, height: 100 },
-			staticPath: '../../../swarm-styles/dist',
-			stylesheets: ['global.css', 'main.css'],
+			port: 4000,
+			viewport: { width: 300, height: 100 },
 			// verbose: true,
 		});
 	});
@@ -26,21 +25,22 @@ describe('Button', () => {
 		return renderer.stop();
 	});
 
-	it('Default', async () => {
+	const testCases = [
+		['Default', <Button key="1" >Press me</Button>],
+		['Disabled', <Button disabled key="2">Can&apos;t press me</Button>],
+		['Primary', <Button primary key="3">Must press me</Button>],
+		['Bordered', <Button bordered key="4">Press me</Button>],
+		['Icon with text', <Button icon="bolt" key="5">Press me</Button>],
+		['Icon (right) with text', <Button right icon="chevron-right" key="6">Press me</Button>],
+		['Icon without text', <Button icon="bolt" key="7" />],
+		['Reset', <Button reset key="8"> Press me</Button>],
+		['Inverted', <Button inverted key="9"> Press me</Button>, {bodyStyle: 'background-color:powderblue;'}],
+		['Neutral',<Button neutral key="10"> Press me</Button>],
+		['Small',<Button small key="11"> Press me</Button>],
+	];
+	test.each(testCases)('Visual diff: %s', async (description, element) => {
 		expect(
-			await renderer.screenshot(<Button>Press me</Button>)
-		).toMatchImageSnapshot();
-	});
-
-	it('Disabled', async () => {
-		expect(
-			await renderer.screenshot(<Button disabled>Can&apos;t press me</Button>)
-		).toMatchImageSnapshot();
-	});
-
-	it('Primary', async () => {
-		expect(
-			await renderer.screenshot(<Button primary>Must press me</Button>)
+			await renderer.screenshot(element)
 		).toMatchImageSnapshot();
 	});
 });
