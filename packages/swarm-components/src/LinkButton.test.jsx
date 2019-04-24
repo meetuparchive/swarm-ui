@@ -13,7 +13,9 @@ describe('LinkButton', () => {
 	beforeAll(async () => {
 		renderer = await getScreenRenderer({
 			port: 4000,
-			viewport: { width: 300, height: 100 },
+			// intentionally have a large viewport height
+			// to accomodate future states
+			viewport: { width: 300, height: 4000 },
 			// verbose: true,
 		});
 	});
@@ -32,21 +34,28 @@ describe('LinkButton', () => {
 		['Icon with text', <LinkButton icon="bolt" key="5">Press me</LinkButton>],
 		['Icon (right) with text', <LinkButton right icon="chevron-right" key="6">Press me</LinkButton>],
 		['Icon without text', <LinkButton icon="bolt" key="7" />],
-		['Inverted', <LinkButton inverted key="9"> Press me</LinkButton>, {bodyStyle: 'background-color:powderblue;'}],
+		['Inverted', <LinkButton inverted key="9"> Press me</LinkButton>, {backgroundColor: 'black', padding: '1em'}],
 		['Neutral', <LinkButton neutral key="10"> Press me</LinkButton>],
 		['Small', <LinkButton small key="11"> Press me</LinkButton>],
 	];
 
 	const testCasesAsMarkup = (
 		<div>
-			{testCases.map((test, index) => (
-				<div key={index}>
-					<p>{test[0]}</p>
-					<div style={test[2] ? test[2] : {}}>
-						{test[1]}
+			{testCases.map((test, index) => {
+				const label = test[0];
+				const component = test[1];
+				const wrapperStyle = test[2];
+
+				return (
+					<div key={index}>
+						<p>{label}</p>
+						<div style={wrapperStyle ? wrapperStyle : {}}>
+							{component}
+						</div>
+						<br/>
 					</div>
-				</div>
-			))}
+				);
+			})}
 		</div>
 	);
 

@@ -70,8 +70,6 @@ class screenRenderer {
 	}
 
 	createRoute(slug, element) {
-		const markup = ReactDOMServer.renderToStaticMarkup(element);
-		console.log(markup);
 		return {
 			method: 'GET',
 			path: `/${slug}`,
@@ -83,7 +81,7 @@ class screenRenderer {
 									${icons}
 								</head>
 								<body>
-									<div style="padding:1em; width:10000px; height:1000px;">
+									<div style="padding:1em;">
 										${ReactDOMServer.renderToStaticMarkup(element)}
 									</div>
 								</body>
@@ -98,9 +96,9 @@ class screenRenderer {
 
 	async screenshot(element, screenshotConfig = {}) {
 		const page = await this.browser.newPage();
-		page.setViewport(
-			(screenshotConfig && screenshotConfig.viewport) || this.config.viewport
-		);
+		const viewport = (screenshotConfig && screenshotConfig.viewport) || this.config.viewport;
+
+		page.setViewport(viewport);
 
 		const slug = `route-${this.routeIndex++}`;
 
