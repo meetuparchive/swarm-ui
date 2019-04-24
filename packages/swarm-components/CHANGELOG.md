@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.9.3](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.9.2...@meetup/swarm-components@0.9.3) (2019-04-24)
+
+
+### Bug Fixes
+
+* removed unnecessary test config ([8eb3510](https://github.com/meetup/swarm-ui/commit/8eb3510))
+* updated snapshots to use correct fonts ([fd1cb2c](https://github.com/meetup/swarm-ui/commit/fd1cb2c))
+
+
+
+
+
 ## [0.9.2](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.9.1...@meetup/swarm-components@0.9.2) (2019-04-24)
 
 
