@@ -3,6 +3,44 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.2](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.3.1...@meetup/swarm-styles@0.3.2) (2019-04-23)
+
+
+### Bug Fixes
+
+* character count and propstable added ([919f1b9](https://github.com/meetup/swarm-ui/commit/919f1b9))
+* merging in master ([e80b12f](https://github.com/meetup/swarm-ui/commit/e80b12f))
+
+
+
+
+
+## [0.3.1](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.3.0...@meetup/swarm-styles@0.3.1) (2019-04-22)
+
+**Note:** Version bump only for package @meetup/swarm-styles
+
+
+
+
+
+# [0.3.0](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.2.9...@meetup/swarm-styles@0.3.0) (2019-04-22)
+
+
+### Bug Fixes
+
+* **merge conflict:** merge branch 'master' ([07a992a](https://github.com/meetup/swarm-ui/commit/07a992a))
+* **swarm-styles:** update spacing css ([5d5d112](https://github.com/meetup/swarm-ui/commit/5d5d112))
+* **swarm-styles:** use swarm constants spacing variables ([8c36efb](https://github.com/meetup/swarm-ui/commit/8c36efb))
+
+
+### Features
+
+* **swarm-styles:** media queries for medium and large screen spacing ([6b7b9c0](https://github.com/meetup/swarm-ui/commit/6b7b9c0))
+
+
+
+
+
 ## [0.2.9](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.2.8...@meetup/swarm-styles@0.2.9) (2019-04-19)
 
 

@@ -3,6 +3,52 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.16](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.8.15...@meetup/swarm-docs@0.8.16) (2019-04-24)
+
+**Note:** Version bump only for package @meetup/swarm-docs
+
+
+
+
+
+## [0.8.15](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.8.14...@meetup/swarm-docs@0.8.15) (2019-04-23)
+
+
+### Bug Fixes
+
+* added autosize support to textarea ([8d70594](https://github.com/gatsbyjs/gatsby-starter-default/commit/8d70594))
+* character count and propstable added ([919f1b9](https://github.com/gatsbyjs/gatsby-starter-default/commit/919f1b9))
+* including example ([15be337](https://github.com/gatsbyjs/gatsby-starter-default/commit/15be337))
+* merging in master ([e80b12f](https://github.com/gatsbyjs/gatsby-starter-default/commit/e80b12f))
+
+
+
+
+
+## [0.8.14](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.8.13...@meetup/swarm-docs@0.8.14) (2019-04-22)
+
+**Note:** Version bump only for package @meetup/swarm-docs
+
+
+
+
+
+## [0.8.13](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.8.12...@meetup/swarm-docs@0.8.13) (2019-04-22)
+
+**Note:** Version bump only for package @meetup/swarm-docs
+
+
+
+
+
+## [0.8.12](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.8.11...@meetup/swarm-docs@0.8.12) (2019-04-22)
+
+**Note:** Version bump only for package @meetup/swarm-docs
+
+
+
+
+
 ## [0.8.11](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.8.10...@meetup/swarm-docs@0.8.11) (2019-04-22)
 
 **Note:** Version bump only for package @meetup/swarm-docs

@@ -6,6 +6,7 @@ import puppeteer from 'puppeteer';
 
 import ReactDOMServer from 'react-dom/server';
 
+import icons from '../testUtils/icons';
 import getPort from 'get-port';
 
 class screenRenderer {
@@ -13,6 +14,8 @@ class screenRenderer {
 		this.config = {
 			viewport: { width: 800, height: 600 },
 			verbose: false,
+			port: 4000,
+			host: 'localhost',
 			padding: '1em',
 			...config,
 		};
@@ -35,17 +38,29 @@ class screenRenderer {
 		this.server = Hapi.server({
 			host,
 			port,
+			host,
 		});
 
 		await this.server.register(inert);
 
-		// serving static files
+		// serving static styles from swarm-styles
 		this.server.route({
 			method: 'GET',
 			path: '/static/{param*}',
 			handler: {
 				directory: {
-					path: Path.join(__dirname, staticPath),
+					path: Path.join(__dirname, '../../../swarm-styles/dist'),
+				},
+			},
+		});
+
+		// serving font files from swarm-docs
+		this.server.route({
+			method: 'GET',
+			path: '/assets/{param*}',
+			handler: {
+				directory: {
+					path: Path.join(__dirname, '../../../swarm-docs/src/assets'),
 				},
 			},
 		});
@@ -56,25 +71,18 @@ class screenRenderer {
 		return this;
 	}
 
-	createRoute(slug, element) {
-		const links = this.config.stylesheets
-			.map(
-				stylesheet =>
-					`<link
-						rel="stylesheet"
-						type="text/css"
-						href="/static/${stylesheet}" />`
-			)
-			.join('\n');
-
+	createRoute(slug, element, bodyStyle = '') {
 		return {
 			method: 'GET',
 			path: `/${slug}`,
 			handler: () => `<html>
 								<head>
-									${links}
+									<link rel="stylesheet" type="text/css" href="/static/global.css" />
+									<link rel="stylesheet" type="text/css" href="/static/main.css" />
+									<link rel="stylesheet" type="text/css" href="/assets/graphik.css" />
+									${icons}
 								</head>
-								<body style="padding: ${this.config.padding}">
+								<body style="padding:1em; ${bodyStyle}">
 								${ReactDOMServer.renderToStaticMarkup(element)}
 								</body>
 							</html>`,
@@ -86,7 +94,7 @@ class screenRenderer {
 		return this.server.stop();
 	}
 
-	async screenshot(element, screenshotConfig) {
+	async screenshot(element, screenshotConfig = {}) {
 		const page = await this.browser.newPage();
 		page.setViewport(
 			(screenshotConfig && screenshotConfig.viewport) || this.config.viewport
@@ -94,7 +102,9 @@ class screenRenderer {
 
 		const slug = `route-${this.routeIndex++}`;
 
-		this.server.route(this.createRoute(slug, element));
+		this.server.route(
+			this.createRoute(slug, element, screenshotConfig.bodyStyle)
+		);
 
 		const testUrl = `${this.server.info.uri}/${slug}`;
 

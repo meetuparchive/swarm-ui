@@ -1,7 +1,12 @@
 // @flow
 import * as React from 'react';
+import auto from 'autosize';
 
 type Props = {
+    /**
+     * Resizes the height based on content
+     */
+    autosize?: boolean,
     /**
      * Whether the textarea should be interactive.
      */
@@ -13,7 +18,15 @@ type Props = {
     /**
      * Value for textarea.
      */
-    value?: string
+    value?: string,
+    /**
+     * max length of input field
+     */
+    maxLength?: string | number,
+}
+
+type CharProps = {
+    children?: React.Node
 }
 
 const getTextareaStatus = (props: Props): string => {
@@ -22,16 +35,32 @@ const getTextareaStatus = (props: Props): string => {
 
 const getCharacterCount = (value: string = '') => value.length;
 
-const Textarea = (props: Props): React.Element<'textarea'> => {
+const CharCount = (props: CharProps) => <p data-swarm-textarea-char-count className="text--tiny" {...props} />
 
-    console.log('textarea char count', getCharacterCount(props.value));
+
+const Textarea = (props: Props): React.Element<'div'> => {
+
+    const { maxLength, autosize } = props;
+
+    const textareaRef = React.useCallback(node => {
+        if (node !== null && props.autosize) {
+            auto(node);
+        }
+    }, [props.value]);
+
+    const remainingCharacters = (parseInt(maxLength, 10) - getCharacterCount(props.value));
+    const textareaStatus = getTextareaStatus({ ...props, error: props.error || remainingCharacters < 0 });
 
     return (
-        <textarea
-            data-swarm-textarea={getTextareaStatus(props)}
-            {...props}
-        />
-    );
+        <div data-swarm-textarea-wrapper>
+            <textarea
+                data-swarm-textarea={textareaStatus}
+                ref={textareaRef}
+                {...props}
+            />
+            { maxLength && <CharCount>{remainingCharacters}</CharCount>}
+        </div>
+   );
 };
 
 export default Textarea;
