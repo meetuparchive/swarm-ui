@@ -14,8 +14,6 @@ describe('FieldHelper', () => {
 	beforeAll(async () => {
 		renderer = await getScreenRenderer({
 			viewport: { width: 200, height: 100 },
-			staticPath: '../../../swarm-styles/dist',
-			stylesheets: ['global.css', 'main.css'],
 			// verbose: true,
 		});
 	});
