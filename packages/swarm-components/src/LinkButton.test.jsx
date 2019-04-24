@@ -5,6 +5,7 @@ expect.extend({ toMatchImageSnapshot });
 
 import getScreenRenderer from './testUtils/screenRenderer';
 import LinkButton from './LinkButton';
+import { getTestMarkup } from './testUtils/testUtils.js';
 
 describe('LinkButton', () => {
 	let renderer;
@@ -15,7 +16,7 @@ describe('LinkButton', () => {
 			port: 4000,
 			// intentionally have a large viewport height
 			// to accomodate future states
-			viewport: { width: 300, height: 4000 },
+			viewport: { width: 300, height: 2000 },
 			// verbose: true,
 		});
 	});
@@ -39,29 +40,9 @@ describe('LinkButton', () => {
 		['Small', <LinkButton small key="11"> Press me</LinkButton>],
 	];
 
-	const testCasesAsMarkup = (
-		<div>
-			{testCases.map((test, index) => {
-				const label = test[0];
-				const component = test[1];
-				const wrapperStyle = test[2];
-
-				return (
-					<div key={index}>
-						<p>{label}</p>
-						<div style={wrapperStyle ? wrapperStyle : {}}>
-							{component}
-						</div>
-						<br/>
-					</div>
-				);
-			})}
-		</div>
-	);
-
 	it('Default', async () => {
 		expect(
-			await renderer.screenshot(testCasesAsMarkup)
+			await renderer.screenshot(getTestMarkup(testCases))
 		).toMatchImageSnapshot();
 	});
 
