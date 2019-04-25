@@ -111,6 +111,10 @@ class screenRenderer {
 		this.log(`Testing: ${testUrl}`);
 		await page.goto(testUrl);
 
+		if (screenshotConfig.beforeScreenshot) {
+			screenshotConfig.beforeScreenshot(page);
+		}
+
 		return page.screenshot();
 	}
 }
