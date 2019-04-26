@@ -4,8 +4,8 @@ import { toMatchImageSnapshot } from 'jest-image-snapshot';
 expect.extend({ toMatchImageSnapshot });
 
 import getScreenRenderer from './testUtils/screenRenderer';
-
 import Button from './Button';
+import { getTestMarkup } from './testUtils/testUtils.js';
 
 describe('Button', () => {
 	let renderer;
@@ -14,7 +14,7 @@ describe('Button', () => {
 	beforeAll(async () => {
 		renderer = await getScreenRenderer({
 			port: 4000,
-			viewport: { width: 300, height: 100 },
+			viewport: { width: 300, height: 2000 },
 			// verbose: true,
 		});
 	});
@@ -34,13 +34,14 @@ describe('Button', () => {
 		['Icon (right) with text', <Button right icon="chevron-right" key="6">Press me</Button>],
 		['Icon without text', <Button icon="bolt" key="7" />],
 		['Reset', <Button reset key="8"> Press me</Button>],
-		['Inverted', <Button inverted key="9"> Press me</Button>, {bodyStyle: 'background-color:powderblue;'}],
+		['Inverted', <Button inverted key="9"> Press me</Button>, {backgroundColor: 'black', padding: '1em'}],
 		['Neutral',<Button neutral key="10"> Press me</Button>],
 		['Small',<Button small key="11"> Press me</Button>],
 	];
-	test.each(testCases)('Visual diff: %s', async (description, element) => {
+
+	it('Default', async () => {
 		expect(
-			await renderer.screenshot(element)
+			await renderer.screenshot(getTestMarkup(testCases))
 		).toMatchImageSnapshot();
 	});
 });
