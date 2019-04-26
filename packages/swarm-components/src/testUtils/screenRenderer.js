@@ -32,7 +32,11 @@ class screenRenderer {
 	async init() {
 		const { host, port, staticPath } = this.config;
 
-		this.browser = await puppeteer.launch();
+		this.browser = await puppeteer.launch({
+			// disable Chrome sandbox security because we are only rendering trusted code
+			// and it makes environment permissions config much simpler
+			args: ['--no-sandbox', '--disable-setuid-sandbox'],
+		});
 		this.log('Browser is running');
 
 		this.server = Hapi.server({
