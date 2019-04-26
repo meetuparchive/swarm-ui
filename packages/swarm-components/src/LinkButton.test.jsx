@@ -13,7 +13,6 @@ describe('LinkButton', () => {
 	// This is ran when the suite starts up.
 	beforeAll(async () => {
 		renderer = await getScreenRenderer({
-			port: 4000,
 			// intentionally have a large viewport height
 			// to accomodate future states
 			viewport: { width: 300, height: 2000 },
