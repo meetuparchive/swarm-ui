@@ -22,3 +22,9 @@ else
 		-m "$$COMMIT_MESSAGE"
 endif
 endif
+
+upload-artifacts:
+	whoami
+	artifacts upload \
+		--target-paths swarm-ui-$(TRAVIS_BUILD_NUMBER) \
+		./packages/swarm-components/src/__image_snapshots__/__diff_output__/
