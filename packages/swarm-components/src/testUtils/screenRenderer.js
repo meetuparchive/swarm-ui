@@ -16,7 +16,6 @@ class screenRenderer {
 			verbose: false,
 			port: 4000,
 			host: 'localhost',
-			padding: '1em',
 			...config,
 		};
 
@@ -30,7 +29,7 @@ class screenRenderer {
 	}
 
 	async init() {
-		const { host, port, staticPath } = this.config;
+		const { host, port } = this.config;
 
 		this.browser = await puppeteer.launch();
 		this.log('Browser is running');
@@ -38,7 +37,6 @@ class screenRenderer {
 		this.server = Hapi.server({
 			host,
 			port,
-			host,
 		});
 
 		await this.server.register(inert);
@@ -82,8 +80,10 @@ class screenRenderer {
 									<link rel="stylesheet" type="text/css" href="/assets/graphik.css" />
 									${icons}
 								</head>
-								<body style="padding:1em; ${bodyStyle}">
-								${ReactDOMServer.renderToStaticMarkup(element)}
+								<body>
+									<div style="padding:1em;${bodyStyle}">
+										${ReactDOMServer.renderToStaticMarkup(element)}
+									</div>
 								</body>
 							</html>`,
 		};
@@ -96,9 +96,9 @@ class screenRenderer {
 
 	async screenshot(element, screenshotConfig = {}) {
 		const page = await this.browser.newPage();
-		page.setViewport(
-			(screenshotConfig && screenshotConfig.viewport) || this.config.viewport
-		);
+		const viewport = (screenshotConfig && screenshotConfig.viewport) || this.config.viewport;
+
+		page.setViewport(viewport);
 
 		const slug = `route-${this.routeIndex++}`;
 
