@@ -69,7 +69,7 @@ class screenRenderer {
 		return this;
 	}
 
-	createRoute(slug, element) {
+	createRoute(slug, element, bodyStyle = '') {
 		return {
 			method: 'GET',
 			path: `/${slug}`,
@@ -81,7 +81,7 @@ class screenRenderer {
 									${icons}
 								</head>
 								<body>
-									<div style="padding:1em;">
+									<div style="padding:1em;${bodyStyle}">
 										${ReactDOMServer.renderToStaticMarkup(element)}
 									</div>
 								</body>
@@ -103,7 +103,7 @@ class screenRenderer {
 		const slug = `route-${this.routeIndex++}`;
 
 		this.server.route(
-			this.createRoute(slug, element)
+			this.createRoute(slug, element, screenshotConfig.bodyStyle)
 		);
 
 		const testUrl = `${this.server.info.uri}/${slug}`;
