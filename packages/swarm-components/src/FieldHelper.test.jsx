@@ -4,18 +4,16 @@ import { toMatchImageSnapshot } from 'jest-image-snapshot';
 expect.extend({ toMatchImageSnapshot });
 
 import getScreenRenderer from './testUtils/screenRenderer';
-import Checkbox from './Checkbox';
-import { getTestMarkup } from './testUtils/testUtils.js';
+import FieldHelper from './FieldHelper';
+import { getTestMarkup } from './testUtils/testUtils.js'
 
-describe('Checkbox', () => {
+describe('FieldHelper', () => {
 	let renderer;
 
 	// This is ran when the suite starts up.
 	beforeAll(async () => {
 		renderer = await getScreenRenderer({
 			viewport: { width: 200, height: 1000 },
-			staticPath: '../../../swarm-styles/dist',
-			stylesheets: ['global.css', 'main.css'],
 			// verbose: true,
 		});
 	});
@@ -27,7 +25,8 @@ describe('Checkbox', () => {
 	});
 
 	const testCases = [
-		['Default', <Checkbox key="1" >Check me</Checkbox>],
+		['Default', <FieldHelper key="1" >Help me!</FieldHelper>],
+		['Custom Styling', <FieldHelper style={{color: 'red'}} key="2" >Help me, I&apos;m red!</FieldHelper>]
 	];
 
 	it('Default', async () => {
