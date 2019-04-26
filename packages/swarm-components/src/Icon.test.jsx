@@ -4,6 +4,7 @@ import { toMatchImageSnapshot } from 'jest-image-snapshot';
 expect.extend({ toMatchImageSnapshot });
 
 import getScreenRenderer from './testUtils/screenRenderer';
+import { getTestMarkup } from './testUtils/testUtils.js';
 
 import Icon, { MEDIA_SIZES } from './Icon';
 
@@ -24,25 +25,29 @@ describe('Icon', () => {
 		return renderer.stop();
 	});
 
+	const testCases = [
+		[
+			'Regular',
+			Object.keys(MEDIA_SIZES).map(size => (
+				<Icon key={size} size={size} shape="cog" />
+			)),
+		],
+		[
+			'Circled',
+			Object.keys(MEDIA_SIZES).map(size => (
+				<Icon key={size} size={size} circle shape="cog" />
+			)),
+		],
+		[
+			'Circled color',
+			Object.keys(MEDIA_SIZES).map(size => (
+				<Icon key={size} size={size} color="blue" circle shape="cog" />
+			)),
+		],
+	];
+
 	it('Should match screenshot', async () =>
 		expect(
-			await renderer.screenshot(
-				<div>
-					<h2>Regular</h2>
-					{Object.keys(MEDIA_SIZES).map(size => (
-						<Icon key={size} size={size} shape="cog" />
-					))}
-
-					<h2>Circled</h2>
-					{Object.keys(MEDIA_SIZES).map(size => (
-						<Icon key={size} size={size} circle shape="cog" />
-					))}
-
-					<h2>Circled color</h2>
-					{Object.keys(MEDIA_SIZES).map(size => (
-						<Icon key={size} size={size} color="blue" circle shape="cog" />
-					))}
-				</div>
-			)
+			await renderer.screenshot(getTestMarkup(testCases))
 		).toMatchImageSnapshot());
 });
