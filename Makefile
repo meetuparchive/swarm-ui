@@ -29,4 +29,4 @@ upload-artifacts:
 		--secret $(ARTIFACTS_SECRET) \
 		--bucket $(ARTIFACTS_BUCKET) \
 		--target-paths $(TRAVIS_BUILD_NUMBER)
-		packages/swarm-components/src/__image_snapshots__/__diff_output__
+		./packages/swarm-components/src/__image_snapshots__/__diff_output__/
