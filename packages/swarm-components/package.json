@@ -1,6 +1,6 @@
 {
   "name": "@meetup/swarm-components",
-  "version": "0.9.3",
+  "version": "0.10.0",
   "description": "Web Components for Swarm",
   "author": "hsbacot <hsbacot@gmail.com>",
   "homepage": "https://github.com/meetup/swarm-ui#readme",
@@ -18,7 +18,8 @@
     "url": "git+https://github.com/meetup/swarm-ui.git"
   },
   "scripts": {
-    "test": "NODE_ENV=test jest --config jest.config.json",
+    "test": "yarn test:integration",
+    "test:integration": "NODE_ENV=test jest --config jest.config.int.json",
     "build": "npx babel src --out-dir lib --ignore 'src/**/*.test.js','src/**/*.test.jsx','src/testUtils/**/*'",
     "develop": "npx babel src/ --watch -d lib/"
   },

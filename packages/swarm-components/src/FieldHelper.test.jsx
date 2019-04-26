@@ -4,8 +4,8 @@ import { toMatchImageSnapshot } from 'jest-image-snapshot';
 expect.extend({ toMatchImageSnapshot });
 
 import getScreenRenderer from './testUtils/screenRenderer';
-
 import FieldHelper from './FieldHelper';
+import { getTestMarkup } from './testUtils/testUtils.js'
 
 describe('FieldHelper', () => {
 	let renderer;
@@ -13,7 +13,7 @@ describe('FieldHelper', () => {
 	// This is ran when the suite starts up.
 	beforeAll(async () => {
 		renderer = await getScreenRenderer({
-			viewport: { width: 200, height: 100 },
+			viewport: { width: 200, height: 1000 },
 			// verbose: true,
 		});
 	});
@@ -23,18 +23,15 @@ describe('FieldHelper', () => {
 		// comment next line out if you want to open it in your browser for debugging
 		return renderer.stop();
 	});
+
+	const testCases = [
+		['Default', <FieldHelper key="1" >Help me!</FieldHelper>],
+		['Custom Styling', <FieldHelper style={{color: 'red'}} key="2" >Help me, I&apos;m red!</FieldHelper>]
+	];
+
 	it('Default', async () => {
 		expect(
-			await renderer.screenshot(<FieldHelper>Help me!</FieldHelper>)
-		).toMatchImageSnapshot();
-	});
-	it('Custom styling', async () => {
-		expect(
-			await renderer.screenshot(
-				<FieldHelper style={{ color: 'red' }}>
-					Help me, I&apos;m red!
-				</FieldHelper>
-			)
+			await renderer.screenshot(getTestMarkup(testCases))
 		).toMatchImageSnapshot();
 	});
 });
