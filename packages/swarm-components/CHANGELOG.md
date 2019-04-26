@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.9.4](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.9.3...@meetup/swarm-components@0.9.4) (2019-04-26)
+
+
+### Bug Fixes
+
+* convert fieldhelper to single snapshot ([638361b](https://github.com/meetup/swarm-ui/commit/638361b))
+* remove port from button and link button tests ([fa6f0ce](https://github.com/meetup/swarm-ui/commit/fa6f0ce))
+* use single snapshot for checkbox ([1070436](https://github.com/meetup/swarm-ui/commit/1070436))
+
+
+
+
+
 ## [0.9.3](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.9.2...@meetup/swarm-components@0.9.3) (2019-04-24)
 
 
