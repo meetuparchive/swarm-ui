@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.10.0](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.9.4...@meetup/swarm-components@0.10.0) (2019-04-26)
+
+
+### Bug Fixes
+
+* test for CSS files availability before doing visual testing ([8b43bdf](https://github.com/meetup/swarm-ui/commit/8b43bdf))
+
+
+### Features
+
+* added "did you run `yarn build`" note to error messages ([f2167a0](https://github.com/meetup/swarm-ui/commit/f2167a0))
+
+
+
+
+
 ## [0.9.4](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.9.3...@meetup/swarm-components@0.9.4) (2019-04-26)
 
 
