@@ -4,10 +4,10 @@ import { toMatchImageSnapshot } from 'jest-image-snapshot';
 expect.extend({ toMatchImageSnapshot });
 
 import getScreenRenderer from './testUtils/screenRenderer';
-import Checkbox from './Checkbox';
-import { getTestMarkup } from './testUtils/testUtils.js';
+import FieldHelper from './FieldHelper';
+import { getTestMarkup } from './testUtils/testUtils.js'
 
-describe('Checkbox', () => {
+describe('FieldHelper', () => {
 	let renderer;
 
 	// This is ran when the suite starts up.
@@ -25,28 +25,11 @@ describe('Checkbox', () => {
 	});
 
 	const testCases = [
-		['Default', <Checkbox key="default">Check me</Checkbox>],
-		[
-			'Checked',
-			<Checkbox key="checked" checked>
-				Uncheck me
-			</Checkbox>,
-		],
-		[
-			'Disbled unchecked',
-			<Checkbox key="disabled" disabled>
-				Can&apos;t check me
-			</Checkbox>,
-		],
-		[
-			'Disbled checked',
-			<Checkbox key="disabled-checked" disabled checked>
-				Can&apos;t uncheck me
-			</Checkbox>,
-		],
+		['Default', <FieldHelper key="1" >Help me!</FieldHelper>],
+		['Custom Styling', <FieldHelper style={{color: 'red'}} key="2" >Help me, I&apos;m red!</FieldHelper>]
 	];
 
-	it('Visually matches snapshot', async () => {
+	it('Default', async () => {
 		expect(
 			await renderer.screenshot(getTestMarkup(testCases))
 		).toMatchImageSnapshot();

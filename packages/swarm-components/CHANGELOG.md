@@ -3,6 +3,47 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.10.0](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.9.4...@meetup/swarm-components@0.10.0) (2019-04-26)
+
+
+### Bug Fixes
+
+* test for CSS files availability before doing visual testing ([8b43bdf](https://github.com/meetup/swarm-ui/commit/8b43bdf))
+
+
+### Features
+
+* added "did you run `yarn build`" note to error messages ([f2167a0](https://github.com/meetup/swarm-ui/commit/f2167a0))
+
+
+
+
+
+## [0.9.4](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.9.3...@meetup/swarm-components@0.9.4) (2019-04-26)
+
+
+### Bug Fixes
+
+* convert fieldhelper to single snapshot ([638361b](https://github.com/meetup/swarm-ui/commit/638361b))
+* remove port from button and link button tests ([fa6f0ce](https://github.com/meetup/swarm-ui/commit/fa6f0ce))
+* use single snapshot for checkbox ([1070436](https://github.com/meetup/swarm-ui/commit/1070436))
+
+
+
+
+
+## [0.9.3](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.9.2...@meetup/swarm-components@0.9.3) (2019-04-24)
+
+
+### Bug Fixes
+
+* removed unnecessary test config ([8eb3510](https://github.com/meetup/swarm-ui/commit/8eb3510))
+* updated snapshots to use correct fonts ([fd1cb2c](https://github.com/meetup/swarm-ui/commit/fd1cb2c))
+
+
+
+
+
 ## [0.9.2](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.9.1...@meetup/swarm-components@0.9.2) (2019-04-24)
 
 
