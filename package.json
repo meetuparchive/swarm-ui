@@ -6,9 +6,7 @@
   ],
   "scripts": {
     "build": "lerna run build",
-    "test:visual": "docker build -t screenshot:latest ./ && docker run -t screenshot:latest test ! -d packages/swarm-components/src/__image_snapshots__/__diff_output__",
-    "copy:test:visual": "docker cp $(docker create screenshot:latest):/packages/swarm-components/src/__image_snapshots__/__diff_output__ ./",
-    "test": "yarn && yarn build && yarn test:visual"
+    "test": "make test-visual"
   },
   "devDependencies": {
     "@commitlint/cli": "7.5.2",

@@ -32,20 +32,21 @@ upload-artifacts:
 		--target-paths swarm-ui-$(TRAVIS_BUILD_NUMBER) \
 		$(DIFF_PATH)
 
-# 1. Build the standard container with visual diff results
-# 2. Test whether there were diffs generated
-# 3. Copy diffs to local filesystem if they are present
+# 1. Build the base container
+# 2. Run the tests with diff output bound to snapshot path
 test-visual:
 	docker build -t screenshot:latest ./
-	docker run -t screenshot:latest \
-	docker run -t screenshot:latest test ! -d $(DIFF_PATH) \
-		|| docker cp $$(docker create screenshot:latest):$(DIFF_PATH) $(DIFF_PATH) \
-		&& (>&2 echo 'visual diff failed, check $(DIFF_PATH) for visual diffs') && false
+	docker run \
+		--mount type=bind,source="$$(pwd)/$(SNAPSHOT_PATH)",target=/$(SNAPSHOT_PATH) \
+		-t screenshot:latest \
+		yarn lerna run --scope @meetup/swarm-components test:integration --stream \
+		|| echo "See $$(pwd)/$(DIFF_PATH) for failed test output"
 
-# 1. Build the standard container with visual diff results
-# 2. Test whether there were diffs generated
-# 3. Copy diffs to local filesystem if they are present
+# 1. Build the base container
+# 2. Run the tests with updated screenshot output bound to snapshot path
 test-visual-update:
 	docker build -t screenshot:latest ./
-	docker run -t screenshot:latest yarn lerna run --scope @meetup/swarm-components test:integration:updateSnapshot
-	docker cp $$(docker create screenshot:latest):$(SNAPSHOT_PATH) $(COMPONENTS_SRC)
+	docker run \
+		--mount type=bind,source="$$(pwd)/$(SNAPSHOT_PATH)",target=/$(SNAPSHOT_PATH) \
+		-t screenshot:latest \
+		yarn lerna run --scope @meetup/swarm-components test:integration:updateSnapshot --stream
