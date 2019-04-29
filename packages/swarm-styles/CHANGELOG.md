@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.3](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.3.2...@meetup/swarm-styles@0.3.3) (2019-04-29)
+
+
+### Bug Fixes
+
+* removing unnecessary and incorrect vars from button css ([511c2fb](https://github.com/meetup/swarm-ui/commit/511c2fb))
+* updating button and link button snaps, line height ([3af964e](https://github.com/meetup/swarm-ui/commit/3af964e))
+
+
+
+
+
 ## [0.3.2](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.3.1...@meetup/swarm-styles@0.3.2) (2019-04-23)
 
 
