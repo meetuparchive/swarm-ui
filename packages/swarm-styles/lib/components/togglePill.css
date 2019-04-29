@@ -16,7 +16,7 @@
     box-sizing: border-box;
     padding: var(--size-space-half) var(--size-space-double);
     font-size: var(--font-size-small);
-    line-height: var(--line-height-smallText);
+    line-height: var(--font-line-height-small);
 }
 
 [data-swarm-toggle-pill]:focus {

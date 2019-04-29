@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.11.0](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.10.0...@meetup/swarm-components@0.11.0) (2019-04-29)
+
+
+### Bug Fixes
+
+* unique key for disabled checked state ([e37a7a3](https://github.com/meetup/swarm-ui/commit/e37a7a3))
+* updating button and link button snaps, line height ([3af964e](https://github.com/meetup/swarm-ui/commit/3af964e))
+
+
+### Features
+
+* remove host/port customization ([87c86f7](https://github.com/meetup/swarm-ui/commit/87c86f7))
+* updated Icon tests to use standard way to produce page markup ([deb83ec](https://github.com/meetup/swarm-ui/commit/deb83ec))
+
+
+
+
+
 # [0.10.0](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.9.4...@meetup/swarm-components@0.10.0) (2019-04-26)
 
 
