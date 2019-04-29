@@ -6,12 +6,9 @@
   ],
   "scripts": {
     "build": "lerna run build",
-    "build:visual": "docker build -t screenshot:latest ./;",
-    "test:visual": "yarn build:visual && docker run -t screenshot:latest yarn test:integration",
-    "copy:test:visual": "echo 'do something to get __diff_output__ out of the container'",
-    "test:visual:execute": "cd packages/swarm-components/ && yarn test || true && ls src/__image_snapshots__",
-    "test": "yarn && yarn build && yarn test:integration",
-    "test:integration": "lerna run --scope @meetup/swarm-components test:integration --stream"
+    "test:visual": "docker build -t screenshot:latest ./ && docker run -t screenshot:latest test ! -d packages/swarm-components/src/__image_snapshots__/__diff_output__",
+    "copy:test:visual": "docker cp $(docker create screenshot:latest):/packages/swarm-components/src/__image_snapshots__/__diff_output__ ./",
+    "test": "yarn && yarn build && yarn test:visual"
   },
   "devDependencies": {
     "@commitlint/cli": "7.5.2",

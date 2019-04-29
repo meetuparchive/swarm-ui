@@ -4,3 +4,4 @@ Dockerfile
 README.md
 .travis.yml
 **/__image_snapshots__/__diff_output__
+Makefile

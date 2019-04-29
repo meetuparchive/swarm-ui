@@ -38,8 +38,9 @@ RUN yarn install
 # USER pptruser
 
 RUN yarn build --scope=@meetup/swarm-styles --scope=@meetup/swarm-constants
+
 # RUN screenshot tests in /packages/swarm-components
-
-# RUN cd packages/swarm-components/ && yarn test || true && ls src/__image_snapshots__
-# copy diffs back to local, if any
-
+# we are intentionally ignoring failures in this command so that the image will
+# be created even on test failure - it is up to other processes to handle the
+# failure case, e.g. by checking for the existence of a __diff_output__ directory
+CMD yarn lerna run --scope @meetup/swarm-components test:integration --stream || true
