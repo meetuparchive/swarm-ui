@@ -27,26 +27,9 @@ describe('FieldLabel', () => {
 		return renderer.stop();
 	});
 
-	const testCases = [
-		['Label alone', <FieldLabel key="alone">Field Label</FieldLabel>],
-		[
-			'Pass focus',
-			<div key="focus">
-				<FieldLabel id="swarm-external-label" htmlFor="swarm-checkbox">
-					External checkbox Label
-				</FieldLabel>
-				<Checkbox id="swarm-checkbox">Checkbox&apos;s own text</Checkbox>
-			</div>,
-		],
-	];
-
 	it('Visually matches', async () => {
 		expect(
-			await renderer.screenshot(getTestMarkup(testCases), {
-				beforeScreenshot: page => {
-					page.click('#swarm-external-label');
-				},
-			})
+			await renderer.screenshot(<FieldLabel>Field Label</FieldLabel>)
 		).toMatchImageSnapshot();
 	});
 });
