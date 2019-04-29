@@ -1,12 +1,5 @@
 :root {
   --default-radius: 5px;
-  --font-size-small: 14px;
-  --line-height-smallText: 20px;
-  --space-half: 5px;
-  --space: 10px;
-  --space-double: 20px;
-  --space-triple: 30px;
-  --space-quadruple: 40px;
 }
 
 %button-personality {
@@ -25,9 +18,9 @@
   border-radius: var(--default-radius);
   box-sizing: border-box;
   font-size: var(--font-size-small);
-  line-height: var(--line-height-smallText);
+  line-height: var(--font-line-height-small);
   outline: 0;
-  padding: var(--space-half) var(--space-triple);
+  padding: var(--space-half) var(--space);
   vertical-align: middle;
 }
 
