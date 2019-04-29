@@ -14,8 +14,6 @@ class screenRenderer {
 		this.config = {
 			viewport: { width: 800, height: 600 },
 			verbose: false,
-			port: 4000,
-			host: 'localhost',
 			...config,
 		};
 
@@ -29,14 +27,12 @@ class screenRenderer {
 	}
 
 	async init() {
-		const { host, port } = this.config;
-
 		this.browser = await puppeteer.launch();
 		this.log('Browser is running');
 
 		this.server = Hapi.server({
-			host,
-			port,
+			host: 'localhost',
+			port: await getPort(),
 		});
 
 		await this.server.register(inert);
@@ -96,7 +92,8 @@ class screenRenderer {
 
 	async screenshot(element, screenshotConfig = {}) {
 		const page = await this.browser.newPage();
-		const viewport = (screenshotConfig && screenshotConfig.viewport) || this.config.viewport;
+		const viewport =
+			(screenshotConfig && screenshotConfig.viewport) || this.config.viewport;
 
 		page.setViewport(viewport);
 
@@ -116,14 +113,5 @@ class screenRenderer {
 }
 
 export default async config => {
-	if (!config.port) {
-		config.port = await getPort();
-	}
-
-	// enforse localhost when not specified
-	if (!config.host) {
-		config.host = 'localhost';
-	}
-
 	return new screenRenderer(config).init();
 };

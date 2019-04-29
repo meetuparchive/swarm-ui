@@ -14,6 +14,8 @@ before_install:
   - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > $HOME/.npmrc
   - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.13.0
   - export PATH=$HOME/.yarn/bin:$PATH
+  # install travis-ci `artifacts` tool
+  - curl -sL https://raw.githubusercontent.com/travis-ci/artifacts/master/install | bash
 
 before_script:
   # Exit the build if there are any diffs in the yarn.lock file
@@ -24,8 +26,14 @@ before_script:
 script:
   # Build the artifacts to publish
   - yarn build
+  # Run the visual diff regression tests
+  - yarn test:integration
 
-# TODO: run flow check, run test before publish
 after_success:
   # use lerna publish to version and deploy new packages
   - make publish
+
+after_failure:
+  # use travis-ci/artifacts tool to upload any failed
+  # visual regression test diffs to s3
+  - make upload-artifacts
