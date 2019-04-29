@@ -5,10 +5,7 @@ expect.extend({ toMatchImageSnapshot });
 
 import getScreenRenderer from './testUtils/screenRenderer';
 
-import { getTestMarkup } from './testUtils/testUtils.js';
-
 import FieldLabel from './FieldLabel';
-import Checkbox from './Checkbox';
 
 describe('FieldLabel', () => {
 	let renderer;
