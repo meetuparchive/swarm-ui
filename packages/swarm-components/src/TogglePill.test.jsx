@@ -40,7 +40,7 @@ describe('TogglePill', () => {
 		],
 		[
 			'Disabled Checked',
-			<TogglePill key="default" disabled checked>
+			<TogglePill key="disabled-checked" disabled checked>
 				Can&apos;t un-toggle me
 			</TogglePill>,
 		],
