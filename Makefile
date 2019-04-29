@@ -39,8 +39,7 @@ test-visual:
 	docker run \
 		--mount type=bind,source="$$(pwd)/$(SNAPSHOT_PATH)",target=/$(SNAPSHOT_PATH) \
 		-t screenshot:latest \
-		yarn lerna run --scope @meetup/swarm-components test:integration --stream \
-		|| echo "See $$(pwd)/$(DIFF_PATH) for failed test output"
+		yarn lerna run --scope @meetup/swarm-components test:integration --stream
 
 # 1. Build the base container
 # 2. Run the tests with updated screenshot output bound to snapshot path

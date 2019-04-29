@@ -3,7 +3,7 @@ FROM node:8-slim
 
 # Install latest chrome dev package and fonts to support major charsets (Chinese, Japanese, Arabic, Hebrew, Thai and a few others)
 # Note: this installs the necessary libs to make the bundled version of Chromium that Puppeteer
-# installs, work.
+# installs work.
 RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
   && sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list' \
   && apt-get update \
@@ -11,36 +11,23 @@ RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key
   --no-install-recommends \
   && rm -rf /var/lib/apt/lists/*
 
-# Uncomment to skip the chromium download when installing puppeteer. If you do,
-# you'll need to launch puppeteer with:
-#     browser.launch({executablePath: 'google-chrome-unstable'})
-# ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
-
-
-# copy repo root (without node_modules) to working dir
-# node_modules are excluded by the .dockerignore rules
-# install dependencies
-
-COPY package.json ./
 COPY ./ ./
 RUN yarn install
 
-# # Add user so we don't need --no-sandbox.
-# # same layer as npm install to keep re-chowned files from using up several hundred MBs more space
-# RUN groupadd -r pptruser && useradd -r -g pptruser -G audio,video pptruser \
-#   && mkdir -p /home/pptruser/Downloads \
-#   && chown -R pptruser:pptruser /home/pptruser \
-#   && chown -R pptruser:pptruser /node_modules \
-#   && chown -R pptruser:pptruser /packages
-
-
-# Run everything after as non-privileged user.
-# USER pptruser
-
+# build the stylesheets
 RUN yarn build --scope=@meetup/swarm-styles --scope=@meetup/swarm-constants
 
-# RUN screenshot tests in /packages/swarm-components
-# we are intentionally ignoring failures in this command so that the image will
-# be created even on test failure - it is up to other processes to handle the
-# failure case, e.g. by checking for the existence of a __diff_output__ directory
-CMD yarn lerna run --scope @meetup/swarm-components test:integration --stream || true
+# The container is ready to be run
+
+# To run visual diff tests:
+# docker run \
+#   --mount type=bind,source="$$(pwd)/$(SNAPSHOT_PATH)",target=/$(SNAPSHOT_PATH) \
+#   -t screenshot:latest \
+#   yarn lerna run --scope @meetup/swarm-components test:integration --stream
+
+# To run visual diff tests and save snapshot updates:
+# docker run \
+#   --mount type=bind,source="$$(pwd)/$(SNAPSHOT_PATH)",target=/$(SNAPSHOT_PATH) \
+#   -t screenshot:latest \
+#   yarn lerna run --scope @meetup/swarm-components test:integration:updateSnapshot --stream
+
