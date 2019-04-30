@@ -10,9 +10,9 @@ const swarmComponents = require('swarm-components');
 ```
 
 ## Testing
-This repo uses `puppeteer` and `hapi`-based web server to render components and generate screenshots to determine discrepancies using visual comparison. Screenshots are commited to repository (see `src/__image_screenshots__/` folder).
+This repo uses [`puppeteer`](https://github.com/GoogleChrome/puppeteer) and [`hapi`](https://hapijs.com/)-based web server to render components and generate screenshots to determine discrepancies using visual comparison. Screenshots are commited to repository (see `src/__image_screenshots__/` folder).
 
-We use `jest-image-snapshot` jest extension to help us manage comparison similarly - it provides `.toMatchImageSnapshot()` method to your tests, which behaves similarly to native `.toMatchSnapshot()`. You need to extend `expect` method before using it:
+We use [`jest-image-snapshot`](https://github.com/americanexpress/jest-image-snapshot) jest extension to help us manage comparison similarly - it provides `.toMatchImageSnapshot()` method to your tests, which behaves similarly to native `.toMatchSnapshot()`. You need to extend `expect` method before using it:
 ```js
 import { toMatchImageSnapshot } from 'jest-image-snapshot';
 expect.extend({ toMatchImageSnapshot });
@@ -40,7 +40,7 @@ also, don't forget to stop renderer once all tests in the suit are complete:
     });
 ```
 
-For individual tests, just call an async `renderer.screenshot()` method and pass a component you'd like to render and call `toMatchImageSnapshot` method provided by `jest-image-snapshot` jest extension:
+For individual tests, just call an async `renderer.screenshot()` method and pass a component you'd like to render and call `toMatchImageSnapshot` method:
 ```js
 it('Visually matches', async () => {
     expect(
