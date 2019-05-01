@@ -1,0 +1,8 @@
+/*
+ * TODO: Remove this file once swarm v1 usage is removed from mup-web and pro-web
+ */
+
+.text--caption,
+.text--secondary {
+    color: var(--color-gray-7);
+}
