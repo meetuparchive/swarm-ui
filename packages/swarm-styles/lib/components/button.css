@@ -18,6 +18,7 @@
   border-radius: var(--default-radius);
   box-sizing: border-box;
   font-size: var(--font-size-small);
+  font-weight: var(--font-weight-regular);
   line-height: var(--font-line-height-small);
   outline: 0;
   padding: var(--space-half) var(--space);
@@ -42,7 +43,7 @@
 }
 
 %swarm-button-primary-focus {
-  border: 1px solid var(--color-peach);
+  border: 1px solid var(--color-alert-red);
 }
 
 [data-swarm-button="primary"]:focus,
@@ -52,8 +53,8 @@
 
 %swarm-button-bordered-focus {
   background-color: var(--color-white);
-  color: var(--color-gray-7);
-  border: 1px solid var(--color-gray-5);
+  color: var(--color-gray-6);
+  border: 1px solid var(--color-gray-6);
 }
 
 [data-swarm-button="bordered"]:focus,
@@ -62,9 +63,9 @@
 }
 
 %swarm-button-neutral-focus {
-  background-color: var(--color-gray-2);
-  color: var(--color-gray-7);
-  border: 1px solid var(--color-gray-3);
+  background-color: var(--color-gray-1);
+  color: var(--color-gray-6);
+  border: 1px solid var(--color-gray-6);
 }
 
 [data-swarm-button="neutral"]:focus,
@@ -83,12 +84,19 @@
 }
 
 %swarm-button-bordered-hover {
-  border: solid 1px var(--color-gray-4);
+  border: solid 1px var(--color-gray-5);
 }
 
-[data-swarm-button="bordered"]:hover,
-[data-swarm-button="neutral"]:hover {
+[data-swarm-button="bordered"]:hover {
   @extend %swarm-button-bordered-hover;
+}
+
+%swarm-button-neutral-hover {
+  background-color: var(--color-gray-2);
+}
+
+[data-swarm-button="neutral"]:hover {
+  @extend %swarm-button-neutral-hover;
 }
 
 %swarm-button-primary-hover {
@@ -124,8 +132,8 @@
 
 %swarm-button-neutral {
   background-color: var(--color-gray-1);
-  border: 1px solid var(--color-gray-3);
-  color: var(--color-gray-7);
+  border: 1px solid var(--color-gray-4);
+  color: var(--color-gray-6);
 }
 
 [data-swarm-button="neutral"] {
@@ -134,8 +142,8 @@
 
 %swarm-button-bordered {
   background-color: var(--color-white);
-  border: 1px solid var(--color-gray-3);
-  color: var(--color-gray-7);
+  border: 1px solid var(--color-gray-4);
+  color: var(--color-gray-6);
 }
 
 [data-swarm-button="bordered"] {
@@ -162,9 +170,9 @@
 }
 
 %swarm-button-disabled {
-  background-color: var(--color-gray-2);
-  border: 1px solid var(--color-gray-2);
-  color: var(--color-gray-4);
+  background-color: var(--color-gray-3);
+  border: 1px solid var(--color-gray-3);
+  color: var(--color-gray-5);
 }
 
 [data-swarm-button="disabled"] {
