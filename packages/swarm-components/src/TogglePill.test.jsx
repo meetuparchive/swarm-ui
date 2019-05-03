@@ -44,6 +44,12 @@ describe('TogglePill', () => {
 				Can&apos;t un-toggle me
 			</TogglePill>,
 		],
+		[
+			'Grow',
+			<TogglePill key="grow" grow>
+				Full width (grow)
+			</TogglePill>,
+		],
 	];
 
 	it('Should match screenshot', async () => {
