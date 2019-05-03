@@ -21,6 +21,10 @@
     background-color: #FAFAFA;
 }
 
+[data-swarm-width="grow"] {
+    width: 100%;
+}
+
 [data-swarm-toggle] [data-swarm-toggle-switch-disc] {
     height: 24px;
     width: 24px;

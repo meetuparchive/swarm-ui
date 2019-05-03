@@ -3,10 +3,15 @@ import PillExample from '../components/togglePillExample';
 import SwitchExample from '../components/toggleExample';
 import PropsTable from '../components/propstable';
 
-# TogglePill 
+# TogglePill
+---
 Toggle pills are used to indicate whether an option has been selected
 
+## Examples
 <PillExample />
+
+## Props
+<PropsTable propMetaData={TogglePill.__docgenInfo} />
 
 ## Snippets
 ```.jsx
@@ -16,18 +21,21 @@ Toggle pills are used to indicate whether an option has been selected
 </>
 ```
 
-## Props
-<PropsTable propMetaData={TogglePill.__docgenInfo} />
-
 ## a11y
 Pass `aria-label` to provide a more specific label to be used with screen readers.  Toggle Pills should support keyboad interaction with both `space` and `enter` keys.
 
-
+<br/>
+<br/>
 
 # Toggle Switch
+---
 Toggle switches are used to indicate whether something is on or off.
 
+## Examples
 <SwitchExample />
+
+## Props
+<PropsTable propMetaData={Toggle.__docgenInfo} />
 
 ## Snippets
 ```.jsx
@@ -36,9 +44,6 @@ Toggle switches are used to indicate whether something is on or off.
 <Toggle checked={1 == 0} name="test-1"/>
 </>
 ```
-
-## Props
-<PropsTable propMetaData={Toggle.__docgenInfo} />
 
 ## a11y
 Remember to associate the label to the Toggle. Toggles should support keyboad interaction with both `space` and `enter` keys.
