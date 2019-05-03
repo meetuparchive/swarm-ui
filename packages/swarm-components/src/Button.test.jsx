@@ -33,9 +33,10 @@ describe('Button', () => {
 		['Icon (right) with text', <Button right icon="chevron-right" key="6">Press me</Button>],
 		['Icon without text', <Button icon="bolt" key="7" />],
 		['Reset', <Button reset key="8"> Press me</Button>],
-		['Inverted', <Button inverted key="9"> Press me</Button>, {backgroundColor: 'black', padding: '1em'}],
-		['Neutral',<Button neutral key="10"> Press me</Button>],
-		['Small',<Button small key="11"> Press me</Button>],
+		['Inverted', <Button inverted key="9">Press me</Button>, {backgroundColor: 'black', padding: '1em'}],
+		['Neutral', <Button neutral key="10">Press me</Button>],
+		['Small', <Button small key="11">Press me</Button>],
+		['Grow', <Button grow key="12">Full Width Button</Button>],
 	];
 
 	it('Default', async () => {
