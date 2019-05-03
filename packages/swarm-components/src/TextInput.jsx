@@ -87,10 +87,7 @@ export const TextInput = (props: Props): React$Element<*> => {
   const width = grow ? 'grow' : 'default';
 
   return (
-    <div
-      data-swarm-text-input-wrapper={wrapperState}
-      data-swarm-width={width}
-     >
+    <div data-swarm-text-input-wrapper={wrapperState}>
       <input
         data-swarm-text-input={inputState}
         data-swarm-width={width}
