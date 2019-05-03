@@ -1,0 +1,16 @@
+/*
+ * When Swarm v1 and Swarm v2 co-exist, certain global styles
+ * from Swarm v1 override defaults in Swarm v2. These styles
+ * are meant to be a temporary fix to that issue.
+ *
+ * TODO: Remove this file once swarm v1 usage is removed from mup-web and pro-web
+ */
+
+ /*
+  * Swarm v1 adds a light gray text color to certain selectors.
+  * Ensure that the correct default swarm v2 color is used.
+  */
+.text--caption,
+.text--secondary {
+    color: var(--color-gray-7);
+}
