@@ -58,11 +58,6 @@ type Props = {
    * Default size is `xs`
    */
   iconSize?: $Values<typeof ICON_SIZES>,
-
-  /**
-   * Grow input to 100% width (full width)
-   */
-  grow?: boolean,
 };
 
 /**
@@ -78,19 +73,16 @@ export const TextInput = (props: Props): React$Element<*> => {
     id,
     iconShape,
     iconSize = 'xs',
-    grow,
     ...other
   } = props;
 
   const wrapperState = iconShape ? 'icon' : 'default';
   const inputState = disabled ? 'disabled' : error ? 'error' : 'default';
-  const width = grow ? 'grow' : 'default';
 
   return (
     <div data-swarm-text-input-wrapper={wrapperState}>
       <input
         data-swarm-text-input={inputState}
-        data-swarm-width={width}
         type={isSearch ? 'search' : 'text'}
         name={name}
         pattern={pattern}

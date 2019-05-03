@@ -23,10 +23,6 @@ type Props = {
      * max length of input field
      */
     maxLength?: string | number,
-    /**
-	 * Grow select to 100% width (full width)
-	 */
-	grow?: boolean
 }
 
 type CharProps = {
@@ -46,7 +42,6 @@ const Textarea = (props: Props): React.Element<'div'> => {
     const {
         maxLength,
         autosize,
-        grow = true,
     } = props;
 
     const textareaRef = React.useCallback(node => {
@@ -57,16 +52,11 @@ const Textarea = (props: Props): React.Element<'div'> => {
 
     const remainingCharacters = (parseInt(maxLength, 10) - getCharacterCount(props.value));
     const textareaStatus = getTextareaStatus({ ...props, error: props.error || remainingCharacters < 0 });
-    const width = grow ? 'grow' : 'default';
 
     return (
-        <div
-            data-swarm-width={width}
-            data-swarm-textarea-wrapper
-        >
+        <div data-swarm-textarea-wrapper>
             <textarea
                 data-swarm-textarea={textareaStatus}
-                data-swarm-width={width}
                 ref={textareaRef}
                 {...props}
             />
