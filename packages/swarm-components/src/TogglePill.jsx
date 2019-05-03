@@ -15,9 +15,9 @@ export type Props = {
    */
   label?: string,
   /**
-	 * Grow select to 100% width (full width)
-	 */
-	grow?: boolean,
+   * Grow select to 100% width (full width)
+   */
+  grow?: boolean,
   /**
    * Text label of the content, applied if label is not set
    */

@@ -11,64 +11,56 @@ const Example = () => {
 
   return (
     <>
-      <div style={{marginTop: '8px'}}>
-        <TextInput
-          id="input1"
-          name="input1"
-          value={value1}
-          onChange={(e) => setValue1(e.target.value)} />
-      </div>
-      <div style={{marginTop: '8px'}}>
-        <label htmlFor="input2">Label</label>
-        <TextInput
-          id="input2"
-          name="input2"
-          value={value2}
-          onChange={(e) => setValue2(e.target.value)} />
-      </div>
-      <div style={{marginTop: '8px'}}>
-        <label htmlFor="input3">Disabled input</label>
-        <TextInput
-          id="input3"
-          name="input3"
-          disabled />
-      </div>
-      <div style={{marginTop: '8px'}}>
-        <label htmlFor="input4">Error Input</label>
-        <TextInput
-          id="input4"
-          name="input4"
-          value={value4}
-          onChange={(e) => setValue4(e.target.value)}
-          error />
-      </div>
-      <div style={{marginTop: '8px'}}>
-        <label htmlFor="input5">Search Input</label>
-        <TextInput
-          id="input5"
-          name="input5"
-          value={value5}
-          onChange={(e) => setValue5(e.target.value)}
-          isSearch />
-      </div>
-      <div style={{marginTop: '8px'}}>
-        <label htmlFor="input6">Input with 3 letter value pattern</label>
-        <TextInput
-          id="input6"
-          name="input6"
-          value={value6}
-          pattern="[A-Za-z]{3}"
-          onChange={(e) => setValue6(e.target.value)} />
-      </div>
-      <div style={{marginTop: '8px'}}>
-        <label htmlFor="input7">Search Input</label>
-        <TextInput
-          id="input7"
-          name="input7"
-          value={value7}
-          onChange={(e) => setValue7(e.target.value)}
-          iconShape="location-pin" />
-      </div>
+      <TextInput
+        id="input1"
+        name="input1"
+        value={value1}
+        onChange={(e) => setValue1(e.target.value)} />
+      <br/>
+      <label htmlFor="input2">Label</label>
+      <TextInput
+        id="input2"
+        name="input2"
+        value={value2}
+        onChange={(e) => setValue2(e.target.value)} />
+      <br/>
+      <label htmlFor="input3">Disabled input</label>
+      <TextInput
+        id="input3"
+        name="input3"
+        disabled />
+      <br/>
+      <label htmlFor="input4">Error Input</label>
+      <TextInput
+        id="input4"
+        name="input4"
+        value={value4}
+        onChange={(e) => setValue4(e.target.value)}
+        error />
+      <br/>
+      <label htmlFor="input5">Search Input</label>
+      <TextInput
+        id="input5"
+        name="input5"
+        value={value5}
+        onChange={(e) => setValue5(e.target.value)}
+        isSearch />
+      <br/>
+      <label htmlFor="input6">Input with 3 letter value pattern</label>
+      <TextInput
+        id="input6"
+        name="input6"
+        value={value6}
+        pattern="[A-Za-z]{3}"
+        onChange={(e) => setValue6(e.target.value)} />
+      <br/>
+      <label htmlFor="input7">Search Input</label>
+      <TextInput
+        id="input7"
+        name="input7"
+        value={value7}
+        onChange={(e) => setValue7(e.target.value)}
+        iconShape="location-pin" />
     </>
   );
 };

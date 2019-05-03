@@ -40,21 +40,20 @@ const Select = (props: Props) => {
 		: (error ? 'error' : 'default');
 
 	return (
-		<div
-			data-swarm-select={selectState}
-			data-swarm-select-wrapper
-		>
-			<select
-				name={name}
-				id={id || name}
-				required={Boolean(requiredText)}
-				disabled={disabled}
-				{...other}
-			/>
+		<div data-swarm-select={selectState}>
+			<div data-swarm-select-wrapper="1">
+				<select
+					name={name}
+					id={id || name}
+					required={Boolean(requiredText)}
+					disabled={disabled}
+					{...other}
+				/>
 
-			<span data-swarm-select-arrow="chevron-down">
-				<Icon shape="chevron-down" size="xs" />
-			</span>
+				<span data-swarm-select-arrow="chevron-down">
+					<Icon shape="chevron-down" size="xs" />
+				</span>
+			</div>
 		</div>
 	);
 };
