@@ -29,6 +29,10 @@
   @extend %button-personality;
 }
 
+[data-swarm-width="grow"] {
+  width: 100%;
+}
+
 /* focus & active */
 %swarm-button-default-focus {
   background-color: var(--color-viridian);
