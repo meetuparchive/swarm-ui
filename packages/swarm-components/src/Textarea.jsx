@@ -23,6 +23,10 @@ type Props = {
      * max length of input field
      */
     maxLength?: string | number,
+    /**
+	 * Grow select to 100% width (full width)
+	 */
+	grow?: boolean
 }
 
 type CharProps = {
@@ -35,30 +39,38 @@ const getTextareaStatus = (props: Props): string => {
 
 const getCharacterCount = (value: string = '') => value.length;
 
-const CharCount = (props: CharProps) => <p data-swarm-textarea-char-count className="text--tiny" {...props} />
+const CharCount = (props: CharProps) => <p data-swarm-textarea-char-count className="text--tiny" {...props} />;
 
 
 const Textarea = (props: Props): React.Element<'div'> => {
-
-    const { maxLength, autosize } = props;
+    const {
+        maxLength,
+        autosize,
+        grow = true,
+    } = props;
 
     const textareaRef = React.useCallback(node => {
-        if (node !== null && props.autosize) {
+        if (node !== null && autosize) {
             auto(node);
         }
     }, [props.value]);
 
     const remainingCharacters = (parseInt(maxLength, 10) - getCharacterCount(props.value));
     const textareaStatus = getTextareaStatus({ ...props, error: props.error || remainingCharacters < 0 });
+    const width = grow ? 'grow' : 'default';
 
     return (
-        <div data-swarm-textarea-wrapper>
+        <div
+            data-swarm-width={width}
+            data-swarm-textarea-wrapper
+        >
             <textarea
                 data-swarm-textarea={textareaStatus}
+                data-swarm-width={width}
                 ref={textareaRef}
                 {...props}
             />
-            { maxLength && <CharCount>{remainingCharacters}</CharCount>}
+            {maxLength && <CharCount>{remainingCharacters}</CharCount>}
         </div>
    );
 };

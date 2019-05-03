@@ -20,6 +20,10 @@ type Props = React.ElementConfig<HTMLSelectElement> & {
 	 */
 	name: string,
 	/**
+	 * Grow select to 100% width (full width)
+	 */
+	grow?: boolean,
+	/**
 	 * Copy to be used for a required select field.
 	 */
 	requiredText?: string,
@@ -32,6 +36,7 @@ const Select = (props: Props) => {
         id,
         name,
 		requiredText,
+		grow,
 		...other
 	} = props;
 
@@ -39,21 +44,26 @@ const Select = (props: Props) => {
 		? 'disabled'
 		: (error ? 'error' : 'default');
 
-	return (
-		<div data-swarm-select={selectState}>
-			<div data-swarm-select-wrapper="1">
-				<select
-					name={name}
-					id={id || name}
-					required={Boolean(requiredText)}
-					disabled={disabled}
-					{...other}
-				/>
+	const width = grow ? 'grow': 'default';
 
-				<span data-swarm-select-arrow="chevron-down">
-					<Icon shape="chevron-down" size="xs" />
-				</span>
-			</div>
+	return (
+		<div
+			data-swarm-select={selectState}
+			data-swarm-width={width}
+			data-swarm-select-wrapper
+		>
+			<select
+				name={name}
+				id={id || name}
+				required={Boolean(requiredText)}
+				disabled={disabled}
+				data-swarm-width={width}
+				{...other}
+			/>
+
+			<span data-swarm-select-arrow="chevron-down">
+				<Icon shape="chevron-down" size="xs" />
+			</span>
 		</div>
 	);
 };
