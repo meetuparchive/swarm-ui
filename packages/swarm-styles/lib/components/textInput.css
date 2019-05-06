@@ -3,8 +3,8 @@
 }
 
 [data-swarm-text-input] {
-    border: 1px solid #DCDCDC;
-    background-color: #FAFAFA;
+    border: 1px solid var(--color-gray-5);
+    background-color: var(--color-white);
     border-radius: 4px;
     color: var(--color-gray-7);
 }
@@ -17,15 +17,24 @@
     padding: var(--size-space-default) var(--size-space-double);
 }
 
+[data-swarm-text-input]:hover {
+    outline: none;
+    border-color: var(--color-gray-6);
+}
+
 [data-swarm-text-input]:focus {
     outline: none;
     border-color: var(--color-viridian);
 }
 
+[data-swarm-text-input]::placeholder {
+    color: var(--color-gray-5);
+}
+
 [data-swarm-text-input="disabled"] {
     background-color: var(--color-gray-3);
     border-color: var(--color-gray-3);
-    color: var(--color-gray-5);
+    color: var(--color-gray-6);
 }
 
 [data-swarm-text-input="error"] {
