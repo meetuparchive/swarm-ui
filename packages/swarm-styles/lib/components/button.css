@@ -185,7 +185,7 @@
 
 /* small */
 %swarm-button-small {
-  padding: var(--space-half) var(--space-half);
+  padding: var(--space-quarter) var(--space-half);
 }
 
 [data-swarm-button][data-swarm-size="small"] {
