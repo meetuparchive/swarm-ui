@@ -44,16 +44,16 @@ class Textarea extends React.Component<Props, State> {
     textarea: ?HTMLTextAreaElement;
 
 	componentDidMount() {
-		if (this.props.autosize) {
-			auto(this.textarea);
-		}
-	}
+        if (this.props.autosize) {
+            auto(this.textarea);
+        }
+    }
 
 	componentDidUpdate(prevProps: Props) {
-		if (this.props.value !== prevProps.value) {
-			auto.update(this.textarea);
-		}
-	}
+        if (this.props.value !== prevProps.value) {
+            auto.update(this.textarea);
+        }
+    }
 
     render() {
         // maxLength is removed because we want to allow for typing over the character limit
@@ -67,8 +67,8 @@ class Textarea extends React.Component<Props, State> {
                 <textarea
                     data-swarm-textarea={textareaStatus}
                     ref={textarea => {
-						this.textarea = textarea;
-					}}
+                        this.textarea = textarea;
+                    }}
                     {...other}
                 />
                 { maxLength && <CharCount>{remainingCharacters}</CharCount>}
