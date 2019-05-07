@@ -25,6 +25,8 @@ type Props = {
     maxLength?: string | number,
 }
 
+type State = {};
+
 type CharProps = {
     children?: React.Node
 }
@@ -38,29 +40,41 @@ const getCharacterCount = (value: string = '') => value.length;
 const CharCount = (props: CharProps) => <p data-swarm-textarea-char-count className="text--tiny" {...props} />
 
 
-const Textarea = (props: Props): React.Element<'div'> => {
+class Textarea extends React.Component<Props, State> {
+    textarea: ?HTMLTextAreaElement;
 
-    const { maxLength, autosize } = props;
-
-    const textareaRef = React.useCallback(node => {
-        if (node !== null && props.autosize) {
-            auto(node);
+	componentDidMount() {
+        if (this.props.autosize) {
+            auto(this.textarea);
         }
-    }, [props.value]);
+    }
 
-    const remainingCharacters = (parseInt(maxLength, 10) - getCharacterCount(props.value));
-    const textareaStatus = getTextareaStatus({ ...props, error: props.error || remainingCharacters < 0 });
+	componentDidUpdate(prevProps: Props) {
+        if (this.props.value !== prevProps.value) {
+            auto.update(this.textarea);
+        }
+    }
 
-    return (
-        <div data-swarm-textarea-wrapper>
-            <textarea
-                data-swarm-textarea={textareaStatus}
-                ref={textareaRef}
-                {...props}
-            />
-            { maxLength && <CharCount>{remainingCharacters}</CharCount>}
-        </div>
-   );
+    render() {
+        // maxLength is removed because we want to allow for typing over the character limit
+        const { maxLength, autosize, ...other } = this.props;
+
+        const remainingCharacters = (parseInt(maxLength, 10) - getCharacterCount(this.props.value));
+        const textareaStatus = getTextareaStatus({ ...this.props, error: this.props.error || remainingCharacters < 0 });
+
+        return (
+            <div data-swarm-textarea-wrapper>
+                <textarea
+                    data-swarm-textarea={textareaStatus}
+                    ref={textarea => {
+                        this.textarea = textarea;
+                    }}
+                    {...other}
+                />
+                { maxLength && <CharCount>{remainingCharacters}</CharCount>}
+            </div>
+        );
+    };
 };
 
 export default Textarea;
