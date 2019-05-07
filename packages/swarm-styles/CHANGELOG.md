@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.3.6...@meetup/swarm-styles@0.4.0) (2019-05-07)
+
+
+### Features
+
+* grow prop for form elements ([a8ab019](https://github.com/meetup/swarm-ui/commit/a8ab019))
+
+
+
+
+
 ## [0.3.6](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.3.5...@meetup/swarm-styles@0.3.6) (2019-05-06)
 
 
