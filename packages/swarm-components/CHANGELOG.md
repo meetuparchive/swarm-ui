@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.11.2](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.11.1...@meetup/swarm-components@0.11.2) (2019-05-07)
+
+
+### Bug Fixes
+
+* formatting ([0409d42](https://github.com/meetup/swarm-ui/commit/0409d42))
+* removing hooks from textarea due to issues integrating into mup-web ([2e2e099](https://github.com/meetup/swarm-ui/commit/2e2e099))
+
+
+
+
+
 ## [0.11.1](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.11.0...@meetup/swarm-components@0.11.1) (2019-05-06)
 
 
