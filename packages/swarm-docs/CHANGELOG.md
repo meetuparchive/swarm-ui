@@ -3,6 +3,41 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.24](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.8.23...@meetup/swarm-docs@0.8.24) (2019-05-07)
+
+
+### Bug Fixes
+
+* removing hooks from textarea due to issues integrating into mup-web ([2e2e099](https://github.com/gatsbyjs/gatsby-starter-default/commit/2e2e099))
+
+
+
+
+
+## [0.8.23](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.8.22...@meetup/swarm-docs@0.8.23) (2019-05-06)
+
+**Note:** Version bump only for package @meetup/swarm-docs
+
+
+
+
+
+## [0.8.22](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.8.21...@meetup/swarm-docs@0.8.22) (2019-05-06)
+
+**Note:** Version bump only for package @meetup/swarm-docs
+
+
+
+
+
+## [0.8.21](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.8.20...@meetup/swarm-docs@0.8.21) (2019-05-03)
+
+**Note:** Version bump only for package @meetup/swarm-docs
+
+
+
+
+
 ## [0.8.20](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.8.19...@meetup/swarm-docs@0.8.20) (2019-04-29)
 
 **Note:** Version bump only for package @meetup/swarm-docs

@@ -3,6 +3,37 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.6](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.3.5...@meetup/swarm-styles@0.3.6) (2019-05-06)
+
+
+### Bug Fixes
+
+* updating input styles for better contrast ([c7fa815](https://github.com/meetup/swarm-ui/commit/c7fa815))
+
+
+
+
+
+## [0.3.5](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.3.4...@meetup/swarm-styles@0.3.5) (2019-05-06)
+
+
+### Bug Fixes
+
+* button small size updated ([350e9df](https://github.com/meetup/swarm-ui/commit/350e9df))
+* button style updates ([a5f1124](https://github.com/meetup/swarm-ui/commit/a5f1124))
+
+
+
+
+
+## [0.3.4](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.3.3...@meetup/swarm-styles@0.3.4) (2019-05-03)
+
+**Note:** Version bump only for package @meetup/swarm-styles
+
+
+
+
+
 ## [0.3.3](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.3.2...@meetup/swarm-styles@0.3.3) (2019-04-29)
 
 
