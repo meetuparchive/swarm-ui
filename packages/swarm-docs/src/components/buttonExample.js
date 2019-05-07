@@ -3,35 +3,61 @@ import { Button } from '@meetup/swarm-components';
 
 const Example = () => {
   return (
-    <div>
-      <Button primary>
-        Primary
-      </Button>
-      <br/>
-      <br/>
-      <Button bordered>
-        Bordered
-      </Button>
-      <br/>
-      <br/>
-      <Button neutral>
-        Neutral
-      </Button>
-      <br/>
-      <br/>
-      <Button disabled>
-        Disabled
-      </Button>
-      <br/>
-      <br/>
-      <div style={{backgroundColor:'black', padding:10}}>
+    <>
+      <div style={{marginTop: '8px'}}>
+        <Button reset>
+          Reset (no styles)
+        </Button>
+      </div>
+      <div style={{marginTop: '8px'}}>
+        <Button primary>
+          Primary
+        </Button>
+      </div>
+      <div style={{marginTop: '8px'}}>
+        <Button bordered>
+          Bordered
+        </Button>
+      </div>
+      <div style={{marginTop: '8px'}}>
+        <Button neutral>
+          Neutral
+        </Button>
+      </div>
+      <div style={{marginTop: '8px'}}>
+        <Button disabled>
+          Disabled
+        </Button>
+      </div>
+      <div style={{marginTop: '8px'}}>
+        <Button small>
+          Small
+        </Button>
+      </div>
+      <div style={{marginTop: '8px'}}>
+        <Button icon="bolt">
+          Icon with text
+        </Button>
+      </div>
+      <div style={{marginTop: '8px'}}>
+        <Button icon="chevron-right" right>
+          Icon (right) with text
+        </Button>
+      </div>
+      <div style={{marginTop: '8px'}}>
+        <Button icon="chevron-right"/><span> (Icon no text)</span>
+      </div>
+      <div style={{marginTop: '8px'}}>
+        <Button grow>
+          Grow (full width)
+        </Button>
+      </div>
+      <div style={{backgroundColor:'black', padding:10, marginTop: '8px'}}>
         <Button inverted>
           Inverted
         </Button>
       </div>
-      <br/>
-      <br/>
-    </div>
+    </>
   );
 };
 

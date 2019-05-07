@@ -55,6 +55,11 @@ export type LinkButtonProps = {
 	small?: boolean,
 
 	/**
+	 * Grow link to 100% width (full width)
+	 */
+	grow?: boolean,
+
+	/**
 	 * Content of button
 	 */
 	children: React.Node,
@@ -65,6 +70,7 @@ const LinkButton = (props: LinkButtonProps): React.Element<'a'> => {
 	const {
 		icon,
 		right,
+		grow,
 		children,
 		bordered, // eslint-disable-line no-unused-vars
 		neutral, // eslint-disable-line no-unused-vars
@@ -75,12 +81,14 @@ const LinkButton = (props: LinkButtonProps): React.Element<'a'> => {
 	} = props;
 
 	const buttonType = getButtonType(props);
+	const width = grow ? 'grow' : 'default';
 
 	return (
 		<a
 			data-swarm-link={buttonType}
 			data-swarm-size={getSwarmSize(props)}
 			data-icon={getIconPosition(props)}
+			data-swarm-width={width}
 			{...other}
 		>
 			{icon ? (
