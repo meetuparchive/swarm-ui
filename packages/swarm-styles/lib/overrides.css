@@ -10,6 +10,7 @@
   * Swarm v1 adds a light gray text color to certain selectors.
   * Ensure that the correct default swarm v2 color is used.
   */
+.text--pageTitle,
 .text--caption,
 .text--secondary {
     color: var(--color-gray-7);
