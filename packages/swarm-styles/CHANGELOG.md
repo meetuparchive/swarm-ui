@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.1](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.4.0...@meetup/swarm-styles@0.4.1) (2019-05-08)
+
+**Note:** Version bump only for package @meetup/swarm-styles
+
+
+
+
+
 # [0.4.0](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.3.6...@meetup/swarm-styles@0.4.0) (2019-05-07)
 
 
