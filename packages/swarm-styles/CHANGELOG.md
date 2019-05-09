@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.2](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.4.1...@meetup/swarm-styles@0.4.2) (2019-05-09)
+
+
+### Bug Fixes
+
+* be more specific on button icon spans to only inline-flex  children ([0a0dba4](https://github.com/meetup/swarm-ui/commit/0a0dba4))
+
+
+
+
+
 ## [0.4.1](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.4.0...@meetup/swarm-styles@0.4.1) (2019-05-08)
 
 **Note:** Version bump only for package @meetup/swarm-styles
