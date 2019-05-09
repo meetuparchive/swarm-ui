@@ -223,6 +223,6 @@
   align-items: center;
 }
 
-[data-swarm-button] span {
+[data-swarm-button] > span {
   @extend %swarm-button-icon-span;
 }
