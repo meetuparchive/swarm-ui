@@ -14,7 +14,8 @@
 }
 
 [data-swarm-text-input-wrapper="icon"] [data-swarm-text-input] {
-    padding: var(--size-space-default) var(--size-space-double);
+    padding: var(--size-space-default);
+    padding-left: var(--size-space-double);
 }
 
 [data-swarm-text-input]:hover {
