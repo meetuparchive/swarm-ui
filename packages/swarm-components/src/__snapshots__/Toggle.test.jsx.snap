@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Toggle Snapshot: Checked 1`] = `
+<button
+  aria-checked={true}
+  aria-readonly={false}
+  checked={true}
+  data-swarm-toggle="checked"
+  disabled={false}
+  role="checkbox"
+  type="button"
+>
+  <span
+    data-swarm-toggle-switch-disc={true}
+  >
+    <Icon
+      color="var(--color-viridian)"
+      shape="check"
+      size="xs"
+    />
+  </span>
+</button>
+`;
+
+exports[`Toggle Snapshot: Default 1`] = `
+<button
+  aria-checked={false}
+  aria-readonly={false}
+  checked={false}
+  data-swarm-toggle="unchecked"
+  disabled={false}
+  role="checkbox"
+  type="button"
+>
+  <span
+    data-swarm-toggle-switch-disc={true}
+  >
+    <Icon
+      color="var(--color-gray-4)"
+      shape="cross"
+      size="xs"
+    />
+  </span>
+</button>
+`;
+
+exports[`Toggle Snapshot: Disabled 1`] = `
+<button
+  aria-checked={false}
+  aria-readonly={true}
+  checked={false}
+  data-swarm-toggle="unchecked"
+  disabled={true}
+  role="checkbox"
+  type="button"
+>
+  <span
+    data-swarm-toggle-switch-disc={true}
+  >
+    <Icon
+      color="var(--color-gray-4)"
+      shape="cross"
+      size="xs"
+    />
+  </span>
+</button>
+`;
+
+exports[`Toggle Snapshot: Disabled Checked 1`] = `
+<button
+  aria-checked={true}
+  aria-readonly={true}
+  checked={true}
+  data-swarm-toggle="checked"
+  disabled={true}
+  role="checkbox"
+  type="button"
+>
+  <span
+    data-swarm-toggle-switch-disc={true}
+  >
+    <Icon
+      color="var(--color-viridian)"
+      shape="check"
+      size="xs"
+    />
+  </span>
+</button>
+`;
