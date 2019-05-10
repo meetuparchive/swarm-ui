@@ -3,8 +3,10 @@ import { shallow } from 'enzyme';
 import Icon, { MEDIA_SIZES } from './Icon';
 
 describe('Icon', () => {
-	const getIconMarkup = (key, props) => (
-		<div key={key}>
+	let count = 0;
+
+	const getIconMarkup = props => (
+		<div key={++count}>
 			{Object.keys(MEDIA_SIZES).map(size => (
 				<Icon key={size} size={size} {...props} />
 			))}
@@ -12,9 +14,9 @@ describe('Icon', () => {
 	);
 
 	const testCases = [
-		['Regular', getIconMarkup("1", {shape: "cog"})],
-		['Circled', getIconMarkup("2", {circle: true, shape: "cog"})],
-		['Circled color', getIconMarkup("3", {color: "blue", circle: true, shape: "cog"})],
+		['Regular', getIconMarkup({shape: "cog"})],
+		['Circled', getIconMarkup({circle: true, shape: "cog"})],
+		['Circled color', getIconMarkup({color: "blue", circle: true, shape: "cog"})],
 	];
 
 	test.each(testCases)('Snapshot: %s', (description, element) => {

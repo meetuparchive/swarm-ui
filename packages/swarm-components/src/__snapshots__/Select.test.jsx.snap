@@ -2,134 +2,202 @@
 
 exports[`Button Snapshot: Default 1`] = `
 <div
-  key="1"
+  data-swarm-select="default"
 >
-  <Select
-    name="select"
+  <div
+    data-swarm-select-wrapper="1"
   >
-    <option
-      value="geoffrey"
+    <select
+      id="select"
+      name="select"
+      required={false}
     >
-      Geoffrey
-    </option>
-    <option
-      value="drhorse"
+      <option
+        value="geoffrey"
+      >
+        Geoffrey
+      </option>
+      <option
+        value="drhorse"
+      >
+        Doctor Horse, MD Junior
+      </option>
+      <option
+        value="chompyhorse"
+      >
+        Mister Chompy
+      </option>
+    </select>
+    <span
+      data-swarm-select-arrow="chevron-down"
     >
-      Doctor Horse, MD Junior
-    </option>
-    <option
-      value="chompyhorse"
-    >
-      Mister Chompy
-    </option>
-  </Select>
+      <Icon
+        shape="chevron-down"
+        size="xs"
+      />
+    </span>
+  </div>
 </div>
 `;
 
 exports[`Button Snapshot: Disabled 1`] = `
 <div
-  key="2"
+  data-swarm-select="disabled"
 >
-  <Select
-    disabled={true}
-    name="select"
+  <div
+    data-swarm-select-wrapper="1"
   >
-    <option
-      value="geoffrey"
+    <select
+      disabled={true}
+      id="select"
+      name="select"
+      required={false}
     >
-      Geoffrey
-    </option>
-    <option
-      value="drhorse"
+      <option
+        value="geoffrey"
+      >
+        Geoffrey
+      </option>
+      <option
+        value="drhorse"
+      >
+        Doctor Horse, MD Junior
+      </option>
+      <option
+        value="chompyhorse"
+      >
+        Mister Chompy
+      </option>
+    </select>
+    <span
+      data-swarm-select-arrow="chevron-down"
     >
-      Doctor Horse, MD Junior
-    </option>
-    <option
-      value="chompyhorse"
-    >
-      Mister Chompy
-    </option>
-  </Select>
+      <Icon
+        shape="chevron-down"
+        size="xs"
+      />
+    </span>
+  </div>
 </div>
 `;
 
 exports[`Button Snapshot: Error 1`] = `
 <div
-  key="3"
+  data-swarm-select="error"
 >
-  <Select
-    error={true}
-    name="select"
+  <div
+    data-swarm-select-wrapper="1"
   >
-    <option
-      value="geoffrey"
+    <select
+      id="select"
+      name="select"
+      required={false}
     >
-      Geoffrey
-    </option>
-    <option
-      value="drhorse"
+      <option
+        value="geoffrey"
+      >
+        Geoffrey
+      </option>
+      <option
+        value="drhorse"
+      >
+        Doctor Horse, MD Junior
+      </option>
+      <option
+        value="chompyhorse"
+      >
+        Mister Chompy
+      </option>
+    </select>
+    <span
+      data-swarm-select-arrow="chevron-down"
     >
-      Doctor Horse, MD Junior
-    </option>
-    <option
-      value="chompyhorse"
-    >
-      Mister Chompy
-    </option>
-  </Select>
+      <Icon
+        shape="chevron-down"
+        size="xs"
+      />
+    </span>
+  </div>
 </div>
 `;
 
 exports[`Button Snapshot: Required Text 1`] = `
 <div
-  key="5"
+  data-swarm-select="default"
 >
-  <Select
-    name="select"
-    requireText="Must fill!"
+  <div
+    data-swarm-select-wrapper="1"
   >
-    <option
-      value="geoffrey"
+    <select
+      id="select"
+      name="select"
+      requireText="Must fill!"
+      required={false}
     >
-      Geoffrey
-    </option>
-    <option
-      value="drhorse"
+      <option
+        value="geoffrey"
+      >
+        Geoffrey
+      </option>
+      <option
+        value="drhorse"
+      >
+        Doctor Horse, MD Junior
+      </option>
+      <option
+        value="chompyhorse"
+      >
+        Mister Chompy
+      </option>
+    </select>
+    <span
+      data-swarm-select-arrow="chevron-down"
     >
-      Doctor Horse, MD Junior
-    </option>
-    <option
-      value="chompyhorse"
-    >
-      Mister Chompy
-    </option>
-  </Select>
+      <Icon
+        shape="chevron-down"
+        size="xs"
+      />
+    </span>
+  </div>
 </div>
 `;
 
 exports[`Button Snapshot: With Id 1`] = `
 <div
-  key="4"
+  data-swarm-select="default"
 >
-  <Select
-    id="select"
-    name="select"
+  <div
+    data-swarm-select-wrapper="1"
   >
-    <option
-      value="geoffrey"
+    <select
+      id="select"
+      name="select"
+      required={false}
     >
-      Geoffrey
-    </option>
-    <option
-      value="drhorse"
+      <option
+        value="geoffrey"
+      >
+        Geoffrey
+      </option>
+      <option
+        value="drhorse"
+      >
+        Doctor Horse, MD Junior
+      </option>
+      <option
+        value="chompyhorse"
+      >
+        Mister Chompy
+      </option>
+    </select>
+    <span
+      data-swarm-select-arrow="chevron-down"
     >
-      Doctor Horse, MD Junior
-    </option>
-    <option
-      value="chompyhorse"
-    >
-      Mister Chompy
-    </option>
-  </Select>
+      <Icon
+        shape="chevron-down"
+        size="xs"
+      />
+    </span>
+  </div>
 </div>
 `;

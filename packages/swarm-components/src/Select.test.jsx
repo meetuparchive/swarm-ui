@@ -5,14 +5,12 @@ import Select from './Select';
 describe('Button', () => {
     let count = 0;
 
-    const getSelectMarkup = (props) => (
-        <div key={++count}>
-            <Select {...props}>
-                <option value="geoffrey">Geoffrey</option>
-                <option value="drhorse">Doctor Horse, MD Junior</option>
-                <option value="chompyhorse">Mister Chompy</option>
-            </Select>
-        </div>
+    const getSelectMarkup = props => (
+        <Select key={++count} {...props}>
+            <option value="geoffrey">Geoffrey</option>
+            <option value="drhorse">Doctor Horse, MD Junior</option>
+            <option value="chompyhorse">Mister Chompy</option>
+        </Select>
     );
 
 	const testCases = [
