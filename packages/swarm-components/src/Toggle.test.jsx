@@ -12,5 +12,5 @@ describe('Toggle', () => {
 
 	test.each(testCases)('Snapshot: %s', (description, element) => {
 		expect(shallow(element)).toMatchSnapshot();
-	})
+	});
 });

@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TogglePill Snapshot: Checked 1`] = `
+<button
+  aria-checked={true}
+  checked={true}
+  data-swarm-toggle-pill="checked"
+  data-swarm-width="default"
+  role="checkbox"
+>
+  <span>
+    Un-toggle me
+  </span>
+</button>
+`;
+
+exports[`TogglePill Snapshot: Default 1`] = `
+<button
+  data-swarm-toggle-pill="unchecked"
+  data-swarm-width="default"
+  role="checkbox"
+>
+  <span>
+    Toggle me
+  </span>
+</button>
+`;
+
+exports[`TogglePill Snapshot: Disabled 1`] = `
+<button
+  data-swarm-toggle-pill="unchecked"
+  data-swarm-width="default"
+  disabled={true}
+  role="checkbox"
+>
+  <span>
+    Can't toggle me
+  </span>
+</button>
+`;
+
+exports[`TogglePill Snapshot: Disabled Checked 1`] = `
+<button
+  aria-checked={true}
+  checked={true}
+  data-swarm-toggle-pill="checked"
+  data-swarm-width="default"
+  disabled={true}
+  role="checkbox"
+>
+  <span>
+    Can't un-toggle me
+  </span>
+</button>
+`;
+
+exports[`TogglePill Snapshot: Grow 1`] = `
+<button
+  data-swarm-toggle-pill="unchecked"
+  data-swarm-width="grow"
+  role="checkbox"
+>
+  <span>
+    Full width (grow)
+  </span>
+</button>
+`;
