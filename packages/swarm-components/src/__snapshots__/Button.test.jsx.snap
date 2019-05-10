@@ -1,0 +1,154 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Snapshot: Bordered 1`] = `
+<button
+  data-icon="left"
+  data-swarm-button="bordered"
+  data-swarm-size="default"
+  data-swarm-width="default"
+>
+  Press me
+</button>
+`;
+
+exports[`Button Snapshot: Default 1`] = `
+<button
+  data-icon="left"
+  data-swarm-button="default"
+  data-swarm-size="default"
+  data-swarm-width="default"
+>
+  Press me
+</button>
+`;
+
+exports[`Button Snapshot: Disabled 1`] = `
+<button
+  data-icon="left"
+  data-swarm-button="disabled"
+  data-swarm-size="default"
+  data-swarm-width="default"
+  disabled={true}
+>
+  Can't press me
+</button>
+`;
+
+exports[`Button Snapshot: Grow 1`] = `
+<button
+  data-icon="left"
+  data-swarm-button="default"
+  data-swarm-size="default"
+  data-swarm-width="grow"
+>
+  Full Width Button
+</button>
+`;
+
+exports[`Button Snapshot: Icon (right) with text 1`] = `
+<button
+  data-icon="right"
+  data-swarm-button="default"
+  data-swarm-size="default"
+  data-swarm-width="default"
+>
+  <span>
+    Press me
+    <Icon
+      color="var(--color-viridian)"
+      shape="chevron-right"
+      size="xs"
+    />
+  </span>
+</button>
+`;
+
+exports[`Button Snapshot: Icon with text 1`] = `
+<button
+  data-icon="left"
+  data-swarm-button="default"
+  data-swarm-size="default"
+  data-swarm-width="default"
+>
+  <span>
+    <Icon
+      color="var(--color-viridian)"
+      shape="bolt"
+      size="xs"
+    />
+    Press me
+  </span>
+</button>
+`;
+
+exports[`Button Snapshot: Icon without text 1`] = `
+<button
+  data-icon="only"
+  data-swarm-button="default"
+  data-swarm-size="default"
+  data-swarm-width="default"
+>
+  <span>
+    <Icon
+      color="var(--color-viridian)"
+      shape="bolt"
+      size="xs"
+    />
+  </span>
+</button>
+`;
+
+exports[`Button Snapshot: Inverted 1`] = `
+<button
+  data-icon="left"
+  data-swarm-button="inverted"
+  data-swarm-size="default"
+  data-swarm-width="default"
+>
+  Press me
+</button>
+`;
+
+exports[`Button Snapshot: Neutral 1`] = `
+<button
+  data-icon="left"
+  data-swarm-button="neutral"
+  data-swarm-size="default"
+  data-swarm-width="default"
+>
+  Press me
+</button>
+`;
+
+exports[`Button Snapshot: Primary 1`] = `
+<button
+  data-icon="left"
+  data-swarm-button="primary"
+  data-swarm-size="default"
+  data-swarm-width="default"
+>
+  Must press me
+</button>
+`;
+
+exports[`Button Snapshot: Reset 1`] = `
+<button
+  data-icon="left"
+  data-swarm-button="reset"
+  data-swarm-size="default"
+  data-swarm-width="default"
+>
+   Press me
+</button>
+`;
+
+exports[`Button Snapshot: Small 1`] = `
+<button
+  data-icon="left"
+  data-swarm-button="default"
+  data-swarm-size="small"
+  data-swarm-width="default"
+>
+  Press me
+</button>
+`;
