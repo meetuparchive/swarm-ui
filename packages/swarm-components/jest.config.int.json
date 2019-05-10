@@ -12,7 +12,6 @@
 	"transformIgnorePatterns": [
 		"node_modules"
 	],
-	"globalSetup": "<rootDir>/src/testUtils/prerequisites.js",
 	"snapshotSerializers": [
 		"<rootDir>/../../node_modules/enzyme-to-json/serializer"
 	]
