@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.3](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.4.2...@meetup/swarm-styles@0.4.3) (2019-05-10)
+
+
+### Bug Fixes
+
+* right padding dropped to space when icon is present on input ([cc419f6](https://github.com/meetup/swarm-ui/commit/cc419f6))
+
+
+
+
+
 ## [0.4.2](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.4.1...@meetup/swarm-styles@0.4.2) (2019-05-09)
 
 
