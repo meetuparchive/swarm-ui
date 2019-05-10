@@ -1,0 +1,152 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Radio Snapshot: Checked 1`] = `
+<label
+  data-swarm-radio="default"
+>
+  <span
+    aria-checked={true}
+    data-swarm-radio-field="checked"
+    role="checkbox"
+    tabIndex="0"
+  >
+    <span
+      data-swarm-radio-dot={true}
+    />
+  </span>
+  <input
+    checked={true}
+    name="radio"
+    type="radio"
+  />
+  <span>
+    Checked
+  </span>
+</label>
+`;
+
+exports[`Radio Snapshot: Checked Disabled 1`] = `
+<label
+  data-swarm-radio="disabled"
+  disabled={true}
+>
+  <span
+    aria-checked={true}
+    data-swarm-radio-field="checked"
+    role="checkbox"
+    tabIndex="0"
+  >
+    <span
+      data-swarm-radio-dot={true}
+    />
+  </span>
+  <input
+    checked={true}
+    disabled={true}
+    name="radio"
+    type="radio"
+  />
+  <span>
+    Checked Disabled
+  </span>
+</label>
+`;
+
+exports[`Radio Snapshot: Children 1`] = `
+<label
+  data-swarm-radio="default"
+>
+  <span
+    data-swarm-radio-field="unchecked"
+    role="checkbox"
+    tabIndex="0"
+  />
+  <input
+    name="radio"
+    type="radio"
+  />
+  <span>
+    Children
+  </span>
+</label>
+`;
+
+exports[`Radio Snapshot: Default 1`] = `
+<label
+  data-swarm-radio="default"
+>
+  <span
+    data-swarm-radio-field="unchecked"
+    role="checkbox"
+    tabIndex="0"
+  />
+  <input
+    name="radio"
+    type="radio"
+  />
+  <span>
+    Default
+  </span>
+</label>
+`;
+
+exports[`Radio Snapshot: Disabled 1`] = `
+<label
+  data-swarm-radio="disabled"
+  disabled={true}
+>
+  <span
+    data-swarm-radio-field="unchecked"
+    role="checkbox"
+    tabIndex="0"
+  />
+  <input
+    disabled={true}
+    name="radio"
+    type="radio"
+  />
+  <span>
+    Disabled
+  </span>
+</label>
+`;
+
+exports[`Radio Snapshot: With Id 1`] = `
+<label
+  data-swarm-radio="default"
+>
+  <span
+    data-swarm-radio-field="unchecked"
+    role="checkbox"
+    tabIndex="0"
+  />
+  <input
+    id="radio"
+    name="radio"
+    type="radio"
+  />
+  <span>
+    Id
+  </span>
+</label>
+`;
+
+exports[`Radio Snapshot: With onChange 1`] = `
+<label
+  data-swarm-radio="default"
+>
+  <span
+    data-swarm-radio-field="unchecked"
+    role="checkbox"
+    tabIndex="0"
+  />
+  <input
+    name="radio"
+    onChange={[MockFunction]}
+    type="radio"
+  />
+  <span>
+    onChange
+  </span>
+</label>
+`;

@@ -24,8 +24,8 @@ before_script:
   # - yarn check
 
 script:
-  # Build the artifacts to publish
-  - yarn build
+  # Build the artifacts to publish; don't build docs
+  - yarn build:src
   # Run unit tests
   - yarn test:unit
 
