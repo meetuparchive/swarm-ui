@@ -1,0 +1,135 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Snapshot: Default 1`] = `
+<div
+  key="1"
+>
+  <Select
+    name="select"
+  >
+    <option
+      value="geoffrey"
+    >
+      Geoffrey
+    </option>
+    <option
+      value="drhorse"
+    >
+      Doctor Horse, MD Junior
+    </option>
+    <option
+      value="chompyhorse"
+    >
+      Mister Chompy
+    </option>
+  </Select>
+</div>
+`;
+
+exports[`Button Snapshot: Disabled 1`] = `
+<div
+  key="2"
+>
+  <Select
+    disabled={true}
+    name="select"
+  >
+    <option
+      value="geoffrey"
+    >
+      Geoffrey
+    </option>
+    <option
+      value="drhorse"
+    >
+      Doctor Horse, MD Junior
+    </option>
+    <option
+      value="chompyhorse"
+    >
+      Mister Chompy
+    </option>
+  </Select>
+</div>
+`;
+
+exports[`Button Snapshot: Error 1`] = `
+<div
+  key="3"
+>
+  <Select
+    error={true}
+    name="select"
+  >
+    <option
+      value="geoffrey"
+    >
+      Geoffrey
+    </option>
+    <option
+      value="drhorse"
+    >
+      Doctor Horse, MD Junior
+    </option>
+    <option
+      value="chompyhorse"
+    >
+      Mister Chompy
+    </option>
+  </Select>
+</div>
+`;
+
+exports[`Button Snapshot: Required Text 1`] = `
+<div
+  key="5"
+>
+  <Select
+    name="select"
+    requireText="Must fill!"
+  >
+    <option
+      value="geoffrey"
+    >
+      Geoffrey
+    </option>
+    <option
+      value="drhorse"
+    >
+      Doctor Horse, MD Junior
+    </option>
+    <option
+      value="chompyhorse"
+    >
+      Mister Chompy
+    </option>
+  </Select>
+</div>
+`;
+
+exports[`Button Snapshot: With Id 1`] = `
+<div
+  key="4"
+>
+  <Select
+    id="select"
+    name="select"
+  >
+    <option
+      value="geoffrey"
+    >
+      Geoffrey
+    </option>
+    <option
+      value="drhorse"
+    >
+      Doctor Horse, MD Junior
+    </option>
+    <option
+      value="chompyhorse"
+    >
+      Mister Chompy
+    </option>
+  </Select>
+</div>
+`;
