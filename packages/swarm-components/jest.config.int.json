@@ -1,6 +1,19 @@
 {
-	"moduleFileExtensions": ["js", "jsx", "node", "json"],
+	"setupFiles": [
+		"<rootDir>/src/utils/testSetup.js"
+	],
+	"moduleFileExtensions": [
+		"js",
+		"jsx",
+		"node",
+		"json"
+	],
 	"testRegex": "(src|util|scripts)/.*\\.test\\.jsx?$",
-	"transformIgnorePatterns": ["node_modules"],
-	"globalSetup": "<rootDir>/src/testUtils/prerequisites.js"
+	"transformIgnorePatterns": [
+		"node_modules"
+	],
+	"globalSetup": "<rootDir>/src/testUtils/prerequisites.js",
+	"snapshotSerializers": [
+		"<rootDir>/../../node_modules/enzyme-to-json/serializer"
+	]
 }
