@@ -1,0 +1,143 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LinkButton Snapshot: Bordered 1`] = `
+<a
+  data-icon="left"
+  data-swarm-link="bordered"
+  data-swarm-size="default"
+  data-swarm-width="default"
+>
+  Press me
+</a>
+`;
+
+exports[`LinkButton Snapshot: Default 1`] = `
+<a
+  data-icon="left"
+  data-swarm-link="default"
+  data-swarm-size="default"
+  data-swarm-width="default"
+>
+  Press me
+</a>
+`;
+
+exports[`LinkButton Snapshot: Disabled 1`] = `
+<a
+  data-icon="left"
+  data-swarm-link="disabled"
+  data-swarm-size="default"
+  data-swarm-width="default"
+  disabled={true}
+>
+  Can't press me
+</a>
+`;
+
+exports[`LinkButton Snapshot: Grow 1`] = `
+<a
+  data-icon="left"
+  data-swarm-link="default"
+  data-swarm-size="default"
+  data-swarm-width="grow"
+>
+  Full Width Button
+</a>
+`;
+
+exports[`LinkButton Snapshot: Icon (right) with text 1`] = `
+<a
+  data-icon="right"
+  data-swarm-link="default"
+  data-swarm-size="default"
+  data-swarm-width="default"
+>
+  <span>
+    Press me
+    <Icon
+      color="var(--color-viridian)"
+      shape="chevron-right"
+      size="xs"
+    />
+  </span>
+</a>
+`;
+
+exports[`LinkButton Snapshot: Icon with text 1`] = `
+<a
+  data-icon="left"
+  data-swarm-link="default"
+  data-swarm-size="default"
+  data-swarm-width="default"
+>
+  <span>
+    <Icon
+      color="var(--color-viridian)"
+      shape="bolt"
+      size="xs"
+    />
+    Press me
+  </span>
+</a>
+`;
+
+exports[`LinkButton Snapshot: Icon without text 1`] = `
+<a
+  data-icon="only"
+  data-swarm-link="default"
+  data-swarm-size="default"
+  data-swarm-width="default"
+>
+  <span>
+    <Icon
+      color="var(--color-viridian)"
+      shape="bolt"
+      size="xs"
+    />
+  </span>
+</a>
+`;
+
+exports[`LinkButton Snapshot: Inverted 1`] = `
+<a
+  data-icon="left"
+  data-swarm-link="inverted"
+  data-swarm-size="default"
+  data-swarm-width="default"
+>
+   Press me
+</a>
+`;
+
+exports[`LinkButton Snapshot: Neutral 1`] = `
+<a
+  data-icon="left"
+  data-swarm-link="neutral"
+  data-swarm-size="default"
+  data-swarm-width="default"
+>
+   Press me
+</a>
+`;
+
+exports[`LinkButton Snapshot: Primary 1`] = `
+<a
+  data-icon="left"
+  data-swarm-link="primary"
+  data-swarm-size="default"
+  data-swarm-width="default"
+>
+  Must press me
+</a>
+`;
+
+exports[`LinkButton Snapshot: Small 1`] = `
+<a
+  data-icon="left"
+  data-swarm-link="default"
+  data-swarm-size="small"
+  data-swarm-width="default"
+>
+   Press me
+</a>
+`;
