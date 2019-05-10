@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FieldHelper Snapshot: Custom Styling 1`] = `
+<p
+  data-swarm-field-helper={true}
+  style={
+    Object {
+      "color": "red",
+    }
+  }
+>
+  Help me, I'm red!
+</p>
+`;
+
+exports[`FieldHelper Snapshot: Default 1`] = `
+<p
+  data-swarm-field-helper={true}
+>
+  Help me!
+</p>
+`;
