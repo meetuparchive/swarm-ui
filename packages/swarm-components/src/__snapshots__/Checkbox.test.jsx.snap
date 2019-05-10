@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox Snapshot: Default 1`] = `
+<label
+  data-swarm-checkbox="default"
+>
+  <span
+    data-swarm-checkbox-field="unchecked"
+    role="checkbox"
+  />
+  <input
+    readOnly={true}
+    type="checkbox"
+  />
+  <span>
+    Check me
+  </span>
+</label>
+`;

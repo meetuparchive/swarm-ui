@@ -6,8 +6,8 @@
   ],
   "scripts": {
     "build": "lerna run build",
-    "test": "yarn && yarn build && yarn test:integration",
-    "test:integration": "lerna run --scope @meetup/swarm-components test:integration --stream"
+    "test": "yarn && yarn build && yarn test:unit",
+    "test:unit": "lerna run --scope @meetup/swarm-components test:unit --stream"
   },
   "devDependencies": {
     "@commitlint/cli": "7.5.2",
