@@ -9,7 +9,8 @@
     "build:docs": "lerna run build --scope @meetup/swarm-docs",
     "build:src": "lerna run build --scope @meetup/swarm-constants --scope @meetup/swarm-styles --scope @meetup/swarm-components",
     "test": "yarn && yarn build:src && yarn test:unit",
-    "test:unit": "lerna run --scope @meetup/swarm-components test:unit --stream"
+    "test:unit": "lerna run --scope @meetup/swarm-components test:unit --stream",
+    "test:updateSnaps": "yarn test:unit -- -- --u"
   },
   "devDependencies": {
     "@commitlint/cli": "7.5.2",
