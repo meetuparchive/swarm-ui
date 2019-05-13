@@ -2,7 +2,6 @@
 import * as React from 'react';
 import Icon from './Icon';
 import {
-	FILLS,
 	getButtonType,
 	getSwarmSize,
 	getIconPosition,
@@ -107,11 +106,11 @@ const Button = (props: ButtonProps): React.Element<'button'> => {
 					{right ? (
 						<>
 							{children}
-							<Icon shape={icon} size="xs" color={FILLS[buttonType]} />
+							<Icon shape={icon} size="xs" />
 						</>
 					) : (
 						<>
-							<Icon shape={icon} size="xs" color={FILLS[buttonType]} />
+							<Icon shape={icon} size="xs" />
 							{children}
 						</>
 					)}
