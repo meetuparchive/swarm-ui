@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FieldLabel Snapshot: Regular 1`] = `
+<label
+  data-swarm-field-label={true}
+>
+  Field Label
+</label>
+`;
