@@ -96,11 +96,11 @@ const LinkButton = (props: LinkButtonProps): React.Element<'a'> => {
 					{right ? (
 						<>
 							{children}
-							<Icon shape={icon} size="xs" color={FILLS[buttonType]} />
+							<Icon shape={icon} size="xs" />
 						</>
 					) : (
 						<>
-							<Icon shape={icon} size="xs" color={FILLS[buttonType]} />
+							<Icon shape={icon} size="xs" />
 							{children}
 						</>
 					)}

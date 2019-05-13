@@ -55,7 +55,6 @@ exports[`Button Snapshot: Icon (right) with text 1`] = `
   <span>
     Press me
     <Icon
-      color="var(--color-viridian)"
       shape="chevron-right"
       size="xs"
     />
@@ -72,7 +71,6 @@ exports[`Button Snapshot: Icon with text 1`] = `
 >
   <span>
     <Icon
-      color="var(--color-viridian)"
       shape="bolt"
       size="xs"
     />
@@ -90,7 +88,6 @@ exports[`Button Snapshot: Icon without text 1`] = `
 >
   <span>
     <Icon
-      color="var(--color-viridian)"
       shape="bolt"
       size="xs"
     />
