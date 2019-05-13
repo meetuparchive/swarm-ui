@@ -224,6 +224,10 @@
   @extend %swarm-button-icon-only
 }
 
+[data-swarm-button][data-swarm-size="small"][data-icon="only"] {
+  padding: var(--space-quarter) var(--space-half);
+}
+
 %swarm-button-icon-span {
   display: inline-flex;
   justify-content: center;
