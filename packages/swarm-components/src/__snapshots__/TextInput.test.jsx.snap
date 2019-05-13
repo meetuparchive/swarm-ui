@@ -1,0 +1,148 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextInput Snapshot: Default (empty) 1`] = `
+<div
+  data-swarm-text-input-wrapper="default"
+>
+  <input
+    data-swarm-text-input="default"
+    id="default"
+    name="default"
+    type="text"
+    value=""
+  />
+</div>
+`;
+
+exports[`TextInput Snapshot: Default (value) 1`] = `
+<div
+  data-swarm-text-input-wrapper="default"
+>
+  <input
+    data-swarm-text-input="default"
+    id="default"
+    name="default"
+    type="text"
+    value="foo"
+  />
+</div>
+`;
+
+exports[`TextInput Snapshot: Disabled 1`] = `
+<div
+  data-swarm-text-input-wrapper="default"
+>
+  <input
+    data-swarm-text-input="disabled"
+    disabled={true}
+    id="disabled"
+    name="disabled"
+    type="text"
+    value=""
+  />
+</div>
+`;
+
+exports[`TextInput Snapshot: Error 1`] = `
+<div
+  data-swarm-text-input-wrapper="default"
+>
+  <input
+    data-swarm-text-input="error"
+    id="error"
+    name="error"
+    type="text"
+    value=""
+  />
+</div>
+`;
+
+exports[`TextInput Snapshot: Icon (custom size) 1`] = `
+<div
+  data-swarm-text-input-wrapper="icon"
+>
+  <input
+    data-swarm-text-input="default"
+    id="iconsize"
+    name="iconsize"
+    type="text"
+    value=""
+  />
+  <span
+    data-swarm-input-icon="location-pin"
+  >
+    <Icon
+      aria-hidden={true}
+      shape="location-pin"
+      size="m"
+    />
+  </span>
+</div>
+`;
+
+exports[`TextInput Snapshot: Icon 1`] = `
+<div
+  data-swarm-text-input-wrapper="icon"
+>
+  <input
+    data-swarm-text-input="default"
+    id="icon"
+    name="icon"
+    type="text"
+    value=""
+  />
+  <span
+    data-swarm-input-icon="location-pin"
+  >
+    <Icon
+      aria-hidden={true}
+      shape="location-pin"
+      size="xs"
+    />
+  </span>
+</div>
+`;
+
+exports[`TextInput Snapshot: Pattern 1`] = `
+<div
+  data-swarm-text-input-wrapper="default"
+>
+  <input
+    data-swarm-text-input="default"
+    id="pattern"
+    name="pattern"
+    pattern="[A-Za-z]{3}"
+    type="text"
+    value=""
+  />
+</div>
+`;
+
+exports[`TextInput Snapshot: isSearch 1`] = `
+<div
+  data-swarm-text-input-wrapper="default"
+>
+  <input
+    data-swarm-text-input="default"
+    id="isSearch"
+    name="isSearch"
+    type="search"
+    value=""
+  />
+</div>
+`;
+
+exports[`TextInput Snapshot: onChange 1`] = `
+<div
+  data-swarm-text-input-wrapper="default"
+>
+  <input
+    data-swarm-text-input="default"
+    id="onChange"
+    name="onChange"
+    onChange={[MockFunction]}
+    type="text"
+    value=""
+  />
+</div>
+`;

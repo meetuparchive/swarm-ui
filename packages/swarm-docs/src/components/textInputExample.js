@@ -54,7 +54,7 @@ const Example = () => {
         pattern="[A-Za-z]{3}"
         onChange={(e) => setValue6(e.target.value)} />
       <br/>
-      <label htmlFor="input7">Search Input</label>
+      <label htmlFor="input7">Icon Input</label>
       <TextInput
         id="input7"
         name="input7"
