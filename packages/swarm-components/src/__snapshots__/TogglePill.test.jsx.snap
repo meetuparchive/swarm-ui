@@ -65,3 +65,15 @@ exports[`TogglePill Snapshot: Grow 1`] = `
   </span>
 </button>
 `;
+
+exports[`TogglePill Snapshot: Reset 1`] = `
+<button
+  data-swarm-toggle-pill="reset"
+  data-swarm-width="default"
+  role="checkbox"
+>
+  <span>
+    No styles
+  </span>
+</button>
+`;

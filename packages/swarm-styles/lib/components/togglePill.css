@@ -32,6 +32,16 @@
     color: var(--color-white)
 }
 
+[data-swarm-toggle-pill="reset"] {
+    border: none;
+    padding: var(--size-space-quarter);
+    color: var(--color-gray-6);
+}
+
+[data-swarm-toggle-pill="reset"]:focus {
+    outline-style: none;
+}
+
 /* space vars not working for padding */
 div[data-swarm-toggle-pill] span {
     padding: 8px 16px;

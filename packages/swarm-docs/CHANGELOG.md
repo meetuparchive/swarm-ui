@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.9.0](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.8.31...@meetup/swarm-docs@0.9.0) (2019-05-13)
+
+
+### Features
+
+* adds reset prop with styling to TogglePill with example ([e0beac1](https://github.com/gatsbyjs/gatsby-starter-default/commit/e0beac1))
+
+
+
+
+
 ## [0.8.31](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.8.30...@meetup/swarm-docs@0.8.31) (2019-05-10)
 
 **Note:** Version bump only for package @meetup/swarm-docs

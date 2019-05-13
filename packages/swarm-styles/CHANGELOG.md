@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.4.3...@meetup/swarm-styles@0.5.0) (2019-05-13)
+
+
+### Features
+
+* adds reset prop with styling to TogglePill with example ([e0beac1](https://github.com/meetup/swarm-ui/commit/e0beac1))
+
+
+
+
+
 ## [0.4.3](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.4.2...@meetup/swarm-styles@0.4.3) (2019-05-10)
 
 
