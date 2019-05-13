@@ -29,7 +29,7 @@ describe('Textarea', () => {
 		['onChange', <Textarea key="6" value="" onChange={mockOnChange} />],
 	];
 
-	test.each(testCases)('Snapshot', (description, element) => {
+	test.each(testCases)('Snapshot: %s', (description, element) => {
 		expect(shallow(element)).toMatchSnapshot();
     });
 
@@ -83,7 +83,7 @@ describe('CharCount', () => {
 		['with props', <CharCount key="1" className="foo" data-attribute="foo" />],
 	];
 
-	test.each(testCases)('Snapshot', (description, element) => {
+	test.each(testCases)('Snapshot: %s', (description, element) => {
 		expect(shallow(element)).toMatchSnapshot();
     });
 });

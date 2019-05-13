@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CharCount Snapshot 1`] = `
+exports[`CharCount Snapshot: Default 1`] = `
 <p
   className="text--tiny"
   data-swarm-textarea-char-count={true}
 />
 `;
 
-exports[`CharCount Snapshot 2`] = `
+exports[`CharCount Snapshot: with props 1`] = `
 <p
   className="foo"
   data-attribute="foo"
@@ -15,7 +15,7 @@ exports[`CharCount Snapshot 2`] = `
 />
 `;
 
-exports[`Textarea Snapshot 1`] = `
+exports[`Textarea Snapshot: Default (empty) 1`] = `
 <div
   data-swarm-textarea-wrapper={true}
 >
@@ -26,7 +26,7 @@ exports[`Textarea Snapshot 1`] = `
 </div>
 `;
 
-exports[`Textarea Snapshot 2`] = `
+exports[`Textarea Snapshot: Default (value) 1`] = `
 <div
   data-swarm-textarea-wrapper={true}
 >
@@ -37,7 +37,7 @@ exports[`Textarea Snapshot 2`] = `
 </div>
 `;
 
-exports[`Textarea Snapshot 3`] = `
+exports[`Textarea Snapshot: Disabled 1`] = `
 <div
   data-swarm-textarea-wrapper={true}
 >
@@ -49,7 +49,7 @@ exports[`Textarea Snapshot 3`] = `
 </div>
 `;
 
-exports[`Textarea Snapshot 4`] = `
+exports[`Textarea Snapshot: Error 1`] = `
 <div
   data-swarm-textarea-wrapper={true}
 >
@@ -61,7 +61,18 @@ exports[`Textarea Snapshot 4`] = `
 </div>
 `;
 
-exports[`Textarea Snapshot 5`] = `
+exports[`Textarea Snapshot: autosize 1`] = `
+<div
+  data-swarm-textarea-wrapper={true}
+>
+  <textarea
+    data-swarm-textarea="default"
+    value="foo"
+  />
+</div>
+`;
+
+exports[`Textarea Snapshot: maxLength 1`] = `
 <div
   data-swarm-textarea-wrapper={true}
 >
@@ -75,18 +86,7 @@ exports[`Textarea Snapshot 5`] = `
 </div>
 `;
 
-exports[`Textarea Snapshot 6`] = `
-<div
-  data-swarm-textarea-wrapper={true}
->
-  <textarea
-    data-swarm-textarea="default"
-    value="foo"
-  />
-</div>
-`;
-
-exports[`Textarea Snapshot 7`] = `
+exports[`Textarea Snapshot: onChange 1`] = `
 <div
   data-swarm-textarea-wrapper={true}
 >
