@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CharCount Snapshot: Default 1`] = `
+<p
+  className="text--tiny"
+  data-swarm-textarea-char-count={true}
+/>
+`;
+
+exports[`CharCount Snapshot: with props 1`] = `
+<p
+  className="foo"
+  data-attribute="foo"
+  data-swarm-textarea-char-count={true}
+/>
+`;
+
+exports[`Textarea Snapshot: Default (empty) 1`] = `
+<div
+  data-swarm-textarea-wrapper={true}
+>
+  <textarea
+    data-swarm-textarea="default"
+    value=""
+  />
+</div>
+`;
+
+exports[`Textarea Snapshot: Default (value) 1`] = `
+<div
+  data-swarm-textarea-wrapper={true}
+>
+  <textarea
+    data-swarm-textarea="default"
+    value="foo"
+  />
+</div>
+`;
+
+exports[`Textarea Snapshot: Disabled 1`] = `
+<div
+  data-swarm-textarea-wrapper={true}
+>
+  <textarea
+    data-swarm-textarea="disabled"
+    disabled={true}
+    value=""
+  />
+</div>
+`;
+
+exports[`Textarea Snapshot: Error 1`] = `
+<div
+  data-swarm-textarea-wrapper={true}
+>
+  <textarea
+    data-swarm-textarea="error"
+    error={true}
+    value="foo"
+  />
+</div>
+`;
+
+exports[`Textarea Snapshot: autosize 1`] = `
+<div
+  data-swarm-textarea-wrapper={true}
+>
+  <textarea
+    data-swarm-textarea="default"
+    value="foo"
+  />
+</div>
+`;
+
+exports[`Textarea Snapshot: maxLength 1`] = `
+<div
+  data-swarm-textarea-wrapper={true}
+>
+  <textarea
+    data-swarm-textarea="default"
+    value="foo"
+  />
+  <CharCount>
+    NaN
+  </CharCount>
+</div>
+`;
+
+exports[`Textarea Snapshot: onChange 1`] = `
+<div
+  data-swarm-textarea-wrapper={true}
+>
+  <textarea
+    data-swarm-textarea="default"
+    onChange={[MockFunction]}
+    value=""
+  />
+</div>
+`;

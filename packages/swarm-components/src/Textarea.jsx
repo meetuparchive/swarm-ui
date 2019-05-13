@@ -31,13 +31,13 @@ type CharProps = {
     children?: React.Node
 }
 
-const getTextareaStatus = (props: Props): string => {
+export const getTextareaStatus = (props: Props): string => {
     return props.disabled ? 'disabled' : (props.error ? 'error' : 'default');
 };
 
-const getCharacterCount = (value: string = '') => value.length;
+export const getCharacterCount = (value: string = '') => value.length;
 
-const CharCount = (props: CharProps) => <p data-swarm-textarea-char-count className="text--tiny" {...props} />;
+export const CharCount = (props: CharProps) => <p data-swarm-textarea-char-count className="text--tiny" {...props} />;
 
 
 class Textarea extends React.Component<Props, State> {
@@ -57,7 +57,11 @@ class Textarea extends React.Component<Props, State> {
 
     render() {
         // maxLength is removed because we want to allow for typing over the character limit
-        const { maxLength, autosize, ...other } = this.props;
+        const {
+            maxLength,
+            autosize, // eslint-disable-line no-unused-vars
+            ...other
+        } = this.props;
 
         const remainingCharacters = (parseInt(maxLength, 10) - getCharacterCount(this.props.value));
         const textareaStatus = getTextareaStatus({ ...this.props, error: this.props.error || remainingCharacters < 0 });
