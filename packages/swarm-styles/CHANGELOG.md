@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.2](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.5.1...@meetup/swarm-styles@0.5.2) (2019-05-13)
+
+
+### Bug Fixes
+
+* padding fixed for icon only small buttons ([13bdd03](https://github.com/meetup/swarm-ui/commit/13bdd03))
+
+
+
+
+
 ## [0.5.1](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.5.0...@meetup/swarm-styles@0.5.1) (2019-05-13)
 
 
