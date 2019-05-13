@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CharCount Snapshot 1`] = `
+<p
+  className="text--tiny"
+  data-swarm-textarea-char-count={true}
+/>
+`;
+
+exports[`CharCount Snapshot 2`] = `
+<p
+  className="foo"
+  data-attribute="foo"
+  data-swarm-textarea-char-count={true}
+/>
+`;
+
+exports[`Textarea Snapshot 1`] = `
+<div
+  data-swarm-textarea-wrapper={true}
+>
+  <textarea
+    data-swarm-textarea="default"
+    value=""
+  />
+</div>
+`;
+
+exports[`Textarea Snapshot 2`] = `
+<div
+  data-swarm-textarea-wrapper={true}
+>
+  <textarea
+    data-swarm-textarea="default"
+    value="foo"
+  />
+</div>
+`;
+
+exports[`Textarea Snapshot 3`] = `
+<div
+  data-swarm-textarea-wrapper={true}
+>
+  <textarea
+    data-swarm-textarea="disabled"
+    disabled={true}
+    value=""
+  />
+</div>
+`;
+
+exports[`Textarea Snapshot 4`] = `
+<div
+  data-swarm-textarea-wrapper={true}
+>
+  <textarea
+    data-swarm-textarea="error"
+    error={true}
+    value="foo"
+  />
+</div>
+`;
+
+exports[`Textarea Snapshot 5`] = `
+<div
+  data-swarm-textarea-wrapper={true}
+>
+  <textarea
+    data-swarm-textarea="default"
+    value="foo"
+  />
+  <CharCount>
+    NaN
+  </CharCount>
+</div>
+`;
+
+exports[`Textarea Snapshot 6`] = `
+<div
+  data-swarm-textarea-wrapper={true}
+>
+  <textarea
+    data-swarm-textarea="default"
+    value="foo"
+  />
+</div>
+`;
+
+exports[`Textarea Snapshot 7`] = `
+<div
+  data-swarm-textarea-wrapper={true}
+>
+  <textarea
+    data-swarm-textarea="default"
+    onChange={[MockFunction]}
+    value=""
+  />
+</div>
+`;
