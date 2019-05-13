@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.13.1](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.13.0...@meetup/swarm-components@0.13.1) (2019-05-13)
+
+
+### Bug Fixes
+
+* button icon styles on hover. remove fill on icon ([97bdac1](https://github.com/meetup/swarm-ui/commit/97bdac1))
+* removed icon fills from link button. updated snaps ([55601c9](https://github.com/meetup/swarm-ui/commit/55601c9))
+
+
+
+
+
 # [0.13.0](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.12.4...@meetup/swarm-components@0.13.0) (2019-05-13)
 
 
