@@ -4,7 +4,25 @@ import Checkbox from './Checkbox';
 
 describe('Checkbox', () => {
 	const testCases = [
-		['Default', <Checkbox key="1" >Check me</Checkbox>],
+		['Default', <Checkbox key="default">Check me</Checkbox>],
+		[
+			'Checked',
+			<Checkbox key="checked" checked>
+				Uncheck me
+			</Checkbox>,
+		],
+		[
+			'Disbled unchecked',
+			<Checkbox key="disabled" disabled>
+				Can&apos;t check me
+			</Checkbox>,
+		],
+		[
+			'Disbled checked',
+			<Checkbox key="disabled-checked" disabled checked>
+				Can&apos;t uncheck me
+			</Checkbox>,
+		],
 	];
 
 	test.each(testCases)('Snapshot: %s', (description, element) => {
