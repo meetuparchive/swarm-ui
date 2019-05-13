@@ -29,6 +29,12 @@ describe('TogglePill', () => {
 				Full width (grow)
 			</TogglePill>,
 		],
+		[
+			'Reset',
+			<TogglePill key="reset" reset>
+				No styles
+			</TogglePill>,
+		],
 	];
 
 	test.each(testCases)('Snapshot: %s', (description, element) => {

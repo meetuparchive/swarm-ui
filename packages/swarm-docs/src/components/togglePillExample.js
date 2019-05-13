@@ -24,6 +24,13 @@ const Example = () => {
           grow
         />
       </div>
+      <div style={{marginTop: '8px'}}>
+        <TogglePill
+          label="Reset TogglePill (no styling)"
+          id="example3"
+          reset
+        />
+      </div>
     </>
   );
 };
