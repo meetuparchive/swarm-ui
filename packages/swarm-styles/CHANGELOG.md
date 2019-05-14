@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.7](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.5.6...@meetup/swarm-styles@0.5.7) (2019-05-14)
+
+
+### Bug Fixes
+
+* reverting inconsistent styles between docs and mup-web ([d648282](https://github.com/meetup/swarm-ui/commit/d648282))
+
+
+
+
+
 ## [0.5.6](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.5.5...@meetup/swarm-styles@0.5.6) (2019-05-14)
 
 
