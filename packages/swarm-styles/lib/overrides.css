@@ -16,3 +16,7 @@
 .text--secondary {
     color: var(--color-gray-7);
 }
+
+.text--error {
+  color: var(--color-alert-red);
+}
