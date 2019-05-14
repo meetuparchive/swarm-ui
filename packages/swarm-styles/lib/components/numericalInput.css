@@ -70,7 +70,7 @@
 
 /* focused */
 [data-swarm-number-input]:focus-within {
-    box-shadow: 0 0 1px 2px rgb(94, 158, 214);
+    border-color: var(--color-viridian);
 }
 [data-swarm-number-input-field]:focus {
     outline: none;
