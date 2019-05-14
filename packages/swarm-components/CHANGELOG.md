@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.13.4](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.13.3...@meetup/swarm-components@0.13.4) (2019-05-14)
+
+
+### Bug Fixes
+
+* updating contrast colors for checkboxes ([231bef4](https://github.com/meetup/swarm-ui/commit/231bef4))
+
+
+
+
+
 ## [0.13.3](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.13.2...@meetup/swarm-components@0.13.3) (2019-05-14)
 
 
