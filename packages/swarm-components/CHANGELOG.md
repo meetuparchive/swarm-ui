@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.13.5](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.13.4...@meetup/swarm-components@0.13.5) (2019-05-14)
+
+
+### Bug Fixes
+
+* numerical input style widths ([cf45001](https://github.com/meetup/swarm-ui/commit/cf45001))
+
+
+
+
+
 ## [0.13.4](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.13.3...@meetup/swarm-components@0.13.4) (2019-05-14)
 
 

@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.5](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.5.4...@meetup/swarm-styles@0.5.5) (2019-05-14)
+
+
+### Bug Fixes
+
+* numerical input style widths ([cf45001](https://github.com/meetup/swarm-ui/commit/cf45001))
+* radio contrast updates ([3f657c9](https://github.com/meetup/swarm-ui/commit/3f657c9))
+
+
+
+
+
 ## [0.5.4](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.5.3...@meetup/swarm-styles@0.5.4) (2019-05-14)
 
 
