@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.13.6](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.13.5...@meetup/swarm-components@0.13.6) (2019-05-14)
+
+
+### Bug Fixes
+
+* text input 100%, select icon vertically centered ([ea0d1d4](https://github.com/meetup/swarm-ui/commit/ea0d1d4))
+
+
+
+
+
 ## [0.13.5](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.13.4...@meetup/swarm-components@0.13.5) (2019-05-14)
 
 
