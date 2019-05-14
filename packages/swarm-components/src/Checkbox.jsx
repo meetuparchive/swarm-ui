@@ -63,7 +63,7 @@ const Checkbox = (props: Props): React.Element<'label'> => {
 				aria-checked={checked}
 			>
 				{checked && (
-					<Icon shape="check" size="xs" color={disabled ? '#A2A2A2' : '#ffffff'} />
+					<Icon shape="check" size="xs" color={disabled ? 'var(--color-gray-6)': '#ffffff'} />
 				)}
 			</span>
 			<input
