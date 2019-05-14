@@ -7,6 +7,8 @@
     background-color: var(--color-white);
     border-radius: 4px;
     color: var(--color-gray-7);
+    width: 100%;
+    box-sizing: border-box;
 }
 
 [data-swarm-text-input-wrapper="default"] [data-swarm-text-input] {

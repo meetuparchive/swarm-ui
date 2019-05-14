@@ -5,7 +5,7 @@ exports[`Button Snapshot: Default 1`] = `
   data-swarm-select="default"
 >
   <div
-    data-swarm-select-wrapper="1"
+    data-swarm-select-wrapper={true}
   >
     <select
       id="select"
@@ -45,7 +45,7 @@ exports[`Button Snapshot: Disabled 1`] = `
   data-swarm-select="disabled"
 >
   <div
-    data-swarm-select-wrapper="1"
+    data-swarm-select-wrapper={true}
   >
     <select
       disabled={true}
@@ -86,7 +86,7 @@ exports[`Button Snapshot: Error 1`] = `
   data-swarm-select="error"
 >
   <div
-    data-swarm-select-wrapper="1"
+    data-swarm-select-wrapper={true}
   >
     <select
       id="select"
@@ -126,7 +126,7 @@ exports[`Button Snapshot: Required Text 1`] = `
   data-swarm-select="default"
 >
   <div
-    data-swarm-select-wrapper="1"
+    data-swarm-select-wrapper={true}
   >
     <select
       id="select"
@@ -167,7 +167,7 @@ exports[`Button Snapshot: With Id 1`] = `
   data-swarm-select="default"
 >
   <div
-    data-swarm-select-wrapper="1"
+    data-swarm-select-wrapper={true}
   >
     <select
       id="select"
