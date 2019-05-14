@@ -2,11 +2,12 @@ import { NumericalInput } from '@meetup/swarm-components';
 import Example from '../components/numericalExample';
 
 # Numerical Input
+Fills to the width of its container.
 ```.jsx
-<NumericalInput value={1} />
+<div style={{ width: 300 }}>
+  <NumericalInput value={1} />
+</div>
 ```
-
-<NumericalInput onIncrament={() => alert('incrament')} />
 
 ## example
 <Example />

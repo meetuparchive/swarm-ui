@@ -1,11 +1,13 @@
 [data-swarm-number-input] {
     display: inline-flex;
-    border: 1px solid #DCDCDC;
-    background-color: #FAFAFA;
+    border: 1px solid var(--color-gray-5);
+    background-color: var(--color-white);
     border-radius: 4px;
     padding: var(--size-space-default);
     color: var(--color-gray-7);
     align-items: center;
+    width: 100%;
+    box-sizing: border-box;
 }
 [data-swarm-number-input]:focus {
     outline: none;
@@ -19,7 +21,7 @@
 [data-swarm-number-input="disabled"] {
     background-color: var(--color-gray-3);
     border-color: var(--color-gray-3);
-    color: var(--color-gray-5);
+    color: var(--color-gray-6);
 }
 
 [data-swarm-number-input="error"] {
@@ -27,7 +29,7 @@
 }
 
 [data-swarm-number-input] input {
-    background-color: #FAFAFA;
+    background-color: var(--color-white);
     border: none;
     padding: 0;
     color: var(--color-gray-7);
@@ -42,9 +44,29 @@
 }
 
 [data-swarm-number-input-field] {
+    width: 100%;
     height: 16px;
     margin: 0;
 }
+
+[data-swarm-number-input-increment] {
+    margin-left: var(--space-half);
+}
+
+/* hover */
+[data-swarm-number-input]:hover {
+   border-color: var(--color-gray-6);
+}
+
+[data-swarm-number-input] button:hover {
+    cursor: pointer;
+}
+
+/* placeholder */
+[data-swarm-number-input-field]::placeholder {
+    color: var(--color-gray-5);
+}
+
 
 /* focused */
 [data-swarm-number-input]:focus-within {
