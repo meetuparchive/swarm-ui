@@ -18,6 +18,10 @@ type Props = {
     /**
      * Value for textarea.
      */
+    name: string,
+    /**
+     * Name for the input.
+     */
     value?: string,
     /**
      * max length of input field
