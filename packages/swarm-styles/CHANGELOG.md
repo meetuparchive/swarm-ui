@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.6](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.5.5...@meetup/swarm-styles@0.5.6) (2019-05-14)
+
+
+### Bug Fixes
+
+* override error to be alert red ([faffe34](https://github.com/meetup/swarm-ui/commit/faffe34))
+* text input 100%, select icon vertically centered ([ea0d1d4](https://github.com/meetup/swarm-ui/commit/ea0d1d4))
+
+
+
+
+
 ## [0.5.5](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.5.4...@meetup/swarm-styles@0.5.5) (2019-05-14)
 
 
