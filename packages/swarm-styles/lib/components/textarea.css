@@ -1,21 +1,29 @@
 [data-swarm-textarea] {
-    border: 1px solid #DCDCDC;
-    background-color: #FAFAFA;
+    border: 1px solid var(--color-gray-5);
+    background-color: var(--color-white);
     border-radius: 4px;
     padding: var(--size-space-default);
     color: var(--color-gray-7);
     width: 100%;
     box-sizing: border-box;
 }
+[data-swarm-textarea]:hover {
+    border-color: var(--color-gray-6);
+}
+
 [data-swarm-textarea]:focus {
     outline: none;
     border-color: var(--color-viridian);
 }
 
+[data-swarm-textarea]::placeholder {
+    color: var(--color-gray-5);
+}
+
 [data-swarm-textarea="disabled"] {
     background-color: var(--color-gray-3);
     border-color: var(--color-gray-3);
-    color: var(--color-gray-5);
+    color: var(--color-gray-6);
 }
 
 [data-swarm-textarea="error"] {
