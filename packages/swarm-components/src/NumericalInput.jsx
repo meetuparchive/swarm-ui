@@ -163,18 +163,6 @@ export class NumericalInput extends React.Component<Props, State> {
 					{...other}
 				/>
 				<button
-					data-swarm-number-input-increment
-					tabIndex="-1"
-					onBlur={this.onBlur}
-					onClick={this.incrementAction}
-                    onFocus={this.onFocus}
-                    ref={(el: HTMLButtonElement | null) =>
-                        (this.incrementBtnEl = el)
-                    }
-				>
-					<Icon shape="plus" size="xs" />
-				</button>
-				<button
 					data-swarm-number-input-decrement
 					tabIndex="-1"
 					onBlur={this.onBlur}
@@ -185,6 +173,18 @@ export class NumericalInput extends React.Component<Props, State> {
                     }
 				>
 					<Icon shape="minus" size="xs" />
+				</button>
+				<button
+					data-swarm-number-input-increment
+					tabIndex="-1"
+					onBlur={this.onBlur}
+					onClick={this.incrementAction}
+                    onFocus={this.onFocus}
+                    ref={(el: HTMLButtonElement | null) =>
+                        (this.incrementBtnEl = el)
+                    }
+				>
+					<Icon shape="plus" size="xs" />
 				</button>
 			</div>
 		);
