@@ -15,7 +15,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid var(--color-gray-3);
+    border: 1px solid var(--color-gray-5);
+    background-color: var(--color-white);
     margin-right: var(--size-space-half);
     border-radius: 4px;
     height: 20px;
@@ -24,8 +25,8 @@
 }
 
 /* hover */
-label[data-swarm-checkbox]:hover  span[data-swarm-checkbox-field] {
-    border-color: var(--color-gray-5);
+[data-swarm-checkbox]:hover  [data-swarm-checkbox-field] {
+    border-color: var(--color-gray-6);
 }
 
 /* focused */
@@ -40,6 +41,8 @@ label[data-swarm-checkbox]:hover  span[data-swarm-checkbox-field] {
 }
 
 /* disabled */
-[data-swarm-checkbox="disabled"] [data-swarm-checkbox-field] {
+[data-swarm-checkbox="disabled"] [data-swarm-checkbox-field],
+[data-swarm-checkbox="disabled"]:hover [data-swarm-checkbox-field] {
     background-color: var(--color-gray-3);
+    border: 1px solid var(--color-gray-3);
 }
