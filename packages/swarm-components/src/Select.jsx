@@ -41,7 +41,7 @@ const Select = (props: Props) => {
 
 	return (
 		<div data-swarm-select={selectState}>
-			<div data-swarm-select-wrapper="1">
+			<div data-swarm-select-wrapper">
 				<select
 					name={name}
 					id={id || name}
