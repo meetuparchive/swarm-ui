@@ -24,7 +24,7 @@ span[data-swarm-radio-field] {
 
 /* hover */
 label[data-swarm-radio]:hover  span[data-swarm-radio-field] {
-    border-color: var(--color-gray-5);
+    border-color: var(--color-gray-6);
 }
 
 /* focused */
@@ -34,7 +34,7 @@ label[data-swarm-radio]:hover  span[data-swarm-radio-field] {
 
 /* unchecked */
 [data-swarm-radio-field="unchecked"] {
-    border: 1px solid var(--color-gray-3);
+    border: 1px solid var(--color-gray-5);
 }
 
 /* checked */
@@ -45,11 +45,11 @@ label[data-swarm-radio]:hover  span[data-swarm-radio-field] {
 
 /* disabled */
 [data-swarm-radio="disabled"] [data-swarm-radio-field] {
-    background-color: var(--color-gray-4);
-    border-color: var(--color-gray-4);
+    background-color: var(--color-gray-3);
+    border-color: var(--color-gray-3);
 }
 [data-swarm-radio="disabled"] [data-swarm-radio-field] [data-swarm-radio-dot] {
-    background-color: var(--color-gray-2);
+    background-color: var(--color-gray-6);
 }
 
 /* selected dot */
