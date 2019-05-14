@@ -11,6 +11,7 @@
   * Ensure that the correct default swarm v2 color is used.
   */
 .text--pageTitle,
+.text--sectionTitle,
 .text--caption,
 .text--secondary {
     color: var(--color-gray-7);
