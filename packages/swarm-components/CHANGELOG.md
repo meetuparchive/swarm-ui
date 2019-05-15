@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.13.10](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.13.9...@meetup/swarm-components@0.13.10) (2019-05-15)
+
+
+### Bug Fixes
+
+* updaating button to declare type=button by default ([609beb2](https://github.com/meetup/swarm-ui/commit/609beb2))
+
+
+
+
+
 ## [0.13.9](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.13.8...@meetup/swarm-components@0.13.9) (2019-05-15)
 
 **Note:** Version bump only for package @meetup/swarm-components
