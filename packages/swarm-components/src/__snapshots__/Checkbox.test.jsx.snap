@@ -1,5 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Checkbox Snapshot: Checked 1`] = `
+<label
+  data-swarm-checkbox="default"
+>
+  <span
+    aria-checked={true}
+    data-swarm-checkbox-field="checked"
+    role="checkbox"
+  >
+    <Icon
+      color="#ffffff"
+      shape="check"
+      size="xs"
+    />
+  </span>
+  <input
+    checked={true}
+    readOnly={true}
+    type="checkbox"
+  />
+  <span>
+    Uncheck me
+  </span>
+</label>
+`;
+
 exports[`Checkbox Snapshot: Default 1`] = `
 <label
   data-swarm-checkbox="default"
@@ -14,6 +40,54 @@ exports[`Checkbox Snapshot: Default 1`] = `
   />
   <span>
     Check me
+  </span>
+</label>
+`;
+
+exports[`Checkbox Snapshot: Disabled checked 1`] = `
+<label
+  data-swarm-checkbox="disabled"
+  disabled={true}
+>
+  <span
+    aria-checked={true}
+    data-swarm-checkbox-field="checked"
+    role="checkbox"
+  >
+    <Icon
+      color="#A2A2A2"
+      shape="check"
+      size="xs"
+    />
+  </span>
+  <input
+    checked={true}
+    disabled={true}
+    readOnly={true}
+    type="checkbox"
+  />
+  <span>
+    Can't uncheck me
+  </span>
+</label>
+`;
+
+exports[`Checkbox Snapshot: Disabled unchecked 1`] = `
+<label
+  data-swarm-checkbox="disabled"
+  disabled={true}
+>
+  <span
+    data-swarm-checkbox-field="unchecked"
+    role="checkbox"
+  />
+  <input
+    disabled={true}
+    readOnly={true}
+    type="checkbox"
+  />
+  <span>
+    Can't check me
   </span>
 </label>
 `;
