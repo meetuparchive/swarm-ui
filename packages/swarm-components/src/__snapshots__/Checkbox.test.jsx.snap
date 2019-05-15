@@ -55,7 +55,7 @@ exports[`Checkbox Snapshot: Disabled checked 1`] = `
     role="checkbox"
   >
     <Icon
-      color="#A2A2A2"
+      color="var(--color-gray-6)"
       shape="check"
       size="xs"
     />
