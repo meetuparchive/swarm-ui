@@ -6,6 +6,7 @@ exports[`Button Snapshot: Bordered 1`] = `
   data-swarm-button="bordered"
   data-swarm-size="default"
   data-swarm-width="default"
+  type="button"
 >
   Press me
 </button>
@@ -17,6 +18,7 @@ exports[`Button Snapshot: Default 1`] = `
   data-swarm-button="default"
   data-swarm-size="default"
   data-swarm-width="default"
+  type="button"
 >
   Press me
 </button>
@@ -29,6 +31,7 @@ exports[`Button Snapshot: Disabled 1`] = `
   data-swarm-size="default"
   data-swarm-width="default"
   disabled={true}
+  type="button"
 >
   Can't press me
 </button>
@@ -40,6 +43,7 @@ exports[`Button Snapshot: Grow 1`] = `
   data-swarm-button="default"
   data-swarm-size="default"
   data-swarm-width="grow"
+  type="button"
 >
   Full Width Button
 </button>
@@ -51,6 +55,7 @@ exports[`Button Snapshot: Icon (right) with text 1`] = `
   data-swarm-button="default"
   data-swarm-size="default"
   data-swarm-width="default"
+  type="button"
 >
   <span>
     Press me
@@ -68,6 +73,7 @@ exports[`Button Snapshot: Icon with text 1`] = `
   data-swarm-button="default"
   data-swarm-size="default"
   data-swarm-width="default"
+  type="button"
 >
   <span>
     <Icon
@@ -85,6 +91,7 @@ exports[`Button Snapshot: Icon without text 1`] = `
   data-swarm-button="default"
   data-swarm-size="default"
   data-swarm-width="default"
+  type="button"
 >
   <span>
     <Icon
@@ -101,6 +108,7 @@ exports[`Button Snapshot: Inverted 1`] = `
   data-swarm-button="inverted"
   data-swarm-size="default"
   data-swarm-width="default"
+  type="button"
 >
   Press me
 </button>
@@ -112,6 +120,7 @@ exports[`Button Snapshot: Neutral 1`] = `
   data-swarm-button="neutral"
   data-swarm-size="default"
   data-swarm-width="default"
+  type="button"
 >
   Press me
 </button>
@@ -123,6 +132,7 @@ exports[`Button Snapshot: Primary 1`] = `
   data-swarm-button="primary"
   data-swarm-size="default"
   data-swarm-width="default"
+  type="button"
 >
   Must press me
 </button>
@@ -134,6 +144,7 @@ exports[`Button Snapshot: Reset 1`] = `
   data-swarm-button="reset"
   data-swarm-size="default"
   data-swarm-width="default"
+  type="button"
 >
    Press me
 </button>
@@ -145,6 +156,7 @@ exports[`Button Snapshot: Small 1`] = `
   data-swarm-button="default"
   data-swarm-size="small"
   data-swarm-width="default"
+  type="button"
 >
   Press me
 </button>

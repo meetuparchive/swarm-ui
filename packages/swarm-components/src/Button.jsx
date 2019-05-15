@@ -99,6 +99,7 @@ const Button = (props: ButtonProps): React.Element<'button'> => {
 			data-swarm-size={getSwarmSize(props)}
 			data-icon={getIconPosition(props)}
 			data-swarm-width={width}
+			type="button"
 			{...other}
 		>
 			{icon ? (
