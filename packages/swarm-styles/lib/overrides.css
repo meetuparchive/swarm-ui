@@ -20,3 +20,8 @@
 .text--error {
   color: var(--color-alert-red);
 }
+
+/* override fill from v1 with specific button colors */
+[data-swarm-button] .svg-icon {
+  fill: inherit;
+}
