@@ -44,7 +44,7 @@ exports[`Checkbox Snapshot: Default 1`] = `
 </label>
 `;
 
-exports[`Checkbox Snapshot: Disbled checked 1`] = `
+exports[`Checkbox Snapshot: Disabled checked 1`] = `
 <label
   data-swarm-checkbox="disabled"
   disabled={true}
@@ -72,7 +72,7 @@ exports[`Checkbox Snapshot: Disbled checked 1`] = `
 </label>
 `;
 
-exports[`Checkbox Snapshot: Disbled unchecked 1`] = `
+exports[`Checkbox Snapshot: Disabled unchecked 1`] = `
 <label
   data-swarm-checkbox="disabled"
   disabled={true}

@@ -12,13 +12,13 @@ describe('Checkbox', () => {
 			</Checkbox>,
 		],
 		[
-			'Disbled unchecked',
+			'Disabled unchecked',
 			<Checkbox key="disabled" disabled>
 				Can&apos;t check me
 			</Checkbox>,
 		],
 		[
-			'Disbled checked',
+			'Disabled checked',
 			<Checkbox key="disabled-checked" disabled checked>
 				Can&apos;t uncheck me
 			</Checkbox>,
