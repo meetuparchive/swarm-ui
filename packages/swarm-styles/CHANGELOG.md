@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.10](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.5.9...@meetup/swarm-styles@0.5.10) (2019-05-15)
+
+
+### Bug Fixes
+
+* button icons inherit fill ([3a816dd](https://github.com/meetup/swarm-ui/commit/3a816dd))
+
+
+
+
+
 ## [0.5.9](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.5.8...@meetup/swarm-styles@0.5.9) (2019-05-15)
 
 **Note:** Version bump only for package @meetup/swarm-styles
