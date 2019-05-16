@@ -188,6 +188,7 @@
 
 [data-swarm-button="reset"] {
   padding: var(--size-space-quarter);
+  font-weight: var(--font-weight-normal);
 }
 
 /* small */

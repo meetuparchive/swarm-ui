@@ -25,3 +25,17 @@
 [data-swarm-button] .svg-icon {
   fill: inherit;
 }
+
+/* override link colors */
+a.link {
+  color: var(--color-viridian);
+}
+
+/* global nav overrides */
+.navItem-label {
+  color: var(--color-gray-7);
+}
+
+.navItem-label:hover {
+  color: var(--color-viridian);
+}
