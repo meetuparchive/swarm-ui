@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.11](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.5.10...@meetup/swarm-styles@0.5.11) (2019-05-16)
+
+
+### Bug Fixes
+
+* button reset to 400. specific nav overrides ([7fca5e2](https://github.com/meetup/swarm-ui/commit/7fca5e2))
+
+
+
+
+
 ## [0.5.10](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.5.9...@meetup/swarm-styles@0.5.10) (2019-05-15)
 
 
