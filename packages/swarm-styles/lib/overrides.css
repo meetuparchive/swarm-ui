@@ -27,13 +27,13 @@
 }
 
 /* override link colors */
-a.link {
+a.link, .link {
   color: var(--color-viridian);
 }
 
 /* global nav overrides */
 .navItem-label {
-  color: var(--color-gray-7);
+  color: var(--color-gray-6);
 }
 
 .navItem-label:hover {
