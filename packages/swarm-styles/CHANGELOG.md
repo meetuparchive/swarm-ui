@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.15](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.5.14...@meetup/swarm-styles@0.5.15) (2019-05-17)
+
+
+### Bug Fixes
+
+* text--blue as viridian ([21b7557](https://github.com/meetup/swarm-ui/commit/21b7557))
+
+
+
+
+
 ## [0.5.14](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.5.13...@meetup/swarm-styles@0.5.14) (2019-05-17)
 
 
