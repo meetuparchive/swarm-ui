@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.13](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.5.12...@meetup/swarm-styles@0.5.13) (2019-05-17)
+
+
+### Bug Fixes
+
+* more overrirdes, icon xs to button lineheight ([a12bdd5](https://github.com/meetup/swarm-ui/commit/a12bdd5))
+
+
+
+
+
 ## [0.5.12](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.5.11...@meetup/swarm-styles@0.5.12) (2019-05-16)
 
 
