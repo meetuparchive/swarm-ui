@@ -12,9 +12,12 @@
   */
 .text--pageTitle,
 .text--sectionTitle,
-.text--caption,
-.text--secondary {
+.text--caption {
     color: var(--color-gray-7);
+}
+
+.text--secondary {
+  color: var(--color-gray-6);
 }
 
 .text--error {
@@ -27,7 +30,12 @@
 }
 
 /* override link colors */
-a.link, .link {
+.link,
+a.link,
+.runningText a,
+.runningText a svg,
+button.link,
+.link svg {
   color: var(--color-viridian);
 }
 

@@ -8,7 +8,7 @@ export const ICON_CIRCLED_CLASS = 'svg--circled';
 
 export const MEDIA_SIZES = {
 	xxs: '12',
-	xs: '16',
+	xs: '20',
 	s: '24',
 	m: '36',
 	l: '48',
