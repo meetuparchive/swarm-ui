@@ -39,6 +39,11 @@ button.link,
   color: var(--color-viridian);
 }
 
+/* .text--blue is used as a link */
+.text--blue {
+  color: var(--color-viridian);
+}
+
 /* global nav overrides */
 .navItem-label {
   color: var(--color-gray-6);
@@ -47,3 +52,4 @@ button.link,
 .navItem-label:hover {
   color: var(--color-viridian);
 }
+
