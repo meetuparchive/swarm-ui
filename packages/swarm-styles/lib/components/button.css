@@ -191,6 +191,11 @@
   font-weight: var(--font-weight-normal);
 }
 
+[data-swarm-button="reset"].padding--none, 
+[data-swarm-button="reset"][data-icon="only"].padding--none {
+  padding: 0;
+}
+
 /* small */
 %swarm-button-small {
   padding: var(--space-quarter) var(--space-half);
