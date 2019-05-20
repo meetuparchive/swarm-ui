@@ -3,6 +3,46 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.9.17](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.9.16...@meetup/swarm-docs@0.9.17) (2019-05-17)
+
+**Note:** Version bump only for package @meetup/swarm-docs
+
+
+
+
+
+## [0.9.16](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.9.15...@meetup/swarm-docs@0.9.16) (2019-05-17)
+
+**Note:** Version bump only for package @meetup/swarm-docs
+
+
+
+
+
+## [0.9.15](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.9.14...@meetup/swarm-docs@0.9.15) (2019-05-17)
+
+**Note:** Version bump only for package @meetup/swarm-docs
+
+
+
+
+
+## [0.9.14](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.9.13...@meetup/swarm-docs@0.9.14) (2019-05-16)
+
+**Note:** Version bump only for package @meetup/swarm-docs
+
+
+
+
+
+## [0.9.13](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.9.12...@meetup/swarm-docs@0.9.13) (2019-05-16)
+
+**Note:** Version bump only for package @meetup/swarm-docs
+
+
+
+
+
 ## [0.9.12](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.9.11...@meetup/swarm-docs@0.9.12) (2019-05-15)
 
 **Note:** Version bump only for package @meetup/swarm-docs

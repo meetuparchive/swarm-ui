@@ -188,6 +188,12 @@
 
 [data-swarm-button="reset"] {
   padding: var(--size-space-quarter);
+  font-weight: var(--font-weight-normal);
+}
+
+[data-swarm-button="reset"].padding--none, 
+[data-swarm-button="reset"][data-icon="only"].padding--none {
+  padding: 0;
 }
 
 /* small */
@@ -204,7 +210,7 @@
   margin-right:  var(--space-half);
 }
 
-[data-swarm-button][data-icon="left"] .svg-icon {
+[data-swarm-button][data-icon="left"] > span > .svg-icon {
   @extend %swarm-button-icon-left;
 }
 
@@ -212,7 +218,7 @@
   margin-left:  var(--space-half);
 }
 
-[data-swarm-button][data-icon="right"] .svg-icon {
+[data-swarm-button][data-icon="right"] > span > .svg-icon {
   @extend %swarm-button-icon-right;
 }
 

@@ -12,9 +12,12 @@
   */
 .text--pageTitle,
 .text--sectionTitle,
-.text--caption,
-.text--secondary {
+.text--caption {
     color: var(--color-gray-7);
+}
+
+.text--secondary {
+  color: var(--color-gray-6);
 }
 
 .text--error {
@@ -25,3 +28,28 @@
 [data-swarm-button] .svg-icon {
   fill: inherit;
 }
+
+/* override link colors */
+.link,
+a.link,
+.runningText a,
+.runningText a svg,
+button.link,
+.link svg {
+  color: var(--color-viridian);
+}
+
+/* .text--blue is used as a link */
+.text--blue {
+  color: var(--color-viridian);
+}
+
+/* global nav overrides */
+.navItem-label {
+  color: var(--color-gray-6);
+}
+
+.navItem-label:hover {
+  color: var(--color-viridian);
+}
+
