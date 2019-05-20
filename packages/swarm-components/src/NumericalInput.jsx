@@ -1,7 +1,6 @@
 // @flow
 import * as React from 'react';
 import Icon from './Icon';
-import { SSL_OP_MSIE_SSLV2_RSA_PADDING } from 'constants';
 
 type Value = number | null;
 type Props = {
