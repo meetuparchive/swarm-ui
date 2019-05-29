@@ -3,7 +3,7 @@ import * as React from 'react';
 import auto from 'autosize';
 
 import CharCount, {
-    getCharacterCount,
+    getRemainingCharacters,
 } from './shared/CharCount';
 
 type Props = {
@@ -63,7 +63,7 @@ class Textarea extends React.Component<Props, State> {
             ...other
         } = this.props;
 
-        const remainingCharacters = (parseInt(maxLength, 10) - getCharacterCount(this.props.value));
+        const remainingCharacters = getRemainingCharacters(maxLength, this.props.value);
         const textareaStatus = getTextareaStatus({ ...this.props, error: this.props.error || remainingCharacters < 0 });
 
         return (
@@ -75,7 +75,7 @@ class Textarea extends React.Component<Props, State> {
                     }}
                     {...other}
                 />
-                { maxLength && <CharCount>{remainingCharacters}</CharCount>}
+                {maxLength && <CharCount>{remainingCharacters}</CharCount>}
             </div>
         );
     };

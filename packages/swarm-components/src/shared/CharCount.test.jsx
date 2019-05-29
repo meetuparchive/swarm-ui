@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import CharCount, {
-    getCharacterCount,
+	getRemainingCharacters,
 } from './CharCount';
 
 describe('CharCount', () => {
@@ -15,15 +15,18 @@ describe('CharCount', () => {
     });
 });
 
-describe('getCharacterCount', () => {
-	it('returns 0 when no argument provided', () => {
-		expect(getCharacterCount()).toEqual(0);
+describe('getRemainingCharacters', () => {
+	const maxLength = 10;
+
+	it('returns `maxLength` when no value provided', () => {
+		expect(getRemainingCharacters(maxLength)).toEqual(maxLength);
 	});
 
-	it('returns the length of a string', () => {
-		expect(getCharacterCount('')).toEqual(0);
-		expect(getCharacterCount('f')).toEqual(1);
-		expect(getCharacterCount('f234')).toEqual(4);
-		expect(getCharacterCount('ff ff ff')).toEqual(8);
+	it('returns the remaining character count', () => {
+		expect(getRemainingCharacters(maxLength, '')).toEqual(maxLength);
+		expect(getRemainingCharacters(maxLength, 'f')).toEqual(9);
+		expect(getRemainingCharacters(maxLength, 'f234')).toEqual(6);
+		expect(getRemainingCharacters(maxLength, 'ff ff ')).toEqual(4);
+		expect(getRemainingCharacters(maxLength, '000000000000000')).toEqual(-5);
 	});
 });
