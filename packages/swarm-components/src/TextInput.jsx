@@ -54,7 +54,7 @@ type Props = {
 	/**
 	 * max length of input field
 	 */
-	maxLength?: string | number,
+	maxLength?: number,
 };
 
 /**

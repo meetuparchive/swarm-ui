@@ -21,7 +21,7 @@ describe('Textarea', () => {
 		['Default (value)', <Textarea key="1" value="foo" />],
 		['Disabled', <Textarea key="2" value="" disabled />],
 		['Error', <Textarea key="3" value="foo" error />],
-		['maxLength', <Textarea key="4" value="foo" maxLength />],
+		['maxLength', <Textarea key="4" value="foo" maxLength="20" />],
 		['autosize', <Textarea key="5" value="foo" autosize />],
 		['onChange', <Textarea key="6" value="" onChange={mockOnChange} />],
 	];

@@ -71,7 +71,7 @@ describe('TextInput', () => {
 				id="maxLength"
 				name="maxLength"
 				value="foo fooo"
-				maxLength="20"
+				maxLength={20}
 			/>,
 		],
 	];

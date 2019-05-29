@@ -6,7 +6,7 @@ type CharProps = {
 };
 
 export const getRemainingCharacters = (maxLength: number, value: string = '') =>
-	parseInt(maxLength, 10) - value.length;
+	maxLength - value.length;
 
 const CharCount = (props: CharProps) => (
 	<p data-swarm-textarea-char-count className="text--tiny" {...props} />
