@@ -1,6 +1,9 @@
 // @flow
 import * as React from 'react';
 import Icon from './Icon';
+import CharCount, {
+  getRemainingCharacters,
+} from './shared/CharCount';
 
 const ICON_SIZES = Object.freeze({
   XXS: 'xxs',
@@ -50,6 +53,10 @@ type Props = {
    * Default size is `xs`
    */
   iconSize?: $Values<typeof ICON_SIZES>,
+  /**
+   * max length of input field
+   */
+  maxLength?: string | number,
 };
 
 /**
@@ -65,11 +72,13 @@ export const TextInput = (props: Props): React$Element<*> => {
     id,
     iconShape,
     iconSize = 'xs',
+    maxLength,
     ...other
   } = props;
 
   const wrapperState = iconShape ? 'icon' : 'default';
   const inputState = disabled ? 'disabled' : error ? 'error' : 'default';
+  const remainingCharacters = getRemainingCharacters(maxLength, props.value);
 
   return (
     <div data-swarm-text-input-wrapper={wrapperState}>
@@ -87,6 +96,7 @@ export const TextInput = (props: Props): React$Element<*> => {
           <Icon shape={iconShape} size={iconSize} aria-hidden={true} />
         </span>
       )}
+      {maxLength && <CharCount>{remainingCharacters}</CharCount>}
     </div>
   );
 };

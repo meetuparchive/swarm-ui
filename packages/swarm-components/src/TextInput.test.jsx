@@ -15,6 +15,7 @@ describe('TextInput', () => {
         ['onChange', <TextInput key="7" id="onChange" name="onChange" value="" onChange={mockOnChange} />],
         ['Icon', <TextInput key="8" id="icon" name="icon" value="" iconShape="location-pin" />],
         ['Icon (custom size)', <TextInput key="9" id="iconsize" name="iconsize" value="" iconShape="location-pin" iconSize="m" />],
+		['maxLength (char count)', <TextInput key="10" id="maxLength" name="maxLength" value="foo fooo" maxLength="20"/>],
 	];
 
 	test.each(testCases)('Snapshot: %s', (description, element) => {
