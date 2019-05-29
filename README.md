@@ -1,4 +1,4 @@
-# Swarm Ecosystem
+# Swarm Ecosystem [![Build Status](https://travis-ci.com/meetup/swarm-ui.svg?branch=master)](https://travis-ci.com/meetup/swarm-ui)
 This is a monorepo that houses all packages used to build the swarm design system
 
 [Documentation](https://github.com/meetup/swarm-ui/tree/master/packages/swarm-docs) `@meetup/swarm-docs`
