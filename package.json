@@ -8,6 +8,7 @@
     "build": "yarn build:src && yarn build:docs",
     "build:docs": "lerna run build --scope @meetup/swarm-docs",
     "build:src": "lerna run build --scope @meetup/swarm-constants --scope @meetup/swarm-styles --scope @meetup/swarm-components",
+    "now-build": "cd packages/swarm-docs && npm run build",
     "test": "yarn && yarn build:src && yarn test:unit",
     "test:unit": "lerna run --scope @meetup/swarm-components test:unit --stream",
     "test:updateSnaps": "yarn test:unit -- -- --u"

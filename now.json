@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "name": "@meetup/swarm-docs",
+  "builds": [
+    {
+      "src": "packages/swarm-docs/package.json",
+      "use": "@now/static-build",
+      "config": { "distDir": "public" }
+    }
+  ]
+}
