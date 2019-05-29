@@ -17,10 +17,6 @@ type Props = {
      */
     error?: React$Node,
     /**
-     * id of the input
-     */
-    id: string,
-    /**
      * the maximum integer allowed
      */
 	max?: number,
@@ -29,21 +25,17 @@ type Props = {
      */
     min?: number,
     /**
-     * name of the input, used with labels
-     */
-    name: string,
-    /**
      * Required change handler with Value, not event
      */
     onChange: Value => void,
     /**
      * funcitonality invoked when the form field is blurred
      */
-    onBlur: (SyntheticInputEvent<HTMLInputElement>) => void,
+    onBlur?: (SyntheticInputEvent<HTMLInputElement>) => void,
     /**
      * The amount the input will increment or decrement when using keyboard interactions
      */
-    step: number,
+    step?: number,
     /**
      * The value of the field
      */
@@ -55,9 +47,13 @@ type State = {
 	value: Value,
 };
 
-const getStatus = (props: Props): string => {
+export const getStatus = (props: Props): string => {
 	return props.disabled ? 'disabled' : props.error ? 'error' : 'default';
 };
+
+export const isDefined = (number: number): boolean => {
+	return (typeof number !== 'undefined' && number !== null);
+}
 
 export class NumericalInput extends React.Component<Props, State> {
 	fauxInputEl: HTMLInputElement | null;
@@ -66,11 +62,10 @@ export class NumericalInput extends React.Component<Props, State> {
 
 	static defaultProps = {
 		step: 1,
-		min: 0,
 	};
 
 	state = {
-		value: this.props.value || this.props.value === 0 ? this.props.value : null,
+		value: isDefined(this.props.value) ? this.props.value : null,
 		isFieldFocused: false,
 	};
 
@@ -84,29 +79,31 @@ export class NumericalInput extends React.Component<Props, State> {
 	}
 
 	_updateValueByStep = (isIncreasing: boolean) => {
-		const { min, max, step } = this.props;
-		const currentVal = this.state.value || min || 0;
+		const min = isDefined(this.props.min) ? this.props.min : -Infinity;
+		const max = isDefined(this.props.max) ? this.props.max : Infinity;
 
-		const newValue = isIncreasing ? currentVal + step : currentVal - step;
-		const minConstrained = Math.max(newValue, this.props.min || -Infinity);
-		return Math.min(minConstrained, max || Infinity);
+		const currentVal = this.state.value ? this.state.value : (isDefined(this.props.min) ? this.props.min : 0);
+		const newValue = isIncreasing ? currentVal + this.props.step : currentVal - this.props.step;
+		const minConstrainedValue = Math.max(newValue, min);
+
+		return Math.min(minConstrainedValue, max);
 	};
 
     // private value updater for keyboard and button interactions
 	_updateValue = (value: Value) => {
-		this.setState(() => ({ value }));
+		this.setState({ value });
 
 		if (this.props.onChange) {
 			this.props.onChange(value);
 		}
 	};
 
-    // this signals blur for the inpurt and the two button controls
+    // this signals blur for the input and the two button controls
     // only registers a blur when all elements are blurred
 	onBlur = (e: SyntheticInputEvent<HTMLInputElement>) => {
 		const formControls = [this.fauxInputEl, this.decrementBtnEl, this.incrementBtnEl];
 		if (formControls.every(c => c !== document.activeElement)) {
-			this.setState(() => ({ isFieldFocused: false }));
+			this.setState({ isFieldFocused: false });
             if (this.props.onBlur) {
                 this.props.onBlur(e);
             }
@@ -123,7 +120,7 @@ export class NumericalInput extends React.Component<Props, State> {
 
     // this signals focus for the inpurt and the two button controls
 	onFocus = (e: SyntheticFocusEvent<HTMLInputElement>) => {
-		this.setState(() => ({ isFieldFocused: true }));
+		this.setState({ isFieldFocused: true });
 	};
 
 	onKeyDown = (e: SyntheticKeyboardEvent<HTMLInputElement>) => {
@@ -147,7 +144,13 @@ export class NumericalInput extends React.Component<Props, State> {
 	};
 
 	render() {
-		const { className = '', onChange, onBlur, value, ...other } = this.props;
+		const {
+			className = '',
+			onChange, // eslint-disable-line no-unused-vars
+			onBlur, // eslint-disable-line no-unused-vars
+			value, // eslint-disable-line no-unused-vars
+			...other
+		} = this.props;
 
 		return (
 			<div data-swarm-number-input={getStatus(this.props)} className={className}>
