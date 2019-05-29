@@ -6,6 +6,18 @@
       "src": "packages/swarm-docs/package.json",
       "use": "@now/static-build",
       "config": { "distDir": "packages/swarm-docs/public" }
+    },
+    {
+      "src": "packages/swarm-components/package.json",
+      "use": "@now/node"
+    },
+    {
+      "src": "packages/swarm-constants/package.json",
+      "use": "@now/node"
+    },
+    {
+      "src": "packages/swarm-styles/package.json",
+      "use": "@now/node"
     }
   ]
 }
