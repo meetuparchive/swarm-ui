@@ -23,7 +23,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "babel-plugin-react-docgen": "2.0.2"
+    "babel-plugin-react-docgen": "2.0.2",
+    "babel-preset-gatsby": "^0.1.11"
   },
   "dependencies": {
     "@mdx-js/mdx": "0.20.3",
