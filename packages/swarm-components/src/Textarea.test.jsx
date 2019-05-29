@@ -2,11 +2,8 @@ import React from 'react';
 import { shallow, mount } from 'enzyme';
 import Textarea, {
 	getTextareaStatus,
-	getCharacterCount,
-	CharCount,
 } from './Textarea';
 import auto from 'autosize';
-import { isTryStatement } from '@babel/types';
 
 // mock `auto` from autosize library
 jest.mock('autosize', () => {
@@ -62,28 +59,4 @@ describe('getTextareaStatus', () => {
 	it('returns default when props do not contain disabled or error', () => {
 		expect(getTextareaStatus({})).toEqual('default');
 	});
-});
-
-describe('getCharacterCount', () => {
-	it('returns 0 when no argument provided', () => {
-		expect(getCharacterCount()).toEqual(0);
-	});
-
-	it('returns the length of a string', () => {
-		expect(getCharacterCount('')).toEqual(0);
-		expect(getCharacterCount('f')).toEqual(1);
-		expect(getCharacterCount('f234')).toEqual(4);
-		expect(getCharacterCount('ff ff ff')).toEqual(8);
-	});
-});
-
-describe('CharCount', () => {
-	const testCases = [
-		['Default', <CharCount key="0" />],
-		['with props', <CharCount key="1" className="foo" data-attribute="foo" />],
-	];
-
-	test.each(testCases)('Snapshot: %s', (description, element) => {
-		expect(shallow(element)).toMatchSnapshot();
-    });
 });

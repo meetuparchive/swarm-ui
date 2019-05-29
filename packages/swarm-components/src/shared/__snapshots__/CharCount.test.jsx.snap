@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CharCount Snapshot: Default 1`] = `
+<p
+  className="text--tiny"
+  data-swarm-textarea-char-count={true}
+/>
+`;
+
+exports[`CharCount Snapshot: with props 1`] = `
+<p
+  className="foo"
+  data-attribute="foo"
+  data-swarm-textarea-char-count={true}
+/>
+`;

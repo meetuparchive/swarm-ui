@@ -2,6 +2,10 @@
 import * as React from 'react';
 import auto from 'autosize';
 
+import CharCount, {
+    getCharacterCount,
+} from './shared/CharCount';
+
 type Props = {
     /**
      * Resizes the height based on content
@@ -31,17 +35,9 @@ type Props = {
 
 type State = {};
 
-type CharProps = {
-    children?: React.Node
-}
-
 export const getTextareaStatus = (props: Props): string => {
     return props.disabled ? 'disabled' : (props.error ? 'error' : 'default');
 };
-
-export const getCharacterCount = (value: string = '') => value.length;
-
-export const CharCount = (props: CharProps) => <p data-swarm-textarea-char-count className="text--tiny" {...props} />;
 
 
 class Textarea extends React.Component<Props, State> {
