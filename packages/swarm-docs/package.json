@@ -16,7 +16,6 @@
   },
   "scripts": {
     "build": "gatsby build",
-    "now-build": "npm run build",
     "develop": "gatsby develop -p 5555",
     "start": "serve public/",
     "format": "prettier --write \"src/**/*.js\"",
