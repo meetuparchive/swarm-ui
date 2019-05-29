@@ -3,7 +3,7 @@
   "name": "@meetup/swarm-docs",
   "builds": [
     {
-      "src": "packages/swarm-docs/package.json",
+      "src": "package.json",
       "use": "@now/static-build",
       "config": { "distDir": "public" }
     }
