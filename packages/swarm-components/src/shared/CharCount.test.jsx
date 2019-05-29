@@ -1,8 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import CharCount, {
-	getRemainingCharacters,
-} from './CharCount';
+import CharCount, { getRemainingCharacters } from './CharCount';
 
 describe('CharCount', () => {
 	const testCases = [
@@ -12,7 +10,7 @@ describe('CharCount', () => {
 
 	test.each(testCases)('Snapshot: %s', (description, element) => {
 		expect(shallow(element)).toMatchSnapshot();
-    });
+	});
 });
 
 describe('getRemainingCharacters', () => {
