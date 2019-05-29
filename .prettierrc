@@ -3,6 +3,7 @@
 	"singleQuote": true,
 	"trailingComma": "es5",
 	"useTabs": true,
+	"semi": true,
 	"overrides": [
 		{
 			"files": "packages/swarm-styles/lib/**/**/*.css",
