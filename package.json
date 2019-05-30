@@ -2,12 +2,14 @@
   "name": "root",
   "private": true,
   "workspaces": [
-    "packages/*"
+    "packages/**"
   ],
   "scripts": {
     "build": "yarn build:src && yarn build:docs",
     "build:docs": "lerna run build --scope @meetup/swarm-docs",
     "build:src": "lerna run build --scope @meetup/swarm-constants --scope @meetup/swarm-styles --scope @meetup/swarm-components",
+    "now-build": "npm run build",
+    "now-dev": "cd packages/swarm-docs && gatsby develop -p $PORT",
     "test": "yarn && yarn build:src && yarn test:unit",
     "test:unit": "lerna run --scope @meetup/swarm-components test:unit --stream",
     "test:updateSnaps": "yarn test:unit -- -- --u"
