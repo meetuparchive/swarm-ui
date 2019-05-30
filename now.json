@@ -6,8 +6,7 @@
       "src": "packages/swarm-docs/package.json",
       "use": "@now/static-build",
       "config": { 
-        "distDir": "public",
-        "includeFiles": ["packages/**"]
+        "distDir": "public"
       }
     }
   ]
