@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.16](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.5.15...@meetup/swarm-styles@0.5.16) (2019-05-30)
+
+
+### Bug Fixes
+
+* global overrides to margin for global nav ([04412ee](https://github.com/meetup/swarm-ui/commit/04412ee))
+
+
+
+
+
 ## [0.5.15](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.5.14...@meetup/swarm-styles@0.5.15) (2019-05-17)
 
 
