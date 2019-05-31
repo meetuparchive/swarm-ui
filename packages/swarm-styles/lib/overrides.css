@@ -53,3 +53,7 @@ button.link,
   color: var(--color-viridian);
 }
 
+[data-swarm-button] .navItem-label {
+  margin-top: 0;
+}
+

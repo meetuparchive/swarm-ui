@@ -1,7 +1,7 @@
 {
   "name": "@meetup/swarm-docs",
   "description": "Meetup Swarm Design System Documentation",
-  "version": "0.9.18",
+  "version": "0.9.19",
   "author": "Hunter Bacot <hsbacot@gmail.com>",
   "publishConfig": {
     "access": "public"
@@ -16,21 +16,21 @@
   },
   "scripts": {
     "build": "gatsby build",
-    "now-build": "npm run build",
     "develop": "gatsby develop -p 5555",
     "start": "serve public/",
     "format": "prettier --write \"src/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "babel-plugin-react-docgen": "2.0.2"
+    "babel-plugin-react-docgen": "2.0.2",
+    "babel-preset-gatsby": "^0.1.11"
   },
   "dependencies": {
     "@mdx-js/mdx": "0.20.3",
     "@mdx-js/tag": "0.20.3",
     "@meetup/swarm-components": "^0.13.15",
     "@meetup/swarm-constants": "^0.3.1",
-    "@meetup/swarm-styles": "^0.5.15",
+    "@meetup/swarm-styles": "^0.5.16",
     "constants": "0.0.2",
     "core-js": "2.6.5",
     "gatsby": "2.3.14",

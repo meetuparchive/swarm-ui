@@ -1,11 +1,14 @@
 {
   "version": 2,
   "name": "@meetup/swarm-docs",
+  "alias": "swarm-docs.now.sh",
   "builds": [
     {
       "src": "package.json",
       "use": "@now/static-build",
-      "config": { "distDir": "public" }
+      "config": { 
+        "distDir": "packages/swarm-docs/public"
+      }
     }
   ]
 }
