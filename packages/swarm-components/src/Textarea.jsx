@@ -60,22 +60,25 @@ class Textarea extends React.Component<Props, State> {
         const {
             maxLength,
             autosize, // eslint-disable-line no-unused-vars
+            value = '',
             ...other
         } = this.props;
 
-        const remainingCharacters = getRemainingCharacters(maxLength, this.props.value);
+        const charLength = value.length;
+        const remainingCharacters = getRemainingCharacters(maxLength, charLength);
         const textareaStatus = getTextareaStatus({ ...this.props, error: this.props.error || remainingCharacters < 0 });
 
         return (
             <div data-swarm-textarea-wrapper>
                 <textarea
+                    value={value}
                     data-swarm-textarea={textareaStatus}
                     ref={textarea => {
                         this.textarea = textarea;
                     }}
                     {...other}
                 />
-                {maxLength && <CharCount>{remainingCharacters}</CharCount>}
+                {maxLength && <CharCount maxLength={maxLength} charLength={charLength} />}
             </div>
         );
     };

@@ -143,9 +143,10 @@ exports[`TextInput Snapshot: maxLength (char count) 1`] = `
     type="text"
     value="foo fooo"
   />
-  <CharCount>
-    12
-  </CharCount>
+  <CharCount
+    charLength={8}
+    maxLength={20}
+  />
 </div>
 `;
 

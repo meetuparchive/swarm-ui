@@ -4,8 +4,9 @@ import CharCount, { getRemainingCharacters } from './CharCount';
 
 describe('CharCount', () => {
 	const testCases = [
-		['Default', <CharCount key="0" />],
-		['with props', <CharCount key="1" className="foo" data-attribute="foo" />],
+		['Default', <CharCount key="0" maxLength={80} />],
+		['Default with props', <CharCount key="1" className="foo" maxLength={80} data-attribute="foo" />],
+		['Value', <CharCount key="0" maxLength={80} value="some test value" />],
 	];
 
 	test.each(testCases)('Snapshot: %s', (description, element) => {
@@ -21,10 +22,8 @@ describe('getRemainingCharacters', () => {
 	});
 
 	it('returns the remaining character count', () => {
-		expect(getRemainingCharacters(maxLength, '')).toEqual(maxLength);
-		expect(getRemainingCharacters(maxLength, 'f')).toEqual(9);
-		expect(getRemainingCharacters(maxLength, 'f234')).toEqual(6);
-		expect(getRemainingCharacters(maxLength, 'ff ff ')).toEqual(4);
-		expect(getRemainingCharacters(maxLength, '000000000000000')).toEqual(-5);
+		expect(getRemainingCharacters(maxLength, 0)).toEqual(maxLength);
+		expect(getRemainingCharacters(maxLength, 6)).toEqual(4);
+		expect(getRemainingCharacters(maxLength, 15)).toEqual(-5);
 	});
 });

@@ -2,14 +2,24 @@
 import * as React from 'react';
 
 type CharProps = {
-	children?: React.Node,
+	maxLength: number,
+	charLength?: number,
 };
 
-export const getRemainingCharacters = (maxLength: number, value: string = '') =>
-	maxLength - value.length;
+export const getRemainingCharacters = (maxLength: number, charLength: number = 0) => maxLength - charLength;
 
-const CharCount = (props: CharProps) => (
-	<p data-swarm-textarea-char-count className="text--tiny" {...props} />
-);
+const CharCount = (props: CharProps) => {
+	const {
+		maxLength,
+		charLength = 0,
+		...other
+	} = props;
+
+	return (
+		<p data-swarm-textarea-char-count className="text--tiny" {...other}>
+			{getRemainingCharacters(maxLength, charLength)}
+		</p>
+	);
+};
 
 export default CharCount;

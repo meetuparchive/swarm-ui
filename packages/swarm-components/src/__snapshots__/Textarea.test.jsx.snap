@@ -65,9 +65,10 @@ exports[`Textarea Snapshot: maxLength 1`] = `
     data-swarm-textarea="default"
     value="foo"
   />
-  <CharCount>
-    17
-  </CharCount>
+  <CharCount
+    charLength={3}
+    maxLength={20}
+  />
 </div>
 `;
 
