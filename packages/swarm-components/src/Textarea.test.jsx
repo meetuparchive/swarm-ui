@@ -1,8 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import Textarea, {
-	getTextareaStatus,
-} from './Textarea';
+import Textarea from './Textarea';
 import auto from 'autosize';
 
 // mock `auto` from autosize library
@@ -44,19 +42,4 @@ describe('Textarea', () => {
 			expect(auto.update).toHaveBeenCalled();
 		});
     });
-});
-
-describe('getTextareaStatus', () => {
-	it('returns disabled when props contain disabled=true', () => {
-		expect(getTextareaStatus({disabled: true})).toEqual('disabled');
-		expect(getTextareaStatus({disabled: true, error: true})).toEqual('disabled');
-	});
-
-	it('returns error when props contain error=true', () => {
-		expect(getTextareaStatus({error: true})).toEqual('error');
-	});
-
-	it('returns default when props do not contain disabled or error', () => {
-		expect(getTextareaStatus({})).toEqual('default');
-	});
 });

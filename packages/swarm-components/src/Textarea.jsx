@@ -6,7 +6,9 @@ import CharCount, {
     getRemainingCharacters,
 } from './shared/CharCount';
 
-type Props = {
+import { getFormFieldState } from './utils/formUtils';
+
+export type TextareaProps = {
     /**
      * Resizes the height based on content
      */
@@ -35,12 +37,7 @@ type Props = {
 
 type State = {};
 
-export const getTextareaStatus = (props: Props): string => {
-    return props.disabled ? 'disabled' : (props.error ? 'error' : 'default');
-};
-
-
-class Textarea extends React.Component<Props, State> {
+class Textarea extends React.Component<TextareaProps, State> {
     textarea: ?HTMLTextAreaElement;
 
 	componentDidMount() {
@@ -49,7 +46,7 @@ class Textarea extends React.Component<Props, State> {
         }
     }
 
-	componentDidUpdate(prevProps: Props) {
+	componentDidUpdate(prevProps: TextareaProps) {
         if (this.props.value !== prevProps.value) {
             auto.update(this.textarea);
         }
@@ -66,13 +63,13 @@ class Textarea extends React.Component<Props, State> {
 
         const charLength = value.length;
         const remainingCharacters = getRemainingCharacters(maxLength, charLength);
-        const textareaStatus = getTextareaStatus({ ...this.props, error: this.props.error || remainingCharacters < 0 });
+        const textareaState = getFormFieldState({ ...this.props, error: this.props.error || remainingCharacters < 0 });
 
         return (
             <div data-swarm-textarea-wrapper>
                 <textarea
                     value={value}
-                    data-swarm-textarea={textareaStatus}
+                    data-swarm-textarea={textareaState}
                     ref={textarea => {
                         this.textarea = textarea;
                     }}

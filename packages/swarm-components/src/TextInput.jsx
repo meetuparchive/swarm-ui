@@ -1,7 +1,10 @@
 // @flow
 import * as React from 'react';
 import Icon from './Icon';
-import CharCount from './shared/CharCount';
+import CharCount, {
+	getRemainingCharacters,
+} from './shared/CharCount';
+import { getFormFieldState } from './utils/formUtils';
 
 const ICON_SIZES = Object.freeze({
 	XXS: 'xxs',
@@ -13,7 +16,7 @@ const ICON_SIZES = Object.freeze({
 	XXL: 'xxl',
 });
 
-type Props = {
+export type TextInputProps = {
 	/**
 	 * Whether the input should be interactive.
 	 */
@@ -60,7 +63,7 @@ type Props = {
 /**
  * @module TextInput
  */
-export const TextInput = (props: Props): React$Element<*> => {
+export const TextInput = (props: TextInputProps): React$Element<*> => {
 	const {
 		name,
 		error,
@@ -75,8 +78,11 @@ export const TextInput = (props: Props): React$Element<*> => {
 		...other
 	} = props;
 
+	const charLength = value.length;
+	const remainingCharacters = getRemainingCharacters(maxLength, charLength);
+
 	const wrapperState = iconShape ? 'icon' : 'default';
-	const inputState = disabled ? 'disabled' : error ? 'error' : 'default';
+	const inputState = getFormFieldState({ ...props, error: error || remainingCharacters < 0 });
 
 	return (
 		<div data-swarm-text-input-wrapper={wrapperState}>
@@ -95,7 +101,7 @@ export const TextInput = (props: Props): React$Element<*> => {
 					<Icon shape={iconShape} size={iconSize} aria-hidden={true} />
 				</span>
 			)}
-			{maxLength && <CharCount maxLength={maxLength} charLength={value.length} />}
+			{maxLength && <CharCount maxLength={maxLength} charLength={charLength} />}
 		</div>
 	);
 };
