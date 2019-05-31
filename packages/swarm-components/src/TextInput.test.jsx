@@ -79,4 +79,12 @@ describe('TextInput', () => {
 	test.each(testCases)('Snapshot: %s', (description, element) => {
 		expect(shallow(element)).toMatchSnapshot();
 	});
+
+	describe('maxLength', () => {
+		it('should render error state when maxLength exceeded', () => {
+			const textInput = shallow(<TextInput name="foo" value="" maxLength={3} />);
+			textInput.setProps({value: "new value"});
+			expect(textInput.exists('[data-swarm-text-input="error"]')).toEqual(true);
+		});
+	});
 });

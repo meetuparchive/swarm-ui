@@ -41,5 +41,13 @@ describe('Textarea', () => {
 			textarea.instance().componentDidUpdate({value: "prev props values"});
 			expect(auto.update).toHaveBeenCalled();
 		});
-    });
+	});
+
+	describe('maxLength', () => {
+		it('should render error state when maxLength exceeded', () => {
+			const textarea = shallow(<Textarea name="foo" value="" maxLength={3} />);
+			textarea.setProps({value: "new value"});
+			expect(textarea.exists('[data-swarm-textarea="error"]')).toEqual(true);
+		});
+	});
 });
