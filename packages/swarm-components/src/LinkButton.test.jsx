@@ -39,21 +39,18 @@ describe('LinkButton', () => {
 		[
 			'Inverted',
 			<LinkButton inverted key="8">
-				{' '}
 				Press me
 			</LinkButton>,
 		],
 		[
 			'Neutral',
 			<LinkButton neutral key="9">
-				{' '}
 				Press me
 			</LinkButton>,
 		],
 		[
 			'Small',
 			<LinkButton small key="10">
-				{' '}
 				Press me
 			</LinkButton>,
 		],

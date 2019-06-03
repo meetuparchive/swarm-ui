@@ -39,7 +39,6 @@ describe('Button', () => {
 		[
 			'Reset',
 			<Button reset key="8">
-				{' '}
 				Press me
 			</Button>,
 		],
