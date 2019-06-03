@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.13.17](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.13.16...@meetup/swarm-components@0.13.17) (2019-06-03)
+
+
+### Bug Fixes
+
+* **swarm-components:** maxlength prop and char count to textinput ([47eb3c0](https://github.com/meetup/swarm-ui/commit/47eb3c0))
+* add error state for charcount in textinput ([23ceb7d](https://github.com/meetup/swarm-ui/commit/23ceb7d))
+* export hasMaxLengthError from Charcount ([9f9f66f](https://github.com/meetup/swarm-ui/commit/9f9f66f))
+
+
+
+
+
 ## [0.13.16](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.13.15...@meetup/swarm-components@0.13.16) (2019-06-03)
 
 **Note:** Version bump only for package @meetup/swarm-components
