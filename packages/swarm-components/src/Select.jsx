@@ -26,18 +26,9 @@ type Props = React.ElementConfig<HTMLSelectElement> & {
 };
 
 const Select = (props: Props) => {
-	const {
-        disabled,
-		error,
-        id,
-        name,
-		requiredText,
-		...other
-	} = props;
+	const { disabled, error, id, name, requiredText, ...other } = props;
 
-	const selectState = disabled
-		? 'disabled'
-		: (error ? 'error' : 'default');
+	const selectState = disabled ? 'disabled' : error ? 'error' : 'default';
 
 	return (
 		<div data-swarm-select={selectState}>

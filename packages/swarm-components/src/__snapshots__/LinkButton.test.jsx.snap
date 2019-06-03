@@ -102,7 +102,7 @@ exports[`LinkButton Snapshot: Inverted 1`] = `
   data-swarm-size="default"
   data-swarm-width="default"
 >
-   Press me
+  Press me
 </a>
 `;
 
@@ -113,7 +113,7 @@ exports[`LinkButton Snapshot: Neutral 1`] = `
   data-swarm-size="default"
   data-swarm-width="default"
 >
-   Press me
+  Press me
 </a>
 `;
 
@@ -135,6 +135,6 @@ exports[`LinkButton Snapshot: Small 1`] = `
   data-swarm-size="small"
   data-swarm-width="default"
 >
-   Press me
+  Press me
 </a>
 `;

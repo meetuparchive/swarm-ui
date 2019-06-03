@@ -8,37 +8,37 @@ type Props = {
 	 * Classname of wrapper, specified because it is not applied with other
 	 */
 	className?: string,
-    /**
-     * indicates whether the input is disabled
-     */
-    disabled?: boolean,
-    /**
-     * indicates whether there is an error on the input
-     */
-    error?: React$Node,
-    /**
-     * the maximum integer allowed
-     */
+	/**
+	 * indicates whether the input is disabled
+	 */
+	disabled?: boolean,
+	/**
+	 * indicates whether there is an error on the input
+	 */
+	error?: React$Node,
+	/**
+	 * the maximum integer allowed
+	 */
 	max?: number,
-    /**
-     * the minimum integer allowed
-     */
-    min?: number,
-    /**
-     * Required change handler with Value, not event
-     */
-    onChange: Value => void,
-    /**
-     * funcitonality invoked when the form field is blurred
-     */
-    onBlur?: (SyntheticInputEvent<HTMLInputElement>) => void,
-    /**
-     * The amount the input will increment or decrement when using keyboard interactions
-     */
-    step?: number,
-    /**
-     * The value of the field
-     */
+	/**
+	 * the minimum integer allowed
+	 */
+	min?: number,
+	/**
+	 * Required change handler with Value, not event
+	 */
+	onChange: Value => void,
+	/**
+	 * funcitonality invoked when the form field is blurred
+	 */
+	onBlur?: (SyntheticInputEvent<HTMLInputElement>) => void,
+	/**
+	 * The amount the input will increment or decrement when using keyboard interactions
+	 */
+	step?: number,
+	/**
+	 * The value of the field
+	 */
 	value: Value,
 };
 
@@ -52,8 +52,8 @@ export const getStatus = (props: Props): string => {
 };
 
 export const isDefined = (number: number): boolean => {
-	return (typeof number !== 'undefined' && number !== null);
-}
+	return typeof number !== 'undefined' && number !== null;
+};
 
 export class NumericalInput extends React.Component<Props, State> {
 	fauxInputEl: HTMLInputElement | null;
@@ -69,7 +69,7 @@ export class NumericalInput extends React.Component<Props, State> {
 		isFieldFocused: false,
 	};
 
-    // internal value updater when passed a value via props
+	// internal value updater when passed a value via props
 	static getDerivedStateFromProps(nextProps: Props, prevState: State) {
 		const isNewValue = nextProps.onChange && nextProps.value !== prevState.value;
 
@@ -82,14 +82,20 @@ export class NumericalInput extends React.Component<Props, State> {
 		const min = isDefined(this.props.min) ? this.props.min : -Infinity;
 		const max = isDefined(this.props.max) ? this.props.max : Infinity;
 
-		const currentVal = this.state.value ? this.state.value : (isDefined(this.props.min) ? this.props.min : 0);
-		const newValue = isIncreasing ? currentVal + this.props.step : currentVal - this.props.step;
+		const currentVal = this.state.value
+			? this.state.value
+			: isDefined(this.props.min)
+			? this.props.min
+			: 0;
+		const newValue = isIncreasing
+			? currentVal + this.props.step
+			: currentVal - this.props.step;
 		const minConstrainedValue = Math.max(newValue, min);
 
 		return Math.min(minConstrainedValue, max);
 	};
 
-    // private value updater for keyboard and button interactions
+	// private value updater for keyboard and button interactions
 	_updateValue = (value: Value) => {
 		this.setState({ value });
 
@@ -98,15 +104,15 @@ export class NumericalInput extends React.Component<Props, State> {
 		}
 	};
 
-    // this signals blur for the input and the two button controls
-    // only registers a blur when all elements are blurred
+	// this signals blur for the input and the two button controls
+	// only registers a blur when all elements are blurred
 	onBlur = (e: SyntheticInputEvent<HTMLInputElement>) => {
 		const formControls = [this.fauxInputEl, this.decrementBtnEl, this.incrementBtnEl];
 		if (formControls.every(c => c !== document.activeElement)) {
 			this.setState({ isFieldFocused: false });
-            if (this.props.onBlur) {
-                this.props.onBlur(e);
-            }
+			if (this.props.onBlur) {
+				this.props.onBlur(e);
+			}
 		}
 	};
 
@@ -118,7 +124,7 @@ export class NumericalInput extends React.Component<Props, State> {
 		this._updateValue(newValue);
 	};
 
-    // this signals focus for the inpurt and the two button controls
+	// this signals focus for the inpurt and the two button controls
 	onFocus = (e: SyntheticFocusEvent<HTMLInputElement>) => {
 		this.setState({ isFieldFocused: true });
 	};
@@ -131,13 +137,13 @@ export class NumericalInput extends React.Component<Props, State> {
 		}
 	};
 
-    // the event for the increment button
+	// the event for the increment button
 	incrementAction = (e: SyntheticInputEvent<HTMLInputElement>) => {
 		e.preventDefault();
 		this._updateValue(this._updateValueByStep(true));
 	};
 
-    // the event for the decrement button
+	// the event for the decrement button
 	decrementAction = (e: SyntheticInputEvent<HTMLInputElement>) => {
 		e.preventDefault();
 		this._updateValue(this._updateValueByStep(false));
@@ -155,14 +161,14 @@ export class NumericalInput extends React.Component<Props, State> {
 		return (
 			<div data-swarm-number-input={getStatus(this.props)} className={className}>
 				<input
-                    data-swarm-number-input-field
-                    type="number"
-                    pattern="[0-9]*"
-                    onBlur={this.onBlur}
-                    onFocus={this.onFocus}
-                    onChange={this.onChange}
-                    onKeyDown={this.onKeyDown}
-                    value={this.state.value === null ? '' : this.state.value}
+					data-swarm-number-input-field
+					type="number"
+					pattern="[0-9]*"
+					onBlur={this.onBlur}
+					onFocus={this.onFocus}
+					onChange={this.onChange}
+					onKeyDown={this.onKeyDown}
+					value={this.state.value === null ? '' : this.state.value}
 					{...other}
 				/>
 				<button
@@ -170,10 +176,8 @@ export class NumericalInput extends React.Component<Props, State> {
 					tabIndex="-1"
 					onBlur={this.onBlur}
 					onClick={this.decrementAction}
-                    onFocus={this.onFocus}
-                    ref={(el: HTMLButtonElement | null) =>
-                        (this.decrementBtnEl = el)
-                    }
+					onFocus={this.onFocus}
+					ref={(el: HTMLButtonElement | null) => (this.decrementBtnEl = el)}
 				>
 					<Icon shape="minus" size="xs" />
 				</button>
@@ -182,10 +186,8 @@ export class NumericalInput extends React.Component<Props, State> {
 					tabIndex="-1"
 					onBlur={this.onBlur}
 					onClick={this.incrementAction}
-                    onFocus={this.onFocus}
-                    ref={(el: HTMLButtonElement | null) =>
-                        (this.incrementBtnEl = el)
-                    }
+					onFocus={this.onFocus}
+					ref={(el: HTMLButtonElement | null) => (this.incrementBtnEl = el)}
 				>
 					<Icon shape="plus" size="xs" />
 				</button>

@@ -146,7 +146,7 @@ exports[`Button Snapshot: Reset 1`] = `
   data-swarm-width="default"
   type="button"
 >
-   Press me
+  Press me
 </button>
 `;
 

@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 import cx from 'classnames';
 import { VALID_SHAPES } from 'swarm-icons/dist/js/shapeConstants';
@@ -34,6 +35,7 @@ export const getIconShape = (shape, size) => {
 		size === 'xxs' || size === 'xs' || size === 's' ? SVG_THIN_STYLE : '';
 	return `${shape}${suffix}`;
 };
+
 type Props = {
 	/** Which of our media sizes to render the icon at */
 	size?: string,
@@ -46,7 +48,7 @@ type Props = {
 	/** Class applied to svg tag */
 	className?: string,
 	/** Object of css styles */
-	style?: {}
+	style?: {},
 };
 
 /**

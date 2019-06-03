@@ -14,9 +14,9 @@ describe('Icon', () => {
 	);
 
 	const testCases = [
-		['Regular', getIconMarkup({shape: "cog"})],
-		['Circled', getIconMarkup({circle: true, shape: "cog"})],
-		['Circled color', getIconMarkup({color: "blue", circle: true, shape: "cog"})],
+		['Regular', getIconMarkup({ shape: 'cog' })],
+		['Circled', getIconMarkup({ circle: true, shape: 'cog' })],
+		['Circled color', getIconMarkup({ color: 'blue', circle: true, shape: 'cog' })],
 	];
 
 	test.each(testCases)('Snapshot: %s', (description, element) => {

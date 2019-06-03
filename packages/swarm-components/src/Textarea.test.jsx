@@ -12,7 +12,7 @@ jest.mock('autosize', () => {
 });
 
 describe('Textarea', () => {
-    const mockOnChange = jest.fn();
+	const mockOnChange = jest.fn();
 
 	const testCases = [
 		['Default (empty)', <Textarea key="0" value="" />],
@@ -26,19 +26,21 @@ describe('Textarea', () => {
 
 	test.each(testCases)('Snapshot: %s', (description, element) => {
 		expect(shallow(element)).toMatchSnapshot();
-    });
+	});
 
-    describe('autosize', ()=> {
-        it('calls autosize on mount', () => {
+	describe('autosize', () => {
+		it('calls autosize on mount', () => {
 			auto.mockClear();
-            mount(<Textarea value="something" onChange={mockOnChange} autosize />);
-            expect(auto).toHaveBeenCalled();
+			mount(<Textarea value="something" onChange={mockOnChange} autosize />);
+			expect(auto).toHaveBeenCalled();
 		});
 
 		it('calls autosize.update on componentDidUpdate', () => {
 			auto.mockClear();
-            const textarea = mount(<Textarea value="something" onChange={mockOnChange} autosize />);
-			textarea.instance().componentDidUpdate({value: "prev props values"});
+			const textarea = mount(
+				<Textarea value="something" onChange={mockOnChange} autosize />
+			);
+			textarea.instance().componentDidUpdate({ value: 'prev props values' });
 			expect(auto.update).toHaveBeenCalled();
 		});
 	});
@@ -46,7 +48,7 @@ describe('Textarea', () => {
 	describe('maxLength', () => {
 		it('should render error state when maxLength exceeded', () => {
 			const textarea = shallow(<Textarea name="foo" value="" maxLength={3} />);
-			textarea.setProps({value: "new value"});
+			textarea.setProps({ value: 'new value' });
 			expect(textarea.exists('[data-swarm-textarea="error"]')).toEqual(true);
 		});
 	});
