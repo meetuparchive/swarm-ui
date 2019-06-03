@@ -6,10 +6,7 @@ describe('TextInput', () => {
 	const mockOnChange = jest.fn();
 
 	const testCases = [
-		[
-			'Default (empty)',
-			<TextInput key="1" id="default" name="default" value="" />,
-		],
+		['Default (empty)', <TextInput key="1" id="default" name="default" value="" />],
 		[
 			'Default (value)',
 			<TextInput key="2" id="default" name="default" value="foo" />,
@@ -45,13 +42,7 @@ describe('TextInput', () => {
 		],
 		[
 			'Icon',
-			<TextInput
-				key="8"
-				id="icon"
-				name="icon"
-				value=""
-				iconShape="location-pin"
-			/>,
+			<TextInput key="8" id="icon" name="icon" value="" iconShape="location-pin" />,
 		],
 		[
 			'Icon (custom size)',
@@ -83,7 +74,7 @@ describe('TextInput', () => {
 	describe('maxLength', () => {
 		it('should render error state when maxLength exceeded', () => {
 			const textInput = shallow(<TextInput name="foo" value="" maxLength={3} />);
-			textInput.setProps({value: "new value"});
+			textInput.setProps({ value: 'new value' });
 			expect(textInput.exists('[data-swarm-text-input="error"]')).toEqual(true);
 		});
 	});

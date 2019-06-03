@@ -75,9 +75,7 @@ class Textarea extends React.Component<TextareaProps, State> {
 					}}
 					{...other}
 				/>
-				{maxLength && (
-					<CharCount maxLength={maxLength} charLength={charLength} />
-				)}
+				{maxLength && <CharCount maxLength={maxLength} charLength={charLength} />}
 			</div>
 		);
 	}

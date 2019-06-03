@@ -4,28 +4,28 @@ import Icon from './Icon';
 
 export type Props = {
 	/**
-		* Whether the box should be checked.
-	*/
+	 * Whether the box should be checked.
+	 */
 	checked: boolean,
 	/**
-		* Whether the box should be interactive.
-	*/
+	 * Whether the box should be interactive.
+	 */
 	disabled?: boolean,
 	/**
-		* An identifier for the checkbox.
-	*/
+	 * An identifier for the checkbox.
+	 */
 	id?: string,
 	/**
-		* A callback function that is called when the checkbox is toggled.
-	*/
+	 * A callback function that is called when the checkbox is toggled.
+	 */
 	onChange?: () => mixed,
 	/**
-		* Child nodes that would be placed if there is no label.
-	*/
+	 * Child nodes that would be placed if there is no label.
+	 */
 	children?: React.Node,
 	/**
-		* A label for your checkbox input. It will not be shown if `children` are passed to the component.
-	*/
+	 * A label for your checkbox input. It will not be shown if `children` are passed to the component.
+	 */
 	label?: string,
 	/**
 	 * Name for checkbox form field.
@@ -35,7 +35,7 @@ export type Props = {
 	 * Value for checkbox form field.
 	 */
 	value?: string | boolean,
-}
+};
 
 // Can not inline css vars as color to Icon. Gray 5 icon fill on disbaled
 const Checkbox = (props: Props): React.Element<'label'> => {
@@ -48,7 +48,8 @@ const Checkbox = (props: Props): React.Element<'label'> => {
 		onChange,
 		name,
 		value,
-		...rest } = props;
+		...rest
+	} = props;
 
 	return (
 		<label
@@ -59,11 +60,15 @@ const Checkbox = (props: Props): React.Element<'label'> => {
 		>
 			<span
 				data-swarm-checkbox-field={checked ? 'checked' : 'unchecked'}
-				role='checkbox'
+				role="checkbox"
 				aria-checked={checked}
 			>
 				{checked && (
-					<Icon shape="check" size="xs" color={disabled ? 'var(--color-gray-6)': '#ffffff'} />
+					<Icon
+						shape="check"
+						size="xs"
+						color={disabled ? 'var(--color-gray-6)' : '#ffffff'}
+					/>
 				)}
 			</span>
 			<input
