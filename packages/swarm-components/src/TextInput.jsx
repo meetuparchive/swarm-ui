@@ -1,9 +1,7 @@
 // @flow
 import * as React from 'react';
 import Icon from './Icon';
-import CharCount, {
-	getRemainingCharacters,
-} from './shared/CharCount';
+import CharCount, { hasMaxLengthError } from './shared/CharCount';
 import { getFormFieldState } from './utils/formUtils';
 
 const ICON_SIZES = Object.freeze({
@@ -78,11 +76,12 @@ export const TextInput = (props: TextInputProps): React$Element<*> => {
 		...other
 	} = props;
 
-	const charLength = value.length;
-	const remainingCharacters = getRemainingCharacters(maxLength, charLength);
-
 	const wrapperState = iconShape ? 'icon' : 'default';
-	const inputState = getFormFieldState({ ...props, error: error || remainingCharacters < 0 });
+	const charLength = value.length;
+	const inputState = getFormFieldState({
+		...props,
+		error: error || hasMaxLengthError(maxLength, charLength),
+	});
 
 	return (
 		<div data-swarm-text-input-wrapper={wrapperState}>

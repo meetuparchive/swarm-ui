@@ -6,14 +6,18 @@ type CharProps = {
 	charLength?: number,
 };
 
-export const getRemainingCharacters = (maxLength: number, charLength: number = 0) => maxLength - charLength;
+export const getRemainingCharacters = (
+	maxLength: number,
+	charLength: number = 0
+): number => maxLength - charLength;
+
+export const hasMaxLengthError = (
+	maxLength: number,
+	charLength: number = 0
+): boolean => charLength > maxLength;
 
 const CharCount = (props: CharProps) => {
-	const {
-		maxLength,
-		charLength = 0,
-		...other
-	} = props;
+	const { maxLength, charLength = 0, ...other } = props;
 
 	return (
 		<p data-swarm-textarea-char-count className="text--tiny" {...other}>
