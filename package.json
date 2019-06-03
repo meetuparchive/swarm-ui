@@ -27,10 +27,5 @@
     "lerna": "3.13.1",
     "lint-staged": "8.1.7",
     "prettier": "1.17.1"
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
   }
 }
