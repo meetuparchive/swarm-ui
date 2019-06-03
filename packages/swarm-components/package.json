@@ -26,12 +26,6 @@
   "bugs": {
     "url": "https://github.com/meetup/swarm-ui/issues"
   },
-  "bundlesize": [
-    {
-      "path": "lib/*.js",
-      "maxSize": "> 10%"
-    }
-  ],
   "peerDependencies": {
     "react": "^16.6.3"
   },
