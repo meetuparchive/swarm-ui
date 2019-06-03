@@ -1,20 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CharCount Snapshot: Default 1`] = `
-<p
-  className="text--tiny"
-  data-swarm-textarea-char-count={true}
-/>
-`;
-
-exports[`CharCount Snapshot: with props 1`] = `
-<p
-  className="foo"
-  data-attribute="foo"
-  data-swarm-textarea-char-count={true}
-/>
-`;
-
 exports[`Textarea Snapshot: Default (empty) 1`] = `
 <div
   data-swarm-textarea-wrapper={true}
@@ -80,9 +65,10 @@ exports[`Textarea Snapshot: maxLength 1`] = `
     data-swarm-textarea="default"
     value="foo"
   />
-  <CharCount>
-    NaN
-  </CharCount>
+  <CharCount
+    charLength={3}
+    maxLength={20}
+  />
 </div>
 `;
 

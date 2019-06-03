@@ -2,87 +2,85 @@
 import * as React from 'react';
 import auto from 'autosize';
 
-type Props = {
-    /**
-     * Resizes the height based on content
-     */
-    autosize?: boolean,
-    /**
-     * Whether the textarea should be interactive.
-     */
-    disabled?: boolean,
-    /**
-     * Whether the textarea renders an error state.
-     */
-    error?: boolean,
-    /**
-     * Value for textarea.
-     */
-    name: string,
-    /**
-     * Name for the input.
-     */
-    value?: string,
-    /**
-     * max length of input field
-     */
-    maxLength?: string | number,
-}
+import CharCount, { hasMaxLengthError } from './shared/CharCount';
+
+import { getFormFieldState } from './utils/formUtils';
+
+export type TextareaProps = {
+	/**
+	 * Resizes the height based on content
+	 */
+	autosize?: boolean,
+	/**
+	 * Whether the textarea should be interactive.
+	 */
+	disabled?: boolean,
+	/**
+	 * Whether the textarea renders an error state.
+	 */
+	error?: boolean,
+	/**
+	 * Value for textarea.
+	 */
+	name: string,
+	/**
+	 * Name for the input.
+	 */
+	value?: string,
+	/**
+	 * max length of input field
+	 */
+	maxLength?: number,
+};
 
 type State = {};
 
-type CharProps = {
-    children?: React.Node
-}
-
-export const getTextareaStatus = (props: Props): string => {
-    return props.disabled ? 'disabled' : (props.error ? 'error' : 'default');
-};
-
-export const getCharacterCount = (value: string = '') => value.length;
-
-export const CharCount = (props: CharProps) => <p data-swarm-textarea-char-count className="text--tiny" {...props} />;
-
-
-class Textarea extends React.Component<Props, State> {
-    textarea: ?HTMLTextAreaElement;
+class Textarea extends React.Component<TextareaProps, State> {
+	textarea: ?HTMLTextAreaElement;
 
 	componentDidMount() {
-        if (this.props.autosize) {
-            auto(this.textarea);
-        }
-    }
+		if (this.props.autosize) {
+			auto(this.textarea);
+		}
+	}
 
-	componentDidUpdate(prevProps: Props) {
-        if (this.props.value !== prevProps.value) {
-            auto.update(this.textarea);
-        }
-    }
+	componentDidUpdate(prevProps: TextareaProps) {
+		if (this.props.value !== prevProps.value) {
+			auto.update(this.textarea);
+		}
+	}
 
-    render() {
-        // maxLength is removed because we want to allow for typing over the character limit
-        const {
-            maxLength,
-            autosize, // eslint-disable-line no-unused-vars
-            ...other
-        } = this.props;
+	render() {
+		// maxLength is removed because we want to allow for typing over the character limit
+		const {
+			maxLength,
+			autosize, // eslint-disable-line no-unused-vars
+			value = '',
+			...other
+		} = this.props;
 
-        const remainingCharacters = (parseInt(maxLength, 10) - getCharacterCount(this.props.value));
-        const textareaStatus = getTextareaStatus({ ...this.props, error: this.props.error || remainingCharacters < 0 });
+		const charLength = value.length;
+		const textareaState = getFormFieldState({
+			...this.props,
+			error: this.props.error || hasMaxLengthError(maxLength, charLength),
+		});
 
-        return (
-            <div data-swarm-textarea-wrapper>
-                <textarea
-                    data-swarm-textarea={textareaStatus}
-                    ref={textarea => {
-                        this.textarea = textarea;
-                    }}
-                    {...other}
-                />
-                { maxLength && <CharCount>{remainingCharacters}</CharCount>}
-            </div>
-        );
-    };
-};
+		return (
+			<div data-swarm-textarea-wrapper>
+				<textarea
+					value={value}
+					data-swarm-textarea={textareaState}
+					ref={textarea => {
+						this.textarea = textarea;
+					}}
+					{...other}
+				/>
+				{maxLength && (
+					<CharCount maxLength={maxLength} charLength={charLength} />
+				)}
+			</div>
+		);
+	}
+}
 
 export default Textarea;

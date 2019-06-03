@@ -132,6 +132,24 @@ exports[`TextInput Snapshot: isSearch 1`] = `
 </div>
 `;
 
+exports[`TextInput Snapshot: maxLength (char count) 1`] = `
+<div
+  data-swarm-text-input-wrapper="default"
+>
+  <input
+    data-swarm-text-input="default"
+    id="maxLength"
+    name="maxLength"
+    type="text"
+    value="foo fooo"
+  />
+  <CharCount
+    charLength={8}
+    maxLength={20}
+  />
+</div>
+`;
+
 exports[`TextInput Snapshot: onChange 1`] = `
 <div
   data-swarm-text-input-wrapper="default"

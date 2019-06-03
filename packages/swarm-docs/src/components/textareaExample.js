@@ -20,7 +20,7 @@ const TextareaExample = () => {
         value={value2}
         onChange={e => setValue2(e.target.value)}
         autosize
-        maxLength="200"
+        maxLength={200}
       />
     </>
   );

@@ -8,6 +8,7 @@ const Example = () => {
   const [value5, setValue5] = React.useState('');
   const [value6, setValue6] = React.useState('abc');
   const [value7, setValue7] = React.useState('value');
+  const [value8, setValue8] = React.useState('value for a char counter');
 
   return (
     <>
@@ -61,6 +62,16 @@ const Example = () => {
         value={value7}
         onChange={(e) => setValue7(e.target.value)}
         iconShape="location-pin" />
+      <br/>
+      <label htmlFor="input8">maxLength (char count)</label>
+      <TextInput
+        id="input8"
+        name="input8"
+        value={value8}
+        onChange={(e) => setValue8(e.target.value)}
+        maxLength={60}
+        />
+      <br/>
     </>
   );
 };
