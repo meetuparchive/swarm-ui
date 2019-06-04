@@ -12,9 +12,9 @@ export const getRemainingCharacters = (
 ): number => maxLength - charLength;
 
 export const hasMaxLengthError = (
-	maxLength: number,
-	charLength: number = 0
-): boolean => charLength > maxLength;
+	maxLength: ?number = 0,
+	charLength: number
+): boolean => !!maxLength && charLength > maxLength;
 
 const CharCount = (props: CharProps) => {
 	const { maxLength, charLength = 0, ...other } = props;

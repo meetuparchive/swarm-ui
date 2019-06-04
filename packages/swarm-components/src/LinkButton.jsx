@@ -1,12 +1,7 @@
 // @flow
 import * as React from 'react';
 import Icon from './Icon';
-import {
-	FILLS,
-	getButtonType,
-	getSwarmSize,
-	getIconPosition,
-} from './utils/buttonUtils';
+import { getButtonType, getSwarmSize, getIconPosition } from './utils/buttonUtils';
 
 export type LinkButtonProps = {
 	/**

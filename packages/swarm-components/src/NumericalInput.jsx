@@ -19,11 +19,11 @@ type Props = {
 	/**
 	 * the maximum integer allowed
 	 */
-	max?: number,
+	max?: ?number,
 	/**
 	 * the minimum integer allowed
 	 */
-	min?: number,
+	min?: ?number,
 	/**
 	 * Required change handler with Value, not event
 	 */
@@ -35,7 +35,7 @@ type Props = {
 	/**
 	 * The amount the input will increment or decrement when using keyboard interactions
 	 */
-	step?: number,
+	step: number,
 	/**
 	 * The value of the field
 	 */
@@ -51,7 +51,7 @@ export const getStatus = (props: Props): string => {
 	return props.disabled ? 'disabled' : props.error ? 'error' : 'default';
 };
 
-export const isDefined = (number: number): boolean => {
+export const isDefined = (number: ?number): boolean => {
 	return typeof number !== 'undefined' && number !== null;
 };
 
@@ -79,17 +79,16 @@ export class NumericalInput extends React.Component<Props, State> {
 	}
 
 	_updateValueByStep = (isIncreasing: boolean) => {
-		const min = isDefined(this.props.min) ? this.props.min : -Infinity;
-		const max = isDefined(this.props.max) ? this.props.max : Infinity;
+		const min: number = this.props.min ? this.props.min : -Infinity;
+		const max: number = this.props.max ? this.props.max : Infinity;
+		const step: number = this.props.step || 1;
 
-		const currentVal = this.state.value
+		const currentVal: number = this.state.value
 			? this.state.value
-			: isDefined(this.props.min)
+			: this.props.min
 			? this.props.min
 			: 0;
-		const newValue = isIncreasing
-			? currentVal + this.props.step
-			: currentVal - this.props.step;
+		const newValue = isIncreasing ? currentVal + step : currentVal - step;
 		const minConstrainedValue = Math.max(newValue, min);
 
 		return Math.min(minConstrainedValue, max);

@@ -26,7 +26,7 @@ const SMALL_ICON_VARIANT_WHITELIST = VALID_SHAPES.filter(
  * @param {String} size - icon size
  * @returns {String} icon name (with or without suffix)
  */
-export const getIconShape = (shape, size) => {
+export const getIconShape = (shape: string, size: string) => {
 	if (!SMALL_ICON_VARIANT_WHITELIST.includes(shape)) {
 		return shape;
 	}
@@ -48,7 +48,15 @@ type Props = {
 	/** Class applied to svg tag */
 	className?: string,
 	/** Object of css styles */
-	style?: {},
+	style?: {
+		color?: string,
+		fill?: string,
+	},
+};
+
+type AllStyles = {
+	color?: string,
+	fill?: string,
 };
 
 /**
@@ -61,7 +69,7 @@ type Props = {
  * @module Icon
  */
 const Icon = (props: Props) => {
-	const { className, shape, size, color, style, circle, ...other } = props;
+	const { className, shape, size = 'xs', color, style, circle, ...other } = props;
 
 	const classNames = cx(
 		ICON_CLASS,
@@ -74,7 +82,7 @@ const Icon = (props: Props) => {
 
 	const sizeVal = MEDIA_SIZES[size];
 
-	const allStyles = style || {};
+	const allStyles: AllStyles = style || {};
 	if (color) {
 		allStyles.fill = color;
 	}

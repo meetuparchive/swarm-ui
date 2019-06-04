@@ -12,6 +12,7 @@
     "alert-red": { "value": "#C80000" },
     "beach-highlight": { "value": "#F7FEFF" },
     "tooltip-blue": { "value": "#3679E4" },
+    "confirm-green": { "value": "#07b203" },
     "gray": {
       "1": { "value": "#F6F7F8" },
       "2": { "value": "#E6E6E6" },
