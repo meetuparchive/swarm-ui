@@ -79,8 +79,10 @@ export class NumericalInput extends React.Component<Props, State> {
 	}
 
 	_updateValueByStep = (isIncreasing: boolean) => {
-		const min: number = this.props.min ? this.props.min : -Infinity;
-		const max: number = this.props.max ? this.props.max : Infinity;
+		const min: number = isDefined(this.props.min)
+			? Number(this.props.min)
+			: -Infinity;
+		const max: number = isDefined(this.props.max) ? Number(this.props.max) : Infinity;
 		const step: number = this.props.step || 1;
 
 		const currentVal: number = this.state.value
