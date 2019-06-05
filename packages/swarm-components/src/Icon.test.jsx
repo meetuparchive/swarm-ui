@@ -17,6 +17,7 @@ describe('Icon', () => {
 		['Regular', getIconMarkup({ shape: 'cog' })],
 		['Circled', getIconMarkup({ circle: true, shape: 'cog' })],
 		['Circled color', getIconMarkup({ color: 'blue', circle: true, shape: 'cog' })],
+		['Default to xs size', <Icon key="default" shape="cog" />],
 	];
 
 	test.each(testCases)('Snapshot: %s', (description, element) => {
