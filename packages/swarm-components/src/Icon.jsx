@@ -36,6 +36,11 @@ export const getIconShape = (shape: string, size: string) => {
 	return `${shape}${suffix}`;
 };
 
+type AllStyles = {
+	color?: string,
+	fill?: string,
+};
+
 type Props = {
 	/** Which of our media sizes to render the icon at */
 	size?: string,
@@ -48,15 +53,7 @@ type Props = {
 	/** Class applied to svg tag */
 	className?: string,
 	/** Object of css styles */
-	style?: {
-		color?: string,
-		fill?: string,
-	},
-};
-
-type AllStyles = {
-	color?: string,
-	fill?: string,
+	style?: AllStyles,
 };
 
 /**
@@ -101,10 +98,6 @@ const Icon = (props: Props) => {
 			<use xlinkHref={`#icon-${getIconShape(shape, size)}`} />
 		</svg>
 	);
-};
-
-Icon.defaultProps = {
-	size: 's',
 };
 
 export default Icon;
