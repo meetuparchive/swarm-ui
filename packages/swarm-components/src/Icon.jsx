@@ -26,7 +26,7 @@ const SMALL_ICON_VARIANT_WHITELIST = VALID_SHAPES.filter(
  * @param {String} size - icon size
  * @returns {String} icon name (with or without suffix)
  */
-export const getIconShape = (shape, size) => {
+export const getIconShape = (shape: string, size: string) => {
 	if (!SMALL_ICON_VARIANT_WHITELIST.includes(shape)) {
 		return shape;
 	}
@@ -34,6 +34,11 @@ export const getIconShape = (shape, size) => {
 	const suffix =
 		size === 'xxs' || size === 'xs' || size === 's' ? SVG_THIN_STYLE : '';
 	return `${shape}${suffix}`;
+};
+
+type AllStyles = {
+	color?: string,
+	fill?: string,
 };
 
 type Props = {
@@ -48,7 +53,7 @@ type Props = {
 	/** Class applied to svg tag */
 	className?: string,
 	/** Object of css styles */
-	style?: {},
+	style?: AllStyles,
 };
 
 /**
@@ -61,7 +66,7 @@ type Props = {
  * @module Icon
  */
 const Icon = (props: Props) => {
-	const { className, shape, size, color, style, circle, ...other } = props;
+	const { className, shape, size = 'xs', color, style, circle, ...other } = props;
 
 	const classNames = cx(
 		ICON_CLASS,
@@ -74,7 +79,7 @@ const Icon = (props: Props) => {
 
 	const sizeVal = MEDIA_SIZES[size];
 
-	const allStyles = style || {};
+	const allStyles: AllStyles = style || {};
 	if (color) {
 		allStyles.fill = color;
 	}
@@ -93,10 +98,6 @@ const Icon = (props: Props) => {
 			<use xlinkHref={`#icon-${getIconShape(shape, size)}`} />
 		</svg>
 	);
-};
-
-Icon.defaultProps = {
-	size: 's',
 };
 
 export default Icon;

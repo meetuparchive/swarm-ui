@@ -105,6 +105,22 @@ exports[`Icon Snapshot: Circled color 1`] = `
 </div>
 `;
 
+exports[`Icon Snapshot: Default to xs size 1`] = `
+<svg
+  className="svg svg--cog svg-icon valign--middle"
+  height="20"
+  preserveAspectRatio="xMinYMin meet"
+  role="img"
+  style={Object {}}
+  viewBox="0 0 20 20"
+  width="20"
+>
+  <use
+    xlinkHref="#icon-cog--small"
+  />
+</svg>
+`;
+
 exports[`Icon Snapshot: Regular 1`] = `
 <div
   key="1"

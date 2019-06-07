@@ -55,7 +55,7 @@ export type TextInputProps = {
 	/**
 	 * max length of input field
 	 */
-	maxLength?: number,
+	maxLength?: ?number,
 };
 
 /**
@@ -97,7 +97,7 @@ export const TextInput = (props: TextInputProps): React$Element<*> => {
 			/>
 			{iconShape && (
 				<span data-swarm-input-icon={iconShape}>
-					<Icon shape={iconShape} size={iconSize} aria-hidden={true} />
+					<Icon shape={iconShape} size={iconSize} aria-hidden />
 				</span>
 			)}
 			{maxLength && <CharCount maxLength={maxLength} charLength={charLength} />}
