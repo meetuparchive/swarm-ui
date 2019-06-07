@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.13.19](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.13.18...@meetup/swarm-components@0.13.19) (2019-06-07)
+
+
+### Bug Fixes
+
+* adding flow support and prepush hooks ([a45aa28](https://github.com/meetup/swarm-ui/commit/a45aa28))
+* casting min & max to be a number in step updater ([404fe41](https://github.com/meetup/swarm-ui/commit/404fe41))
+* icon tests for default to xs ([955db6b](https://github.com/meetup/swarm-ui/commit/955db6b))
+* updating type def of style object, cleaning up default props ([87e7e95](https://github.com/meetup/swarm-ui/commit/87e7e95))
+
+
+
+
+
 ## [0.13.18](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.13.17...@meetup/swarm-components@0.13.18) (2019-06-03)
 
 **Note:** Version bump only for package @meetup/swarm-components
