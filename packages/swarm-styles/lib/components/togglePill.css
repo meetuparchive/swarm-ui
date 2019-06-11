@@ -14,7 +14,7 @@
     transition: background 0.15s;
     cursor: pointer;
     box-sizing: border-box;
-    padding: var(--size-space-half) var(--size-space-double);
+    padding: var(--space-half) var(--space-double);
     font-size: var(--font-size-small);
     line-height: var(--font-line-height-small);
 }
@@ -34,7 +34,7 @@
 
 [data-swarm-toggle-pill="reset"] {
     border: none;
-    padding: var(--size-space-quarter);
+    padding: var(--space-quarter);
     color: var(--color-gray-6);
 }
 

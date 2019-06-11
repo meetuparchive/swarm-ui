@@ -17,7 +17,7 @@
     align-items: center;
     border: 1px solid var(--color-gray-5);
     background-color: var(--color-white);
-    margin-right: var(--size-space-half);
+    margin-right: var(--space-half);
     border-radius: 4px;
     height: 20px;
     width: 20px;
