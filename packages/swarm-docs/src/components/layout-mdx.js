@@ -1,14 +1,15 @@
-import React from 'react'
-import Layout from './layout'
-import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
-import { MDXProvider } from '@mdx-js/tag'
+/* eslint-disable react/prop-types */
+import React from 'react';
+import Layout from './layout';
+import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
+import { MDXProvider } from '@mdx-js/react';
 
 // imports for use in react-live
-import * as scope from '@meetup/swarm-components'
+import * as scope from '@meetup/swarm-components';
 
 const PreComponent = ({ className, ...props }) => {
-  return props.children.props.props &&
-    props.children.props.props.className === 'language-.jsx' ? (
+  return props.children.props &&
+    props.children.props.className === 'language-.jsx' ? (
     <LiveProvider code={props.children.props.children} scope={scope}>
       <LiveEditor tabIndex="-1" />
       <LiveError />
@@ -16,16 +17,16 @@ const PreComponent = ({ className, ...props }) => {
     </LiveProvider>
   ) : (
     <pre {...props} className="pre-static" />
-  )
-}
+  );
+};
 
 // apply swarm classnames to classes used in markdown
-const H1 = props => <h1 className="text--display" {...props}/>
-const H2 = props => <h2 className="text--pageTitle" {...props}/>
-const H3 = props => <h3 className="text--big" {...props}/>
-const H4 = props => <h3 className="text--sectionTitle" {...props}/>
-const P = props => <p className="text--body" {...props}/>
-const A = props => <a className="text--link" {...props}/>
+const H1 = props => <h1 className="text--display" {...props}/>;
+const H2 = props => <h2 className="text--pageTitle" {...props}/>;
+const H3 = props => <h3 className="text--big" {...props}/>;
+const H4 = props => <h3 className="text--sectionTitle" {...props}/>;
+const P = props => <p className="text--body" {...props}/>;
+const A = props => <a className="text--link" {...props}/>;
 
 export default class MDXLayout extends React.Component {
   render() {
@@ -35,6 +36,6 @@ export default class MDXLayout extends React.Component {
           {this.props.children}
         </MDXProvider>
       </Layout>
-    )
+    );
   }
 }
