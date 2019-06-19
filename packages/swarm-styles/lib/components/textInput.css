@@ -11,12 +11,12 @@
     box-sizing: border-box;
 }
 
-[data-swarm-text-input-wrapper="default"] [data-swarm-text-input] {
-    padding: var(--space);
+[data-swarm-text-input-wrapper] [data-swarm-text-input] {
+    padding: var(--space-half) var(--space);
+    line-height: 26px;
 }
 
 [data-swarm-text-input-wrapper="icon"] [data-swarm-text-input] {
-    padding: var(--space);
     padding-left: var(--space-double);
 }
 
