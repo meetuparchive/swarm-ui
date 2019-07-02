@@ -11,6 +11,12 @@ StyleDictionary.registerFormat({
   formatter: _.template(fs.readFileSync(__dirname + '/templates/colorModifiers.template'))
 });
 
+// Custom format that uses the Lodash "template" syntax
+StyleDictionary.registerFormat({
+  name: 'custom/format/colorSwatch',
+  formatter: _.template(fs.readFileSync(__dirname + '/templates/colorSwatch.template'))
+});
+
 // Filter to determine if a property is a color
 StyleDictionary.registerFilter({
   name: 'isColorProp',

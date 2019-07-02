@@ -20,6 +20,15 @@
         "format": "custom/format/colorModifiers",
         "filter": "isColorProp"
       }]
-    }
+		},
+		"json": {
+			"transforms": ["name/cti/kebab", "color/css"],
+      "buildPath": "build/js/",
+      "files": [{
+        "destination": "colors.js",
+				"format": "custom/format/colorSwatch",
+				"filter": "isColorProp"
+      }]
+		}
   }
 }
