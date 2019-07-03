@@ -4,8 +4,8 @@ import Swatch from './swatch';
 
 const Swatches = props => {
  return(
- 	<div style={{display: "flex", "flex-wrap": "wrap"}}>
-	 {colors.map(color => <Swatch cssVariable={color.color} />)}
+ 	<div style={{display: "flex", "flexWrap": "wrap"}}>
+	 {colors.map(color => <Swatch cssVariable={color.color} name={color.name} />)}
 	 </div>);
 
 };

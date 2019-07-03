@@ -1,4 +1,4 @@
-module.exports = [<% _.each(allProperties, function(prop) {%>
+module.exports = [<% _.each(allProperties, function(prop) { %>
 {
 	name: "<%= prop.name %>",
 	color: "<%= prop.value %>",
