@@ -25,7 +25,7 @@ StyleDictionary.registerFilter({
   }
 });
 
-// Filter to determine if a property is a color
+// Filter to determine if a property is a color and not a font color to remove repeats
 StyleDictionary.registerFilter({
   name: 'isColorNotFontProp',
   matcher: function(prop) {
