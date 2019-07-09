@@ -1,0 +1,6 @@
+module.exports = [<% _.each(allProperties, function(prop) { %>
+{
+	name: "<%= prop.name %>",
+	hex: "<%= prop.value %>",
+},
+<% }); %>]
