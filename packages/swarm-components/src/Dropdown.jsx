@@ -28,40 +28,6 @@ let checkIfAppManagedFocus = ({ refs, state }) => {
 	return false;
 };
 
-let manageFocusOnUpdate = (context, appManagedFocus) => {
-	const { refs = {}, state = {} } = context;
-	if (state.isOpen && !!refs.items && !!refs.menu) {
-		window.__REACH_DISABLE_TOOLTIPS = true;
-		// eslint-disable-next-line no-negated-condition
-		if (state.selectionIndex !== -1) {
-			// haven't measured the popover yet, give it a frame otherwise
-			// we'll scroll to the bottom of the page >.<
-			requestAnimationFrame(() => {
-				console.log('ii', refs);
-				// refs.items[state.selectionIndex].focus();
-			});
-		} else {
-			refs.menu.focus();
-		}
-	} else if (!state.isOpen && !!refs.button) {
-		if (!appManagedFocus) {
-			// refs.button.focus();
-		}
-		// we want to ignore the immediate focus of a tooltip so it doesn't pop
-		// up again when the menu closes, only pops up when focus returns again
-		// to the tooltip (like native OS tooltips)
-		window.__REACH_DISABLE_TOOLTIPS = false;
-	} else if (state.selectionIndex) {
-		if (state.selectionIndex === -1) {
-			// clear highlight when mousing over non-menu items, but focus the menu
-			// so the the keyboard will work after a mouseover
-			// refs.menu.focus();
-		} else {
-			// refs.items[state.selectionIndex].focus();
-		}
-	}
-};
-
 let openAtFirstItem = state => ({ isOpen: true, selectionIndex: 0 });
 
 let close = state => ({
@@ -107,20 +73,8 @@ let Menu = ({ children }) => {
 
 	useEffect(() => {
 		checkIfStylesIncluded();
-		checkIfAppManagedFocus(context);
-	}, [state.isOpen]);
-
-	useEffect(() => {
-		console.log('mr', context.refs);
 		setAppManagedFocus(checkIfAppManagedFocus(context));
-		if (!appManagedFocus && state.isOpen && !!context.refs.menu) {
-			// context.refs.items[state.selectionIndex].focus();
-		}
-	}, [context.refs.items]);
-
-	useEffect(() => {
-		manageFocusOnUpdate(context, appManagedFocus);
-	}, [context.state.isOpen, context.state.selectionIndex, context.refs.items]);
+	}, [state.isOpen]);
 
 	return (
 		<MenuContext.Provider value={context}>
@@ -338,12 +292,6 @@ MenuLink.propTypes = {
 
 let MenuList = React.forwardRef((props, ref) => {
 	const { state, setState, refs } = useContext(MenuContext);
-
-	useEffect(() => {
-		if (state.isOpen) {
-			console.log('open r', refs.menu);
-		}
-	}, [state.isOpen]);
 
 	return (
 		state.isOpen && (
