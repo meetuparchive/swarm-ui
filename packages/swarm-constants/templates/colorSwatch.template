@@ -1,6 +1,6 @@
 module.exports = [<% _.each(allProperties, function(prop) { %>
 {
 	name: "<%= prop.name %>",
-	color: "<%= prop.value %>",
+	hex: "<%= prop.value %>",
 },
 <% }); %>]

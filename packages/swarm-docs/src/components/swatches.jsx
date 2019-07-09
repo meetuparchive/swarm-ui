@@ -2,9 +2,10 @@ import React from 'react';
 import colors from '@meetup/swarm-constants/build/js/colors';
 import Swatch from './swatch';
 
-const Swatches = props => (
+const Swatches = () => (
 	<div style={{display: "flex", "flexWrap": "wrap"}}>
-		{colors.map(color => <Swatch cssVariable={color.color} name={color.name} />)}
+		{colors.map(color => <Swatch hex={color.hex} name={color.name} key={color.name} />)}
 	</div>
 );
+
 export default Swatches;
