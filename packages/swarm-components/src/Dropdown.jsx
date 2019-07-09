@@ -31,7 +31,7 @@ let checkIfAppManagedFocus = ({ refs, state }) => {
 let openAtFirstItem = state => ({ isOpen: true, selectionIndex: 0 });
 
 let close = state => ({
-	isOpen: false,
+	isOpen: true,
 	selectionIndex: -1,
 	closingWithClick: false,
 });
@@ -97,11 +97,14 @@ let MenuButton = React.forwardRef(
 		const buttonRect = useRect(buttonRef, state.isOpen);
 
 		useEffect(() => {
-			setState({ ...state, buttonRect });
 			if (!state.isOpen) {
 				buttonRef.current.focus();
 			}
 		}, [state.isOpen]);
+
+		useEffect(() => {
+			setState({ ...state, buttonRect });
+		}, [state.isOpen, window.scrollX, window.scrollY]);
 
 		return (
 			<ForwardedButton
@@ -292,6 +295,7 @@ MenuLink.propTypes = {
 
 let MenuList = React.forwardRef((props, ref) => {
 	const { state, setState, refs } = useContext(MenuContext);
+	const menuRef = useRef(null);
 
 	return (
 		state.isOpen && (
