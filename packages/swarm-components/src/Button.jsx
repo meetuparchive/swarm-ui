@@ -119,4 +119,59 @@ const Button = (props: ButtonProps): React.Element<'button'> => {
 	);
 };
 
+// duplicated with a forwardRef for use in Dropwdown internally
+// not exported from swarm-ui
+// open to suggestions moving forward that don't introduce breaking changes
+export const ForwardedButton = React.forwardRef<ButtonProps, Button>(
+	(props: ButtonProps, ref) => {
+		// destructuring to not pass invalid attributes to node
+		const {
+			icon,
+			right,
+			grow,
+			children,
+			bordered, // eslint-disable-line no-unused-vars
+			neutral, // eslint-disable-line no-unused-vars
+			primary, // eslint-disable-line no-unused-vars
+			inverted, // eslint-disable-line no-unused-vars
+			reset, // eslint-disable-line no-unused-vars
+			small, // eslint-disable-line no-unused-vars
+			...other
+		} = props;
+
+		const buttonType = getButtonType(props);
+		const width = grow ? 'grow' : 'default';
+
+		return (
+			<button
+				data-swarm-button={buttonType}
+				data-swarm-size={getSwarmSize(props)}
+				data-icon={getIconPosition(props)}
+				data-swarm-width={width}
+				type="button"
+				ref={ref}
+				{...other}
+			>
+				{icon ? (
+					<span>
+						{right ? (
+							<>
+								{children}
+								<Icon shape={icon} size="xs" />
+							</>
+						) : (
+							<>
+								<Icon shape={icon} size="xs" />
+								{children}
+							</>
+						)}
+					</span>
+				) : (
+					children
+				)}
+			</button>
+		);
+	}
+);
+
 export default Button;

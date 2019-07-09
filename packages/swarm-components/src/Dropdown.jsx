@@ -5,12 +5,14 @@ import React, {
 	useContext,
 	useState,
 	useEffect,
+	useRef,
 } from 'react';
 import Portal from '@reach/portal';
-import Rect from '@reach/rect';
+import Rect, { useRect } from '@reach/rect';
 import WindowSize from '@reach/window-size';
 import { node, func, object, string, number, oneOfType, any } from 'prop-types';
 import { wrapEvent, checkStyles, assignRef } from '@reach/utils';
+import { ForwardedButton } from './Button';
 
 // TODO: add the mousedown/drag/mouseup to select of native menus, will
 // also help w/ remove the menu button tooltip hide-flash.
@@ -35,14 +37,15 @@ let manageFocusOnUpdate = (context, appManagedFocus) => {
 			// haven't measured the popover yet, give it a frame otherwise
 			// we'll scroll to the bottom of the page >.<
 			requestAnimationFrame(() => {
-				refs.items[state.selectionIndex].focus();
+				console.log('ii', refs);
+				// refs.items[state.selectionIndex].focus();
 			});
 		} else {
 			refs.menu.focus();
 		}
 	} else if (!state.isOpen && !!refs.button) {
 		if (!appManagedFocus) {
-			refs.button.focus();
+			// refs.button.focus();
 		}
 		// we want to ignore the immediate focus of a tooltip so it doesn't pop
 		// up again when the menu closes, only pops up when focus returns again
@@ -52,9 +55,9 @@ let manageFocusOnUpdate = (context, appManagedFocus) => {
 		if (state.selectionIndex === -1) {
 			// clear highlight when mousing over non-menu items, but focus the menu
 			// so the the keyboard will work after a mouseover
-			refs.menu.focus();
+			// refs.menu.focus();
 		} else {
-			refs.items[state.selectionIndex].focus();
+			// refs.items[state.selectionIndex].focus();
 		}
 	}
 };
@@ -136,48 +139,47 @@ Menu.propTypes = {
 let MenuButton = React.forwardRef(
 	({ onClick, onKeyDown, onMouseDown, ...props }, ref) => {
 		const { refs, state, setState } = useContext(MenuContext);
+		const buttonRef = useRef(null);
+		const buttonRect = useRect(buttonRef, state.isOpen);
+
+		useEffect(() => {
+			setState({ ...state, buttonRect });
+			if (!state.isOpen) {
+				buttonRef.current.focus();
+			}
+		}, [state.isOpen]);
+
 		return (
-			<Rect
-				observe={state.isOpen}
-				onChange={buttonRect => setState({ ...state, buttonRect })}
-			>
-				{({ ref: rectRef }) => (
-					<button
-						id={state.buttonId}
-						aria-haspopup="menu"
-						aria-expanded={state.isOpen}
-						data-reach-menu-button
-						type="button"
-						ref={node => {
-							rectRef(node);
-							assignRef(ref, node);
-							refs.button = node;
-						}}
-						onMouseDown={wrapEvent(onMouseDown, () => {
-							if (state.isOpen) {
-								setState({ ...state, closingWithClick: true });
-							}
-						})}
-						onClick={wrapEvent(onClick, () => {
-							if (state.isOpen) {
-								setState({ ...state, ...close() });
-							} else {
-								setState({ ...state, ...openAtFirstItem() });
-							}
-						})}
-						onKeyDown={wrapEvent(onKeyDown, event => {
-							if (event.key === 'ArrowDown') {
-								event.preventDefault(); // prevent scroll
-								setState({ ...state, ...openAtFirstItem() });
-							} else if (event.key === 'ArrowUp') {
-								event.preventDefault(); // prevent scroll
-								setState({ ...state, ...openAtFirstItem() });
-							}
-						})}
-						{...props}
-					/>
-				)}
-			</Rect>
+			<ForwardedButton
+				id={state.buttonId}
+				aria-haspopup="menu"
+				aria-expanded={state.isOpen}
+				data-reach-menu-button
+				type="button"
+				ref={buttonRef}
+				onMouseDown={wrapEvent(onMouseDown, () => {
+					if (state.isOpen) {
+						setState({ ...state, closingWithClick: true });
+					}
+				})}
+				onClick={wrapEvent(onClick, () => {
+					if (state.isOpen) {
+						setState({ ...state, ...close() });
+					} else {
+						setState({ ...state, ...openAtFirstItem() });
+					}
+				})}
+				onKeyDown={wrapEvent(onKeyDown, event => {
+					if (event.key === 'ArrowDown') {
+						event.preventDefault(); // prevent scroll
+						setState({ ...state, ...openAtFirstItem() });
+					} else if (event.key === 'ArrowUp') {
+						event.preventDefault(); // prevent scroll
+						setState({ ...state, ...openAtFirstItem() });
+					}
+				})}
+				{...props}
+			/>
 		);
 	}
 );
@@ -198,6 +200,8 @@ let MenuItem = React.forwardRef(
 			onKeyDown,
 			onMouseMove,
 			onMouseLeave,
+			setState: propSetState,
+			state: propState,
 			_ref,
 			...rest
 		},
@@ -209,13 +213,21 @@ let MenuItem = React.forwardRef(
 			onSelect();
 			setState({ ...state, ...close() });
 		};
+
+		const itemRef = useRef(null);
+
+		// assignRef(ref, node);
+		// assignRef(_ref, node);
+
+		useEffect(() => {
+			if (itemRef.current && state.selectionIndex === index) {
+				itemRef.current.focus();
+			}
+		}, [state.selectionIndex]);
 		return (
 			<div
 				{...rest}
-				ref={node => {
-					assignRef(ref, node);
-					assignRef(_ref, node);
-				}}
+				ref={itemRef}
 				data-reach-menu-item={role === 'menuitem' ? true : undefined}
 				role={role}
 				tabIndex="-1"
@@ -326,6 +338,12 @@ MenuLink.propTypes = {
 
 let MenuList = React.forwardRef((props, ref) => {
 	const { state, setState, refs } = useContext(MenuContext);
+
+	useEffect(() => {
+		if (state.isOpen) {
+			console.log('open r', refs.menu);
+		}
+	}, [state.isOpen]);
 
 	return (
 		state.isOpen && (

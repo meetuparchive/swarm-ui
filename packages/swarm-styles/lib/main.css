@@ -2,6 +2,7 @@
 @import '@meetup/swarm-constants/build/css/colorModifiers.css';
 @import '@reach/menu-button/styles.css';
 @import './components/button.css';
+@import './components/dropdown.css';
 @import './components/linkButton.css'; /* extends button.css */
 @import './components/checkbox.css';
 @import './components/numericalInput.css';

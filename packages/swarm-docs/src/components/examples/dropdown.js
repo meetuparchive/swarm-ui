@@ -3,14 +3,17 @@ import { Menu, MenuButton, MenuList, MenuItem } from '@meetup/swarm-components';
 
 export let name = "Basic";
 // eslint-disable-next-line react/display-name
-const WrappedItem = React.forwardRef((props, ref) => {
-  return <MenuItem data-swarm-item ref={ref} {...props} />;
-});
+// const WrappedItem = React.forwardRef((props, ref) => {
+//   return <MenuItem data-swarm-item ref={ref} {...props} />;
+// });
+const WrappedItem = (props) => {
+  return <MenuItem data-swarm-item {...props} />;
+};
 
 const Example = () => (
   <Menu>
-    <MenuButton>
-      Actions <span aria-hidden="true">▾</span>
+    <MenuButton primary>
+      Actions
     </MenuButton>
     <MenuList focusableChildrenTypes={[MenuItem, WrappedItem]}>
       <WrappedItem onSelect={() => alert("Download")}>Download</WrappedItem>
