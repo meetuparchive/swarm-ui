@@ -45,7 +45,7 @@ const Swatch = ({name, hex}) => {
 		<button
 			onClick={() => onClickColorSwatch(cssVarName)}
 			style={getSwatchStyles(hex)}>
-			{ copied && <p style={{ position: 'absolute', width: '100%', background: `linear-gradient(90deg, ${hex} 35%, #fff 35%, #fff 65%, ${hex} 65%)`, top: 2}}>Copied!</p>}
+			{ copied && <p style={{ paddingBottom: 2, paddingTop: 2, position: 'absolute', width: '100%', background: `linear-gradient(90deg, ${hex} 35%, #fff 35%, #fff 65%, ${hex} 65%)`, top: 2}}>Copied!</p>}
 			<div style={swatchBackground}>
 				<p style={{padding: 8}}>{`${displayName}`} <br/> {hex} <br/> {cssVarName} </p>
 			</div>
