@@ -122,7 +122,7 @@ const Button = (props: ButtonProps): React.Element<'button'> => {
 // duplicated with a forwardRef for use in Dropwdown internally
 // not exported from swarm-ui
 // open to suggestions moving forward that don't introduce breaking changes
-export const ForwardedButton = React.forwardRef<ButtonProps, button>(
+export const ForwardedButton = React.forwardRef<ButtonProps, HTMLButtonElement>(
 	(props: ButtonProps, ref) => {
 		// destructuring to not pass invalid attributes to node
 		const {
