@@ -65,66 +65,19 @@ export type ButtonProps = {
 	grow?: boolean,
 
 	/**
+	 *
+	 */
+	forwardedRef?: ?React.ElementRef<*>,
+
+	/**
 	 * Content of button
 	 */
 	children: React.Node,
 };
 
-const Button = (props: ButtonProps): React.Element<'button'> => {
+class Button extends React.Component<ButtonProps> {
 	// destructuring to not pass invalid attributes to node
-	const {
-		icon,
-		right,
-		grow,
-		children,
-		bordered, // eslint-disable-line no-unused-vars
-		neutral, // eslint-disable-line no-unused-vars
-		primary, // eslint-disable-line no-unused-vars
-		inverted, // eslint-disable-line no-unused-vars
-		reset, // eslint-disable-line no-unused-vars
-		small, // eslint-disable-line no-unused-vars
-		...other
-	} = props;
-
-	const buttonType = getButtonType(props);
-	const width = grow ? 'grow' : 'default';
-
-	return (
-		<button
-			data-swarm-button={buttonType}
-			data-swarm-size={getSwarmSize(props)}
-			data-icon={getIconPosition(props)}
-			data-swarm-width={width}
-			type="button"
-			{...other}
-		>
-			{icon ? (
-				<span>
-					{right ? (
-						<>
-							{children}
-							<Icon shape={icon} size="xs" />
-						</>
-					) : (
-						<>
-							<Icon shape={icon} size="xs" />
-							{children}
-						</>
-					)}
-				</span>
-			) : (
-				children
-			)}
-		</button>
-	);
-};
-
-// duplicated with a forwardRef for use in Dropwdown internally
-// not exported from swarm-ui
-// open to suggestions moving forward that don't introduce breaking changes
-export const ForwardedButton = React.forwardRef<ButtonProps, HTMLButtonElement>(
-	(props: ButtonProps, ref) => {
-		// destructuring to not pass invalid attributes to node
+	render() {
 		const {
 			icon,
 			right,
@@ -136,20 +89,21 @@ export const ForwardedButton = React.forwardRef<ButtonProps, HTMLButtonElement>(
 			inverted, // eslint-disable-line no-unused-vars
 			reset, // eslint-disable-line no-unused-vars
 			small, // eslint-disable-line no-unused-vars
+			forwardedRef,
 			...other
-		} = props;
+		} = this.props;
 
-		const buttonType = getButtonType(props);
+		const buttonType = getButtonType(this.props);
 		const width = grow ? 'grow' : 'default';
 
 		return (
 			<button
 				data-swarm-button={buttonType}
-				data-swarm-size={getSwarmSize(props)}
-				data-icon={getIconPosition(props)}
+				data-swarm-size={getSwarmSize(this.props)}
+				data-icon={getIconPosition(this.props)}
 				data-swarm-width={width}
 				type="button"
-				ref={ref}
+				ref={forwardedRef}
 				{...other}
 			>
 				{icon ? (
@@ -172,6 +126,10 @@ export const ForwardedButton = React.forwardRef<ButtonProps, HTMLButtonElement>(
 			</button>
 		);
 	}
+}
+
+export const ForwardedButton = React.forwardRef<ButtonProps, HTMLButtonElement>(
+	(props, ref) => <Button {...props} forwardedRef={ref} />
 );
 
 export default Button;
