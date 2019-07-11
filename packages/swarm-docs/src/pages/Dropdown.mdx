@@ -1,8 +1,30 @@
-import { Menu, MenuButton } from '@meetup/swarm-components';
+import { Menu, MenuList, MenuButton, MenuItem, MenuLink } from '@meetup/swarm-components';
 import Example from '../components/examples/dropdown';
 
 # Dropdown
 
 <Example />
-<Example />
-<Example />
+
+Example
+
+```.jsx
+<Menu>
+  <MenuButton primary>
+    Actions
+  </MenuButton>
+  <MenuList focusableChildrenTypes={[MenuItem]}>
+    <MenuItem onSelect={() => alert("Download")}>Download</MenuItem>
+    <MenuItem onSelect={() => alert("Copy")}>Create a Copy</MenuItem>
+    <MenuItem onSelect={() => alert("Mark as Draft")}>Mark as Draft</MenuItem>
+    <MenuItem onSelect={() => alert("Delete")}>Delete</MenuItem>
+  </MenuList>
+</Menu>
+```
+
+## Props
+Dropdowns are composed of five components, their props are listed below:
+<br/>
+<PropsTable propMetaData={Menu.__docgenInfo} />
+<PropsTable propMetaData={MenuList.__docgenInfo} />
+<PropsTable propMetaData={MenuButton.__docgenInfo} />
+<PropsTable propMetaData={MenuItem.__docgenInfo} />
