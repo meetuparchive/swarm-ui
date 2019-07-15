@@ -32,7 +32,6 @@ const Layout = ({ children }) => {
               name
             }
           }
-          distinct(field: relativeDirectory)
         }
       }
       `}
