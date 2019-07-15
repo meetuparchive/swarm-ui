@@ -9,7 +9,6 @@ type Props = {
 const transformFiles = (files: Array<Object>) => {
     const nav = [];
     files.forEach(file => {
-        console.log(file);
         const folder = {};
         file.nodes.forEach(node => {
             const value = (folder[node.relativeDirectory] || []);
