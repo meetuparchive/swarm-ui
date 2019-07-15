@@ -26,14 +26,14 @@ const Layout = ({ children }) => {
           }
         # Get all files for Nav
         allFile(filter: {extension: {eq: "mdx"}, absolutePath: {regex: "/pages/"}}) {
-					group(field: relativeDirectory) {
-						nodes {
-							relativeDirectory
-							name
-						}
-					}
-					distinct(field: relativeDirectory)
-				}
+          group(field: relativeDirectory) {
+            nodes {
+              relativeDirectory
+              name
+            }
+          }
+          distinct(field: relativeDirectory)
+        }
       }
       `}
       render={data => (
