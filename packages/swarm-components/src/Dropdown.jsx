@@ -168,6 +168,8 @@ const MenuItem = React.forwardRef(
 		useEffect(() => {
 			if (itemRef.current && state.selectionIndex === index) {
 				itemRef.current.focus();
+			} else {
+				itemRef.current.blur();
 			}
 		}, [state.selectionIndex]);
 		return (
