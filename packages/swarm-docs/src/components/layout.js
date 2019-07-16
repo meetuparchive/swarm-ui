@@ -25,9 +25,10 @@ const Layout = ({ children }) => {
             }
           }
         # Get all files for Nav
-        allFile(filter: { extension: { eq: "mdx" } }) {
-          edges {
-            node {
+        allFile(filter: {extension: {eq: "mdx"}, absolutePath: {regex: "/pages/"}}) {
+          group(field: relativeDirectory) {
+            nodes {
+              relativeDirectory
               name
             }
           }
@@ -46,7 +47,7 @@ const Layout = ({ children }) => {
             <html lang="en" />
             {require('swarm-icons/dist/sprite/sprite.inc')}
           </Helmet>
-          <Nav fileNames={ data.allFile.edges.map((value) => value.node.name)} />
+          <Nav files={data.allFile.group} />
           <div className="main">
             <Header siteTitle={data.site.siteMetadata.title} />
             <div>
