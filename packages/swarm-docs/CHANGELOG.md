@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.10.0](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.9.27...@meetup/swarm-docs@0.10.0) (2019-07-16)
+
+
+### Bug Fixes
+
+* remove console.log ([6fdb4a3](https://github.com/gatsbyjs/gatsby-starter-default/commit/6fdb4a3))
+* remove distinct, not needed ([e9f2adb](https://github.com/gatsbyjs/gatsby-starter-default/commit/e9f2adb))
+* tabs to spaces ([fc71f79](https://github.com/gatsbyjs/gatsby-starter-default/commit/fc71f79))
+
+
+### Features
+
+* move colors into foundation ([216eefe](https://github.com/gatsbyjs/gatsby-starter-default/commit/216eefe))
+* navigation with relative directory ([6cb85f9](https://github.com/gatsbyjs/gatsby-starter-default/commit/6cb85f9))
+
+
+
+
+
 ## [0.9.27](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.9.26...@meetup/swarm-docs@0.9.27) (2019-07-16)
 
 **Note:** Version bump only for package @meetup/swarm-docs
