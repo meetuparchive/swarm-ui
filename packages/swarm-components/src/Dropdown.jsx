@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React, {
 	createContext,
 	Children,
@@ -10,7 +9,16 @@ import React, {
 import Portal from '@reach/portal';
 import Rect, { useRect } from '@reach/rect';
 import WindowSize from '@reach/window-size';
-import { node, func, object, string, number, oneOfType, any } from 'prop-types';
+import {
+	node,
+	func,
+	object,
+	string,
+	number,
+	oneOfType,
+	any,
+	arrayOf,
+} from 'prop-types';
 import * as ReachUtils from '@reach/utils';
 import { ForwardedButton } from './Button';
 
@@ -20,9 +28,6 @@ import { ForwardedButton } from './Button';
 // TODO: add type-to-highlight like native menus
 
 const MenuContext = createContext();
-
-const checkIfAppManagedFocus = ({ refs, state }) =>
-	state.isOpen && Boolean(refs.menu) && refs.menu.contains(document.activeElement);
 
 const openAtFirstItem = state => ({ isOpen: true, selectionIndex: 0 });
 
@@ -37,7 +42,7 @@ const genId = prefix =>
 		.toString(32)
 		.substr(2, 8)}`;
 
-////////////////////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////////////////
 
 const INITIAL_MENU_STATE = {
 	// isOpen: false,
@@ -51,7 +56,6 @@ const checkIfStylesIncluded = () => ReachUtils.checkStyles('menu-button');
 
 const Menu = ({ children }) => {
 	const [state, setState] = useState(INITIAL_MENU_STATE);
-	const [appManagedFocus, setAppManagedFocus] = useState(false);
 
 	const context = {
 		state,
@@ -65,7 +69,6 @@ const Menu = ({ children }) => {
 
 	useEffect(() => {
 		checkIfStylesIncluded();
-		setAppManagedFocus(checkIfAppManagedFocus(context));
 	}, [state.isOpen]);
 
 	return (
@@ -81,10 +84,10 @@ Menu.propTypes = {
 	children: oneOfType([func, node]),
 };
 
-////////////////////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////////////////
 const MenuButton = React.forwardRef(
 	({ onClick, onKeyDown, onMouseDown, ...props }, ref) => {
-		const { refs, state, setState } = useContext(MenuContext);
+		const { state, setState } = useContext(MenuContext);
 		const buttonRef = useRef(null);
 		const buttonRect = useRect(buttonRef, state.isOpen);
 
@@ -112,6 +115,7 @@ const MenuButton = React.forwardRef(
 					}
 				})}
 				onClick={ReachUtils.wrapEvent(onClick, () => {
+					console.log('b', state);
 					if (state.isOpen) {
 						setState({ ...state, ...closeState() });
 					} else {
@@ -136,6 +140,7 @@ const MenuButton = React.forwardRef(
 MenuButton.propTypes = {
 	onClick: func,
 	onKeyDown: func,
+	onMouseDown: func,
 	children: node,
 };
 
@@ -215,12 +220,13 @@ MenuItem.propTypes = {
 	index: number,
 	onKeyDown: func,
 	onMouseMove: func,
+	onMouseLeave: func,
 	_ref: func,
 };
 
 const k = () => {};
 
-////////////////////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////////////////
 const MenuLink = React.forwardRef(
 	(
 		{
@@ -292,11 +298,10 @@ MenuLink.propTypes = {
 	index: number,
 	_ref: func,
 };
-///////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////
 
 const MenuList = React.forwardRef((props, ref) => {
-	const { state, setState, refs } = useContext(MenuContext);
-	const menuRef = useRef(null);
+	const { state } = useContext(MenuContext);
 
 	return (
 		state.isOpen && (
@@ -360,10 +365,14 @@ const MenuListImpl = React.forwardRef(
 		}, [state.selectionIndex]);
 
 		const handleClickOutside = e => {
-			if (menuListRef.current.contains(e.target)) {
+			console.log(e);
+			if (
+				menuListRef.current.contains(e.target) ||
+				e.target.hasAttribute('data-swarm-menu-button')
+			) {
 				return;
 			}
-			setState({ ...state, isOpen: false });
+			setState({ ...state, closingWithClick: true, isOpen: false });
 		};
 
 		useEffect(() => {
@@ -429,6 +438,7 @@ MenuListImpl.propTypes = {
 	refs: object,
 	state: object,
 	setState: func,
+	focusableChildrenTypes: arrayOf(any),
 	children: node,
 	onKeyDown: func,
 	onBlur: func,
@@ -480,4 +490,3 @@ const getStyles = (buttonRect, menuRect) => {
 };
 
 export { Menu, MenuList, MenuButton, MenuLink, MenuItem };
-/* eslint-enable */
