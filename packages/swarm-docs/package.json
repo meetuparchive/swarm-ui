@@ -31,6 +31,7 @@
     "@meetup/swarm-components": "^0.13.21",
     "@meetup/swarm-constants": "^0.3.4",
     "@meetup/swarm-styles": "^0.5.19",
+    "change-case": "^3.1.0",
     "constants": "0.0.2",
     "core-js": "2.6.5",
     "gatsby": "^2.8.8",

@@ -11,4 +11,4 @@ export { default as Textarea } from './Textarea';
 export { default as Toggle } from './Toggle';
 export { default as TogglePill } from './TogglePill';
 export { default as Select } from './Select';
-export { Menu, MenuButton, MenuItem, MenuList } from './DropdownWrappers';
+export { Menu, MenuButton, MenuItem, MenuList, MenuLink } from './DropdownWrappers';

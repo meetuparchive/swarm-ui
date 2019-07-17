@@ -27,7 +27,7 @@ const checkIfAppManagedFocus = ({ refs, state }) =>
 const openAtFirstItem = state => ({ isOpen: true, selectionIndex: 0 });
 
 const closeState = state => ({
-	isOpen: false,
+	isOpen: true,
 	selectionIndex: -1,
 	closingWithClick: false,
 });
@@ -172,6 +172,7 @@ const MenuItem = React.forwardRef(
 				itemRef.current.blur();
 			}
 		}, [state.selectionIndex]);
+
 		return (
 			<div
 				{...rest}
@@ -228,8 +229,8 @@ const MenuLink = React.forwardRef(
 			component: Comp,
 			as: AsComp = 'a',
 			style,
-			setState,
-			state,
+			setState: propSetState,
+			state: propState,
 			index,
 			_ref,
 			...props
@@ -237,6 +238,18 @@ const MenuLink = React.forwardRef(
 		ref
 	) => {
 		const Link = Comp || AsComp;
+		const { state, setState } = useContext(MenuContext);
+
+		const itemRef = useRef(null);
+
+		useEffect(() => {
+			if (itemRef.current && state.selectionIndex === index) {
+				itemRef.current.focus();
+			} else {
+				itemRef.current.blur();
+			}
+		}, [state.selectionIndex]);
+
 		if (Comp) {
 			console.warn(
 				'[@swarm-ui/dropdown]: Please use the `as` prop instead of `component`.'
@@ -250,7 +263,7 @@ const MenuLink = React.forwardRef(
 					tabIndex="-1"
 					data-selected={index === state.selectionIndex ? true : undefined}
 					onClick={ReachUtils.wrapEvent(onClick, event => {
-						setState({ ...state, ...closeState() });
+						setState({ ...closeState() });
 					})}
 					onKeyDown={ReachUtils.wrapEvent(onKeyDown, event => {
 						if (event.key === 'Enter') {
@@ -259,10 +272,7 @@ const MenuLink = React.forwardRef(
 							event.stopPropagation();
 						}
 					})}
-					ref={node => {
-						ReachUtils.assignRef(_ref, node);
-						ReachUtils.assignRef(ref, node);
-					}}
+					ref={itemRef}
 					style={{ ...style }}
 					{...props}
 				/>

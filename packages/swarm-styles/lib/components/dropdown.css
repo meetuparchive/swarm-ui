@@ -2,7 +2,8 @@
   color: var(--color-gray-7);
 }
 
-[data-swarm-menu-item][data-selected] {
+[data-swarm-menu-item][data-selected],
+[data-swarm-menu-link][data-selected] {
   background-color: var(--color-gray-3);
   color: var(--color-gray-7);
 }
