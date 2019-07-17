@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const PropsTable = props => {
-  const { propMetaData = { props: {} },...rest } = props;
+const isEmpty = obj => [Object, Array].includes((obj || {}).constructor) && !Object.entries((obj || {})).length;
 
-  return (
+const PropsTable = props => {
+  const { propMetaData = { props: {} }, ...rest } = props;
+
+  return !isEmpty(propMetaData.props) && (
     <table {...rest} className="props-table">
       <thead>
         <tr>

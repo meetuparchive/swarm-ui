@@ -1,24 +1,29 @@
 const config = {
-  extends: ['eslint:recommended', 'plugin:flowtype/recommended', 'plugin:react/recommended', 'prettier'],
-  parser: 'babel-eslint',
-  parserOptions: {
-    ecmaVersion: 6,
-    ecmaFeatures: {
-      jsx: true,
-      experimentalObjectRestSpread: true
-    },
-    sourceType: 'module'
-  },
-  env: {
-    browser: true,
-    node: true,
-    jest: true,
-    jasmine: true,
-    es6: true
-  },
-  plugins: ['react', 'flowtype'],
-  rules: {
-    'array-callback-return': 2,
+	extends: [
+		'eslint:recommended',
+		'plugin:flowtype/recommended',
+		'plugin:react/recommended',
+		'prettier',
+	],
+	parser: 'babel-eslint',
+	parserOptions: {
+		ecmaVersion: 6,
+		ecmaFeatures: {
+			jsx: true,
+			experimentalObjectRestSpread: true,
+		},
+		sourceType: 'module',
+	},
+	env: {
+		browser: true,
+		node: true,
+		jest: true,
+		jasmine: true,
+		es6: true,
+	},
+	plugins: ['react', 'flowtype'],
+	rules: {
+		'array-callback-return': 2,
 		'comma-dangle': 0,
 		'eol-last': 2,
 		'no-console': 0,
@@ -34,6 +39,7 @@ const config = {
 		'no-useless-escape': 2,
 		'no-whitespace-before-property': 2,
 		'prefer-template': 2,
+		'react/display-name': 0,
 		'react/jsx-no-undef': 0,
 		'react/jsx-uses-react': 1,
 		'react/jsx-uses-vars': 1,
@@ -49,12 +55,12 @@ const config = {
 		'space-in-parens': [2, 'never'],
 		'spaced-comment': [2, 'always'],
 		strict: 0,
-  },
-  settings: {
-    react: {
-      version: 'detect'
-    }
-  }
+	},
+	settings: {
+		react: {
+			version: 'detect',
+		},
+	},
 };
 
 module.exports = config;
