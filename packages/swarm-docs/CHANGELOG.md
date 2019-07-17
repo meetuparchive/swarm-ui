@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.11.0](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.10.0...@meetup/swarm-docs@0.11.0) (2019-07-17)
+
+
+### Bug Fixes
+
+* blur when item is no longer active ([1b1b8c8](https://github.com/gatsbyjs/gatsby-starter-default/commit/1b1b8c8))
+* forwardedRef, window removed from effect compare ([d547d1f](https://github.com/gatsbyjs/gatsby-starter-default/commit/d547d1f))
+* resolved focus issue, ForwardedButton for forwardRefs in dropdown ([f4829ba](https://github.com/gatsbyjs/gatsby-starter-default/commit/f4829ba))
+* updated and added MenuLink to demo ([b0f780a](https://github.com/gatsbyjs/gatsby-starter-default/commit/b0f780a))
+
+
+### Features
+
+* dropdown wip, buggy initial focus ([716a5cb](https://github.com/gatsbyjs/gatsby-starter-default/commit/716a5cb))
+
+
+
+
+
 # [0.10.0](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.9.27...@meetup/swarm-docs@0.10.0) (2019-07-16)
 
 
