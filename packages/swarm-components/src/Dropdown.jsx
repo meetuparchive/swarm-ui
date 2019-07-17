@@ -27,7 +27,7 @@ const checkIfAppManagedFocus = ({ refs, state }) =>
 const openAtFirstItem = state => ({ isOpen: true, selectionIndex: 0 });
 
 const closeState = state => ({
-	isOpen: true,
+	isOpen: false,
 	selectionIndex: -1,
 	closingWithClick: false,
 });
@@ -168,7 +168,7 @@ const MenuItem = React.forwardRef(
 		useEffect(() => {
 			if (itemRef.current && state.selectionIndex === index) {
 				itemRef.current.focus();
-			} else {
+			} else if (state.selectionIndex === -1) {
 				itemRef.current.blur();
 			}
 		}, [state.selectionIndex]);
@@ -350,6 +350,34 @@ const MenuListImpl = React.forwardRef(
 			children,
 			focusableChildrenTypes
 		);
+
+		const menuListRef = useRef(null);
+
+		useEffect(() => {
+			if (menuListRef && state.selectionIndex === -1) {
+				menuListRef.current.focus();
+			}
+		}, [state.selectionIndex]);
+
+		const handleClickOutside = e => {
+			if (menuListRef.current.contains(e.target)) {
+				return;
+			}
+			setState({ ...state, isOpen: false });
+		};
+
+		useEffect(() => {
+			if (state.isOpen) {
+				document.addEventListener('mousedown', handleClickOutside);
+			} else {
+				document.removeEventListener('mousedown', handleClickOutside);
+			}
+
+			return () => {
+				document.removeEventListener('mousedown', handleClickOutside);
+			};
+		}, [state.isOpen]);
+
 		return (
 			<div
 				data-reach-menu-list
@@ -357,15 +385,7 @@ const MenuListImpl = React.forwardRef(
 				role="menu"
 				aria-labelledby={state.buttonId}
 				tabIndex="-1"
-				ref={node => {
-					refs.menu = node;
-					ReachUtils.assignRef(ref, node);
-				}}
-				onBlur={event => {
-					if (!state.closingWithClick && !refs.menu.contains(event.relatedTarget)) {
-						setState({ ...state, ...closeState() });
-					}
-				}}
+				ref={menuListRef}
 				onKeyDown={ReachUtils.wrapEvent(onKeyDown, event => {
 					if (event.key === 'Escape') {
 						setState({ ...state, ...closeState() });
