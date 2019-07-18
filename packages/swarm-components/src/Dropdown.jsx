@@ -115,7 +115,6 @@ const MenuButton = React.forwardRef(
 					}
 				})}
 				onClick={ReachUtils.wrapEvent(onClick, () => {
-					console.log('b', state);
 					if (state.isOpen) {
 						setState({ ...state, ...closeState() });
 					} else {
@@ -279,7 +278,7 @@ const MenuLink = React.forwardRef(
 						}
 					})}
 					ref={itemRef}
-					style={{ ...style }}
+					style={style}
 					{...props}
 				/>
 			</MenuItem>
@@ -300,6 +299,7 @@ MenuLink.propTypes = {
 };
 // /////////////////////////////////////////////////////////////////
 
+// The open state is client side only
 const MenuList = React.forwardRef((props, ref) => {
 	const { state } = useContext(MenuContext);
 
@@ -365,7 +365,6 @@ const MenuListImpl = React.forwardRef(
 		}, [state.selectionIndex]);
 
 		const handleClickOutside = e => {
-			console.log(e);
 			if (
 				menuListRef.current.contains(e.target) ||
 				e.target.hasAttribute('data-swarm-menu-button')
