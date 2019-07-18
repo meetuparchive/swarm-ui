@@ -3,6 +3,79 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.11.0](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.10.0...@meetup/swarm-docs@0.11.0) (2019-07-17)
+
+
+### Bug Fixes
+
+* blur when item is no longer active ([1b1b8c8](https://github.com/gatsbyjs/gatsby-starter-default/commit/1b1b8c8))
+* forwardedRef, window removed from effect compare ([d547d1f](https://github.com/gatsbyjs/gatsby-starter-default/commit/d547d1f))
+* resolved focus issue, ForwardedButton for forwardRefs in dropdown ([f4829ba](https://github.com/gatsbyjs/gatsby-starter-default/commit/f4829ba))
+* updated and added MenuLink to demo ([b0f780a](https://github.com/gatsbyjs/gatsby-starter-default/commit/b0f780a))
+
+
+### Features
+
+* dropdown wip, buggy initial focus ([716a5cb](https://github.com/gatsbyjs/gatsby-starter-default/commit/716a5cb))
+
+
+
+
+
+# [0.10.0](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.9.27...@meetup/swarm-docs@0.10.0) (2019-07-16)
+
+
+### Bug Fixes
+
+* remove console.log ([6fdb4a3](https://github.com/gatsbyjs/gatsby-starter-default/commit/6fdb4a3))
+* remove distinct, not needed ([e9f2adb](https://github.com/gatsbyjs/gatsby-starter-default/commit/e9f2adb))
+* tabs to spaces ([fc71f79](https://github.com/gatsbyjs/gatsby-starter-default/commit/fc71f79))
+
+
+### Features
+
+* move colors into foundation ([216eefe](https://github.com/gatsbyjs/gatsby-starter-default/commit/216eefe))
+* navigation with relative directory ([6cb85f9](https://github.com/gatsbyjs/gatsby-starter-default/commit/6cb85f9))
+
+
+
+
+
+## [0.9.27](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.9.26...@meetup/swarm-docs@0.9.27) (2019-07-16)
+
+**Note:** Version bump only for package @meetup/swarm-docs
+
+
+
+
+
+## [0.9.26](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.9.25...@meetup/swarm-docs@0.9.26) (2019-07-09)
+
+
+### Bug Fixes
+
+* not modifier class ([7a72f8e](https://github.com/gatsbyjs/gatsby-starter-default/commit/7a72f8e))
+
+
+
+
+
+## [0.9.25](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.9.24...@meetup/swarm-docs@0.9.25) (2019-06-13)
+
+**Note:** Version bump only for package @meetup/swarm-docs
+
+
+
+
+
+## [0.9.24](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.9.23...@meetup/swarm-docs@0.9.24) (2019-06-11)
+
+**Note:** Version bump only for package @meetup/swarm-docs
+
+
+
+
+
 ## [0.9.23](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.9.22...@meetup/swarm-docs@0.9.23) (2019-06-07)
 
 **Note:** Version bump only for package @meetup/swarm-docs

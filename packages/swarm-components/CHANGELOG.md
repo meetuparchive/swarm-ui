@@ -3,6 +3,45 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.14.0](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.13.21...@meetup/swarm-components@0.14.0) (2019-07-17)
+
+
+### Bug Fixes
+
+* blur when item is no longer active ([1b1b8c8](https://github.com/meetup/swarm-ui/commit/1b1b8c8))
+* close menu on outside click ([57c44c9](https://github.com/meetup/swarm-ui/commit/57c44c9))
+* corrected clickoutside to look for trigger as well ([49a832a](https://github.com/meetup/swarm-ui/commit/49a832a))
+* forwardedRef, window removed from effect compare ([d547d1f](https://github.com/meetup/swarm-ui/commit/d547d1f))
+* forwardRef types ([0a341c8](https://github.com/meetup/swarm-ui/commit/0a341c8))
+* forwardRef types ([48332c7](https://github.com/meetup/swarm-ui/commit/48332c7))
+* resolved focus issue, ForwardedButton for forwardRefs in dropdown ([f4829ba](https://github.com/meetup/swarm-ui/commit/f4829ba))
+* updated and added MenuLink to demo ([b0f780a](https://github.com/meetup/swarm-ui/commit/b0f780a))
+
+
+### Features
+
+* dropdown wip, buggy initial focus ([716a5cb](https://github.com/meetup/swarm-ui/commit/716a5cb))
+
+
+
+
+
+## [0.13.21](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.13.20...@meetup/swarm-components@0.13.21) (2019-07-16)
+
+**Note:** Version bump only for package @meetup/swarm-components
+
+
+
+
+
+## [0.13.20](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.13.19...@meetup/swarm-components@0.13.20) (2019-07-09)
+
+**Note:** Version bump only for package @meetup/swarm-components
+
+
+
+
+
 ## [0.13.19](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.13.18...@meetup/swarm-components@0.13.19) (2019-06-07)
 
 

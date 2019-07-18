@@ -1,9 +1,9 @@
-import React from 'react'
-import { Checkbox } from '@meetup/swarm-components'
+import React from 'react';
+import { Checkbox } from '@meetup/swarm-components';
 
 const Example = () => {
-  const [checked, setChecked] = React.useState(false)
-  const [twoChecked, setTwoChecked] = React.useState(false)
+  const [checked, setChecked] = React.useState(false);
+  const [twoChecked, setTwoChecked] = React.useState(false);
   return (
     <>
       <Checkbox
@@ -29,7 +29,7 @@ const Example = () => {
         disabled checked
       </Checkbox>
     </>
-  )
-}
+  );
+};
 
-export default Example
+export default Example;
