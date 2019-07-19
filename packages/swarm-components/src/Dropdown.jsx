@@ -44,18 +44,18 @@ const genId = prefix =>
 
 // //////////////////////////////////////////////////////////////////////
 
-const INITIAL_MENU_STATE = {
+const getInitialState = () => ({
 	// isOpen: false,
 	buttonRect: {},
 	selectionIndex: -1,
 	closingWithClick: false,
 	buttonId: genId('button'),
-};
+});
 
 const checkIfStylesIncluded = () => ReachUtils.checkStyles('menu-button');
 
 const Menu = ({ children }) => {
-	const [state, setState] = useState(INITIAL_MENU_STATE);
+	const [state, setState] = useState(getInitialState());
 
 	const context = {
 		state,
@@ -365,10 +365,8 @@ const MenuListImpl = React.forwardRef(
 		}, [state.selectionIndex]);
 
 		const handleClickOutside = e => {
-			if (
-				menuListRef.current.contains(e.target) ||
-				e.target.hasAttribute('data-swarm-menu-button')
-			) {
+			const buttonId = document.getElementById(state.buttonId);
+			if (menuListRef.current.contains(e.target) || buttonId.contains(e.target)) {
 				return;
 			}
 			setState({ ...state, closingWithClick: true, isOpen: false });
