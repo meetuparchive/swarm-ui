@@ -16,7 +16,7 @@ span[data-swarm-radio-field] {
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    margin-right: var(--size-space-half);
+    margin-right: var(--space-half);
     border-radius: 50%;
     height: 19px;
     width: 19px;

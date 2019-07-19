@@ -9,10 +9,10 @@
 [data-swarm-select] select {
     appearance: none;
     user-select: none;
-    padding-top: var(--size-space-default);
-    padding-right: var(--size-space-double);
-    padding-bottom: var(--size-space-default);
-    padding-left: var(--size-space-default);
+    padding-top: var(--space);
+    padding-right: var(--space-double);
+    padding-bottom: var(--space);
+    padding-left: var(--space);
     width: 100%;
     border: 1px solid var(--color-gray-3);
     /* ToDo: do we need a box shadow? do we want it on focus or on error states as well? */
@@ -41,13 +41,13 @@
     display: inline-block;
     pointer-events: none;
     position:absolute;
-    right: var(--size-space-default);
-    bottom: var(--size-space-default);
+    right: var(--space);
+    bottom: var(--space);
 }
 
 [data-swarm-select-arrow] svg {
-    height: var(--size-space-default);
-    width: var(--size-space-default);
+    height: var(--space);
+    width: var(--space);
     align-self: center;
     vertical-align: middle;
     overflow: hidden;

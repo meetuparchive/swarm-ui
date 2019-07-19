@@ -46,7 +46,7 @@ pre,
 
 .runningText p {
     @extend %wrapNice;
-    margin-bottom: var(--size-space-default);
+    margin-bottom: var(--space);
     max-width: 40em;
 
 }

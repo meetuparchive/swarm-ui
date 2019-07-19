@@ -8,7 +8,7 @@ table {
 caption,
 td,
 th {
-	padding: calc(var(--size-space-default) / 2) var(--size-space-default);
+	padding: calc(var(--space) / 2) var(--space);
 	color: var(--color-gray-4);
 	text-align: left;
 	vertical-align: middle;
