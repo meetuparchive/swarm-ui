@@ -13,7 +13,7 @@
 
 [data-swarm-text-input-wrapper] [data-swarm-text-input] {
     padding: var(--space-half) var(--space);
-    line-height: 26px;
+    line-height: 28px;
 }
 
 [data-swarm-text-input-wrapper="icon"] [data-swarm-text-input] {
