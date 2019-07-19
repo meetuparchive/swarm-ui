@@ -6,16 +6,34 @@ import Example from '../../components/examples/dropdown';
 
 <Example />
 
-Example
-
+Manage Group Example
 ```.jsx
 <Menu>
-  <MenuButton primary>
-    Actions
+  <MenuButton icon="chevron-down" right>
+    Manage Group
   </MenuButton>
   <MenuList focusableChildrenTypes={[MenuItem]}>
-    <MenuItem onSelect={() => alert("Download")}>Download</MenuItem>
-    <MenuItem onSelect={() => alert("Copy")}>Create a Copy</MenuItem>
+    <MenuItem onSelect={() => alert("Download")}>Contact Group Members</MenuItem>
+    <MenuItem onSelect={() => alert("Copy")}>Edit Group Settings</MenuItem>
+    <MenuItem onSelect={() => alert("Mark as Draft")}>Mark as Draft</MenuItem>
+    <MenuLink
+      as="a"
+      href="https://meetup.com"
+    >Meetup</MenuLink>
+    <MenuItem onSelect={() => alert("Delete")}>Delete</MenuItem>
+  </MenuList>
+</Menu>
+```
+
+Create Event Example
+```.jsx
+<Menu>
+  <MenuButton primary icon="chevron-down" right>
+    Create Event
+  </MenuButton>
+  <MenuList focusableChildrenTypes={[MenuItem]}>
+    <MenuItem onSelect={() => alert("Download")}>Create New Event</MenuItem>
+    <MenuItem onSelect={() => alert("Copy")}>Book as Space</MenuItem>
     <MenuItem onSelect={() => alert("Mark as Draft")}>Mark as Draft</MenuItem>
     <MenuLink
       as="a"
