@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.1](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.6.0...@meetup/swarm-styles@0.6.1) (2019-07-19)
+
+
+### Bug Fixes
+
+* input padding & line heights, tracked master ([1c7ef55](https://github.com/meetup/swarm-ui/commit/1c7ef55))
+* update padding and lineheight of textinput ([7f332f8](https://github.com/meetup/swarm-ui/commit/7f332f8))
+* updated all spaces to use responsive spaces as defined ([fa56f4d](https://github.com/meetup/swarm-ui/commit/fa56f4d))
+
+
+
+
+
 # [0.6.0](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.5.19...@meetup/swarm-styles@0.6.0) (2019-07-17)
 
 
