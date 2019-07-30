@@ -58,6 +58,14 @@ h1.docs-title a {
   margin: 0 auto var(--size-space-double);
 }
 
+.about-list {
+  list-style-type: none;
+  margin-bottom: var(--space);
+}
+
+.about-list li {
+  margin-left: var(--space);
+}
 
 /* Props Table */
 .props-table {
@@ -144,4 +152,25 @@ pre.prism-code {
   height: 180px;
   background-color: var(--color-gray-1);
   margin: 30px 0;
+}
+
+/* static snippet styling */
+.pre-static {
+  font-size: 14px;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  border-left: 5px solid #eee;
+  padding-left: 5px;
+  background: #fff;
+  color: #303030;
+  overflow: auto;
 }
