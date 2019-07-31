@@ -1,0 +1,31 @@
+{
+  "name": "@meetup/swarm-icons",
+  "version": "0.0.1",
+  "description": "> TODO: description",
+  "author": "hsbacot <hsbacot@gmail.com>",
+  "homepage": "https://github.com/meetup/swarm-ui#readme",
+  "license": "ISC",
+  "main": "lib/swarm-icons.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meetup/swarm-ui.git"
+  },
+  "scripts": {
+    "build": "npx svgo lib/**/*.svg"
+  },
+  "bugs": {
+    "url": "https://github.com/meetup/swarm-ui/issues"
+  },
+  "devDependencies": {
+    "svgo": "^1.3.0"
+  }
+}
