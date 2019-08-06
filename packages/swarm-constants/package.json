@@ -28,5 +28,8 @@
   "devDependencies": {
     "lodash": "4.17.13",
     "style-dictionary": "2.7.0"
+  },
+  "dependencies": {
+    "@meetup/swarm-icons": "^0.0.1"
   }
 }

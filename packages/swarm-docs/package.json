@@ -30,6 +30,7 @@
     "@mdx-js/react": "^1.0.20",
     "@meetup/swarm-components": "^0.14.2",
     "@meetup/swarm-constants": "^0.3.4",
+    "@meetup/swarm-icons": "^0.0.1",
     "@meetup/swarm-styles": "^0.6.1",
     "change-case": "^3.1.0",
     "constants": "0.0.2",
