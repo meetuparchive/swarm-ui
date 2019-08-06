@@ -7,7 +7,7 @@
   "scripts": {
     "build": "yarn build:src && yarn build:docs",
     "build:docs": "lerna run build --scope @meetup/swarm-docs",
-    "build:src": "lerna run build --scope @meetup/swarm-constants --scope @meetup/swarm-styles --scope @meetup/swarm-components",
+    "build:src": "lerna run build --scope @meetup/swarm-constants --scope @meetup/swarm-styles --scope @meetup/swarm-components --scope @meetup/swarm-icons",
     "now-build": "npm run build",
     "now-dev": "cd packages/swarm-docs && gatsby develop -p $PORT",
     "test": "yarn && yarn build:src && yarn test:unit",
