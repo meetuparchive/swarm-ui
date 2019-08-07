@@ -1,16 +1,22 @@
 [data-swarm-menu-item] {
   color: var(--color-gray-7);
-  display: flex;
   align-items: center;
+  padding: var(--space-quarter) var(--space);
+  display: flex;
+}
+
+[data-swarm-menu-item] svg {
+  margin-right: var(--space-half);
 }
 
 [data-swarm-menu-item][data-selected],
 [data-swarm-menu-link][data-selected] {
-  background-color: var(--color-gray-3);
+  background-color: var(--color-gray-1);
   color: var(--color-gray-7);
 }
 
 [data-swarm-menu-list] {
-  margin-top: var(--space-quarter);
+  margin: var(--space-quarter) 0;
   border-radius: var(--space-quarter);
+  padding: var(--space-half) 0;
 }

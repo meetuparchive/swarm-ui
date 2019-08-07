@@ -27,7 +27,7 @@ const Icon = (props: Props) => {
 
 	if (!Component) {
 		console.warn(
-			'The Icon does not exist in the solid icon family used in <Button />, please see the docs for current supported icons https://swarm-docs.now.sh/Foundations/Icons'
+			`The ${shape} icon does not exist in the solid icon family used in <Button />, please see the docs for current supported icons https://swarm-docs.now.sh/Foundations/Icons`
 		);
 	}
 

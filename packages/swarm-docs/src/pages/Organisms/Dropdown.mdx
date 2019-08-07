@@ -27,7 +27,7 @@ Manage Group Example
   </MenuButton>
   <MenuList focusableChildrenTypes={[MenuItem]}>
     <MenuItem onSelect={() => alert("Download")}>Contact Group Members</MenuItem>
-    <MenuItem onSelect={() => alert("Copy")}><Edit style={{ marginRight: 10 }} />Edit Group Settings</MenuItem>
+    <MenuItem onSelect={() => alert("Copy")}><Edit />Edit Group Settings</MenuItem>
     <MenuItem onSelect={() => alert("Mark as Draft")}>Mark as Draft</MenuItem>
     <MenuLink
       as="a"
@@ -47,7 +47,7 @@ Create Event Example
   <MenuList focusableChildrenTypes={[MenuItem]}>
     <MenuItem onSelect={() => alert("Download")}>Create New Event</MenuItem>
     <MenuItem onSelect={() => alert("Copy")}>Book as Space</MenuItem>
-    <MenuItem onSelect={() => alert("Mark as Draft")}><Edit style={{ marginRight: 10 }} />Mark as Draft</MenuItem>
+    <MenuItem onSelect={() => alert("Mark as Draft")}><Edit />Mark as Draft</MenuItem>
     <MenuLink
       as="a"
       href="https://meetup.com"

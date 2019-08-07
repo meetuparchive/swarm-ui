@@ -92,7 +92,9 @@ const MenuButton = React.forwardRef(
 		const buttonRect = useRect(buttonRef, state.isOpen);
 
 		useEffect(() => {
-			if (!state.isOpen) {
+			// need to check false specifically because isOpen is initially undefined then updates
+			// to false causing dropdown buttons to be focused
+			if (state.isOpen === false && KeyboardEvent) {
 				buttonRef.current.focus();
 			}
 		}, [state.isOpen]);
