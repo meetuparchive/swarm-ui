@@ -1,59 +1,14 @@
 // @flow
 import React from 'react';
-import cx from 'classnames';
-import { VALID_SHAPES } from 'swarm-icons/dist/js/shapeConstants';
+import * as Icons from '@meetup/swarm-icons/lib/components/solid';
 
-export const ICON_CLASS = 'svg';
-export const SVG_THIN_STYLE = '--small';
-export const ICON_CIRCLED_CLASS = 'svg--circled';
-
-export const MEDIA_SIZES = {
-	xxs: '12',
-	xs: '20',
-	s: '24',
-	m: '36',
-	l: '48',
-	xl: '72',
-	xxl: '120',
-};
-
-const SMALL_ICON_VARIANT_WHITELIST = VALID_SHAPES.filter(
-	s => !s.startsWith('external') && !s.startsWith('meetup') // no third party icons // logos use same path for `xs`
-);
-
-/**
- * @param {String} shape - icon shape
- * @param {String} size - icon size
- * @returns {String} icon name (with or without suffix)
- */
-export const getIconShape = (shape: string, size: string) => {
-	if (!SMALL_ICON_VARIANT_WHITELIST.includes(shape)) {
-		return shape;
-	}
-
-	const suffix =
-		size === 'xxs' || size === 'xs' || size === 's' ? SVG_THIN_STYLE : '';
-	return `${shape}${suffix}`;
-};
-
-type AllStyles = {
-	color?: string,
-	fill?: string,
-};
+function toPascalCase(s) {
+	const capitalized = s.charAt(0).toUpperCase() + s.slice(1);
+	return capitalized.replace(/-(\w)/g, g => g[1].toUpperCase());
+}
 
 type Props = {
-	/** Which of our media sizes to render the icon at */
-	size?: string,
-	/** The name of the icon shape to render */
 	shape: string,
-	/** Whether the icon is outlined with a circle */
-	circle?: boolean,
-	/** What color the icon should be filled with */
-	color?: string,
-	/** Class applied to svg tag */
-	className?: string,
-	/** Object of css styles */
-	style?: AllStyles,
 };
 
 /**
@@ -66,38 +21,17 @@ type Props = {
  * @module Icon
  */
 const Icon = (props: Props) => {
-	const { className, shape, size = 'xs', color, style, circle, ...other } = props;
+	const { shape, ...other } = props;
 
-	const classNames = cx(
-		ICON_CLASS,
-		`svg--${shape}`,
-		{ [ICON_CIRCLED_CLASS]: circle },
-		className,
-		'svg-icon',
-		'valign--middle'
-	);
+	const Component = Icons[toPascalCase(shape)];
 
-	const sizeVal = MEDIA_SIZES[size];
-
-	const allStyles: AllStyles = style || {};
-	if (color) {
-		allStyles.fill = color;
+	if (!Component) {
+		console.warn(
+			'The Icon does not exist in the solid icon family used in <Button />, please see the docs for current supported icons https://swarm-docs.now.sh/Foundations/Icons'
+		);
 	}
 
-	return (
-		<svg
-			preserveAspectRatio="xMinYMin meet"
-			width={sizeVal}
-			height={sizeVal}
-			viewBox={`0 0 ${sizeVal} ${sizeVal}`}
-			className={classNames}
-			role="img"
-			style={allStyles}
-			{...other}
-		>
-			<use xlinkHref={`#icon-${getIconShape(shape, size)}`} />
-		</svg>
-	);
+	return Component ? <Component {...other} /> : false;
 };
 
 export default Icon;

@@ -1,5 +1,7 @@
 [data-swarm-menu-item] {
   color: var(--color-gray-7);
+  display: flex;
+  align-items: center;
 }
 
 [data-swarm-menu-item][data-selected],
