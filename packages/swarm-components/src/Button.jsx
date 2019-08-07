@@ -20,7 +20,7 @@ export type ButtonProps = {
 	disabled?: boolean,
 
 	/**
-	 * Supports icon classes found at https://meetup.github.io/swarm-icons/
+	 * Supports icon shapes found at https://swarm-docs.now.sh/Foundations/Icons
 	 */
 	icon?: string,
 

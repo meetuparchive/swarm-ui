@@ -1,4 +1,5 @@
 import { Menu, MenuList, MenuButton, MenuItem, MenuLink } from '@meetup/swarm-components';
+import { Edit } from '@meetup/swarm-icons/lib/components/line';
 import PropsTable from '../../components/propstable';
 import Example from '../../components/examples/dropdown';
 
@@ -21,12 +22,12 @@ import {
 Manage Group Example
 ```.jsx
 <Menu>
-  <MenuButton icon="chevron-down" right>
+  <MenuButton icon="arrow-down" right>
     Manage Group
   </MenuButton>
   <MenuList focusableChildrenTypes={[MenuItem]}>
     <MenuItem onSelect={() => alert("Download")}>Contact Group Members</MenuItem>
-    <MenuItem onSelect={() => alert("Copy")}>Edit Group Settings</MenuItem>
+    <MenuItem onSelect={() => alert("Copy")}><Edit />Edit Group Settings</MenuItem>
     <MenuItem onSelect={() => alert("Mark as Draft")}>Mark as Draft</MenuItem>
     <MenuLink
       as="a"
@@ -40,13 +41,13 @@ Manage Group Example
 Create Event Example
 ```.jsx
 <Menu>
-  <MenuButton primary icon="chevron-down" right>
+  <MenuButton primary icon="arrow-down" right>
     Create Event
   </MenuButton>
   <MenuList focusableChildrenTypes={[MenuItem]}>
     <MenuItem onSelect={() => alert("Download")}>Create New Event</MenuItem>
     <MenuItem onSelect={() => alert("Copy")}>Book as Space</MenuItem>
-    <MenuItem onSelect={() => alert("Mark as Draft")}>Mark as Draft</MenuItem>
+    <MenuItem onSelect={() => alert("Mark as Draft")}><Edit />Mark as Draft</MenuItem>
     <MenuLink
       as="a"
       href="https://meetup.com"

@@ -35,17 +35,17 @@ const Example = () => {
         </Button>
       </div>
       <div style={{marginTop: '8px'}}>
-        <Button icon="bolt">
+        <Button icon="add">
           Icon with text
         </Button>
       </div>
       <div style={{marginTop: '8px'}}>
-        <Button icon="chevron-right" right>
+        <Button icon="arrow-right" right>
           Icon (right) with text
         </Button>
       </div>
       <div style={{marginTop: '8px'}}>
-        <Button icon="chevron-right"/><span> (Icon no text)</span>
+        <Button icon="arrow-right"/><span> (Icon no text)</span>
       </div>
       <div style={{marginTop: '8px'}}>
         <Button grow>

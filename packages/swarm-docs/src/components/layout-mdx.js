@@ -5,7 +5,15 @@ import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
 import { MDXProvider } from '@mdx-js/react';
 
 // imports for use in react-live
-import * as scope from '@meetup/swarm-components';
+import * as SwarmComponents from '@meetup/swarm-components';
+import * as LineIcons from '@meetup/swarm-icons/lib/components/line';
+import * as SolidIcons from '@meetup/swarm-icons/lib/components/line';
+
+const scope = {
+  ...SwarmComponents,
+  ...LineIcons,
+  ...SolidIcons,
+};
 
 const PreComponent = ({ className, ...props }) => {
   return props.children.props &&

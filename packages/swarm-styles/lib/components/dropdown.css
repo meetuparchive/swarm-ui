@@ -1,5 +1,6 @@
 [data-swarm-menu-item] {
   color: var(--color-gray-7);
+  align-items: center;
   padding: var(--space-quarter) var(--space);
   display: flex;
 }
