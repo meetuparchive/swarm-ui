@@ -47,7 +47,7 @@ fs.readdir(`${__dirname}/icons/${argv.family}`, function(err, files) {
 			contents = contents
 				.replace(/<svg[^>]*>/, '')
 				.replace('</svg>', '')
-				.replace(/\sfill="[^"]*"/g, '')
+				.replace(/\sfill="#[^"]*"/g, '')
 				.replace(/fill-rule/g, 'fillRule');
 
 			console.log('file', file);
