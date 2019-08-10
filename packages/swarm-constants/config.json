@@ -1,34 +1,57 @@
 {
-  "source": ["properties/**/*.json"],
-  "platforms": {
-    "scss": {
-      "transforms": ["name/cti/snake", "size/px"],
-      "buildPath": "build/scss/",
-      "files": [{
-        "destination": "_variables.scss",
-        "format": "scss/variables"
-      }]
-    },
-    "css": {
-      "transforms": ["name/cti/kebab", "color/css", "size/px"],
-      "buildPath": "build/css/",
-      "files": [{
-        "destination": "variables.css",
-        "format": "css/variables"
-      },{
-        "destination": "colorModifiers.css",
-        "format": "custom/format/colorModifiers",
-        "filter": "isColorProp"
-      }]
+	"source": [
+		"properties/**/*.json"
+	],
+	"platforms": {
+		"scss": {
+			"transforms": [
+				"name/cti/snake",
+				"size/px"
+			],
+			"buildPath": "build/scss/",
+			"files": [
+				{
+					"destination": "_variables.scss",
+					"format": "scss/variables"
+				}
+			]
+		},
+		"css": {
+			"transforms": [
+				"name/cti/kebab",
+				"color/css",
+				"size/px"
+			],
+			"buildPath": "build/css/",
+			"files": [
+				{
+					"destination": "variables.css",
+					"format": "css/variables"
+				},
+				{
+					"destination": "colorModifiers.css",
+					"format": "custom/format/colorModifiers",
+					"filter": "isColorProp"
+				}
+			]
 		},
 		"json": {
-			"transforms": ["name/cti/kebab", "color/css"],
-      "buildPath": "build/js/",
-      "files": [{
-        "destination": "colors.js",
-				"format": "custom/format/colorSwatch",
-				"filter": "isColorNotFontProp"
-      }]
+			"transforms": [
+				"name/cti/kebab",
+				"color/css"
+			],
+			"buildPath": "build/js/",
+			"files": [
+				{
+					"destination": "colors.js",
+					"format": "custom/format/colorSwatch",
+					"filter": "isColorNotFontProp"
+				},
+				{
+					"destination": "customProperties.js",
+					"format": "custom/format/customProperties"
+				}
+			]
 		}
-  }
+	}
 }

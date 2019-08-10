@@ -17,6 +17,11 @@ StyleDictionary.registerFormat({
   formatter: _.template(fs.readFileSync(`${__dirname}/templates/colorSwatch.template`))
 });
 
+StyleDictionary.registerFormat({
+  name: 'custom/format/customProperties',
+  formatter: _.template(fs.readFileSync(`${__dirname}/templates/customProperties.template`))
+});
+
 // Filter to determine if a property is a color
 StyleDictionary.registerFilter({
   name: 'isColorProp',
