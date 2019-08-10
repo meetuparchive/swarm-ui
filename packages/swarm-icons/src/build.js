@@ -33,7 +33,7 @@ fs.readdir(`${__dirname}/icons/${argv.family}`, function(err, files) {
 		process.exit(1);
 	}
 
-	files.forEach(function(file, index) {
+	files.sort().forEach(function(file, index) {
 		console.log(file);
 		fs.readFile(`${__dirname}/icons/${argv.family}/${file}`, (err, data) => {
 			if (err) {
