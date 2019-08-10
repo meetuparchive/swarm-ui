@@ -58,7 +58,7 @@ fs.readdir(`${__dirname}/icons/${argv.family}`, function(err, files) {
 				camelCaseFilename.slice(1).replace('.svg', ''); // stripping .svg extension
 
 			indexFile = `${indexFile}
-export { default as ${componentName} } from './${componentName}'`;
+export { default as ${componentName} } from './${componentName}';`;
 
 			fs.writeFileSync(
 				`${__dirname}/components/${argv.family}/${componentName}.jsx`,
