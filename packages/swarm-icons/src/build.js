@@ -25,13 +25,13 @@ export default ${componentName};
 `;
 };
 
-let indexFile = '';
-
 fs.readdir(`${__dirname}/icons/${argv.family}`, function(err, files) {
 	if (err) {
 		console.error('Could not list the directory.', err);
 		process.exit(1);
 	}
+	// initialize empty index file
+	fs.writeFileSync(`${__dirname}/components/${argv.family}/index.js`, '');
 
 	files
 		.sort((a, b) => toCamelCase(a).localeCompare(toCamelCase(b)))
@@ -53,6 +53,7 @@ fs.readdir(`${__dirname}/icons/${argv.family}`, function(err, files) {
 				camelCaseFilename.charAt(0).toUpperCase() + // TitleCasing
 				camelCaseFilename.slice(1).replace('.svg', ''); // stripping .svg extension
 
+			// write component JSX
 			fs.writeFileSync(
 				`${__dirname}/components/${argv.family}/${componentName}.jsx`,
 				createIconComponent(
@@ -62,8 +63,10 @@ fs.readdir(`${__dirname}/icons/${argv.family}`, function(err, files) {
 				)
 			);
 
-			indexFile = `${indexFile}
-export { default as ${componentName} } from './${componentName}';`;
-			fs.writeFileSync(`${__dirname}/components/${argv.family}/index.js`, indexFile);
+			// append export to index file
+			fs.appendFileSync(
+				`${__dirname}/components/${argv.family}/index.js`,
+				`export { default as ${componentName} } from './${componentName}';\n`
+			);
 		});
 });
