@@ -36,43 +36,34 @@ fs.readdir(`${__dirname}/icons/${argv.family}`, function(err, files) {
 	files
 		.sort((a, b) => toCamelCase(a).localeCompare(toCamelCase(b)))
 		.forEach(function(file, index) {
-			console.log(file);
-			fs.readFile(`${__dirname}/icons/${argv.family}/${file}`, (err, data) => {
-				if (err) {
-					console.log(err);
-					return;
-				}
+			// syncronous in order to keep alphabetical order
+			const data = fs.readFileSync(`${__dirname}/icons/${argv.family}/${file}`);
+			let contents = data.toString();
 
-				let contents = data.toString();
+			// stripping outer svg tag
+			contents = contents
+				.replace(/<svg[^>]*>/, '')
+				.replace('</svg>', '')
+				.replace(/(\S)\/>/g, '$1 />')
+				.replace(/\sfill="#[^"]*"/g, '')
+				.replace(/fill-rule/g, 'fillRule');
 
-				// stripping outer svg tag
-				contents = contents
-					.replace(/<svg[^>]*>/, '')
-					.replace('</svg>', '')
-					.replace(/(\S)\/>/g, '$1 />')
-					.replace(/\sfill="#[^"]*"/g, '')
-					.replace(/fill-rule/g, 'fillRule');
+			const camelCaseFilename = toCamelCase(file);
+			const componentName =
+				camelCaseFilename.charAt(0).toUpperCase() + // TitleCasing
+				camelCaseFilename.slice(1).replace('.svg', ''); // stripping .svg extension
 
-				const camelCaseFilename = toCamelCase(file);
-				const componentName =
-					camelCaseFilename.charAt(0).toUpperCase() + // TitleCasing
-					camelCaseFilename.slice(1).replace('.svg', ''); // stripping .svg extension
+			fs.writeFileSync(
+				`${__dirname}/components/${argv.family}/${componentName}.jsx`,
+				createIconComponent(
+					componentName,
+					contents,
+					argv.family === 'line' ? '24' : '18'
+				)
+			);
 
-				fs.writeFileSync(
-					`${__dirname}/components/${argv.family}/${componentName}.jsx`,
-					createIconComponent(
-						componentName,
-						contents,
-						argv.family === 'line' ? '24' : '18'
-					)
-				);
-
-				indexFile = `${indexFile}
+			indexFile = `${indexFile}
 export { default as ${componentName} } from './${componentName}';`;
-				fs.writeFileSync(
-					`${__dirname}/components/${argv.family}/index.js`,
-					indexFile
-				);
-			});
+			fs.writeFileSync(`${__dirname}/components/${argv.family}/index.js`, indexFile);
 		});
 });
