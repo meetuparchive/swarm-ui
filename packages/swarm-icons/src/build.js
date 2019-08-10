@@ -15,7 +15,7 @@ function toCamelCase(s) {
 const createIconComponent = (componentName, contents, size) => {
 	return `import React from 'react';
 
-const ${componentName} = (props) => (
+const ${componentName} = props => (
 	<svg data-swarm-icon height="${size}" width="${size}" viewBox="0 0 ${size} ${size}" {...props}>
 		${contents}
 	</svg>
@@ -47,6 +47,7 @@ fs.readdir(`${__dirname}/icons/${argv.family}`, function(err, files) {
 			contents = contents
 				.replace(/<svg[^>]*>/, '')
 				.replace('</svg>', '')
+				.replace(' />', '/>')
 				.replace(/\sfill="#[^"]*"/g, '')
 				.replace(/fill-rule/g, 'fillRule');
 
