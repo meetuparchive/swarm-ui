@@ -28,8 +28,6 @@ script:
   - yarn build:src
   # Run unit tests
   - yarn test:unit
-
-after_success:
   # use lerna publish to version and deploy new packages
   - make publish
 
