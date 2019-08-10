@@ -33,43 +33,46 @@ fs.readdir(`${__dirname}/icons/${argv.family}`, function(err, files) {
 		process.exit(1);
 	}
 
-	files.sort().forEach(function(file, index) {
-		console.log(file);
-		fs.readFile(`${__dirname}/icons/${argv.family}/${file}`, (err, data) => {
-			if (err) {
-				console.log(err);
-				return;
-			}
+	files
+		.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()))
+		.forEach(function(file, index) {
+			console.log(file);
+			fs.readFile(`${__dirname}/icons/${argv.family}/${file}`, (err, data) => {
+				if (err) {
+					console.log(err);
+					return;
+				}
 
-			let contents = data.toString();
+				let contents = data.toString();
 
-			// stripping outer svg tag
-			contents = contents
-				.replace(/<svg[^>]*>/, '')
-				.replace('</svg>', '')
-				.replace(/(\S)\/>/g, '$1 />')
-				.replace(/\sfill="#[^"]*"/g, '')
-				.replace(/fill-rule/g, 'fillRule');
+				// stripping outer svg tag
+				contents = contents
+					.replace(/<svg[^>]*>/, '')
+					.replace('</svg>', '')
+					.replace(/(\S)\/>/g, '$1 />')
+					.replace(/\sfill="#[^"]*"/g, '')
+					.replace(/fill-rule/g, 'fillRule');
 
-			console.log('file', file);
-			const camelCaseFilename = toCamelCase(file);
-			const componentName =
-				camelCaseFilename.charAt(0).toUpperCase() + // TitleCasing
-				camelCaseFilename.slice(1).replace('.svg', ''); // stripping .svg extension
+				const camelCaseFilename = toCamelCase(file);
+				const componentName =
+					camelCaseFilename.charAt(0).toUpperCase() + // TitleCasing
+					camelCaseFilename.slice(1).replace('.svg', ''); // stripping .svg extension
 
-			indexFile = `${indexFile}
+				fs.writeFileSync(
+					`${__dirname}/components/${argv.family}/${componentName}.jsx`,
+					createIconComponent(
+						componentName,
+						contents,
+						argv.family === 'line' ? '24' : '18'
+					)
+				);
+
+				indexFile = `${indexFile}
 export { default as ${componentName} } from './${componentName}';`;
-
-			fs.writeFileSync(
-				`${__dirname}/components/${argv.family}/${componentName}.jsx`,
-				createIconComponent(
-					componentName,
-					contents,
-					argv.family === 'line' ? '24' : '18'
-				)
-			);
-
-			fs.writeFileSync(`${__dirname}/components/${argv.family}/index.js`, indexFile);
+				fs.writeFileSync(
+					`${__dirname}/components/${argv.family}/index.js`,
+					indexFile
+				);
+			});
 		});
-	});
 });
