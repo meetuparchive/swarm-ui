@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-constants@0.3.4...@meetup/swarm-constants@0.4.0) (2019-08-10)
+
+
+### Features
+
+* add customProperties.js build output for postcss ([271cd3d](https://github.com/meetup/swarm-ui/commit/271cd3d))
+* swarm-icons package introduced ([b9bd4ed](https://github.com/meetup/swarm-ui/commit/b9bd4ed))
+
+
+
+
+
 ## [0.3.4](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-constants@0.3.3...@meetup/swarm-constants@0.3.4) (2019-07-16)
 
 **Note:** Version bump only for package @meetup/swarm-constants

@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.6.1...@meetup/swarm-styles@0.7.0) (2019-08-10)
+
+
+### Bug Fixes
+
+* adding icons css ([03035a7](https://github.com/meetup/swarm-ui/commit/03035a7))
+* merging master, better icon error message ([041e887](https://github.com/meetup/swarm-ui/commit/041e887))
+* removed errored notif icon. icon fill set ([74a470e](https://github.com/meetup/swarm-ui/commit/74a470e))
+* spacing updates, focus fix for dropdown button ([4cc1d1c](https://github.com/meetup/swarm-ui/commit/4cc1d1c))
+
+
+### Features
+
+* migrating button to use new icon set, icons updated in docs ([5abb8a2](https://github.com/meetup/swarm-ui/commit/5abb8a2))
+* swarm-icons package introduced ([b9bd4ed](https://github.com/meetup/swarm-ui/commit/b9bd4ed))
+
+
+
+
+
 ## [0.6.1](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.6.0...@meetup/swarm-styles@0.6.1) (2019-07-19)
 
 

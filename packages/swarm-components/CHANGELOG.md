@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.15.0](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.14.2...@meetup/swarm-components@0.15.0) (2019-08-10)
+
+
+### Bug Fixes
+
+* merging master, better icon error message ([041e887](https://github.com/meetup/swarm-ui/commit/041e887))
+* spacing updates, focus fix for dropdown button ([4cc1d1c](https://github.com/meetup/swarm-ui/commit/4cc1d1c))
+
+
+### Features
+
+* migrating button to use new icon set, icons updated in docs ([5abb8a2](https://github.com/meetup/swarm-ui/commit/5abb8a2))
+* swarm-icons package introduced ([b9bd4ed](https://github.com/meetup/swarm-ui/commit/b9bd4ed))
+
+
+
+
+
 ## [0.14.2](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.14.1...@meetup/swarm-components@0.14.2) (2019-07-19)
 
 

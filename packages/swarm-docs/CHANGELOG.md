@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.12.0](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.11.5...@meetup/swarm-docs@0.12.0) (2019-08-10)
+
+
+### Bug Fixes
+
+* merging master, better icon error message ([041e887](https://github.com/gatsbyjs/gatsby-starter-default/commit/041e887))
+
+
+### Features
+
+* migrating button to use new icon set, icons updated in docs ([5abb8a2](https://github.com/gatsbyjs/gatsby-starter-default/commit/5abb8a2))
+* swarm-icons package introduced ([b9bd4ed](https://github.com/gatsbyjs/gatsby-starter-default/commit/b9bd4ed))
+
+
+
+
+
 ## [0.11.5](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.11.4...@meetup/swarm-docs@0.11.5) (2019-07-30)
 
 **Note:** Version bump only for package @meetup/swarm-docs
