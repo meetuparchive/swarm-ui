@@ -16,9 +16,9 @@ const createIconComponent = (componentName, contents, size) => {
 	return `import React from 'react';
 
 const ${componentName} = (props) => (
-  <svg data-swarm-icon height="${size}" width="${size}" viewBox="0 0 ${size} ${size}" {...props}>
-    ${contents}
-  </svg>
+	<svg data-swarm-icon height="${size}" width="${size}" viewBox="0 0 ${size} ${size}" {...props}>
+		${contents}
+	</svg>
 );
 
 export default ${componentName};
