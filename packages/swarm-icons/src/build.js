@@ -34,7 +34,7 @@ fs.readdir(`${__dirname}/icons/${argv.family}`, function(err, files) {
 	}
 
 	files
-		.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()))
+		.sort((a, b) => toCamelCase(a).localeCompare(toCamelCase(b)))
 		.forEach(function(file, index) {
 			console.log(file);
 			fs.readFile(`${__dirname}/icons/${argv.family}/${file}`, (err, data) => {
