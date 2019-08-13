@@ -1,6 +1,6 @@
 {
   "name": "@meetup/swarm-components",
-  "version": "0.15.0",
+  "version": "0.15.1",
   "description": "Web Components for Swarm",
   "author": "hsbacot <hsbacot@gmail.com>",
   "homepage": "https://github.com/meetup/swarm-ui#readme",
@@ -44,8 +44,8 @@
     "jest": "24.7.1"
   },
   "dependencies": {
-    "@meetup/swarm-constants": "^0.4.0",
-    "@meetup/swarm-icons": "^0.1.0",
+    "@meetup/swarm-constants": "^0.4.1",
+    "@meetup/swarm-icons": "^0.1.1",
     "@reach/menu-button": "^0.1.18",
     "autosize": "^4.0.2",
     "classnames": "2.2.6",

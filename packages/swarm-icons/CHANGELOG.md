@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.1](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-icons@0.1.0...@meetup/swarm-icons@0.1.1) (2019-08-13)
+
+
+### Bug Fixes
+
+* fixes [#121](https://github.com/meetup/swarm-ui/issues/121) remove incorrectly-cased Tv.jsx from source control ([b367d5f](https://github.com/meetup/swarm-ui/commit/b367d5f))
+
+
+
+
+
 # 0.1.0 (2019-08-10)
 
 
