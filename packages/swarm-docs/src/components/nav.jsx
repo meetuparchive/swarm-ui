@@ -1,6 +1,7 @@
 // @flow
 import * as React from 'react';
 import { Link } from 'gatsby';
+
 type FileGroup = {
     nodes: Array<File>
 };
@@ -27,15 +28,24 @@ files.map(file =>
 );
 
 const Nav = (props: Props): React.Element<'div'> => {
+    const folderStyles = {
+        fontWeight: 500
+    };
+
+    const fileStyles = {
+        paddingLeft: 16
+    };
+
     const navStructure = transformFiles(props.files);
+
     const navItems = navStructure.map(subdir => {
         const folder = Object.keys(subdir)[0];
         const files = subdir[folder];
         return (
             <li key={folder}>
-            <span style={{fontWeight: 500}}>{folder}</span>
+                <span style={folderStyles}>{folder}</span>
                 <ul>
-                    {files.map(file => <li style={{paddingLeft: 16}} key={file}><Link to={`/${folder}/${file}`} className="text--link">{file}</Link></li>)}
+                    {files.map(file => <li style={fileStyles} key={file}><Link to={`/${folder}/${file}`} className="text--link">{file}</Link></li>)}
                 </ul>
             </li>
         );
@@ -45,7 +55,17 @@ const Nav = (props: Props): React.Element<'div'> => {
             <Link to="/">
                 <img className="swarm-logo" src="/docs-images/swarm-logo.png" width="64" height="62" />
             </Link>
-            <ul> {navItems} </ul>
+            <ul>
+                {navItems}
+                <li key="guides">
+                    <span style={folderStyles}>Guides</span>
+                    <ul>
+                        <li style={fileStyles} key="migration">
+                            <Link to="/migration" className="text--link">MWC to SwarmUI</Link>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
         </div>
     );
 };
