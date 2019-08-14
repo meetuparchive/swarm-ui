@@ -1,0 +1,136 @@
+import Example, { GroupRadioButtonsExample } from '../../components/examples/radio';
+
+# MWC to Swarm-UI Migration Docs
+---
+<br />
+Below are a few examples of migrating simple and complex
+components from meetup-web-components to Swarm-UI.
+<br />
+<br />
+<br />
+<br />
+
+### RadioButton example
+---
+<br />
+
+#### Before, using meetup-web-components:
+
+```
+import RadioButton from 'meetup-web-components/lib/forms/RadioButton';
+
+<RadioButton
+    name="option"
+    value="1"
+    checked={true}
+    className={text('className', '')}
+    label={text('label', 'This is a radio')}
+/>
+```
+<br />
+<br />
+
+#### After, using swarm-ui:
+
+```
+import { Button } from '@meetup/swarm-components';
+
+<Radio
+    name="swarm"
+    label="swarm"
+    value="1"
+    checked={true}
+    onChange={(e) => alert(e.target.value)} />
+```
+<br />
+<br />
+
+#### Swarm UI examples
+<Example />
+
+<br />
+<br />
+
+### RadioButtonGroup example
+---
+<br />
+
+#### Before, using meetup-web-components:
+
+```
+import RadioButton from 'meetup-web-components/lib/forms/RadioButton';
+import RadioButtonGroup from 'meetup-web-components/lib/forms/RadioButtonGroup';
+
+    <RadioButtonGroup
+        name="radioButtonGroup"
+        onChange={action('radio button change')}
+        className={classNameKnob}
+        direction={directionKnob}
+        selectedValue={selectedValueKnob}
+    >
+        <RadioButton value="one" label="Option 1" name="radioButton" />
+        <RadioButton value="two" label="Option 2" name="radioButton" />
+        <RadioButton value="three" label="Option 3" name="radioButton" />
+    </RadioButtonGroup>
+```
+<br />
+<br />
+
+#### After, using swarm-ui:
+
+```
+export const GroupRadioButtonsExample = () => {
+  const [shape, setShape] = React.useState('circle');
+  const [circleButton, setCircleButton] = React.useState(true);
+  const [squareButton, setSquareButton] = React.useState(false);
+  const [triangleButton, setTriangleButton] = React.useState(false);
+
+
+  function onButtonChange(e) {
+    const value = e.target.value;
+
+    setShape(value);
+
+    setCircleButton(value === 'circle');
+    setSquareButton(value === 'square');
+    setTriangleButton(value === 'triangle');
+
+  }
+
+  React.useEffect(() => console.log(shape));
+
+  return(
+    <>
+      <Radio
+        name='shape'
+        label="Circle"
+        id='circle'
+        value='circle'
+        onChange={(e) => onButtonChange(e)}
+        checked={circleButton}
+      />
+      <Radio
+        name="shape"
+        label="Square"
+        id='square'
+        value='square'
+        onChange={(e) => onButtonChange(e)}
+        checked={squareButton}
+      />
+      <Radio
+        name="shape"
+        label="Triangle"
+        id='triangle'
+        value='triangle'
+        onChange={(e) => onButtonChange(e)}
+        checked={triangleButton}
+      />
+    </>
+  );
+};
+```
+<br />
+<br />
+
+#### Swarm UI example
+<GroupRadioButtonsExample />
