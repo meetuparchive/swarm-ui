@@ -81,21 +81,6 @@ import RadioButtonGroup from 'meetup-web-components/lib/forms/RadioButtonGroup';
 ```
 export const GroupRadioButtonsExample = () => {
   const [shape, setShape] = React.useState('circle');
-  const [circleButton, setCircleButton] = React.useState(true);
-  const [squareButton, setSquareButton] = React.useState(false);
-  const [triangleButton, setTriangleButton] = React.useState(false);
-
-
-  function onButtonChange(e) {
-    const value = e.target.value;
-
-    setShape(value);
-
-    setCircleButton(value === 'circle');
-    setSquareButton(value === 'square');
-    setTriangleButton(value === 'triangle');
-
-  }
 
   React.useEffect(() => console.log(shape));
 
@@ -106,24 +91,24 @@ export const GroupRadioButtonsExample = () => {
         label="Circle"
         id='circle'
         value='circle'
-        onChange={(e) => onButtonChange(e)}
-        checked={circleButton}
+        onChange={(e) => setShape(e.target.value)}
+        checked={shape === 'circle'}
       />
       <Radio
         name="shape"
         label="Square"
         id='square'
         value='square'
-        onChange={(e) => onButtonChange(e)}
-        checked={squareButton}
+        onChange={(e) => setShape(e.target.value)}
+        checked={shape === 'square'}
       />
       <Radio
         name="shape"
         label="Triangle"
         id='triangle'
         value='triangle'
-        onChange={(e) => onButtonChange(e)}
-        checked={triangleButton}
+        onChange={(e) => setShape(e.target.value)}
+        checked={shape === 'triangle'}
       />
     </>
   );
