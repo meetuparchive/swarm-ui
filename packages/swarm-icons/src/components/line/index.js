@@ -15,7 +15,7 @@ export { default as CalendarCross } from './CalendarCross';
 export { default as CalendarCrossAlt } from './CalendarCrossAlt';
 export { default as CalendarPlus } from './CalendarPlus';
 export { default as CalendarPlusAlt } from './CalendarPlusAlt';
-export { default as CameraA } from './CameraA';
+export { default as Camera } from './Camera';
 export { default as Check } from './Check';
 export { default as CheckCircled } from './CheckCircled';
 export { default as Clock } from './Clock';
