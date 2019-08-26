@@ -1,11 +1,9 @@
-# `swarm-icons`
+# Swarm Icons
 
-> TODO: description
+## Build process
+Pass the family to be built to `build.js`
 
-## Usage
+example of building the line icon set
+`./src/build.js --f=line`
 
-```
-const swarmIcons = require('swarm-icons');
-
-// TODO: DEMONSTRATE API
-```
+## Adding an Icon

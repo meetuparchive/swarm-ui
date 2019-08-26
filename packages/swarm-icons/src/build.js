@@ -6,10 +6,16 @@ const argv = require('yargs').options('f', {
 	default: 'solid',
 }).argv;
 
+const ICON_SIZES = {
+	line: '24',
+	solid: '18',
+	large: '28',
+};
+
 console.log(`building ${argv.family} icon set`);
 
 function toCamelCase(s) {
-	return s.replace(/-(\w)/g, g => g[1].toUpperCase());
+	return s.replace(/[\s-](\w)/g, g => g[1].toUpperCase());
 }
 
 const createIconComponent = (componentName, contents, size) => {
@@ -56,11 +62,7 @@ fs.readdir(`${__dirname}/icons/${argv.family}`, function(err, files) {
 			// write component JSX
 			fs.writeFileSync(
 				`${__dirname}/components/${argv.family}/${componentName}.jsx`,
-				createIconComponent(
-					componentName,
-					contents,
-					argv.family === 'line' ? '24' : '18'
-				)
+				createIconComponent(componentName, contents, ICON_SIZES[argv.family] || '18')
 			);
 
 			// append export to index file
