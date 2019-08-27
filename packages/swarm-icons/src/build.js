@@ -92,3 +92,11 @@ function appendToIndex(component, family) {
 }
 
 console.log(`finished building ${argv.family} icon set`);
+
+var contents = fs.readFileSync(
+	`${__dirname}/components/${argv.family}/index.js`,
+	'utf8'
+);
+console.log(argv.family, '***** start ******');
+console.log(contents);
+console.log(argv.family, '***** end******');
