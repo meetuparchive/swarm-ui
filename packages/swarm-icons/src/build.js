@@ -65,9 +65,9 @@ alphabetizedFiles.forEach(function(file, index) {
 		`${__dirname}/components/${argv.family}/${componentName}.jsx`,
 		createIconComponent(componentName, contents, ICON_SIZES[argv.family] || '18')
 	);
-
-	buildIndex(alphabetizedFiles, argv.family);
 });
+
+buildIndex(alphabetizedFiles, argv.family);
 
 function buildIndex(files, family) {
 	// initialize empty index file
