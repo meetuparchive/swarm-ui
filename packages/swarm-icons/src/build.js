@@ -83,6 +83,7 @@ function buildIndex(files, family) {
 }
 
 function appendToIndex(component, family) {
+	console.log('writing to index:', family, component);
 	// append export to index file
 	fs.appendFileSync(
 		`${__dirname}/components/${family}/index.js`,
