@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-icons@0.1.2...@meetup/swarm-icons@0.2.0) (2019-08-28)
+
+
+### Features
+
+* icon svg files ([6a7d1fa](https://github.com/meetup/swarm-ui/commit/6a7d1fa))
+* large icon family added ([4fce945](https://github.com/meetup/swarm-ui/commit/4fce945))
+* remove component files ([b57bec3](https://github.com/meetup/swarm-ui/commit/b57bec3))
+* sync read dir ([8d1a966](https://github.com/meetup/swarm-ui/commit/8d1a966))
+* updating icon sets ([b132ab9](https://github.com/meetup/swarm-ui/commit/b132ab9))
+
+
+
+
+
 ## [0.1.2](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-icons@0.1.1...@meetup/swarm-icons@0.1.2) (2019-08-19)
 
 **Note:** Version bump only for package @meetup/swarm-icons
