@@ -15,3 +15,14 @@ example of building the line icon set
 ## Adding an Icon
 Add the `.svg` file to `src/icons`
 Run `yarn build` 
+
+## Using Icons
+Import whole sets
+import * as SolidIcons from '@meetup/swarm-icons/lib/components/solid';
+import * as LineIcons from '@meetup/swarm-icons/lib/components/line';
+import * as LargeIcons from '@meetup/swarm-icons/lib/components/large';
+
+Or individual Icons
+import { ArrowDown } from '@meetup/swarm-icons/lib/components/solid';
+import { ArrowDown } from '@meetup/swarm-icons/lib/components/line';
+import { ArrowDown } from '@meetup/swarm-icons/lib/components/large';
