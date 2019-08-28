@@ -1,6 +1,6 @@
 {
   "name": "@meetup/swarm-constants",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "style constants for swarm ui",
   "author": "hsbacot <hsbacot@gmail.com>",
   "homepage": "https://github.com/meetup/swarm-ui#readme",
@@ -30,6 +30,6 @@
     "style-dictionary": "2.7.0"
   },
   "dependencies": {
-    "@meetup/swarm-icons": "^0.1.2"
+    "@meetup/swarm-icons": "^0.2.0"
   }
 }
