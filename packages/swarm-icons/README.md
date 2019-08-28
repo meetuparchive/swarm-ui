@@ -1,11 +1,17 @@
-# `swarm-icons`
+# Swarm Icons
 
-> TODO: description
+## Build process
+Pass the family to be built to `build.js`
 
-## Usage
+There are three icon families in `@meetup/swarm-icons`
++ solid
++ line
++ large
 
-```
-const swarmIcons = require('swarm-icons');
+example of building the line icon set
+`./src/build.js --f=line`
 
-// TODO: DEMONSTRATE API
-```
+
+## Adding an Icon
+Add the `.svg` file to `src/icons`
+Run `yarn build` 
