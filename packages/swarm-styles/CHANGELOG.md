@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.6](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.7.5...@meetup/swarm-styles@0.7.6) (2019-09-12)
+
+
+### Bug Fixes
+
+* tweaking focus styles to only change border on default button ([ff3f7a1](https://github.com/meetup/swarm-ui/commit/ff3f7a1))
+
+
+
+
+
 ## [0.7.5](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.7.4...@meetup/swarm-styles@0.7.5) (2019-09-05)
 
 **Note:** Version bump only for package @meetup/swarm-styles
