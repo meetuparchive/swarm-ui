@@ -1,6 +1,6 @@
 // @flow
 import * as React from 'react';
-import Icon from './Icon';
+import { ArrowDown } from '@meetup/swarm-icons/lib/components/solid';
 
 type Props = React.ElementConfig<HTMLSelectElement> & {
 	/**
@@ -41,8 +41,8 @@ const Select = (props: Props) => {
 					{...other}
 				/>
 
-				<span data-swarm-select-arrow="chevron-down">
-					<Icon shape="chevron-down" size="xs" />
+				<span data-swarm-select-arrow="arrow-down">
+					<ArrowDown />
 				</span>
 			</div>
 		</div>
