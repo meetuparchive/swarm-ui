@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.16.0](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.15.5...@meetup/swarm-components@0.16.0) (2019-09-18)
+
+
+### Features
+
+* updated to use new icon set in select and textInput ([01b1111](https://github.com/meetup/swarm-ui/commit/01b1111))
+
+
+
+
+
 ## [0.15.5](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.15.4...@meetup/swarm-components@0.15.5) (2019-09-05)
 
 **Note:** Version bump only for package @meetup/swarm-components

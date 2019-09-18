@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.8.0](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.7.6...@meetup/swarm-styles@0.8.0) (2019-09-18)
+
+
+### Features
+
+* updated to use new icon set in select and textInput ([01b1111](https://github.com/meetup/swarm-ui/commit/01b1111))
+
+
+
+
+
 ## [0.7.6](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.7.5...@meetup/swarm-styles@0.7.6) (2019-09-12)
 
 
