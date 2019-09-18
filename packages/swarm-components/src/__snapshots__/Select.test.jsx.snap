@@ -29,12 +29,9 @@ exports[`Button Snapshot: Default 1`] = `
       </option>
     </select>
     <span
-      data-swarm-select-arrow="chevron-down"
+      data-swarm-select-arrow="arrow-down"
     >
-      <Icon
-        shape="chevron-down"
-        size="xs"
-      />
+      <ArrowDown />
     </span>
   </div>
 </div>
@@ -70,12 +67,9 @@ exports[`Button Snapshot: Disabled 1`] = `
       </option>
     </select>
     <span
-      data-swarm-select-arrow="chevron-down"
+      data-swarm-select-arrow="arrow-down"
     >
-      <Icon
-        shape="chevron-down"
-        size="xs"
-      />
+      <ArrowDown />
     </span>
   </div>
 </div>
@@ -110,12 +104,9 @@ exports[`Button Snapshot: Error 1`] = `
       </option>
     </select>
     <span
-      data-swarm-select-arrow="chevron-down"
+      data-swarm-select-arrow="arrow-down"
     >
-      <Icon
-        shape="chevron-down"
-        size="xs"
-      />
+      <ArrowDown />
     </span>
   </div>
 </div>
@@ -151,12 +142,9 @@ exports[`Button Snapshot: Required Text 1`] = `
       </option>
     </select>
     <span
-      data-swarm-select-arrow="chevron-down"
+      data-swarm-select-arrow="arrow-down"
     >
-      <Icon
-        shape="chevron-down"
-        size="xs"
-      />
+      <ArrowDown />
     </span>
   </div>
 </div>
@@ -191,12 +179,9 @@ exports[`Button Snapshot: With Id 1`] = `
       </option>
     </select>
     <span
-      data-swarm-select-arrow="chevron-down"
+      data-swarm-select-arrow="arrow-down"
     >
-      <Icon
-        shape="chevron-down"
-        size="xs"
-      />
+      <ArrowDown />
     </span>
   </div>
 </div>

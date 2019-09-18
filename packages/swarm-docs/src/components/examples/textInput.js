@@ -61,7 +61,7 @@ const Example = () => {
         name="input7"
         value={value7}
         onChange={(e) => setValue7(e.target.value)}
-        iconShape="location-pin" />
+        iconShape="pin" />
       <br/>
       <label htmlFor="input8">maxLength (char count)</label>
       <TextInput
