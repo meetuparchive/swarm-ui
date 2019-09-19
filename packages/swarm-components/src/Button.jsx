@@ -1,7 +1,12 @@
 // @flow
 import * as React from 'react';
 import Icon from './Icon';
-import { getButtonType, getSwarmSize, getIconPosition } from './utils/buttonUtils';
+import {
+	getButtonType,
+	getSwarmSize,
+	getIconPosition,
+	getButtonWidth,
+} from './utils/buttonUtils';
 
 export type ButtonProps = {
 	/**
@@ -38,6 +43,11 @@ export type ButtonProps = {
 	 * The neutral style
 	 */
 	neutral?: boolean,
+
+	/**
+	 * The normal width style (3x padding)
+	 */
+	normal?: boolean,
 
 	/**
 	 * The function invoked when interacting with Button
@@ -87,10 +97,11 @@ class Button extends React.Component<ButtonProps> {
 		const {
 			icon,
 			right,
-			grow,
+			grow, // eslint-disable-line no-unused-vars
 			children,
 			bordered, // eslint-disable-line no-unused-vars
 			neutral, // eslint-disable-line no-unused-vars
+			normal, // eslint-disable-line no-unused-vars
 			primary, // eslint-disable-line no-unused-vars
 			inverted, // eslint-disable-line no-unused-vars
 			reset, // eslint-disable-line no-unused-vars
@@ -101,14 +112,13 @@ class Button extends React.Component<ButtonProps> {
 		} = this.props;
 
 		const buttonType = getButtonType(this.props);
-		const width = grow ? 'grow' : 'default';
 
 		return (
 			<button
 				data-swarm-button={buttonType}
 				data-swarm-size={getSwarmSize(this.props)}
 				data-icon={getIconPosition(this.props)}
-				data-swarm-width={width}
+				data-swarm-width={getButtonWidth(this.props)}
 				type="button"
 				ref={forwardedRef}
 				{...other}

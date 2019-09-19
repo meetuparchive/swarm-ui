@@ -42,3 +42,15 @@ export const getSwarmSize = (props: Props): string => {
 export const getIconPosition = (props: Props): string => {
 	return props.children ? (props.right ? 'right' : 'left') : 'only';
 };
+
+export const getButtonWidth = (props: Props): string => {
+	let width = 'default';
+
+	if (props.grow) {
+		width = 'grow';
+	} else if (props.normal) {
+		width = 'normal';
+	}
+
+	return width;
+};
