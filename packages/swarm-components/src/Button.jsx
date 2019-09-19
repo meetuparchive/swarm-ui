@@ -35,6 +35,12 @@ export type ButtonProps = {
 	inverted?: boolean,
 
 	/**
+	 * The large button size
+	 */
+
+	large?: boolean,
+
+	/**
 	 * The neutral style
 	 */
 	neutral?: boolean,
@@ -89,6 +95,7 @@ class Button extends React.Component<ButtonProps> {
 			inverted, // eslint-disable-line no-unused-vars
 			reset, // eslint-disable-line no-unused-vars
 			small, // eslint-disable-line no-unused-vars
+			large, // eslint-disable-line no-unused-vars
 			forwardedRef,
 			...other
 		} = this.props;

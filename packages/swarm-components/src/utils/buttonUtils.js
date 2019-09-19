@@ -30,7 +30,13 @@ export const getButtonType = (props: Props): string => {
 };
 
 export const getSwarmSize = (props: Props): string => {
-	return props.small ? 'small' : 'default';
+	let size = 'default';
+	if (props.large) {
+		size = 'large';
+	} else if (props.small) {
+		size = 'small';
+	}
+	return size;
 };
 
 export const getIconPosition = (props: Props): string => {
