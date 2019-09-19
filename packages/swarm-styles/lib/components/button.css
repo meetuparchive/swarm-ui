@@ -203,6 +203,17 @@
   @extend %swarm-button-small;
 }
 
+/* large */
+%swarm-button-large {
+  font-size: var(--font-size-normal);
+  line-height: var(--font-line-height-normal);
+}
+
+[data-swarm-button][data-swarm-size="large"] {
+  @extend %swarm-button-large;
+}
+
+
 /* with icon */
 [data-swarm-button] [data-swarm-icon] {
   fill: inherit;
