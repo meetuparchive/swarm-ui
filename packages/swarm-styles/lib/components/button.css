@@ -1,5 +1,5 @@
 :root {
-  --default-radius: 5px;
+  --default-radius: 8px;
 }
 
 %button-personality {
@@ -206,7 +206,7 @@
 /* large */
 %swarm-button-large {
   font-size: var(--font-size-normal);
-  line-height: var(--font-line-height-normal);
+  line-height: 28px;
 }
 
 [data-swarm-button][data-swarm-size="large"] {
