@@ -2,7 +2,7 @@
     width: 100%;
 }
 
-[data-swarm-width="normal"] {
+[data-swarm-width="natural"] {
     padding-left: var(--space-triple);
     padding-right: var(--space-triple);
 }

@@ -45,9 +45,9 @@ export type ButtonProps = {
 	neutral?: boolean,
 
 	/**
-	 * The normal width style (3x padding)
+	 * The natural width style (3x padding)
 	 */
-	normal?: boolean,
+	natural?: boolean,
 
 	/**
 	 * The function invoked when interacting with Button
@@ -101,7 +101,7 @@ class Button extends React.Component<ButtonProps> {
 			children,
 			bordered, // eslint-disable-line no-unused-vars
 			neutral, // eslint-disable-line no-unused-vars
-			normal, // eslint-disable-line no-unused-vars
+			natural, // eslint-disable-line no-unused-vars
 			primary, // eslint-disable-line no-unused-vars
 			inverted, // eslint-disable-line no-unused-vars
 			reset, // eslint-disable-line no-unused-vars

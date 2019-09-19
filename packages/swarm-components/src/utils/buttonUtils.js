@@ -48,8 +48,8 @@ export const getButtonWidth = (props: Props): string => {
 
 	if (props.grow) {
 		width = 'grow';
-	} else if (props.normal) {
-		width = 'normal';
+	} else if (props.natural) {
+		width = 'natural';
 	}
 
 	return width;
