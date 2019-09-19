@@ -13,6 +13,10 @@
                 "value": "8px",
                 "comment": "half space size"
             },
+            "triple": {
+                "value": "48px",
+                "comment": "triple space size"
+            },
             "quarter": {
                 "value": "4px",
                 "comment": "quarter space size"
@@ -27,7 +31,11 @@
             },
             "largeDouble": {
                 "value": "40px",
-                "comment": "default space size for large screens"
+                "comment": "double space size for large screens"
+            },
+            "largeTriple": {
+                "value": "60px",
+                "comment": "triple space size for large screens"
             },
             "largeHalf": {
                 "value": "10px",
