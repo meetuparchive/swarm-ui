@@ -35,12 +35,6 @@ export type ButtonProps = {
 	inverted?: boolean,
 
 	/**
-	 * The large button size
-	 */
-
-	large?: boolean,
-
-	/**
 	 * The neutral style
 	 */
 	neutral?: boolean,
@@ -59,6 +53,12 @@ export type ButtonProps = {
 	 * Aligns the icon to the right
 	 */
 	right?: boolean,
+
+	/**
+	 * The large button size
+	 */
+
+	large?: boolean,
 
 	/**
 	 * Use the small button size
