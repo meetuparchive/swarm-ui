@@ -207,6 +207,7 @@
 %swarm-button-large {
   font-size: var(--font-size-normal);
   line-height: 28px;
+  padding: var(--space-half) var(--space-and-half);
 }
 
 [data-swarm-button][data-swarm-size="large"] {

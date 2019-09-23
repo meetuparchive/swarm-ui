@@ -2,6 +2,7 @@
     --space-quarter: var(--size-space-quarter);
     --space-half: var(--size-space-half);
     --space: var(--size-space-default);
+    --space-and-half: var(--size-space-and-half);
     --space-double: var(--size-space-double);
     --space-quadruple: var(--size-space-quadruple);
 }
@@ -12,6 +13,7 @@
     --space-quarter: var(--size-space-large-quarter);
     --space-half: var(--size-space-large-half);
     --space: var(--size-space-large-default);
+    --space-and-half: var(--size-space-large-and-half);
     --space-double: var(--size-space-large-double);
     --space-quadruple: var(--size-space-large-quadruple);
    }
