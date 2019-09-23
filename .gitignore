@@ -2,6 +2,7 @@
 node_modules
 *.log
 *.chache
+.vscode/
 
 lib/
 !packages/swarm-styles/lib/
