@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.15.0](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.14.2...@meetup/swarm-docs@0.15.0) (2019-09-24)
+
+
+### Features
+
+* added svg wrapper to hold 32px height for large iconOnly buttons ([8caea08](https://github.com/gatsbyjs/gatsby-starter-default/commit/8caea08))
+
+
+
+
+
 ## [0.14.2](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.14.1...@meetup/swarm-docs@0.14.2) (2019-09-19)
 
 **Note:** Version bump only for package @meetup/swarm-docs

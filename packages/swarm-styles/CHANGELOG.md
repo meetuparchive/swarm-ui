@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.11.0](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.10.0...@meetup/swarm-styles@0.11.0) (2019-09-24)
+
+
+### Features
+
+* added svg wrapper to hold 32px height for large iconOnly buttons ([8caea08](https://github.com/meetup/swarm-ui/commit/8caea08))
+* space and half added to large buton ([8d4c9c4](https://github.com/meetup/swarm-ui/commit/8d4c9c4))
+
+
+
+
+
 # [0.10.0](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.9.0...@meetup/swarm-styles@0.10.0) (2019-09-19)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-constants@0.5.0...@meetup/swarm-constants@0.6.0) (2019-09-24)
+
+
+### Features
+
+* space and half added to large buton ([8d4c9c4](https://github.com/meetup/swarm-ui/commit/8d4c9c4))
+
+
+
+
+
 # [0.5.0](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-constants@0.4.4...@meetup/swarm-constants@0.5.0) (2019-09-05)
 
 
