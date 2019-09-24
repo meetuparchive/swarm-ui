@@ -20,9 +20,14 @@ export type ButtonProps = {
 	disabled?: boolean,
 
 	/**
-	 * Supports icon shapes found at https://swarm-docs.now.sh/Foundations/Icons
+	 * Supports solid icon shapes found at https://swarm-docs.now.sh/Foundations/Icons. This is the recommended way to use icons in buttons.
 	 */
 	icon?: string,
+
+	/**
+	 * Supports icon only padding for using icons as children rather than by passing an icon prop. Using the icon prop is preferred.
+	 */
+	iconOnly?: boolean,
 
 	/**
 	 * Strips all styles from the button
@@ -86,6 +91,7 @@ class Button extends React.Component<ButtonProps> {
 	render() {
 		const {
 			icon,
+			iconOnly,
 			right,
 			grow,
 			children,
@@ -127,6 +133,8 @@ class Button extends React.Component<ButtonProps> {
 							</>
 						)}
 					</span>
+				) : iconOnly ? (
+					<span>{children}</span>
 				) : (
 					children
 				)}

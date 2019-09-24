@@ -5,6 +5,10 @@
                 "value": "16px",
                 "comment": "default space size"
             },
+            "andHalf": {
+                "value": "24px",
+                "comment": "default space + half space size"
+            },
             "double": {
                 "value": "32px",
                 "comment": "double space size"
@@ -24,6 +28,10 @@
             "largeDefault": {
                 "value": "20px",
                 "comment": "default space size for large screens"
+            },
+            "largeAndHalf": {
+                "value": "30px",
+                "comment": "default space + half space size"
             },
             "largeDouble": {
                 "value": "40px",

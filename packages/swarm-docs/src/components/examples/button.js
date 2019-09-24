@@ -1,5 +1,7 @@
 import React from 'react';
 import { Button } from '@meetup/swarm-components';
+import { Star } from '@meetup/swarm-icons/lib/components/line';
+
 
 const Example = () => {
   return (
@@ -32,6 +34,11 @@ const Example = () => {
       <div style={{marginTop: '8px'}}>
         <Button small>
           Small
+        </Button>
+      </div>
+      <div style={{marginTop: '8px'}}>
+        <Button iconOnly large>
+          <Star />
         </Button>
       </div>
       <div style={{marginTop: '8px'}}>

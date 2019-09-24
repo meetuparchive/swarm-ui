@@ -40,5 +40,8 @@ export const getSwarmSize = (props: Props): string => {
 };
 
 export const getIconPosition = (props: Props): string => {
+	if (props.iconOnly) {
+		return 'only';
+	}
 	return props.children ? (props.right ? 'right' : 'left') : 'only';
 };
