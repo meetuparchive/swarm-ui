@@ -206,7 +206,7 @@
 /* large */
 %swarm-button-large {
   font-size: var(--font-size-normal);
-  line-height: 28px;
+  line-height: 32px;
   padding: var(--space-half) var(--space-and-half);
 }
 
@@ -239,11 +239,16 @@
 }
 
 %swarm-button-icon-only {
-  padding: var(--space-half) var(--space);
+  padding: var(--space-half);
 }
 
 [data-swarm-button][data-icon="only"] {
   @extend %swarm-button-icon-only
+}
+
+[data-swarm-button][data-icon="only"][data-swarm-size="large"] > span {
+  height: 32px;
+  width: 32px;
 }
 
 [data-swarm-button][data-swarm-size="small"][data-icon="only"] {

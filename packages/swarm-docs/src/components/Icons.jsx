@@ -18,7 +18,7 @@ const Icons = ({ icons = {}, iconFamily = '' }) => {
   return (
     <div>
       <pre className="pre-static">
-        {`import { ${activeIcon} } from '@meetup/swarm-icons/lib/components/${iconFamily}`}
+        {`import { ${activeIcon} } from '@meetup/swarm-icons/lib/components/${iconFamily}';`}
       </pre>
       <pre className="pre-static">
         {`<${activeIcon} />`}
