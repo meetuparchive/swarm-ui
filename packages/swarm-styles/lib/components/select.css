@@ -15,6 +15,8 @@
     padding-left: var(--space);
     width: 100%;
     border: 1px solid var(--color-gray-3);
+    height: inherit;
+    font-size: var(--font-size-normal);
     /* ToDo: do we need a box shadow? do we want it on focus or on error states as well? */
     /* box-shadow: 0px 1px 3px 0px var(--color-gray-5); */
 }
