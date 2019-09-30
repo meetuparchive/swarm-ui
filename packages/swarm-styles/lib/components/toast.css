@@ -1,0 +1,17 @@
+[data-swarm-toast] {
+  padding: var(--space-double);
+  color: var(--color-white);
+  display: flex;
+}
+
+[data-swarm-toast="default"] {
+  background: var(--color-viridian);
+}
+
+[data-swarm-toast="success"] {
+  background: var(--color-confirm-green);
+}
+
+[data-swarm-toast="error"] {
+  background: var(--color-warning-orange);
+}

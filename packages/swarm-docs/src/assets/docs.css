@@ -36,6 +36,7 @@ h1.docs-title a {
   width: 200px;
   padding: 40px 30px 30px;
   background: var(--color-gray-1);
+  overflow: scroll;
 }
 
 .left-nav ul,
