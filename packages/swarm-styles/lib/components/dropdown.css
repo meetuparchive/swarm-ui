@@ -5,6 +5,10 @@
   display: flex;
 }
 
+[data-swarm-menu-item]:focus {
+  outline: none;
+}
+
 [data-swarm-menu-item] svg {
   margin-right: var(--space-half);
 }
