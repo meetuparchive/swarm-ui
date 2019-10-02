@@ -315,7 +315,7 @@ const MenuList = React.forwardRef((props, ref) => {
 								<div
 									data-reach-menu
 									ref={menuRef}
-									style={getStyles(state.buttonRect, menuRect)}
+									style={getStyles(state.buttonRect, menuRect, props.style)}
 								>
 									<MenuListImpl {...props} ref={ref} />
 								</div>
@@ -329,6 +329,7 @@ const MenuList = React.forwardRef((props, ref) => {
 });
 
 MenuList.propTypes = {
+	style: object,
 	children: node,
 };
 
@@ -443,7 +444,7 @@ MenuListImpl.propTypes = {
 	onBlur: func,
 };
 
-const getStyles = (buttonRect, menuRect) => {
+const getStyles = (buttonRect, menuRect, style = {}) => {
 	const haventMeasuredButtonYet = !buttonRect;
 	if (haventMeasuredButtonYet) {
 		return { opacity: 0 };
@@ -454,6 +455,7 @@ const getStyles = (buttonRect, menuRect) => {
 	const styles = {
 		left: `${buttonRect.left + window.pageXOffset}px`,
 		top: `${buttonRect.top + buttonRect.height + window.pageYOffset}px`,
+		zIndex: style.zIndex || 'auto',
 	};
 
 	if (haventMeasuredMenuYet) {
