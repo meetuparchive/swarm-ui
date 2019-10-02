@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.11.2](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.11.1...@meetup/swarm-styles@0.11.2) (2019-10-02)
+
+
+### Bug Fixes
+
+* exposing zIndex to menu container from style prop ([3b5b6e5](https://github.com/meetup/swarm-ui/commit/3b5b6e5))
+
+
+
+
+
 ## [0.11.1](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.11.0...@meetup/swarm-styles@0.11.1) (2019-09-30)
 
 
