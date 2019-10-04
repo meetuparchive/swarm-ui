@@ -1,7 +1,22 @@
+[data-swarm-toaster] {
+  width: 100%;
+  position: fixed;
+  padding: var(--space);
+  top: 0;
+  right: 0;
+  display: flex;
+  max-width: 500px;
+  height: 0;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
 [data-swarm-toast] {
-  padding: var(--space-double);
+  padding: var(--space);
+  margin: var(--space);
   color: var(--color-white);
   display: flex;
+  width: 100%;
 }
 
 [data-swarm-toast="default"] {
