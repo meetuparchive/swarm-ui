@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { motion } from 'framer-motion';
 import { ToasterContext } from './Toaster';
+import Button from './Button';
 
 export interface ToastProps {
   /**
@@ -29,13 +30,13 @@ export const Toast = (props: ToastProps) => {
   const { status = 'default', id, onDismiss, duration = 5000 } = props;
   const { removeToast } = React.useContext(ToasterContext);
 
-  // React.useEffect(() => {
-  //   const toasterTimeout = window.setTimeout(() => {
-  //     removeToast(id)
-  //   }, duration)
+  React.useEffect(() => {
+    const toasterTimeout = window.setTimeout(() => {
+      removeToast(id)
+    }, duration)
 
-  //   return () => window.clearTimeout(toasterTimeout);
-  // }, [id])
+    return () => window.clearTimeout(toasterTimeout);
+  }, [id])
 
   return (
     <motion.li
@@ -48,6 +49,9 @@ export const Toast = (props: ToastProps) => {
       animate={{ opacity: 1, x: 0, scale: 1 }}
       exit={{ opacity: 0, scale: 0.5, x: 250, transition: { duration: 0.2 } }}
       {...props}
-    />
+    >
+      {props.children}
+      <Button icon="close" onClick={onDismiss}/>
+    </motion.li>
   )
 }

@@ -1,4 +1,5 @@
 import * as React from 'react';
+import ReactDOM from 'react-dom';
 import { AnimatePresence } from 'framer-motion';
 import { Toast } from './Toast';
 import Button from './Button';
@@ -39,19 +40,32 @@ export const Toaster = (props) => {
     return setToasts(ts => {
       return ts.filter(t => t.props.id !== toastId)
     })
-    
   }
 
-  return (
+  let portalNode = React.useRef<HTMLDivElement | null>(null);
+
+  React.useEffect(() => {
+    const node = document.createElement('div');
+    node.id = 'swarm-toaster';
+    document.body.prepend(node);
+    portalNode.current = node;
+
+    return () => node.remove();
+  }, [])
+
+    return (
     <ToasterContext.Provider value={{ toasts, addToast, removeToast }}>
-      <div data-swarm-toaster>
-        <ul style={{ width: '100%' }}>
-          <AnimatePresence initial={false}>
-            {toasts}
-          </AnimatePresence>
-        </ul>
-      </div>
-      {props.children}
-    </ToasterContext.Provider>
-  );
-};
+      {portalNode.current && ReactDOM.createPortal(
+        <div data-swarm-toaster>
+          <ul style={{ width: '100%' }}>
+            <AnimatePresence initial={false}>
+              {toasts}
+            </AnimatePresence>
+          </ul>
+        </div>,
+        portalNode.current
+      )}
+        {props.children}
+      </ToasterContext.Provider>
+    );
+}

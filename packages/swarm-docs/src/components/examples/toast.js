@@ -2,12 +2,12 @@ import React from 'react';
 import { Toaster, Toast, Button, useToaster } from '@meetup/swarm-components';
 
 const AddToast = () => {
-  const { addToast } = useToaster();
+  const { addToast, removeToast } = useToaster();
   const [ id, setId ] = React.useState(Math.random());
 
   return <Button onClick={() => {
     setId(Math.random());
-    addToast(<Toast id={id} key={id}><p>test</p></Toast>);
+    addToast(<Toast id={id} key={id} onDismiss={() => removeToast(id)}><p>test</p></Toast>);
   }}>Add Toast</Button>;
 };
 
