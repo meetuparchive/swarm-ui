@@ -2,44 +2,55 @@ import { Button } from '@meetup/swarm-components'
 import { Icon } from '@meetup/swarm-components'
 import Example from '../../components/examples/button';
 import PropsTable from '../../components/propstable';
+import { Close, Check } from '@meetup/swarm-icons/lib/components/solid';
+
 
 # Button
 ---
-Buttons are the primary way to interact with content.
+Buttons are a fundamental component and primarily how users trigger actions. They can be customized by sizes and color to communicate importance and content heirarchy.
+<br/><br/>
 
-## Examples
-The following are all the available states for a `Button`:
-<br/>
 <Example /><br/>
 
-## Props
-All available props for `Button` include:
+<br/><br/>
+
+### Props
 <br/>
 <PropsTable propMetaData={Button.__docgenInfo} />
 
-## Snippet
-Try using `Button` with this interactive code snippet. Update a prop and see what happens!
+<br/><br/>
+
 
 ```.jsx
 <>
-  <Button>Click</Button>
-  <br />
-  <Button icon="send">Click</Button>
+  <Button>Default</Button>
+  <Button primary>Primary</Button>
+  <Button neutral>Neutral</Button>
+  <Button bordered>Bordered</Button>
+  <Button icon="send">Send message</Button>
+  <Button large iconOnly>
+    <Search/>
+  </Button>
+  <br/><br/>
+  <Button neutral grow icon="InfoCircled">Fill the space</Button>
 </>
 ```
 
-## Anatomy
+<br/><br/>
+
+### Anatomy
 All button styles and sizes share the same anatomy.
+<br/>
 <img src="/docs-images/button-anatomy.png" width="810" height="252" />
 <br/>
 <div class="grid-2-col">
     <div class="column">
-        <p class="text--body"><strong>Label</strong></p>
-        <p class="text--body">Button labels should be short and actionable. Label attributes are driven by button style and size.</p>
+        <p class="text--body"><b>Label</b></p>
+        <p class="text--body">Button labels should be short and actionable. Label attributes are driven by the selected button style and size.</p>
     </div>
     <div class="column">
         <p class="text--body"><strong>Border</strong></p>
-        <p class="text--body">All buttons have solid 1px borders, though some styles require the same color for background and border, hiding the presence of the border.</p>
+        <p class="text--body">All buttons have a solid 1px border, though some styles require the same color for background and border, hiding the presence of the border.</p>
     </div>
     <div class="column">
         <p class="text--body"><strong>Background</strong></p>
@@ -51,47 +62,51 @@ All button styles and sizes share the same anatomy.
     </div>
 </div>
 
-## Styles
+<br/><br/>
 
-** Default **
-
-<img src="/docs-images/button-secondary-states.png" width="810" height="132" />
+### Sizing
 <br/>
-
-** Primary **
-
-<img src="/docs-images/button-primary-states.png" width="810" height="132" />
-<br/>
-
-** Neutral **
-
-<img src="/docs-images/button-neutral-states.png" width="810" height="132" />
-<br/>
-
-** Bordered **
-
-<img src="/docs-images/button-bordered-states.png" width="810" height="132" />
-<br/>
-
-** Disabled **
-
-<img src="/docs-images/button-disabled-states.png" width="250" height="132" />
-
-## Sizing
 
 ** Size & Height **
 
-Any button can be configured to one of three distinct sizes. Size dictates label style and top/bottom padding. Button padding uses spacing variables which are dynamic based on viewport.
+Any button can be configured to one of three distinct sizes. Size dictates label text style and top/bottom padding. Button padding uses spacing variables which are dynamic based on viewport.
 <br/>
-<img src="/docs-images/button-sizing-size.png" width="600" height="373" />
-<br/><br/>
+<img src="/docs-images/button-sizing-size.png" width="600" height="405" />
+
+<br/><br/><br/>
 
 ** Width **
 
-Any button can be configured to one of three width settings. Width dictates left/right padding behavior. Button padding uses spacing variables which are dynamic based on viewport.
+Buttons will inherit their left and right padding from their size. Use the grow attribute to expand a button to fill its container.
 <br/>
-<img src="/docs-images/button-sizing-width.png" width="600" height="371" />
-<br/><br/>
+<img src="/docs-images/button-sizing-width.png" width="600" height="120" />
 
-## a11y
-Keyboard interactions: The button action should be triggered by the enter and space keys.
+<br/><br/><br/><br/>
+
+### a11y
+<br/>
+
+** Keyboard interactions**
+
+The button action should be triggered by the enter and space keys.
+
+<br/><br/><br/>
+
+### Content Guidelines
+<br/>
+
+** Button labels **
+
+Should clearly indicate what will happen if the user clicks on them. They should be easy to scan and comprehend.
+
+<br/>
+
+<ul style="margin: 0 0 0 20px;">
+    <li> Keep it scannable: Avoid articles like "a" and "the"</li>
+    <li> Use sentence case</li>
+    <li> Don't use first person to speak from the user's point of view (Sign up vs. Sign me up!)</li>
+    <li> No ampersands or end punctuation (Agree and continue vs. Agree & continue)</li>
+    <li> Make priorities clear: Never present the user with more than one primary action</li>
+</ul>
+
+

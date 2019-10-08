@@ -1,5 +1,8 @@
 .react-live-preview {
-  margin: 10px 0;
+  margin: 0 0 20px 0;
+  padding: 30px 30px;
+  border: 1px solid var(--color-gray-3);
+  border-top: 0;
 }
 
 h1.docs-title {
@@ -11,15 +14,14 @@ h1.docs-title a {
   color: var(--color-gray-5);
 }
 
+hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rbga(255,255,255,1);
+  border-bottom: 1px solid var(--color-gray-3);
+  margin-bottom: var(--space);
+}
 
-/* Swarm Typography Overrides */
-.text--pageTitle {
-  color: var(--color-gray-6);
-  margin: 80px 0 10px;
-}
-.text--body {
-  margin: 0 0 10px;
-}
 
 
 /* Page Layout */
@@ -43,6 +45,10 @@ h1.docs-title a {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.left-nav ul {
+  margin-bottom: var(--space);
 }
 
 .left-nav a {
@@ -82,6 +88,7 @@ h1.docs-title a {
   border-bottom: 2px solid var(--color-indigo);
   margin-right: 5px;
   color: var(--color-gray-7);
+  font-weight: 500;
 }
 
 .props-table th,
@@ -123,6 +130,7 @@ h1.docs-title a {
 .props-table .text-highlight {
   color: var(--color-marigold);
 }
+
 
 /* Content Layout */
 .grid-2-col {
