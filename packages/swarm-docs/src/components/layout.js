@@ -7,6 +7,7 @@ import Nav from './nav';
 import { setConfig } from 'react-hot-loader';
 // icon sprite
 // import 'meetup-web-components/assets/css/main.css'
+import { Toaster } from '@meetup/swarm-components';
 import '../assets/graphik.css';
 import '@meetup/swarm-styles/dist/main.css';
 import '@meetup/swarm-styles/dist/global.css';
@@ -36,7 +37,7 @@ const Layout = ({ children }) => {
       }
       `}
       render={data => (
-        <>
+        <Toaster>
           <Helmet
             title={data.site.siteMetadata.title}
             meta={[
@@ -60,7 +61,7 @@ const Layout = ({ children }) => {
               />
             </div>
         </div>
-        </>
+        </Toaster>
       )}
     />
   );

@@ -1,14 +1,15 @@
 import React from 'react';
 import { Toaster, Toast, Button, useToaster } from '@meetup/swarm-components';
 
-const AddToast = () => {
+// eslint-disable-next-line
+const AddToast = ({ status = 'default' }) => {
   const { addToast, removeToast } = useToaster();
   const [ id, setId ] = React.useState(Math.random());
 
   return <Button onClick={() => {
     setId(Math.random());
-    addToast(<Toast id={id} key={id} onDismiss={() => removeToast(id)}><p>test</p></Toast>);
-  }}>Add Toast</Button>;
+    addToast(<Toast id={id} key={id} status={status} onDismiss={() => removeToast(id)}><p>test</p></Toast>);
+  }}>Add {status} Toast</Button>;
 };
 
 // eslint-disable-next-line
@@ -34,6 +35,9 @@ const Example = () => {
       <Toaster>
         <div>
           <AddToast />
+          <AddToast status='warning' />
+          <AddToast status='success' />
+          <AddToast status='error' />
           <RemoveToastsSection />
         </div>
       </Toaster>
