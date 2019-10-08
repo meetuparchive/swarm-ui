@@ -34,7 +34,6 @@ const ICONS = {
 }
 
 const StatusIcon = ({ status, ...rest }) => {
-  console.log('si', status)
   if(status === 'success') {
     return <CheckCircled className="color-confirm-green" {...rest} />;
   } else if (status === 'warning') {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Toaster, Toast, Button, useToaster } from '@meetup/swarm-components';
+import { Toast, Button, useToaster } from '@meetup/swarm-components';
 
 // eslint-disable-next-line
 const AddToast = ({ status = 'default' }) => {
@@ -32,7 +32,6 @@ const RemoveToastsSection = () => {
 const Example = () => {
   return (
     <>
-      <Toaster>
         <div>
           <AddToast />
           <AddToast status='warning' />
@@ -40,7 +39,6 @@ const Example = () => {
           <AddToast status='error' />
           <RemoveToastsSection />
         </div>
-      </Toaster>
     </>
   );
 };

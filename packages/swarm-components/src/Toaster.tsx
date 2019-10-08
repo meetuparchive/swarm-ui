@@ -21,17 +21,8 @@ export const useToaster = () => {
   return React.useContext(ToasterContext);
 }
 
-const createPortalNode = (): HTMLDivElement => {
-    const node = document.createElement('div');
-    node.id = 'swarm-toaster';
-    return node;
-}
-
-
 export const Toaster = (props) => {
   const [toasts, setToasts] = React.useState([]);
-  // by using useState instead of useRef we can guarantee the element is a dom node when component is intantiated
-  const [portalNode] = React.useState(createPortalNode());
 
   const addToast = (toast) => {
     console.log(toast)
@@ -45,28 +36,32 @@ export const Toaster = (props) => {
     })
   }
 
-  React.useEffect(() => {
-    // Add portal div to body
-    document.body.prepend(portalNode);
+  let portalNode = React.useRef<HTMLDivElement>();
 
-    // remove portal node when provider is removed from page
-    return () => portalNode.remove();
+
+  
+  React.useEffect(() => {
+    const node = document.createElement('div');
+    node.id = 'swarm-toaster';
+    document.body.prepend(node);
+    portalNode.current = node;
+
+    return () => node.remove();
   }, [])
 
-
-  return (
+    return (
     <ToasterContext.Provider value={{ toasts, addToast, removeToast }}>
-      {ReactDOM.createPortal(
+      {portalNode.current && ReactDOM.createPortal(
         <div data-swarm-toaster>
           <ul style={{ width: '100%' }}>
-            <AnimatePresence initial={false}>
+            <AnimatePresence >
               {toasts}
             </AnimatePresence>
           </ul>
         </div>,
-        portalNode
+        portalNode.current
       )}
         {props.children}
-    </ToasterContext.Provider>
-  );
+      </ToasterContext.Provider>
+    );
 }
