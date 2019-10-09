@@ -1,0 +1,28 @@
+  
+{
+  "compilerOptions": {
+    "incremental": true,
+    "module": "commonjs",
+    "declaration": true,
+    "noImplicitAny": false,
+    "removeComments": true,
+    "noLib": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es6",
+    "sourceMap": true,
+    "lib": ["es6", "dom", "esnext.array"],
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true,
+    // "baseUrl": "./packages",
+    "strict": true,
+    // "paths": {
+    //   "@meetup/*": ["./*/src"]
+    // },
+    "resolveJsonModule": true,
+    "outDir": "./lib",
+    "rootDirs": ["src"],
+  },
+  "exclude": ["node_modules", "**/*.test.ts"],
+  "include": ["./src"],
+}

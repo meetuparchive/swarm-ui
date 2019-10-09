@@ -1,6 +1,8 @@
-<% _.each(allProperties, function(prop) {
-%>.<%= prop.name %> {
+<% _.each(allProperties, function(prop) {%>
+.<%= prop.name %>,
+[data-swarm-icon].<%= prop.name %> {
     color: <%= prop.value %>;
+    fill: <%= prop.value %>;
 }
 
 <% }); %>

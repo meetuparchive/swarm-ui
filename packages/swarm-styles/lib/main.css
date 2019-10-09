@@ -11,6 +11,7 @@
 @import './components/field.css';
 @import './components/textInput.css';
 @import './components/textarea.css';
+@import './components/toast.css';
 @import './components/togglePill.css';
 @import './components/toggle.css';
 @import './components/select.css';

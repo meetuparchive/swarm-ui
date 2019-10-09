@@ -20,8 +20,8 @@
   "scripts": {
     "test": "yarn test:unit",
     "test:unit": "NODE_ENV=test jest --config jest.config.json",
-    "build": "npx babel src --out-dir lib --ignore 'src/**/*.test.js','src/**/*.test.jsx','src/testUtils/**/*'",
-    "develop": "yarn build && npx babel src/ --watch -d lib/"
+    "build": "npx babel src --out-dir lib --extensions '.js,.jsx,.ts,.tsx' --ignore 'src/**/*.test.js','src/**/*.test.jsx','src/testUtils/**/*'",
+    "develop": "yarn build && npx babel src/ --extensions '.js,.jsx,.ts,.tsx' --watch -d lib/"
   },
   "bugs": {
     "url": "https://github.com/meetup/swarm-ui/issues"
@@ -36,6 +36,9 @@
     "@babel/preset-env": "7.4.3",
     "@babel/preset-flow": "7.0.0",
     "@babel/preset-react": "7.0.0",
+    "@babel/preset-typescript": "^7.6.0",
+    "@types/react": "^16.9.3",
+    "@types/react-dom": "^16.9.1",
     "babel-plugin-react-docgen": "2.0.2",
     "enzyme": "3.9.0",
     "enzyme-adapter-react-16": "1.12.1",
@@ -49,6 +52,7 @@
     "@reach/menu-button": "^0.1.18",
     "autosize": "^4.0.2",
     "classnames": "2.2.6",
+    "framer-motion": "^1.6.8",
     "swarm-icons": "3.8.354"
   }
 }
