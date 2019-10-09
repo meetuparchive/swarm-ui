@@ -25,7 +25,6 @@ export const Toaster = (props) => {
   const [toasts, setToasts] = React.useState([]);
 
   const addToast = (toast) => {
-    console.log(toast)
     return setToasts(t => [...t, toast]);
   
   };
