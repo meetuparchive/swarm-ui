@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.12.0](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.11.2...@meetup/swarm-styles@0.12.0) (2019-10-09)
+
+
+### Features
+
+* adding icons to large family ([b23651f](https://github.com/meetup/swarm-ui/commit/b23651f))
+* toaster styles, and behavior updates ([a281d35](https://github.com/meetup/swarm-ui/commit/a281d35))
+* toaster wip ([c9b060d](https://github.com/meetup/swarm-ui/commit/c9b060d))
+* toaster wip ([37bc2e6](https://github.com/meetup/swarm-ui/commit/37bc2e6))
+
+
+
+
+
 ## [0.11.2](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.11.1...@meetup/swarm-styles@0.11.2) (2019-10-02)
 
 

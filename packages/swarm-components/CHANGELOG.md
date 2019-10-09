@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.20.0](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.19.1...@meetup/swarm-components@0.20.0) (2019-10-09)
+
+
+### Bug Fixes
+
+* ssr corrections ([ae02089](https://github.com/meetup/swarm-ui/commit/ae02089))
+
+
+### Features
+
+* adding icons to large family ([b23651f](https://github.com/meetup/swarm-ui/commit/b23651f))
+* adding support for typescript components ([f11de75](https://github.com/meetup/swarm-ui/commit/f11de75))
+* toaster contents in portal ([882eb6a](https://github.com/meetup/swarm-ui/commit/882eb6a))
+* toaster styles, and behavior updates ([a281d35](https://github.com/meetup/swarm-ui/commit/a281d35))
+* toaster wip ([c9b060d](https://github.com/meetup/swarm-ui/commit/c9b060d))
+* toaster wip ([37bc2e6](https://github.com/meetup/swarm-ui/commit/37bc2e6))
+
+
+
+
+
 ## [0.19.1](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.19.0...@meetup/swarm-components@0.19.1) (2019-10-02)
 
 

@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.16.0](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.15.3...@meetup/swarm-docs@0.16.0) (2019-10-09)
+
+
+### Bug Fixes
+
+* ssr corrections ([ae02089](https://github.com/gatsbyjs/gatsby-starter-default/commit/ae02089))
+
+
+### Features
+
+* adding icons to large family ([b23651f](https://github.com/gatsbyjs/gatsby-starter-default/commit/b23651f))
+* toaster contents in portal ([882eb6a](https://github.com/gatsbyjs/gatsby-starter-default/commit/882eb6a))
+* toaster styles, and behavior updates ([a281d35](https://github.com/gatsbyjs/gatsby-starter-default/commit/a281d35))
+* toaster wip ([c9b060d](https://github.com/gatsbyjs/gatsby-starter-default/commit/c9b060d))
+* toaster wip ([37bc2e6](https://github.com/gatsbyjs/gatsby-starter-default/commit/37bc2e6))
+
+
+
+
+
 ## [0.15.3](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.15.2...@meetup/swarm-docs@0.15.3) (2019-10-09)
 
 **Note:** Version bump only for package @meetup/swarm-docs

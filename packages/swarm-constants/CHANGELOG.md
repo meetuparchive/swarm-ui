@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-constants@0.6.0...@meetup/swarm-constants@0.7.0) (2019-10-09)
+
+
+### Features
+
+* toaster styles, and behavior updates ([a281d35](https://github.com/meetup/swarm-ui/commit/a281d35))
+
+
+
+
+
 # [0.6.0](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-constants@0.5.0...@meetup/swarm-constants@0.6.0) (2019-09-24)
 
 

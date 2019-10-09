@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-icons@0.2.1...@meetup/swarm-icons@0.3.0) (2019-10-09)
+
+
+### Features
+
+* adding icons to large family ([b23651f](https://github.com/meetup/swarm-ui/commit/b23651f))
+
+
+
+
+
 ## [0.2.1](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-icons@0.2.0...@meetup/swarm-icons@0.2.1) (2019-08-29)
 
 
