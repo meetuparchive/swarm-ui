@@ -8,7 +8,7 @@ const AddToast = ({ status = 'default' }) => {
 
   return <Button onClick={() => {
     setId(Math.random());
-    addToast(<Toast id={id} key={id} status={status} onDismiss={() => removeToast(id)}><p>test</p></Toast>);
+    addToast(<Toast id={id} key={id} status={status} onDismiss={() => removeToast(id)}><p>test test test test test test test test test test test test</p><p className="color-gray-6 text--tiny">text small</p><br /><a href="#">test link</a></Toast>);
   }}>Add {status} Toast</Button>;
 };
 

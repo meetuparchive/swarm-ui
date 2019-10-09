@@ -2,7 +2,7 @@ import * as React from 'react';
 import { motion } from 'framer-motion';
 import { ToasterContext } from './Toaster';
 import Button from './Button';
-import { CheckCircled, CloseCircled, WarningCircled } from '@meetup/swarm-icons/lib/components/solid';
+import { CheckCircledSelected, CloseCircledSelected, WarningCircledSelected } from '@meetup/swarm-icons/lib/components/large';
 
 export interface ToastProps {
   /**
@@ -35,11 +35,11 @@ const ICONS = {
 
 const StatusIcon = ({ status, ...rest }) => {
   if(status === 'success') {
-    return <CheckCircled className="color-confirm-green" {...rest} />;
+    return <CheckCircledSelected className="color-confirm-green" {...rest} />;
   } else if (status === 'warning') {
-    return <WarningCircled className="color-warning-orange" {...rest} />;
+    return <WarningCircledSelected className="color-warning-orange" {...rest} />;
   } else if (status === 'error') {
-    return <CloseCircled className="color-alert-red" {...rest} />;
+    return <CloseCircledSelected className="color-alert-red" {...rest} />;
   }
   return null;
 }
@@ -68,7 +68,7 @@ export const Toast = (props: ToastProps) => {
       exit={{ opacity: 0, scale: 0.9, x: 250, transition: { duration: 0.2 } }}
       {...props}
     >
-      <StatusIcon status={status} height={24} width={24} style={{ paddingRight: 5 }} />
+      <StatusIcon status={status} style={{ paddingRight: 5 }} />
       <div data-swarm-toast-content>
         {props.children}
       </div>

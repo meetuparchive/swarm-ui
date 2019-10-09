@@ -52,3 +52,5 @@ export { default as Star } from './Star';
 export { default as StarSelected } from './StarSelected';
 export { default as StartMessage } from './StartMessage';
 export { default as StartMessageSelected } from './StartMessageSelected';
+export { default as WarningCircled } from './WarningCircled';
+export { default as WarningCircledSelected } from './WarningCircledSelected';
