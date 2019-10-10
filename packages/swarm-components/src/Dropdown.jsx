@@ -45,7 +45,7 @@ const genId = prefix =>
 // //////////////////////////////////////////////////////////////////////
 
 const getInitialState = () => ({
-	// isOpen: false,
+	isOpen: false,
 	buttonRect: {},
 	selectionIndex: -1,
 	closingWithClick: false,
