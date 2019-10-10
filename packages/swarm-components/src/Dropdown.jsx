@@ -333,7 +333,15 @@ MenuList.propTypes = {
 	children: node,
 };
 
-const isFocusableChildType = (child, types = []) => types.includes(child.type);
+// super hacky to support react-hot-loader
+// https://github.com/gaearon/react-hot-loader/issues/304
+const isFocusableChildType = (child, types = []) => {
+	const typeNames = types.map(t => t.name);
+	const childName = child.type.displayName || child.type.name;
+
+	return typeNames.includes(childName);
+};
+
 const getFocusableMenuChildren = (children, types) => {
 	const focusable = [];
 	Children.forEach(children, child => {
