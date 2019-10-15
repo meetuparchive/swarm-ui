@@ -60,6 +60,10 @@ export type ButtonProps = {
 	right?: boolean,
 
 	/**
+	 * The size of the button. supports "small", "large", & "default"
+	 */
+	size?: "small" | "large" | "default",
+	/**
 	 * The large button size
 	 */
 
@@ -78,12 +82,12 @@ export type ButtonProps = {
 	/**
 	 *
 	 */
-	forwardedRef?: ?React.ElementRef<*>,
+	forwardedRef?: React.Ref<ButtonProps>,
 
 	/**
 	 * Content of button
 	 */
-	children: React.Node,
+	children?: React.ReactNode,
 };
 
 class Button extends React.Component<ButtonProps> {
@@ -100,6 +104,7 @@ class Button extends React.Component<ButtonProps> {
 			primary, // eslint-disable-line no-unused-vars
 			inverted, // eslint-disable-line no-unused-vars
 			reset, // eslint-disable-line no-unused-vars
+			size, // eslint-disable-line no-unused-vars
 			small, // eslint-disable-line no-unused-vars
 			large, // eslint-disable-line no-unused-vars
 			forwardedRef,
@@ -108,6 +113,7 @@ class Button extends React.Component<ButtonProps> {
 
 		const buttonType = getButtonType(this.props);
 		const width = grow ? 'grow' : 'default';
+
 
 		return (
 			<button
@@ -124,11 +130,11 @@ class Button extends React.Component<ButtonProps> {
 						{right ? (
 							<>
 								{children}
-								<Icon shape={icon} size="xs" />
+								<Icon shape={icon} />
 							</>
 						) : (
 							<>
-								<Icon shape={icon} size="xs" />
+								<Icon shape={icon} />
 								{children}
 							</>
 						)}
@@ -143,8 +149,8 @@ class Button extends React.Component<ButtonProps> {
 	}
 }
 
-export const ForwardedButton = React.forwardRef<ButtonProps, HTMLButtonElement>(
+const ForwardedButton = React.forwardRef<ButtonProps, HTMLButtonElement>(
 	(props, ref) => <Button {...props} forwardedRef={ref} />
 );
 
-export default Button;
+export { Button, ForwardedButton };

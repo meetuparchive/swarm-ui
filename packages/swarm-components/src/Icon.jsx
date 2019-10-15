@@ -31,7 +31,7 @@ const Icon = (props: Props) => {
 		);
 	}
 
-	return Component ? <Component {...other} /> : false;
+	return Component ? <Component {...other} /> : null;
 };
 
 export default Icon;

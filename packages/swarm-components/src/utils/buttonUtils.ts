@@ -1,4 +1,3 @@
-// @flow
 import type { ButtonProps } from '../Button';
 import type { LinkButtonProps } from '../LinkButton';
 
@@ -30,6 +29,9 @@ export const getButtonType = (props: Props): string => {
 };
 
 export const getSwarmSize = (props: Props): string => {
+	if (props.size) {
+		return props.size;
+	}
 	let size = 'default';
 	if (props.large) {
 		size = 'large';
