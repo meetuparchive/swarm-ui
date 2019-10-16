@@ -1,5 +1,5 @@
-import type { ButtonProps } from '../Button';
-import type { LinkButtonProps } from '../LinkButton';
+import { ButtonProps } from '../Button';
+import { LinkButtonProps } from '../LinkButton';
 
 type Props = ButtonProps | LinkButtonProps;
 

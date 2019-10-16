@@ -2,7 +2,7 @@
 import * as React from 'react';
 import Icon from './Icon';
 
-export type Props = {
+export interface Props {
 	/**
 	 * Whether the box should be checked.
 	 */
@@ -18,11 +18,11 @@ export type Props = {
 	/**
 	 * A callback function that is called when the checkbox is toggled.
 	 */
-	onChange?: () => mixed,
+	onChange?: () => void,
 	/**
 	 * Child nodes that would be placed if there is no label.
 	 */
-	children?: React.Node,
+	children?: React.ReactNode,
 	/**
 	 * A label for your checkbox input. It will not be shown if `children` are passed to the component.
 	 */
@@ -38,7 +38,7 @@ export type Props = {
 };
 
 // Can not inline css vars as color to Icon. Gray 5 icon fill on disbaled
-const Checkbox = (props: Props): React.Element<'label'> => {
+const Checkbox = (props: Props): React.ReactElement => {
 	const {
 		checked,
 		label,
@@ -55,7 +55,6 @@ const Checkbox = (props: Props): React.Element<'label'> => {
 		<label
 			data-swarm-checkbox={disabled ? 'disabled' : 'default'}
 			htmlFor={id}
-			disabled={disabled}
 			{...rest}
 		>
 			<span
@@ -79,7 +78,7 @@ const Checkbox = (props: Props): React.Element<'label'> => {
 				onChange={onChange}
 				readOnly={!onChange || disabled}
 				name={name}
-				value={value}
+				value={`${value}`}
 			/>
 			<span>{label || children}</span>
 		</label>

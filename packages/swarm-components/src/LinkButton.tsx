@@ -5,7 +5,7 @@ import { getButtonType, getSwarmSize, getIconPosition } from './utils/buttonUtil
 
 export interface LinkButtonProps extends ButtonProps {};
 
-const LinkButton = (props: LinkButtonProps): HTMLAnchorElement => {
+const LinkButton = (props: LinkButtonProps): React.AnchorHTMLAttributes<LinkButtonProps> => {
 	// destructuring to not pass invalid attributes to node
 	const {
 		icon,
