@@ -3,7 +3,7 @@ import * as React from 'react';
 import Icon from './Icon';
 import { getButtonType, getSwarmSize, getIconPosition } from './utils/buttonUtils';
 
-export type ButtonProps = {
+export interface ButtonProps {
 	/**
 	 * The bordered button
 	 */
