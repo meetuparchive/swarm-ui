@@ -52,4 +52,4 @@ const LinkButton = (props: LinkButtonProps): React.AnchorHTMLAttributes<LinkButt
 	);
 };
 
-export default LinkButton;
+export { LinkButton };

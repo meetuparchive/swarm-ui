@@ -85,4 +85,4 @@ const Checkbox = (props: Props): React.ReactElement => {
 	);
 };
 
-export default Checkbox;
+export { Checkbox };
