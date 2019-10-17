@@ -1,8 +1,6 @@
 import * as React from 'react';
-import ReactDOM from 'react-dom';
+import * as ReactDOM from 'react-dom';
 import { AnimatePresence } from 'framer-motion';
-import { Toast } from './Toast';
-import Button from './Button';
 
 const removeToast = (toasts: Array<any>, id: string) => {
   return [...toasts.filter(t => t.id !== id)];

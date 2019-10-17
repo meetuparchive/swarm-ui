@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Icon } from './Icon';
-import CharCount, { hasMaxLengthError } from './shared/CharCount';
+import { CharCount, hasMaxLengthError } from './shared/CharCount';
 import { getFormFieldState } from './utils/formUtils';
 
 const ICON_SIZES = Object.freeze({
