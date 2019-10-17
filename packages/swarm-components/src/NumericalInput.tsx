@@ -190,7 +190,7 @@ class NumericalInput extends React.Component<Props, State> {
 					onFocus={this.onFocus}
 					ref={(el: HTMLButtonElement | null) => (this.incrementBtnEl = el)}
 				>
-					<Icon shape="plus" />
+					<Icon shape="add" />
 				</button>
 			</div>
 		);

@@ -1,6 +1,5 @@
-// @flow
 import * as React from 'react';
-import Icon from './Icon';
+import { Icon } from './Icon';
 import CharCount, { hasMaxLengthError } from './shared/CharCount';
 import { getFormFieldState } from './utils/formUtils';
 
@@ -14,7 +13,7 @@ const ICON_SIZES = Object.freeze({
 	XXL: 'xxl',
 });
 
-export type TextInputProps = {
+interface TextInputProps {
 	/**
 	 * Whether the input should be interactive.
 	 */
@@ -51,17 +50,17 @@ export type TextInputProps = {
 	 * Optional size for icon if `iconShape` is provided.
 	 * Default size is `xs`
 	 */
-	iconSize?: $Values<typeof ICON_SIZES>,
+	iconSize?: 'xxs' | 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl',
 	/**
 	 * max length of input field
 	 */
-	maxLength?: ?number,
+	maxLength?: number,
 };
 
 /**
  * @module TextInput
  */
-export const TextInput = (props: TextInputProps): React$Element<*> => {
+const TextInput = (props: TextInputProps): React.ReactElement => {
 	const {
 		name,
 		error,
@@ -70,7 +69,6 @@ export const TextInput = (props: TextInputProps): React$Element<*> => {
 		disabled,
 		id,
 		iconShape,
-		iconSize = 'xs',
 		value = '',
 		maxLength,
 		...other
@@ -97,7 +95,7 @@ export const TextInput = (props: TextInputProps): React$Element<*> => {
 			/>
 			{iconShape && (
 				<span data-swarm-input-icon={iconShape}>
-					<Icon shape={iconShape} size={iconSize} aria-hidden />
+					<Icon shape={iconShape} aria-hidden />
 				</span>
 			)}
 			{maxLength && <CharCount maxLength={maxLength} charLength={charLength} />}
@@ -105,4 +103,4 @@ export const TextInput = (props: TextInputProps): React$Element<*> => {
 	);
 };
 
-export default TextInput;
+export { TextInput };

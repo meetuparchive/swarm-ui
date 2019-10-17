@@ -1,12 +1,11 @@
-// @flow
 import * as React from 'react';
 import auto from 'autosize';
 
-import CharCount, { hasMaxLengthError } from './shared/CharCount';
+import { CharCount, hasMaxLengthError } from './shared/CharCount';
 
 import { getFormFieldState } from './utils/formUtils';
 
-export type TextareaProps = {
+interface TextareaProps {
 	/**
 	 * Resizes the height based on content
 	 */
@@ -36,7 +35,7 @@ export type TextareaProps = {
 type State = {};
 
 class Textarea extends React.Component<TextareaProps, State> {
-	textarea: ?HTMLTextAreaElement;
+	textarea: HTMLTextAreaElement | null | undefined;
 
 	componentDidMount() {
 		if (this.props.autosize) {
@@ -81,4 +80,4 @@ class Textarea extends React.Component<TextareaProps, State> {
 	}
 }
 
-export default Textarea;
+export { Textarea };

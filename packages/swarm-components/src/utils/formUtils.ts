@@ -1,7 +1,6 @@
-// @flow
-type FieldProps = {
-	disabled?: ?boolean,
-	error?: ?boolean,
+interface FieldProps {
+	disabled?: boolean,
+	error?: boolean,
 };
 
 /**

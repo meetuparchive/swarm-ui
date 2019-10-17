@@ -1,7 +1,6 @@
-// @flow
 import * as React from 'react';
 
-type CharProps = {
+interface CharProps {
 	maxLength: number,
 	charLength?: number,
 };
@@ -12,7 +11,7 @@ export const getRemainingCharacters = (
 ): number => maxLength - charLength;
 
 export const hasMaxLengthError = (
-	maxLength: ?number = 0,
+	maxLength: number = 0,
 	charLength: number
 ): boolean => !!maxLength && charLength > maxLength;
 
@@ -26,4 +25,4 @@ const CharCount = (props: CharProps) => {
 	);
 };
 
-export default CharCount;
+export { CharCount };

@@ -1,6 +1,5 @@
-// @flow
 import * as React from 'react';
-import Icon from './Icon';
+import { Icon } from './Icon';
 
 export interface Props {
 	/**

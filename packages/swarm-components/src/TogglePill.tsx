@@ -1,7 +1,6 @@
-// @flow
 import * as React from 'react';
 
-export type Props = {
+interface Props {
 	/**
 	 * Indicates whether the toggle is selected
 	 */
@@ -25,27 +24,27 @@ export type Props = {
 	/**
 	 * Strips all styles from the toggle pill
 	 */
-	children?: React.Node,
+	children?: React.ReactElement,
 };
 
-const TogglePill = (props: Props): React.Element<'button'> => {
-	const { checked, disabled, label, children, grow, reset, ...other } = props;
+const getPillState = (reset: boolean, checked: boolean) => {
+	if (reset) return 'reset';
+	else if (checked) return 'checked';
+	else return 'unchecked';
+};
+
+const TogglePill = (props: Props) => {
+	const { checked = false, disabled, label, children, grow, reset = false, ...other } = props;
 
 	const width = grow ? 'grow' : 'default';
-	const pillState = () => {
-		if (reset) return 'reset';
-		else if (checked) return 'checked';
-		else return 'unchecked';
-	};
 
 	return (
 		<button
-			data-swarm-toggle-pill={pillState()}
+			data-swarm-toggle-pill={getPillState(reset, checked)}
 			data-swarm-width={width}
 			role="checkbox"
 			aria-checked={checked}
 			disabled={disabled}
-			checked={checked}
 			{...other}
 		>
 			<span>{label || children}</span>
@@ -53,4 +52,4 @@ const TogglePill = (props: Props): React.Element<'button'> => {
 	);
 };
 
-export default TogglePill;
+export { TogglePill };
