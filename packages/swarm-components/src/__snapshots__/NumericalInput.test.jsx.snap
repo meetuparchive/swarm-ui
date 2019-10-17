@@ -21,11 +21,10 @@ exports[`NumericalInput render Snapshot: Default 1`] = `
     onBlur={[Function]}
     onClick={[Function]}
     onFocus={[Function]}
-    tabIndex="-1"
+    tabIndex={-1}
   >
     <Icon
       shape="minus"
-      size="xs"
     />
   </button>
   <button
@@ -33,11 +32,10 @@ exports[`NumericalInput render Snapshot: Default 1`] = `
     onBlur={[Function]}
     onClick={[Function]}
     onFocus={[Function]}
-    tabIndex="-1"
+    tabIndex={-1}
   >
     <Icon
-      shape="plus"
-      size="xs"
+      shape="add"
     />
   </button>
 </div>
@@ -64,11 +62,10 @@ exports[`NumericalInput render Snapshot: Default with classname 1`] = `
     onBlur={[Function]}
     onClick={[Function]}
     onFocus={[Function]}
-    tabIndex="-1"
+    tabIndex={-1}
   >
     <Icon
       shape="minus"
-      size="xs"
     />
   </button>
   <button
@@ -76,11 +73,10 @@ exports[`NumericalInput render Snapshot: Default with classname 1`] = `
     onBlur={[Function]}
     onClick={[Function]}
     onFocus={[Function]}
-    tabIndex="-1"
+    tabIndex={-1}
   >
     <Icon
-      shape="plus"
-      size="xs"
+      shape="add"
     />
   </button>
 </div>
@@ -108,11 +104,10 @@ exports[`NumericalInput render Snapshot: Default with id 1`] = `
     onBlur={[Function]}
     onClick={[Function]}
     onFocus={[Function]}
-    tabIndex="-1"
+    tabIndex={-1}
   >
     <Icon
       shape="minus"
-      size="xs"
     />
   </button>
   <button
@@ -120,11 +115,10 @@ exports[`NumericalInput render Snapshot: Default with id 1`] = `
     onBlur={[Function]}
     onClick={[Function]}
     onFocus={[Function]}
-    tabIndex="-1"
+    tabIndex={-1}
   >
     <Icon
-      shape="plus"
-      size="xs"
+      shape="add"
     />
   </button>
 </div>
@@ -152,11 +146,10 @@ exports[`NumericalInput render Snapshot: Default with max 1`] = `
     onBlur={[Function]}
     onClick={[Function]}
     onFocus={[Function]}
-    tabIndex="-1"
+    tabIndex={-1}
   >
     <Icon
       shape="minus"
-      size="xs"
     />
   </button>
   <button
@@ -164,11 +157,10 @@ exports[`NumericalInput render Snapshot: Default with max 1`] = `
     onBlur={[Function]}
     onClick={[Function]}
     onFocus={[Function]}
-    tabIndex="-1"
+    tabIndex={-1}
   >
     <Icon
-      shape="plus"
-      size="xs"
+      shape="add"
     />
   </button>
 </div>
@@ -196,11 +188,10 @@ exports[`NumericalInput render Snapshot: Default with min 1`] = `
     onBlur={[Function]}
     onClick={[Function]}
     onFocus={[Function]}
-    tabIndex="-1"
+    tabIndex={-1}
   >
     <Icon
       shape="minus"
-      size="xs"
     />
   </button>
   <button
@@ -208,11 +199,10 @@ exports[`NumericalInput render Snapshot: Default with min 1`] = `
     onBlur={[Function]}
     onClick={[Function]}
     onFocus={[Function]}
-    tabIndex="-1"
+    tabIndex={-1}
   >
     <Icon
-      shape="plus"
-      size="xs"
+      shape="add"
     />
   </button>
 </div>
@@ -239,11 +229,10 @@ exports[`NumericalInput render Snapshot: Default with onBlur 1`] = `
     onBlur={[Function]}
     onClick={[Function]}
     onFocus={[Function]}
-    tabIndex="-1"
+    tabIndex={-1}
   >
     <Icon
       shape="minus"
-      size="xs"
     />
   </button>
   <button
@@ -251,11 +240,10 @@ exports[`NumericalInput render Snapshot: Default with onBlur 1`] = `
     onBlur={[Function]}
     onClick={[Function]}
     onFocus={[Function]}
-    tabIndex="-1"
+    tabIndex={-1}
   >
     <Icon
-      shape="plus"
-      size="xs"
+      shape="add"
     />
   </button>
 </div>
@@ -282,11 +270,10 @@ exports[`NumericalInput render Snapshot: Default with step 1`] = `
     onBlur={[Function]}
     onClick={[Function]}
     onFocus={[Function]}
-    tabIndex="-1"
+    tabIndex={-1}
   >
     <Icon
       shape="minus"
-      size="xs"
     />
   </button>
   <button
@@ -294,11 +281,10 @@ exports[`NumericalInput render Snapshot: Default with step 1`] = `
     onBlur={[Function]}
     onClick={[Function]}
     onFocus={[Function]}
-    tabIndex="-1"
+    tabIndex={-1}
   >
     <Icon
-      shape="plus"
-      size="xs"
+      shape="add"
     />
   </button>
 </div>
@@ -326,11 +312,10 @@ exports[`NumericalInput render Snapshot: Disabled 1`] = `
     onBlur={[Function]}
     onClick={[Function]}
     onFocus={[Function]}
-    tabIndex="-1"
+    tabIndex={-1}
   >
     <Icon
       shape="minus"
-      size="xs"
     />
   </button>
   <button
@@ -338,11 +323,10 @@ exports[`NumericalInput render Snapshot: Disabled 1`] = `
     onBlur={[Function]}
     onClick={[Function]}
     onFocus={[Function]}
-    tabIndex="-1"
+    tabIndex={-1}
   >
     <Icon
-      shape="plus"
-      size="xs"
+      shape="add"
     />
   </button>
 </div>
@@ -370,11 +354,10 @@ exports[`NumericalInput render Snapshot: Error 1`] = `
     onBlur={[Function]}
     onClick={[Function]}
     onFocus={[Function]}
-    tabIndex="-1"
+    tabIndex={-1}
   >
     <Icon
       shape="minus"
-      size="xs"
     />
   </button>
   <button
@@ -382,11 +365,10 @@ exports[`NumericalInput render Snapshot: Error 1`] = `
     onBlur={[Function]}
     onClick={[Function]}
     onFocus={[Function]}
-    tabIndex="-1"
+    tabIndex={-1}
   >
     <Icon
-      shape="plus"
-      size="xs"
+      shape="add"
     />
   </button>
 </div>

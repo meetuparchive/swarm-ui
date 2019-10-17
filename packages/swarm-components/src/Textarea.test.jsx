@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import Textarea from './Textarea';
+import { Textarea } from './Textarea';
 import auto from 'autosize';
 
 // mock `auto` from autosize library
@@ -35,12 +35,12 @@ describe('Textarea', () => {
 			expect(auto).toHaveBeenCalled();
 		});
 
-		it('calls autosize.update on componentDidUpdate', () => {
+		it('calls autosize.update on value update', () => {
 			auto.mockClear();
 			const textarea = mount(
 				<Textarea value="something" onChange={mockOnChange} autosize />
 			);
-			textarea.instance().componentDidUpdate({ value: 'prev props values' });
+			textarea.setProps({ value: 'prev props values' });
 			expect(auto.update).toHaveBeenCalled();
 		});
 	});

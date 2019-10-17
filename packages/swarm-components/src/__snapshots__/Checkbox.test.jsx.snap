@@ -19,6 +19,7 @@ exports[`Checkbox Snapshot: Checked 1`] = `
     checked={true}
     readOnly={true}
     type="checkbox"
+    value="undefined"
   />
   <span>
     Uncheck me
@@ -37,6 +38,7 @@ exports[`Checkbox Snapshot: Default 1`] = `
   <input
     readOnly={true}
     type="checkbox"
+    value="undefined"
   />
   <span>
     Check me
@@ -47,7 +49,6 @@ exports[`Checkbox Snapshot: Default 1`] = `
 exports[`Checkbox Snapshot: Disabled checked 1`] = `
 <label
   data-swarm-checkbox="disabled"
-  disabled={true}
 >
   <span
     aria-checked={true}
@@ -65,6 +66,7 @@ exports[`Checkbox Snapshot: Disabled checked 1`] = `
     disabled={true}
     readOnly={true}
     type="checkbox"
+    value="undefined"
   />
   <span>
     Can't uncheck me
@@ -75,7 +77,6 @@ exports[`Checkbox Snapshot: Disabled checked 1`] = `
 exports[`Checkbox Snapshot: Disabled unchecked 1`] = `
 <label
   data-swarm-checkbox="disabled"
-  disabled={true}
 >
   <span
     data-swarm-checkbox-field="unchecked"
@@ -85,6 +86,7 @@ exports[`Checkbox Snapshot: Disabled unchecked 1`] = `
     disabled={true}
     readOnly={true}
     type="checkbox"
+    value="undefined"
   />
   <span>
     Can't check me

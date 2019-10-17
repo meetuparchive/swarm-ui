@@ -27,9 +27,10 @@ interface Props {
 	/**
 	 * Required change handler with Value, not event
 	 */
-	onChange: () => void,
+	onChange: (value: Value) => void,
 	/**
-	 * funcitonality invoked when the form field is blurred
+	 * funcitonality invo
+	 * ked when the form field is blurred
 	 */
 	onBlur?: () => void,
 	/**
