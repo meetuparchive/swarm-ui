@@ -38,10 +38,10 @@ const Radio: React.FC<Props> = (props) => {
 	const { checked, label, id, disabled, value, children, name, ...other } = props;
 
 	return (
-		<label data-swarm-radio={disabled ? 'disabled' : 'default'} disabled={disabled}>
+		<label data-swarm-radio={disabled ? 'disabled' : 'default'}>
 			<span
 				data-swarm-radio-field={checked ? 'checked' : 'unchecked'}
-				tabIndex="0"
+				tabIndex={0}
 				role="checkbox"
 				aria-checked={checked}
 			>

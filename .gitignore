@@ -4,6 +4,8 @@ node_modules
 *.chache
 .vscode/
 
+tsconfig.tsbuildinfo
+
 lib/
 !packages/swarm-styles/lib/
 build/

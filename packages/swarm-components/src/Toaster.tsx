@@ -1,6 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { AnimatePresence } from 'framer-motion';
+import { ToastProps } from './Toast';
 
 const removeToast = (toasts: Array<any>, id: string) => {
   return [...toasts.filter(t => t.id !== id)];
@@ -20,7 +21,7 @@ export const useToaster = () => {
 }
 
 export const Toaster = (props) => {
-  const [toasts, setToasts] = React.useState([]);
+  const [toasts, setToasts] = React.useState<Array<React.ReactElement<ToastProps>>>([]);
 
   const addToast = (toast) => {
     return setToasts(t => [...t, toast]);
