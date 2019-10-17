@@ -10,7 +10,7 @@ export { TextInput } from './TextInput';
 export { Textarea } from './Textarea';
 export { Toggle } from './Toggle';
 export { TogglePill } from './TogglePill';
-export { default as Select } from './Select';
+export { Select } from './Select';
 export { Menu, MenuButton, MenuItem, MenuList, MenuLink } from './DropdownWrappers';
 export { Toast } from './Toast';
 export { Toaster, ToasterContext, useToaster } from './Toaster';
