@@ -1,7 +1,6 @@
-// @flow
 import * as React from 'react';
 
-export type Props = {
+interface Props {
 	/**
 	 * Whether the radio button is checked.
 	 */
@@ -31,18 +30,18 @@ export type Props = {
 	 * Use children as an alternative to the `label` prop for more complex input labels.
 	 * The `label` prop will override children.
 	 */
-	children?: React.Node,
+	children?: React.ReactElement,
 };
 
 // Can not inline css vars as color to Icon. Gray 5 icon fill on disbaled
-const Radio = (props: Props): React.Element<'label'> => {
+const Radio: React.FC<Props> = (props) => {
 	const { checked, label, id, disabled, value, children, name, ...other } = props;
 
 	return (
-		<label data-swarm-radio={disabled ? 'disabled' : 'default'} disabled={disabled}>
+		<label data-swarm-radio={disabled ? 'disabled' : 'default'}>
 			<span
 				data-swarm-radio-field={checked ? 'checked' : 'unchecked'}
-				tabIndex="0"
+				tabIndex={0}
 				role="checkbox"
 				aria-checked={checked}
 			>
@@ -62,4 +61,4 @@ const Radio = (props: Props): React.Element<'label'> => {
 	);
 };
 
-export default Radio;
+export { Radio };

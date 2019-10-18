@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Radio from './Radio';
+import { Radio } from './Radio';
 
 describe('Radio', () => {
 	const mockOnChange = jest.fn();

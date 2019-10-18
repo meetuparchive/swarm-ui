@@ -1,14 +1,14 @@
-// @flow
-import React from 'react';
+import * as React from 'react';
 import * as Icons from '@meetup/swarm-icons/lib/components/solid';
 
-function toPascalCase(s) {
+function toPascalCase(s: string) {
 	const capitalized = s.charAt(0).toUpperCase() + s.slice(1);
 	return capitalized.replace(/-(\w)/g, g => g[1].toUpperCase());
 }
 
-type Props = {
+interface Props {
 	shape: string,
+	color?: string
 };
 
 /**
@@ -20,7 +20,7 @@ type Props = {
  *
  * @module Icon
  */
-const Icon = (props: Props) => {
+const Icon: React.FC<Props> = (props): React.ReactElement | null => {
 	const { shape, ...other } = props;
 
 	const Component = Icons[toPascalCase(shape)];
@@ -31,7 +31,7 @@ const Icon = (props: Props) => {
 		);
 	}
 
-	return Component ? <Component {...other} /> : false;
+	return Component ? <Component {...other} /> : null;
 };
 
-export default Icon;
+export { Icon };

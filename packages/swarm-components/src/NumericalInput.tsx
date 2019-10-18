@@ -1,9 +1,9 @@
-// @flow
 import * as React from 'react';
-import Icon from './Icon';
+import { Icon } from './Icon';
 
-type Value = number | null;
-type Props = {
+type Value = number | null | undefined;
+
+interface Props {
 	/**
 	 * Classname of wrapper, specified because it is not applied with other
 	 */
@@ -15,23 +15,24 @@ type Props = {
 	/**
 	 * indicates whether there is an error on the input
 	 */
-	error?: React$Node,
+	error?: React.ReactElement,
 	/**
 	 * the maximum integer allowed
 	 */
-	max?: ?number,
+	max?: number | undefined,
 	/**
 	 * the minimum integer allowed
 	 */
-	min?: ?number,
+	min?: number | undefined,
 	/**
 	 * Required change handler with Value, not event
 	 */
-	onChange: Value => void,
+	onChange: (value: Value) => void,
 	/**
-	 * funcitonality invoked when the form field is blurred
+	 * funcitonality invo
+	 * ked when the form field is blurred
 	 */
-	onBlur?: (SyntheticInputEvent<HTMLInputElement>) => void,
+	onBlur?: (e: any) => void,
 	/**
 	 * The amount the input will increment or decrement when using keyboard interactions
 	 */
@@ -51,14 +52,14 @@ export const getStatus = (props: Props): string => {
 	return props.disabled ? 'disabled' : props.error ? 'error' : 'default';
 };
 
-export const isDefined = (number: ?number): boolean => {
+export const isDefined = (number: Value): boolean => {
 	return typeof number !== 'undefined' && number !== null;
 };
 
-export class NumericalInput extends React.Component<Props, State> {
-	fauxInputEl: HTMLInputElement | null;
-	decrementBtnEl: HTMLButtonElement | null;
-	incrementBtnEl: HTMLButtonElement | null;
+class NumericalInput extends React.Component<Props, State> {
+	fauxInputEl: HTMLInputElement | null | undefined;
+	decrementBtnEl: HTMLButtonElement | null | undefined;
+	incrementBtnEl: HTMLButtonElement | null | undefined;
 
 	static defaultProps = {
 		step: 1,
@@ -107,7 +108,7 @@ export class NumericalInput extends React.Component<Props, State> {
 
 	// this signals blur for the input and the two button controls
 	// only registers a blur when all elements are blurred
-	onBlur = (e: SyntheticInputEvent<HTMLInputElement>) => {
+	onBlur = (e: React.FocusEvent<HTMLInputElement | HTMLButtonElement>) => {
 		const formControls = [this.fauxInputEl, this.decrementBtnEl, this.incrementBtnEl];
 		if (formControls.every(c => c !== document.activeElement)) {
 			this.setState({ isFieldFocused: false });
@@ -117,8 +118,8 @@ export class NumericalInput extends React.Component<Props, State> {
 		}
 	};
 
-	onChange = (e: SyntheticInputEvent<HTMLInputElement>) => {
-		const newValue = e.target.value ? parseInt(e.target.value, 10) : null;
+	onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+		const newValue = parseInt(e.target.value, 10);
 		if (Number.isNaN(newValue)) {
 			return;
 		}
@@ -126,11 +127,11 @@ export class NumericalInput extends React.Component<Props, State> {
 	};
 
 	// this signals focus for the inpurt and the two button controls
-	onFocus = (e: SyntheticFocusEvent<HTMLInputElement>) => {
+	onFocus = (e: React.FocusEvent<HTMLInputElement | HTMLButtonElement>) => {
 		this.setState({ isFieldFocused: true });
 	};
 
-	onKeyDown = (e: SyntheticKeyboardEvent<HTMLInputElement>) => {
+	onKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
 		// Disable the 'e' or 'E' values because we don't
 		// support scientific notation at the moment
 		if (e.key.toLowerCase() === 'e') {
@@ -139,13 +140,13 @@ export class NumericalInput extends React.Component<Props, State> {
 	};
 
 	// the event for the increment button
-	incrementAction = (e: SyntheticInputEvent<HTMLInputElement>) => {
+	incrementAction = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
 		e.preventDefault();
 		this._updateValue(this._updateValueByStep(true));
 	};
 
 	// the event for the decrement button
-	decrementAction = (e: SyntheticInputEvent<HTMLInputElement>) => {
+	decrementAction = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
 		e.preventDefault();
 		this._updateValue(this._updateValueByStep(false));
 	};
@@ -174,27 +175,27 @@ export class NumericalInput extends React.Component<Props, State> {
 				/>
 				<button
 					data-swarm-number-input-decrement
-					tabIndex="-1"
+					tabIndex={-1}
 					onBlur={this.onBlur}
 					onClick={this.decrementAction}
 					onFocus={this.onFocus}
 					ref={(el: HTMLButtonElement | null) => (this.decrementBtnEl = el)}
 				>
-					<Icon shape="minus" size="xs" />
+					<Icon shape="minus" />
 				</button>
 				<button
 					data-swarm-number-input-increment
-					tabIndex="-1"
+					tabIndex={-1}
 					onBlur={this.onBlur}
 					onClick={this.incrementAction}
 					onFocus={this.onFocus}
 					ref={(el: HTMLButtonElement | null) => (this.incrementBtnEl = el)}
 				>
-					<Icon shape="plus" size="xs" />
+					<Icon shape="add" />
 				</button>
 			</div>
 		);
 	}
 }
 
-export default NumericalInput;
+export { NumericalInput };

@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 const isEmpty = obj => [Object, Array].includes((obj || {}).constructor) && !Object.entries((obj || {})).length;
 
 const PropsTable = props => {
+  console.log('props', props);
   const { propMetaData = { props: {} }, ...rest } = props;
 
   return !isEmpty(propMetaData.props) && (

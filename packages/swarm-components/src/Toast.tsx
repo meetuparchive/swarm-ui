@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { motion } from 'framer-motion';
 import { ToasterContext } from './Toaster';
-import Button from './Button';
+import { Button } from './Button';
 import { CheckCircledSelected, CloseCircledSelected, WarningCircledSelected } from '@meetup/swarm-icons/lib/components/large';
 
 export interface ToastProps {
@@ -24,7 +24,11 @@ export interface ToastProps {
   /**
    * invoked when toast is closed
    */
-  onDismiss?(): void,
+  onDismiss?: () => any,
+  /**
+   * The children rendered within Toast
+   */
+  children: React.ReactElement
 }
 
 const ICONS = {

@@ -1,5 +1,5 @@
 {
-	"presets": ["@babel/preset-flow", "@babel/preset-react", "@babel/preset-env", "@babel/preset-typescript"],
+	"presets": ["@babel/preset-react", "@babel/preset-env", "@babel/preset-typescript"],
 	"plugins": [
 		"react-docgen",
 		"@babel/plugin-proposal-class-properties"

@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Toggle from './Toggle';
+import { Toggle } from './Toggle';
 
 describe('Toggle', () => {
 	const testCases = [

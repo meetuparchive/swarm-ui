@@ -63,6 +63,7 @@ exports[`TextInput Snapshot: Icon (custom size) 1`] = `
 >
   <input
     data-swarm-text-input="default"
+    iconSize="m"
     id="iconsize"
     name="iconsize"
     type="text"
@@ -74,7 +75,6 @@ exports[`TextInput Snapshot: Icon (custom size) 1`] = `
     <Icon
       aria-hidden={true}
       shape="location-pin"
-      size="m"
     />
   </span>
 </div>
@@ -97,7 +97,6 @@ exports[`TextInput Snapshot: Icon 1`] = `
     <Icon
       aria-hidden={true}
       shape="location-pin"
-      size="xs"
     />
   </span>
 </div>

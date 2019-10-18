@@ -1,6 +1,5 @@
-// @flow
 import * as React from 'react';
-import Icon from './Icon';
+import { Icon } from './Icon';
 
 export type Props = {
 	/**
@@ -22,7 +21,7 @@ const FILLS = {
 	unchecked: 'var(--color-gray-4)',
 };
 
-const Toggle = (props: Props): React.Element<'button'> => {
+const Toggle = (props: Props): React.ReactElement => {
 	const { checked = false, disabled = false, ...rest } = props;
 	const checkedStatus = checked ? 'checked' : 'unchecked';
 	const fillIcon = checked ? 'check' : 'cross';
@@ -34,15 +33,14 @@ const Toggle = (props: Props): React.Element<'button'> => {
 			type="button"
 			aria-checked={checked}
 			aria-readonly={disabled}
-			checked={checked}
 			disabled={disabled}
 			{...rest}
 		>
 			<span data-swarm-toggle-switch-disc>
-				<Icon shape={fillIcon} size="xs" color={FILLS[checkedStatus]} />
+				<Icon shape={fillIcon} />
 			</span>
 		</button>
 	);
 };
 
-export default Toggle;
+export { Toggle };

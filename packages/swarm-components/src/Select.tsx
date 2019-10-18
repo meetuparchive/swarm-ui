@@ -1,8 +1,7 @@
-// @flow
 import * as React from 'react';
 import { ArrowDown } from '@meetup/swarm-icons/lib/components/solid';
 
-type Props = React.ElementConfig<HTMLSelectElement> & {
+interface Props {
 	/**
 	 * Whether the select menu is disabled.
 	 */
@@ -49,4 +48,4 @@ const Select = (props: Props) => {
 	);
 };
 
-export default Select;
+export { Select };

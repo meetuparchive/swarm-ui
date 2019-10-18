@@ -5,6 +5,8 @@
 	"moduleFileExtensions": [
 		"js",
 		"jsx",
+		"ts",
+		"tsx",
 		"node",
 		"json"
 	],

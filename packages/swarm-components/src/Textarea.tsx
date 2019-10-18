@@ -1,12 +1,11 @@
-// @flow
 import * as React from 'react';
 import auto from 'autosize';
 
-import CharCount, { hasMaxLengthError } from './shared/CharCount';
+import { CharCount, hasMaxLengthError } from './shared/CharCount';
 
 import { getFormFieldState } from './utils/formUtils';
 
-export type TextareaProps = {
+interface Props {
 	/**
 	 * Resizes the height based on content
 	 */
@@ -35,34 +34,27 @@ export type TextareaProps = {
 
 type State = {};
 
-class Textarea extends React.Component<TextareaProps, State> {
-	textarea: ?HTMLTextAreaElement;
+const Textarea = (props: Props): React.ReactElement => {
+	// maxLength is removed because we want to allow for typing over the character limit
+	const { maxLength, value = '', autosize, ...rest} = props;
+	const textareaRef = React.useRef<HTMLTextAreaElement>(null);
 
-	componentDidMount() {
-		if (this.props.autosize) {
-			auto(this.textarea);
+	React.useEffect(() => {
+		if (autosize) {
+			auto(textareaRef.current);
 		}
-	}
+	}, [])
 
-	componentDidUpdate(prevProps: TextareaProps) {
-		if (this.props.value !== prevProps.value) {
-			auto.update(this.textarea);
+	React.useEffect(() => {
+		if (autosize) {
+			auto.update(textareaRef.current);
 		}
-	}
-
-	render() {
-		// maxLength is removed because we want to allow for typing over the character limit
-		const {
-			maxLength,
-			autosize, // eslint-disable-line no-unused-vars
-			value = '',
-			...other
-		} = this.props;
+	}, [value])
 
 		const charLength = value.length;
 		const textareaState = getFormFieldState({
-			...this.props,
-			error: this.props.error || hasMaxLengthError(maxLength, charLength),
+			...props,
+			error: props.error || hasMaxLengthError(maxLength, charLength),
 		});
 
 		return (
@@ -70,15 +62,12 @@ class Textarea extends React.Component<TextareaProps, State> {
 				<textarea
 					value={value}
 					data-swarm-textarea={textareaState}
-					ref={textarea => {
-						this.textarea = textarea;
-					}}
-					{...other}
+					ref={textareaRef}
+					{...rest}
 				/>
 				{maxLength && <CharCount maxLength={maxLength} charLength={charLength} />}
 			</div>
 		);
 	}
-}
 
-export default Textarea;
+export { Textarea };

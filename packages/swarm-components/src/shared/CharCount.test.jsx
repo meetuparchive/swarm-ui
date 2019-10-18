@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import CharCount, { getRemainingCharacters, hasMaxLengthError } from './CharCount';
+import { CharCount, getRemainingCharacters, hasMaxLengthError } from './CharCount';
 
 describe('CharCount', () => {
 	const testCases = [

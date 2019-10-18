@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import FieldHelper from './FieldHelper';
+import { FieldHelper } from './FieldHelper';
 
 describe('FieldHelper', () => {
 	const testCases = [

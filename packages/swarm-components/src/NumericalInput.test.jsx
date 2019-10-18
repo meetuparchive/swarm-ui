@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import NumericalInput, { getStatus } from './NumericalInput';
+import { NumericalInput, getStatus } from './NumericalInput';
 
 describe('NumericalInput', () => {
 	describe('render', () => {
