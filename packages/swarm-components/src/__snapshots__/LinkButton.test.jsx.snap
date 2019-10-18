@@ -56,7 +56,6 @@ exports[`LinkButton Snapshot: Icon (right) with text 1`] = `
     Press me
     <Icon
       shape="chevron-right"
-      size="xs"
     />
   </span>
 </a>
@@ -72,7 +71,6 @@ exports[`LinkButton Snapshot: Icon with text 1`] = `
   <span>
     <Icon
       shape="bolt"
-      size="xs"
     />
     Press me
   </span>
@@ -89,7 +87,6 @@ exports[`LinkButton Snapshot: Icon without text 1`] = `
   <span>
     <Icon
       shape="bolt"
-      size="xs"
     />
   </span>
 </a>

@@ -8,7 +8,7 @@ exports[`Radio Snapshot: Checked 1`] = `
     aria-checked={true}
     data-swarm-radio-field="checked"
     role="checkbox"
-    tabIndex="0"
+    tabIndex={0}
   >
     <span
       data-swarm-radio-dot={true}
@@ -28,13 +28,12 @@ exports[`Radio Snapshot: Checked 1`] = `
 exports[`Radio Snapshot: Checked Disabled 1`] = `
 <label
   data-swarm-radio="disabled"
-  disabled={true}
 >
   <span
     aria-checked={true}
     data-swarm-radio-field="checked"
     role="checkbox"
-    tabIndex="0"
+    tabIndex={0}
   >
     <span
       data-swarm-radio-dot={true}
@@ -59,7 +58,7 @@ exports[`Radio Snapshot: Children 1`] = `
   <span
     data-swarm-radio-field="unchecked"
     role="checkbox"
-    tabIndex="0"
+    tabIndex={0}
   />
   <input
     name="radio"
@@ -78,7 +77,7 @@ exports[`Radio Snapshot: Default 1`] = `
   <span
     data-swarm-radio-field="unchecked"
     role="checkbox"
-    tabIndex="0"
+    tabIndex={0}
   />
   <input
     name="radio"
@@ -93,12 +92,11 @@ exports[`Radio Snapshot: Default 1`] = `
 exports[`Radio Snapshot: Disabled 1`] = `
 <label
   data-swarm-radio="disabled"
-  disabled={true}
 >
   <span
     data-swarm-radio-field="unchecked"
     role="checkbox"
-    tabIndex="0"
+    tabIndex={0}
   />
   <input
     disabled={true}
@@ -118,7 +116,7 @@ exports[`Radio Snapshot: With Id 1`] = `
   <span
     data-swarm-radio-field="unchecked"
     role="checkbox"
-    tabIndex="0"
+    tabIndex={0}
   />
   <input
     id="radio"
@@ -138,7 +136,7 @@ exports[`Radio Snapshot: With onChange 1`] = `
   <span
     data-swarm-radio-field="unchecked"
     role="checkbox"
-    tabIndex="0"
+    tabIndex={0}
   />
   <input
     name="radio"
