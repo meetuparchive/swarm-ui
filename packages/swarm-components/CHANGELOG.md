@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.21.0](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.20.1...@meetup/swarm-components@0.21.0) (2019-10-18)
+
+
+### Bug Fixes
+
+* correcting type errors ([874a7d3](https://github.com/meetup/swarm-ui/commit/874a7d3))
+* select export ([0b11803](https://github.com/meetup/swarm-ui/commit/0b11803))
+* types to interface ([74c1da6](https://github.com/meetup/swarm-ui/commit/74c1da6))
+
+
+### Features
+
+* checkbox to typescript ([98ac9d4](https://github.com/meetup/swarm-ui/commit/98ac9d4))
+* convert button to typescript ([6e6cd1b](https://github.com/meetup/swarm-ui/commit/6e6cd1b))
+* converting to typescript, remove defalut exports ([5ae933c](https://github.com/meetup/swarm-ui/commit/5ae933c))
+* typescript conversion tests update ([5c031bb](https://github.com/meetup/swarm-ui/commit/5c031bb))
+* typescript conversion wip ([72914c0](https://github.com/meetup/swarm-ui/commit/72914c0))
+* typescript task in husky, correct types ([c8bc020](https://github.com/meetup/swarm-ui/commit/c8bc020))
+* typescript wip build succeeds ([dbbd5ba](https://github.com/meetup/swarm-ui/commit/dbbd5ba))
+
+
+
+
+
 ## [0.20.1](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.20.0...@meetup/swarm-components@0.20.1) (2019-10-10)
 
 

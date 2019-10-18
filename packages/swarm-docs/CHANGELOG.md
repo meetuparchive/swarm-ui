@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.17.0](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.16.1...@meetup/swarm-docs@0.17.0) (2019-10-18)
+
+
+### Features
+
+* converting to typescript, remove defalut exports ([5ae933c](https://github.com/gatsbyjs/gatsby-starter-default/commit/5ae933c))
+* typescript conversion wip ([72914c0](https://github.com/gatsbyjs/gatsby-starter-default/commit/72914c0))
+
+
+
+
+
 ## [0.16.1](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.16.0...@meetup/swarm-docs@0.16.1) (2019-10-10)
 
 **Note:** Version bump only for package @meetup/swarm-docs
