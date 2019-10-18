@@ -32,7 +32,7 @@ interface Props {
 	 * funcitonality invo
 	 * ked when the form field is blurred
 	 */
-	onBlur?: () => void,
+	onBlur?: (e: any) => void,
 	/**
 	 * The amount the input will increment or decrement when using keyboard interactions
 	 */

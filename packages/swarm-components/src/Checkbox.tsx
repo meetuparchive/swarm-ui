@@ -64,7 +64,6 @@ const Checkbox = (props: Props): React.ReactElement => {
 				{checked && (
 					<Icon
 						shape="check"
-						size="xs"
 						color={disabled ? 'var(--color-gray-6)' : '#ffffff'}
 					/>
 				)}

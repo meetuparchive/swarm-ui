@@ -18,6 +18,7 @@
       "@meetup/*": ["./packages/*/src"]
     },
     "resolveJsonModule": true,
+    "skipLibCheck": true
   },
-  "exclude": ["node_modules/", "**/*.test.ts"]
+  "exclude": ["./node_modules", "./packages/*/node_modules", "**/*.test.ts"]
 }

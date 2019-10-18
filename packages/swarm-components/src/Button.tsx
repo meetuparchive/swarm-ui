@@ -82,7 +82,7 @@ export interface ButtonProps {
 	/**
 	 *
 	 */
-	forwardedRef?: React.Ref<ButtonProps | null>,
+	forwardedRef?: React.Ref<ButtonProps | null> | any,
 
 	/**
 	 * Content of button

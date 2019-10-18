@@ -36,11 +36,11 @@ const LinkButton = (props: LinkButtonProps): React.AnchorHTMLAttributes<LinkButt
 					{right ? (
 						<>
 							{children}
-							<Icon shape={icon} size="xs" />
+							<Icon shape={icon} />
 						</>
 					) : (
 						<>
-							<Icon shape={icon} size="xs" />
+							<Icon shape={icon} />
 							{children}
 						</>
 					)}

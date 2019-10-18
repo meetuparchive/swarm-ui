@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import * as Icons from '@meetup/swarm-icons/lib/components/solid';
 
 function toPascalCase(s: string) {
@@ -8,6 +8,7 @@ function toPascalCase(s: string) {
 
 interface Props {
 	shape: string,
+	color?: string
 };
 
 /**
