@@ -1,10 +1,9 @@
 import * as React from 'react';
 import Portal from '@reach/portal';
-import Rect, { useRect } from '@reach/rect';
-import WindowSize from '@reach/window-size';
+import { useRect } from '@reach/rect';
 import * as ReachUtils from '@reach/utils';
 import { ForwardedButton } from './Button';
-import { ReactElement } from 'react';
+import { useSSR } from './utils/useSSR';
 
 // TODO: add the mousedown/drag/mouseup to select of native menus, will
 // also help w/ remove the menu button tooltip hide-flash.
@@ -339,13 +338,14 @@ interface MenuListProps {
 // The open state is client side only
 const MenuList = React.forwardRef<HTMLDivElement, MenuListProps>((props, ref) => {
 	const { isOpen, buttonRect } = React.useContext(MenuContext);
+	const { isBrowser } = useSSR();
 
 	const isOpenFalseAsNullForTypescript: true | null = isOpen ? isOpen : null;
-	const menuRef = React.useRef<HTMLDivElement>(document.createElement('div'));
+	const menuRef = React.useRef<HTMLDivElement>(isBrowser ? document.createElement('div') : null);
 	const menuRect = useRect(menuRef, isOpenFalseAsNullForTypescript);
-	let listStyles = getStyles(buttonRect, menuRect, props.style);
+	let listStyles = isBrowser ? getStyles(buttonRect, menuRect, props.style) : {};
 
-	React.useLayoutEffect(() => {
+	React.useEffect(() => {
 		listStyles = getStyles(buttonRect, menuRect, props.style);
 	}, [buttonRect])
 
@@ -483,7 +483,7 @@ interface StyleShape {
 	opacity?: string | number
 }
 
-const getStyles = (buttonRect, menuRect, style = { zIndex: 'auto' }): StyleShape => {
+const getStyles = (buttonRect: object, menuRect: object, style: object = { zIndex: 'auto' }): StyleShape => {
 	const haventMeasuredButtonYet = !buttonRect;
 	if (haventMeasuredButtonYet) {
 		return { opacity: 0 };
