@@ -15,6 +15,7 @@ interface MenuCtx {
 	isOpen: boolean,
 	selectionIndex: number,
 	closingWithClick: boolean,
+	hasBeenClosed: boolean,
 	buttonId: string,
 	buttonRect: {}
 	dispatch: ({}: Action) => any
@@ -26,6 +27,7 @@ const ctxDefaults = {
 	isOpen: false,
 	selectionIndex: -1,
 	closingWithClick: false,
+	hasBeenClosed: false,
 	dispatch: ({}) => null
 };
 
@@ -51,6 +53,7 @@ const getInitialState = (): MenuCtx => ({
 	buttonRect: {},
 	selectionIndex: -1,
 	closingWithClick: false,
+	hasBeenClosed: false,
 	buttonId: genId('button'),
 	dispatch: ({}: any) => null
 });
@@ -64,7 +67,7 @@ function reducer(state: MenuCtx, action: Action) {
 	console.log('action', action.type, action)
 	switch (action.type) {
 		case 'CLOSE':
-			return { ...state, isOpen: false};
+			return { ...state, isOpen: false, hasBeenClosed: true };
 		case 'OPEN':
 			// open at first Item 
 			return { ...state, isOpen: true, selectionIndex: 0 };
@@ -119,7 +122,7 @@ interface MenuButtonProps {
 
 const MenuButton = React.forwardRef(
 	({ onClick, onKeyDown, onMouseDown, ...props }: MenuButtonProps, ref) => {
-		const { isOpen, buttonId, dispatch } = React.useContext(MenuContext);
+		const { isOpen, buttonId, hasBeenClosed, dispatch } = React.useContext(MenuContext);
 		const buttonRef = React.useRef<HTMLButtonElement>(null);
 		const buttonRect = useRect(buttonRef, isOpen);
 
@@ -127,8 +130,9 @@ const MenuButton = React.forwardRef(
 		React.useEffect(() => {
 			// need to check false specifically because isOpen is initially undefined then updates
 			// to false causing dropdown buttons to be focused
-			if (isOpen === false && KeyboardEvent && buttonRef.current) {
-				// buttonRef.current.focus();
+			if (hasBeenClosed && !isOpen && KeyboardEvent && buttonRef.current) {
+				console.log('button', buttonRef)
+				buttonRef.current.focus();
 			}
 		}, [isOpen]);
 
@@ -136,17 +140,13 @@ const MenuButton = React.forwardRef(
 			dispatch({ type: 'UPDATE_RECT', payload: buttonRect });
 		}, [isOpen, buttonRect]);
 
-		React.useLayoutEffect(() => {
-			console.log('initial')
-			dispatch({ type: 'UPDATE_RECT', payload: buttonRect });
-		}, [])
-
 		return (
 			<ForwardedButton
 				id={buttonId}
 				aria-haspopup="menu"
 				aria-expanded={isOpen}
 				data-reach-menu-button
+				data-button-id={buttonId}
 				type="button"
 				ref={buttonRef}
 				onMouseDown={ReachUtils.wrapEvent(onMouseDown, () => {
@@ -214,7 +214,7 @@ const MenuItem = React.forwardRef<HTMLUnknownElement, MenuItemProps>((props, ref
 
 		const itemRef = React.useRef<HTMLDivElement>(null);
 
-		React.useEffect(() => {
+		React.useLayoutEffect(() => {
 			if (itemRef.current && selectionIndex === index) {
 				itemRef.current.focus();
 			} else if (itemRef.current && selectionIndex === -1) {
@@ -338,29 +338,28 @@ interface MenuListProps {
 };
 // The open state is client side only
 const MenuList = React.forwardRef<HTMLDivElement, MenuListProps>((props, ref) => {
-	const { isOpen, buttonRect} = React.useContext(MenuContext);
+	const { isOpen, buttonRect } = React.useContext(MenuContext);
 
 	const isOpenFalseAsNullForTypescript: true | null = isOpen ? isOpen : null;
+	const menuRef = React.useRef<HTMLDivElement>(document.createElement('div'));
+	const menuRect = useRect(menuRef, isOpenFalseAsNullForTypescript);
+	let listStyles = getStyles(buttonRect, menuRect, props.style);
 
-	console.log('is open', isOpenFalseAsNullForTypescript)
+	React.useLayoutEffect(() => {
+		listStyles = getStyles(buttonRect, menuRect, props.style);
+	}, [buttonRect])
+
+	// calculate position before draw or menu is painted for 1 frame in corner so it brings focus there
 	return (
-		isOpenFalseAsNullForTypescript && (
+		isOpenFalseAsNullForTypescript && listStyles.top && (
 			<Portal>
-				<WindowSize>
-					{() => (
-						<Rect>
-							{({ rect: menuRect, ref: menuRef }) => (
-								<div
-									data-reach-menu
-									ref={menuRef}
-									style={getStyles(buttonRect, menuRect, props.style)}
-								>
-									<MenuListImpl {...props} ref={ref} />
-								</div>
-							)}
-						</Rect>
-					)}
-				</WindowSize>
+				<div
+					data-reach-menu
+					ref={menuRef}
+					style={listStyles}
+				>
+					<MenuListImpl {...props} ref={ref} />
+				</div>
 			</Portal>
 		)
 	);
@@ -417,7 +416,6 @@ const MenuListImpl = React.forwardRef<HTMLDivElement, MenuListImplProps>((props,
 				return;
 			}
 			dispatch({ type: 'CLOSE'});
-			// setState({ ...state, closingWithClick: true, isOpen: false });
 		};
 
 		React.useEffect(() => {
@@ -481,10 +479,11 @@ interface StyleShape {
 	minWidth?: number
 	left?: string | number,
 	top?: string | number,
-	zIndex: string | number
+	zIndex: string | number,
+	opacity?: string | number
 }
 
-const getStyles = (buttonRect, menuRect, style = { zIndex: 'auto' }) => {
+const getStyles = (buttonRect, menuRect, style = { zIndex: 'auto' }): StyleShape => {
 	const haventMeasuredButtonYet = !buttonRect;
 	if (haventMeasuredButtonYet) {
 		return { opacity: 0 };
