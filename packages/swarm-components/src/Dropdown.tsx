@@ -63,7 +63,6 @@ interface Action {
 };
 
 function reducer(state: MenuCtx, action: Action) {
-	console.log('action', action.type, action)
 	switch (action.type) {
 		case 'CLOSE':
 			return { ...state, isOpen: false, hasBeenClosed: true };
@@ -130,7 +129,6 @@ const MenuButton = React.forwardRef(
 			// need to check false specifically because isOpen is initially undefined then updates
 			// to false causing dropdown buttons to be focused
 			if (hasBeenClosed && !isOpen && KeyboardEvent && buttonRef.current) {
-				console.log('button', buttonRef)
 				buttonRef.current.focus();
 			}
 		}, [isOpen]);
