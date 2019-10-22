@@ -149,7 +149,8 @@ class Button extends React.Component<ButtonProps> {
 	}
 }
 
-const ForwardedButton = React.forwardRef<ButtonProps, HTMLButtonElement>(
+// any for now. Not sure how to type forwarded ref
+const ForwardedButton = React.forwardRef<ButtonProps, any>(
 	(props, ref) => <Button {...props} forwardedRef={ref} />
 );
 
