@@ -50,6 +50,7 @@ function useSSR(): UseSSRReturn {
     canUseViewport: whereAmI === BROWSER && !!window.screen
   }), [whereAmI])
 
+  // not Object.values is allowed in "es2017" lib config in typescript
   return React.useMemo(() => Object.assign(Object.values(useSSRObject), useSSRObject), [whereAmI])
 }
 

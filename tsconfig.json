@@ -10,7 +10,7 @@
     "experimentalDecorators": true,
     "target": "es6",
     "sourceMap": true,
-    "lib": ["es7", "dom"],
+    "lib": ["es2017", "dom"],
     "jsx": "react",
     "baseUrl": ".",
     "strict": true,
