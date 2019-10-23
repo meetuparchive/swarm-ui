@@ -346,6 +346,7 @@ interface MenuListProps extends MenuListImplProps{
 	
 };
 // The open state is client side only
+// @ts-ignore nested refs with possible null return not playing nice
 const MenuList = React.forwardRef<HTMLDivElement, MenuListProps>((props, ref) => {
 	const { isOpen, buttonRect } = React.useContext(MenuContext);
 	const { isBrowser } = useSSR();
