@@ -9,6 +9,17 @@ import { useSSR } from './utils/useSSR';
 // also help w/ remove the menu button tooltip hide-flash.
 
 // TODO: add type-to-highlight like native menus
+const RECT_DEFAULTS: DOMRect = {
+	top: 0,
+	left: 0,
+	right: 0,
+	bottom: 0,
+	x: 0,
+	y: 0,
+	height: 0,
+	width: 0,
+	toJSON: () => null
+}
 
 interface MenuCtx {
 	isOpen: boolean,
@@ -16,13 +27,13 @@ interface MenuCtx {
 	closingWithClick: boolean,
 	hasBeenClosed: boolean,
 	buttonId: string,
-	buttonRect: {}
+	buttonRect: DOMRect, 
 	dispatch: ({}: Action) => any
 }
 
 const ctxDefaults = {
 	buttonId: '',
-	buttonRect: {},
+	buttonRect: {...RECT_DEFAULTS},
 	isOpen: false,
 	selectionIndex: -1,
 	closingWithClick: false,
@@ -49,7 +60,7 @@ const genId = prefix =>
 
 const getInitialState = (): MenuCtx => ({
 	isOpen: false,
-	buttonRect: {},
+	buttonRect: {...RECT_DEFAULTS},
 	selectionIndex: -1,
 	closingWithClick: false,
 	hasBeenClosed: false,
@@ -329,11 +340,13 @@ const MenuLink = React.forwardRef<HTMLUnknownElement, MenuLinkProps>((props, ref
 // /////////////////////////////////////////////////////////////////
 
 
-interface MenuListProps {
+interface MenuListProps extends MenuListImplProps{
 	style?: {},
 	children: React.ReactElement,
+	
 };
 // The open state is client side only
+// @ts-ignore nested refs with possible null return not playing nice
 const MenuList = React.forwardRef<HTMLDivElement, MenuListProps>((props, ref) => {
 	const { isOpen, buttonRect } = React.useContext(MenuContext);
 	const { isBrowser } = useSSR();
@@ -365,7 +378,12 @@ const MenuList = React.forwardRef<HTMLDivElement, MenuListProps>((props, ref) =>
 
 // super hacky to support react-hot-loader
 // https://github.com/gaearon/react-hot-loader/issues/304
-const isFocusableChildType = (child, types: Array<{name: string}> = []) => {
+const isFocusableChildType = (child: any, types: Array<{name: string}> = []) => {
+	// return false if child is not component
+	// for falsy or null values
+	if (!child) {
+		return false;
+	}
 	const typeNames: Array<string> = types.map(t => t.name);
 	const childName = child.type.displayName || child.type.name;
 
@@ -382,7 +400,7 @@ const getFocusableMenuChildren = (children, types) => {
 
 interface MenuListImplProps {
 	focusableChildrenTypes: Array<any>,
-	children: React.ReactChildren,
+	children: React.ReactElement,
 	onKeyDown: () => void,
 	onBlur: () => void,
 };
@@ -400,7 +418,7 @@ const MenuListImpl = React.forwardRef<HTMLDivElement, MenuListImplProps>((props,
 			focusableChildrenTypes
 		);
 
-		const menuListRef = React.useRef<HTMLLIElement>(null);
+		const menuListRef = React.useRef<HTMLDivElement>(null);
 
 		React.useEffect(() => {
 			if (menuListRef && menuListRef.current && selectionIndex === -1) {
@@ -456,13 +474,12 @@ const MenuListImpl = React.forwardRef<HTMLDivElement, MenuListImplProps>((props,
 					}
 				})}
 			>
-				{React.Children.map(children, (child, index) => {
+				{React.Children.map(children, (child: React.ReactElement<any>, index: number) => {
 					if (isFocusableChildType(child, focusableChildrenTypes)) {
 						const focusIndex = focusableChildren.indexOf(child);
 
 						return React.cloneElement(child, {
 							index: focusIndex,
-							_ref: node => (refs.items[focusIndex] = node),
 						});
 					}
 
@@ -473,15 +490,16 @@ const MenuListImpl = React.forwardRef<HTMLDivElement, MenuListImplProps>((props,
 	}
 );
 
+type zIndexType = number | "-moz-initial" | "inherit" | "initial" | "revert" | "unset" | "auto" | undefined;
 interface StyleShape {
 	minWidth?: number
 	left?: string | number,
 	top?: string | number,
-	zIndex: string | number,
-	opacity?: string | number
+	zIndex?: zIndexType,
+	opacity?: number | "-moz-initial" | "inherit" | "initial" | "revert" | "unset" | undefined
 }
 
-const getStyles = (buttonRect: object, menuRect: object, style: object = { zIndex: 'auto' }): StyleShape => {
+const getStyles = (buttonRect: DOMRect, menuRect: DOMRect, style: { zIndex?: zIndexType } = { zIndex: 'auto' }): StyleShape => {
 	const haventMeasuredButtonYet = !buttonRect;
 	if (haventMeasuredButtonYet) {
 		return { opacity: 0 };
