@@ -4,7 +4,7 @@ import { ToasterContext } from './Toaster';
 import { Button } from './Button';
 import { CheckCircledSelected, CloseCircledSelected, WarningCircledSelected } from '@meetup/swarm-icons/lib/components/large';
 
-export interface ToastProps {
+export type ToastProps = {
   /**
    * The status of the toast displayed. Options are success, error, warning, & default
    */

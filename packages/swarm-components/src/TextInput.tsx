@@ -13,7 +13,7 @@ const ICON_SIZES = Object.freeze({
 	XXL: 'xxl',
 });
 
-interface TextInputProps {
+type TextInputProps = {
 	/**
 	 * Whether the input should be interactive.
 	 */

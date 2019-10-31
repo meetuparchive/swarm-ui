@@ -21,7 +21,7 @@ const RECT_DEFAULTS: DOMRect = {
 	toJSON: () => null
 }
 
-interface MenuCtx {
+type MenuCtx = {
 	isOpen: boolean,
 	selectionIndex: number,
 	closingWithClick: boolean,
@@ -68,7 +68,7 @@ const getInitialState = (): MenuCtx => ({
 	dispatch: ({}: any) => null
 });
 
-interface Action {
+type Action = {
 	type: 'OPEN' | 'CLOSE' | 'SET_SELECTION_INDEX' | 'CLEAR_SELECTION_INDEX' | 'UPDATE_RECT' | 'SET_IS_KEYBOARD_USER',
 	payload?: any
 };
@@ -122,7 +122,7 @@ const Menu: ({ children }) => any| React.ReactElement<any> = ({ children }) => {
 };
 
 // //////////////////////////////////////////////////////////////////////
-interface MenuButtonProps {
+type MenuButtonProps = {
 	onClick: () => void,
 	onKeyDown: () => void,
 	onMouseDown: () => void,
@@ -184,7 +184,7 @@ const MenuButton = React.forwardRef(
 	}
 );
 
-interface MenuItemProps {
+type MenuItemProps = {
 	onSelect: () => void,
 	onClick?: () => void,
 	role?: string,
@@ -267,7 +267,7 @@ const MenuItem = React.forwardRef<HTMLUnknownElement, MenuItemProps>((props, ref
 const k = () => {};
 
 // //////////////////////////////////////////////////////////////////////
-interface MenuLinkProps {
+type MenuLinkProps = {
 	onKeyDown?: () => void,
 	onClick?: () => void,
 	component?: any,
@@ -398,7 +398,7 @@ const getFocusableMenuChildren = (children, types) => {
 	return focusable;
 };
 
-interface MenuListImplProps {
+type MenuListImplProps = {
 	focusableChildrenTypes: Array<any>,
 	children: React.ReactElement,
 	onKeyDown: () => void,
@@ -491,7 +491,7 @@ const MenuListImpl = React.forwardRef<HTMLDivElement, MenuListImplProps>((props,
 );
 
 type zIndexType = number | "-moz-initial" | "inherit" | "initial" | "revert" | "unset" | "auto" | undefined;
-interface StyleShape {
+type StyleShape = {
 	minWidth?: number
 	left?: string | number,
 	top?: string | number,

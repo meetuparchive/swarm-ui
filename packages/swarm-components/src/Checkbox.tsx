@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Icon } from './Icon';
 
-export interface Props {
+export type Props = {
 	/**
 	 * Whether the box should be checked.
 	 */

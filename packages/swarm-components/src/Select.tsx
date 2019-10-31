@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { ArrowDown } from '@meetup/swarm-icons/lib/components/solid';
 
-interface Props {
+type Props = {
 	/**
 	 * Whether the select menu is disabled.
 	 */

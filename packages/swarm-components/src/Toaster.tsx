@@ -7,7 +7,7 @@ const removeToast = (toasts: Array<any>, id: string) => {
   return [...toasts.filter(t => t.id !== id)];
 };
 
-interface ToasterContextInterface {
+type ToasterContextInterface = {
   toasts: Array<any>,
   addToast: (i: any) => void,
   removeToast: (i: any) => void,
