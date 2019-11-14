@@ -1,6 +1,6 @@
 {
   "name": "@meetup/swarm-styles",
-  "version": "0.12.0",
+  "version": "0.12.1",
   "description": "Swarm UI styles",
   "author": "hsbacot <hsbacot@gmail.com>",
   "homepage": "",
@@ -28,8 +28,8 @@
     "postcss-import": "12.0.1"
   },
   "dependencies": {
-    "@meetup/swarm-constants": "^0.7.0",
-    "@meetup/swarm-icons": "^0.3.0",
+    "@meetup/swarm-constants": "^0.7.1",
+    "@meetup/swarm-icons": "^0.3.1",
     "@reach/menu-button": "^0.1.18"
   }
 }

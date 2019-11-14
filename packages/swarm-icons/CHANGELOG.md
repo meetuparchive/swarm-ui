@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-icons@0.3.0...@meetup/swarm-icons@0.3.1) (2019-11-14)
+
+
+### Bug Fixes
+
+* pin now to 16.2.0 since later versions do not preserve permissions ([8ec911c](https://github.com/meetup/swarm-ui/commit/8ec911c))
+
+
+
+
+
 # [0.3.0](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-icons@0.2.1...@meetup/swarm-icons@0.3.0) (2019-10-09)
 
 
