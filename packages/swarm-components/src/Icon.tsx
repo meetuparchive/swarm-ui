@@ -6,7 +6,7 @@ function toPascalCase(s: string) {
 	return capitalized.replace(/-(\w)/g, g => g[1].toUpperCase());
 }
 
-interface Props {
+type Props = {
 	shape: string,
 	color?: string
 };

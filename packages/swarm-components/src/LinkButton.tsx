@@ -3,9 +3,8 @@ import { Icon } from './Icon';
 import { ButtonProps } from './Button';
 import { getButtonType, getSwarmSize, getIconPosition } from './utils/buttonUtils';
 
-export interface LinkButtonProps extends ButtonProps {};
 
-const LinkButton = (props: LinkButtonProps): React.AnchorHTMLAttributes<LinkButtonProps> => {
+const LinkButton = (props: ButtonProps): React.AnchorHTMLAttributes<ButtonProps> => {
 	// destructuring to not pass invalid attributes to node
 	const {
 		icon,

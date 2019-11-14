@@ -3,7 +3,7 @@ import { Icon } from './Icon';
 
 type Value = number | null | undefined;
 
-interface Props {
+type Props = {
 	/**
 	 * Classname of wrapper, specified because it is not applied with other
 	 */

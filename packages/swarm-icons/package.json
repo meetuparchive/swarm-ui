@@ -22,7 +22,7 @@
   "scripts": {
     "clean:components": "rm -f src/components/**/*.jsx",
     "clean:icons": "rm src/icons/**/*.svg",
-    "generate": "npx svgo src/icons/**/*.svg && yarn clean:components && src/build.js --f=solid && src/build.js --f=line && src/build.js --f=large",
+    "generate": "npm i -g now@16.2.0 && npx svgo src/icons/**/*.svg && yarn clean:components && src/build.js --f=solid && src/build.js --f=line && src/build.js --f=large",
     "build": "yarn generate && npx babel src --out-dir lib --ignore 'src/**/*.test.js','src/build.js'"
   },
   "bugs": {

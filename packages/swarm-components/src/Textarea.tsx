@@ -5,7 +5,7 @@ import { CharCount, hasMaxLengthError } from './shared/CharCount';
 
 import { getFormFieldState } from './utils/formUtils';
 
-interface Props {
+type Props = {
 	/**
 	 * Resizes the height based on content
 	 */
@@ -31,8 +31,6 @@ interface Props {
 	 */
 	maxLength?: number,
 };
-
-type State = {};
 
 const Textarea = (props: Props): React.ReactElement => {
 	// maxLength is removed because we want to allow for typing over the character limit
