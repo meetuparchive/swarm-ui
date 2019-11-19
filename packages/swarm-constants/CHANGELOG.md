@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.8.0](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-constants@0.7.1...@meetup/swarm-constants@0.8.0) (2019-11-19)
+
+
+### Features
+
+* styles to 4px scale in all envs ([8238afe](https://github.com/meetup/swarm-ui/commit/8238afe))
+
+
+
+
+
 ## [0.7.1](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-constants@0.7.0...@meetup/swarm-constants@0.7.1) (2019-11-14)
 
 **Note:** Version bump only for package @meetup/swarm-constants
