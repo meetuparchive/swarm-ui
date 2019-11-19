@@ -1,53 +1,73 @@
 {
     "size": {
         "space": {
-            "default": {
-                "value": "16px",
-                "comment": "default space size"
+            "0": {
+                "value": "0",
+                "comment": "space-0"
             },
-            "andHalf": {
-                "value": "24px",
-                "comment": "default space + half space size"
-            },
-            "double": {
-                "value": "32px",
-                "comment": "double space size"
-            },
-            "half": {
-                "value": "8px",
-                "comment": "half space size"
-            },
-            "quarter": {
+            "1": {
                 "value": "4px",
-                "comment": "quarter space size"
+                "comment": "space-1"
             },
-            "quadruple": {
-                "value": "64px",
-                "comment": "quadruple space size"
+            "2": {
+                "value": "8px",
+                "comment": "space-2"
             },
-            "largeDefault": {
+            "3": {
+                "value": "12px",
+                "comment": "space-3"
+            },
+            "4": {
+                "value": "16px",
+                "comment": "space-4"
+            },
+            "5": {
                 "value": "20px",
-                "comment": "default space size for large screens"
+                "comment": "space-5"
             },
-            "largeAndHalf": {
-                "value": "30px",
-                "comment": "default space + half space size"
+            "6": {
+                "value": "24px",
+                "comment": "space-6"
             },
-            "largeDouble": {
+            "7": {
+                "value": "28px",
+                "comment": "space-7"
+            },
+            "8": {
+                "value": "32px",
+                "comment": "space-8"
+            },
+            "9": {
+                "value": "36px",
+                "comment": "space-9"
+            },
+            "10": {
                 "value": "40px",
-                "comment": "default space size for large screens"
+                "comment": "space-10"
             },
-            "largeHalf": {
-                "value": "10px",
-                "comment": "half space size"
+            "11": {
+                "value": "44px",
+                "comment": "space-11"
             },
-            "largeQuarter": {
-                "value": "5px",
-                "comment": "quarter space size"
+            "12": {
+                "value": "48px",
+                "comment": "space-12"
             },
-            "largeQuadruple": {
-                "value": "80px",
-                "comment": "quadruple space size"
+            "13": {
+                "value": "52px",
+                "comment": "space-13"
+            },
+            "14": {
+                "value": "56px",
+                "comment": "space-14"
+            },
+            "15": {
+                "value": "60px",
+                "comment": "space-15"
+            },
+            "16": {
+                "value": "64px",
+                "comment": "space-16"
             }
         }
     }
