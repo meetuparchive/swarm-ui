@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.13.2](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.13.1...@meetup/swarm-styles@0.13.2) (2020-01-17)
+
+
+### Bug Fixes
+
+* white icon fill for checkbox ([1cc2997](https://github.com/meetup/swarm-ui/commit/1cc2997))
+
+
+
+
+
 ## [0.13.1](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.13.0...@meetup/swarm-styles@0.13.1) (2020-01-17)
 
 **Note:** Version bump only for package @meetup/swarm-styles
