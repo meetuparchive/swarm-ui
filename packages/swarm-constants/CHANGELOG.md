@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.9.0](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-constants@0.8.0...@meetup/swarm-constants@0.9.0) (2020-01-17)
+
+
+### Features
+
+* update viridian ([5101f68](https://github.com/meetup/swarm-ui/commit/5101f68))
+
+
+
+
+
 # [0.8.0](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-constants@0.7.1...@meetup/swarm-constants@0.8.0) (2019-11-19)
 
 
