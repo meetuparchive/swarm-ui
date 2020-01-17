@@ -40,6 +40,10 @@
     background-color: var(--color-viridian);
 }
 
+[data-swarm-checkbox-field="checked"] [data-swarm-icon] {
+    fill: var(--color-white);
+}
+
 /* disabled */
 [data-swarm-checkbox="disabled"] [data-swarm-checkbox-field],
 [data-swarm-checkbox="disabled"]:hover [data-swarm-checkbox-field] {
