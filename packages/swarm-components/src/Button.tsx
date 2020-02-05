@@ -47,7 +47,7 @@ export type ButtonProps = {
 	/**
 	 * The function invoked when interacting with Button
 	 */
-	onClick?: () => {},
+	onClick?: () => void,
 
 	/**
 	 * The primary style
