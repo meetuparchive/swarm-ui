@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.21.7](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.21.6...@meetup/swarm-components@0.21.7) (2020-02-05)
+
+
+### Bug Fixes
+
+* corrected Button onClick return type ([55e3216](https://github.com/meetup/swarm-ui/commit/55e3216))
+
+
+
+
+
 ## [0.21.6](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.21.5...@meetup/swarm-components@0.21.6) (2020-01-17)
 
 **Note:** Version bump only for package @meetup/swarm-components
