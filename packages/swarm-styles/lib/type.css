@@ -71,6 +71,10 @@
     color: var(--color-viridian);
 }
 
+.text--link:hover {
+    text-decoration: underline;
+}
+
 /* INVERTED */
 .inverted {
     color: var(--color-white);
