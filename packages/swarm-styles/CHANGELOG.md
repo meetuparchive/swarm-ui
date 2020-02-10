@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.13.3](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.13.2...@meetup/swarm-styles@0.13.3) (2020-02-10)
+
+
+### Bug Fixes
+
+* underline for text--link added ([e7ad2ad](https://github.com/meetup/swarm-ui/commit/e7ad2ad))
+
+
+
+
+
 ## [0.13.2](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.13.1...@meetup/swarm-styles@0.13.2) (2020-01-17)
 
 
