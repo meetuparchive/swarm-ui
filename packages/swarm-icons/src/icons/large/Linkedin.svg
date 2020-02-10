@@ -1,9 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
-    <title>28dp/Logo Linkedin</title>
-    <desc>Created with Sketch.</desc>
-    <g id="28dp/Logo-Linkedin" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <path d="M21,2 L7,2 C4.239,2 2,4.239 2,7 L2,21 C2,23.761 4.239,26 7,26 L21,26 C23.762,26 26,23.761 26,21 L26,7 C26,4.239 23.762,2 21,2 Z M10,21 L7,21 L7,10 L10,10 L10,21 Z M8.5,8.732 C7.534,8.732 6.75,7.942 6.75,6.968 C6.75,5.994 7.534,5.204 8.5,5.204 C9.466,5.204 10.25,5.994 10.25,6.968 C10.25,7.942 9.467,8.732 8.5,8.732 Z M22,21 L19,21 L19,15.396 C19,12.028 15,12.283 15,15.396 L15,21 L12,21 L12,10 L15,10 L15,11.765 C16.396,9.179 22,8.988 22,14.241 L22,21 Z" id="Color" fill="#212121" fill-rule="nonzero"></path>
-    </g>
-</svg>
+<svg width="28" height="28" xmlns="http://www.w3.org/2000/svg"><path d="M21 2H7a5 5 0 00-5 5v14a5 5 0 005 5h14a5 5 0 005-5V7a5 5 0 00-5-5zM10 21H7V10h3v11zM8.5 8.732c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zM22 21h-3v-5.604c0-3.368-4-3.113-4 0V21h-3V10h3v1.765c1.396-2.586 7-2.777 7 2.476V21z" fill="#212121" fill-rule="nonzero"/></svg>
