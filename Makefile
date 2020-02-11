@@ -12,8 +12,10 @@ publish:
 ifeq ($(TRAVIS_BRANCH), master)
 ifeq ($(TRAVIS_PULL_REQUEST), false)
 	git checkout master
+	git status
 	lerna publish --conventional-commits --yes -m "$$COMMIT_MESSAGE"
 else
+git status
 	lerna publish \
 		--conventional-commits \
 		--yes \
