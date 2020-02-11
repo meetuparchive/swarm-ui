@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-icons@0.3.1...@meetup/swarm-icons@0.4.0) (2020-02-11)
+
+
+### Bug Fixes
+
+* adding generated components ([1914c69](https://github.com/meetup/swarm-ui/commit/1914c69))
+* icons built to components ([bbae909](https://github.com/meetup/swarm-ui/commit/bbae909))
+
+
+### Features
+
+* adding social icons to swarm icons ([bcf026e](https://github.com/meetup/swarm-ui/commit/bcf026e))
+* adding social icons to swarm icons ([f1e6bfa](https://github.com/meetup/swarm-ui/commit/f1e6bfa))
+
+
+
+
+
 ## [0.3.1](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-icons@0.3.0...@meetup/swarm-icons@0.3.1) (2019-11-14)
 
 
