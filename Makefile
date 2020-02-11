@@ -15,7 +15,7 @@ ifeq ($(TRAVIS_PULL_REQUEST), false)
 	git status
 	lerna publish --conventional-commits --yes -m "$$COMMIT_MESSAGE"
 else
-git status
+	git status
 	lerna publish \
 		--conventional-commits \
 		--yes \
