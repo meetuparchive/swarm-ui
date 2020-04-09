@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.1](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-icons@0.5.0...@meetup/swarm-icons@0.5.1) (2020-04-09)
+
+
+### Bug Fixes
+
+* adds filtering to icons build.js for xlink:href [[#172205984](https://github.com/meetup/swarm-ui/issues/172205984)] ([4db6ac2](https://github.com/meetup/swarm-ui/commit/4db6ac2))
+* re-compiles solid video svg [[#172205984](https://github.com/meetup/swarm-ui/issues/172205984)] ([e068de9](https://github.com/meetup/swarm-ui/commit/e068de9))
+
+
+
+
+
 # [0.5.0](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-icons@0.4.0...@meetup/swarm-icons@0.5.0) (2020-04-09)
 
 
