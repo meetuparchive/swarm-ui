@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.2](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-icons@0.5.1...@meetup/swarm-icons@0.5.2) (2020-04-09)
+
+
+### Bug Fixes
+
+* uses different svg from John for video icon [[#172205984](https://github.com/meetup/swarm-ui/issues/172205984)] ([a457a5d](https://github.com/meetup/swarm-ui/commit/a457a5d))
+
+
+
+
+
 ## [0.5.1](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-icons@0.5.0...@meetup/swarm-icons@0.5.1) (2020-04-09)
 
 
