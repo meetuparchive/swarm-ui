@@ -53,6 +53,7 @@ alphabetizedFiles.forEach(function(file, index) {
 		.replace('</svg>', '')
 		.replace(/(\S)\/>/g, '$1 />')
 		.replace(/\sfill="#[^"]*"/g, '')
+		.replace(/xlink:href/, 'xlinkHref')
 		.replace(/fill-rule/g, 'fillRule');
 
 	const camelCaseFilename = toCamelCase(file);
