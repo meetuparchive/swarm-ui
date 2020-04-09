@@ -58,4 +58,5 @@ export { default as Share } from './Share';
 export { default as Star } from './Star';
 export { default as StartMessage } from './StartMessage';
 export { default as Ticket } from './Ticket';
+export { default as Video } from './Video';
 export { default as WarningCircled } from './WarningCircled';

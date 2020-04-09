@@ -16,6 +16,9 @@ example of building the line icon set
 Add the `.svg` file to `src/icons`
 Run `yarn build` 
 
+## Deploying an Icon
+Run `yarn build:src` from the root, then commit.
+
 
 ## Using Icons
 Import whole sets
