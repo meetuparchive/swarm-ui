@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.3](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-icons@0.5.2...@meetup/swarm-icons@0.5.3) (2020-04-13)
+
+**Note:** Version bump only for package @meetup/swarm-icons
+
+
+
+
+
 ## [0.5.2](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-icons@0.5.1...@meetup/swarm-icons@0.5.2) (2020-04-09)
 
 

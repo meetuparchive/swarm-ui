@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.17.17](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.17.16...@meetup/swarm-docs@0.17.17) (2020-04-13)
+
+**Note:** Version bump only for package @meetup/swarm-docs
+
+
+
+
+
 ## [0.17.16](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.17.15...@meetup/swarm-docs@0.17.16) (2020-04-09)
 
 **Note:** Version bump only for package @meetup/swarm-docs
