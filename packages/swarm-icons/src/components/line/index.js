@@ -78,6 +78,5 @@ export { default as StartMessage } from './StartMessage';
 export { default as TextBlock } from './TextBlock';
 export { default as Ticket } from './Ticket';
 export { default as TV } from './TV';
-export { default as Video } from './Video';
 export { default as WarningCircled } from './WarningCircled';
 export { default as WiFi } from './WiFi';
