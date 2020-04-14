@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-icons@0.5.5...@meetup/swarm-icons@0.6.0) (2020-04-14)
+
+
+### Features
+
+* add line video icon ([a77c6cb](https://github.com/meetup/swarm-ui/commit/a77c6cb))
+
+
+
+
+
 ## [0.5.5](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-icons@0.5.4...@meetup/swarm-icons@0.5.5) (2020-04-13)
 
 **Note:** Version bump only for package @meetup/swarm-icons
