@@ -2,6 +2,7 @@ import React from 'react';
 import { TextInput } from '@meetup/swarm-components';
 
 const Example = () => {
+  const [value0, setValue0] = React.useState('password');
   const [value1, setValue1] = React.useState('no label');
   const [value2, setValue2] = React.useState('value');
   const [value4, setValue4] = React.useState('');
@@ -12,6 +13,13 @@ const Example = () => {
 
   return (
     <>
+      <TextInput
+        id="input0"
+        type="password"
+        name="input0"
+        value={value0}
+        onChange={(e) => setValue0(e.target.value)} />
+      <br/>
       <TextInput
         id="input1"
         name="input1"
