@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.16.0](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.14.0...@meetup/swarm-styles@0.16.0) (2021-03-12)
+
+
+### Features
+
+* release password input eye styles [2268] ([75e1a16](https://github.com/meetup/swarm-ui/commit/75e1a16))
+* update swarm styles package version [2268] ([8e76b40](https://github.com/meetup/swarm-ui/commit/8e76b40))
+
+
+
+
+
 # [0.14.1](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.13.11...@meetup/swarm-styles@0.14.0) (2021-03-12)
 
 * add password eye styles
