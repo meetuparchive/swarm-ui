@@ -8,7 +8,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* add changelog [2268] ([25eaebd](https://github.com/meetup/swarm-ui/commit/25eaebd))
 * add input type password [2268] ([6708369](https://github.com/meetup/swarm-ui/commit/6708369))
 
 
