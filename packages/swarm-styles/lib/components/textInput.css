@@ -54,3 +54,12 @@
     position: absolute;
     top:0;
 }
+
+[data-swarm-focusable] {
+    cursor: pointer;
+}
+
+[data-swarm-position-right] {
+    left: auto;
+    right: 0;
+}

@@ -15,6 +15,10 @@ const ICON_SIZES = Object.freeze({
 
 type TextInputProps = {
 	/**
+	 * Input type
+	 */
+	type?: string
+	/**
 	 * Whether the input should be interactive.
 	 */
 	disabled?: boolean,
@@ -62,6 +66,7 @@ type TextInputProps = {
  */
 const TextInput = (props: TextInputProps): React.ReactElement => {
 	const {
+		type,
 		name,
 		error,
 		isSearch,
@@ -73,13 +78,42 @@ const TextInput = (props: TextInputProps): React.ReactElement => {
 		maxLength,
 		...other
 	} = props;
-
 	const wrapperState = iconShape ? 'icon' : 'default';
 	const charLength = value.length;
 	const inputState = getFormFieldState({
 		...props,
 		error: error || hasMaxLengthError(maxLength, charLength),
 	});
+
+  const [showPassword, setShowPassword] = React.useState(false);
+	const togglePassword = React.useCallback(() => {
+		setShowPassword(!showPassword);
+	}, [showPassword]);
+
+	if (type === 'password') {
+		return (
+		  <div data-swarm-text-input-wrapper={wrapperState}>
+		  	<input
+		  		data-swarm-text-input={inputState}
+		  		type={showPassword ? 'text' : 'password'}
+		  		name={name}
+		  		disabled={disabled}
+		  		id={id}
+		  		value={value}
+		  		{...other}
+		  	/>
+		  	<span
+		  	  onClick={togglePassword}
+		  	  data-swarm-input-icon="xs"
+		  	  data-swarm-position-right
+		  	  data-swarm-focusable
+		  	 >
+		  		<Icon shape={showPassword ? 'eye-visible' : 'eye-hidden'} aria-hidden />
+		  	</span>
+		  	{maxLength && <CharCount maxLength={maxLength} charLength={charLength} />}
+		  </div>
+	  );
+	}
 
 	return (
 		<div data-swarm-text-input-wrapper={wrapperState}>
