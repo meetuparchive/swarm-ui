@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.18.0](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.17.20...@meetup/swarm-docs@0.18.0) (2021-03-12)
+
+
+### Features
+
+* add input type password [2268] ([6708369](https://github.com/gatsbyjs/gatsby-starter-default/commit/6708369))
+
+
+
+
+
 ## [0.17.20](https://github.com/gatsbyjs/gatsby-starter-default/compare/@meetup/swarm-docs@0.17.19...@meetup/swarm-docs@0.17.20) (2020-04-14)
 
 **Note:** Version bump only for package @meetup/swarm-docs

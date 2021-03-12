@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.22.0](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.21.15...@meetup/swarm-components@0.22.0) (2021-03-12)
+
+
+### Features
+
+* add changelog [2268] ([25eaebd](https://github.com/meetup/swarm-ui/commit/25eaebd))
+* add input type password [2268] ([6708369](https://github.com/meetup/swarm-ui/commit/6708369))
+
+
+
+
+
 
 ## [0.21.15](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.21.15...@meetup/swarm-components@0.21.16) (2020-04-14)
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.14.0](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.13.11...@meetup/swarm-styles@0.14.0) (2021-03-12)
+
+
+### Features
+
+* add input type password [2268] ([6708369](https://github.com/meetup/swarm-ui/commit/6708369))
+
+
+
+
+
 ## [0.13.11](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-styles@0.13.10...@meetup/swarm-styles@0.13.11) (2020-04-14)
 
 **Note:** Version bump only for package @meetup/swarm-styles
