@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.24.0](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.23.0...@meetup/swarm-components@0.24.0) (2021-03-22)
+
+
+### Features
+
+* update swarm icons package version [2268] ([c680be7](https://github.com/meetup/swarm-ui/commit/c680be76db28316f5ca152b452d6794e77a88175))
+
+
+
+
+
 # [0.23.0](https://github.com/meetup/swarm-ui/compare/@meetup/swarm-components@0.22.0...@meetup/swarm-components@0.23.0) (2021-03-12)
 
 
