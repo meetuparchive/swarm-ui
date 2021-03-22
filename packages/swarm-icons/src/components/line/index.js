@@ -50,6 +50,7 @@ export { default as Message } from './Message';
 export { default as MessageBlank } from './MessageBlank';
 export { default as Minus } from './Minus';
 export { default as MinusCircled } from './MinusCircled';
+export { default as NetworkEvent } from './NetworkEvent';
 export { default as NewWindow } from './NewWindow';
 export { default as Notif } from './Notif';
 export { default as NotifSelected } from './NotifSelected';
