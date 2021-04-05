@@ -2231,6 +2231,33 @@
   resolved "https://registry.yarnpkg.com/@mdx-js/react/-/react-1.0.27.tgz#7461e39f8880eceff8f48b0240e6cdc0f01cc8db"
   integrity sha512-sCv3ItE5L6rdpnZR0s69C8KFgz4pmhGsH4de0ZiO+fiCC/L6asuKLubf9QZk3oG3vjebym/V593CE15vRXvvwQ==
 
+"@meetup/swarm-components@^0.23.0":
+  version "0.23.0"
+  resolved "https://registry.yarnpkg.com/@meetup/swarm-components/-/swarm-components-0.23.0.tgz#87e2d6ac80940b2dfe41a96844ced7463a35648c"
+  integrity sha512-U5vB0arnF6m3sHEnSrsZxcCEcwdzM0QMYw8N026+MZgYINinb0ApQnPpfW2D3cTtFdZAYH9XmYbyHN7zOSoWyA==
+  dependencies:
+    "@meetup/swarm-constants" "^0.9.9"
+    "@meetup/swarm-icons" "^0.6.0"
+    "@reach/menu-button" "^0.1.18"
+    autosize "^4.0.2"
+    classnames "2.2.6"
+    framer-motion "^1.6.8"
+    swarm-icons "3.8.354"
+
+"@meetup/swarm-icons@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@meetup/swarm-icons/-/swarm-icons-0.6.0.tgz#6c975ea002f4bc60677589fd137734a4a6e71004"
+  integrity sha512-T212ytKv2hR68QddvDR9mhhbdE6jPqZtPNCT38iU4oPlLSX1agMCKReKkd3SGkL7lpl2531ipfmSxtIjAXsFDQ==
+
+"@meetup/swarm-styles@^0.14.0":
+  version "0.14.0"
+  resolved "https://registry.yarnpkg.com/@meetup/swarm-styles/-/swarm-styles-0.14.0.tgz#659d696797d40556f56219fb272e22e433de194a"
+  integrity sha512-VfQje+2ndv74+nVGLM3EJ1aV6+xrnDH4Up7ibHNhHPppvdQZwk12Cn1yHah/MjfUHaA23S5thT/sD0XuNoK3bg==
+  dependencies:
+    "@meetup/swarm-constants" "^0.9.9"
+    "@meetup/swarm-icons" "^0.6.0"
+    "@reach/menu-button" "^0.1.18"
+
 "@mikaelkristiansson/domready@^1.0.9":
   version "1.0.9"
   resolved "https://registry.yarnpkg.com/@mikaelkristiansson/domready/-/domready-1.0.9.tgz#b2b85d8ac7bb2797e577050b61aeaf1b26fbd906"
@@ -17312,9 +17339,9 @@ xtend@^4.0.0, xtend@^4.0.1, xtend@~4.0.1:
   integrity sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ==
 
 y18n@^3.2.1:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/y18n/-/y18n-3.2.1.tgz#6d15fba884c08679c0d77e88e7759e811e07fa41"
-  integrity sha1-bRX7qITAhnnA136I53WegR4H+kE=
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/y18n/-/y18n-3.2.2.tgz#85c901bd6470ce71fc4bb723ad209b70f7f28696"
+  integrity sha512-uGZHXkHnhF0XeeAPgnKfPv1bgKAYyVvmNL1xlKsPYZPaIHxGti2hHqvOCQv71XMsLxu1QjergkqogUnms5D3YQ==
 
 "y18n@^3.2.1 || ^4.0.0", y18n@^4.0.0:
   version "4.0.0"
