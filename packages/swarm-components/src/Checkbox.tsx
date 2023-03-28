@@ -60,6 +60,7 @@ const Checkbox = (props: Props): React.ReactElement => {
 				data-swarm-checkbox-field={checked ? 'checked' : 'unchecked'}
 				role="checkbox"
 				aria-checked={checked}
+				aria-label="checkbox"
 			>
 				{checked && (
 					<Icon
